@@ -7,8 +7,8 @@
 }
 
 html, body {
-	background-color: #dddddd;
-	color: #333;
+	background-color:var(--color_bg_2);
+	color: white;
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.5;
@@ -24,53 +24,76 @@ html {
 
 body {
 	min-height: 100%;
-	margin: 0px 0px 50px;
+	margin: 0 0 50px;
+}
+
+a {
+	cursor: pointer;
 }
 
 header {
 	display: flex;
 	background-color: var(--color_bg_1);
-	border-bottom: 2px solid var(--color_sep);
 	align-items: center;
-	padding: 0px 40px;
+	padding: 0 40px;
+	border: 0;
 }
 
 header > * {
-	color: #ddd;
 	width: 100%;
 }
 
-header h1, header h1 a, header h1 a:visited, header h1 a:active {
-	color: inherit;
-	font-size: 70px;
+header h1 {
 	text-decoration: none;
+	font-size: 80px;
 }
 
-header #head_main_infos {
+@media (max-width: 900px) {
+	header h1 {
+		margin: 10px 0;
+	}
+}
+
+@media (min-width: 900px) {
+	header h1 {
+		margin: 10px 0 -35px;
+	}
+}
+
+div.alternate a {
+	background-color: var(--color_bg_1);
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	font-size: 20pt;
+	justify-content: right;
+	width: fit-content;
+	font-size: 30px;
+	padding: 0 20px;
+}
+
+div.alternate a:hover {
+	background-color: var(--color_bg_2);
 }
 
 nav {
-	text-align: center;
 	display: flex;
-	justify-content: center space-around;
-	background-color: var(--color_bg_2);
-	color: white;
+	justify-content: right;
+	background-color: var(--color_bg_1);
 	margin: 0;
 	padding: 0 20px;
-	border-bottom: 6px solid var(--color_bg_1);
+	border-bottom: 4px solid var(--color_sep);
+	width: calc(100% - 40px);
+}
+
+nav img {
+	padding: 10px 5px 0;
+	height: 30px;
 }
 
 nav a {
-	padding: 5px;
-	font-size: 20px;
-	color: white;
+	font-size: 35px;
+	padding: 5px 10px;
 	text-decoration: none;
 	text-emphasis: bold;
-	width: 100%;
+	border-radius: 15px 15px 0 0;
 }
 
 nav a:hover {
@@ -80,7 +103,22 @@ nav a:hover {
 }
 
 nav a.current {
-	background-color: var(--color_bg_1);
+	background-color: var(--color_bg_2);
+}
+
+@media (max-width: 600px) {
+	header h1 {
+		font-size: 50px;
+	}
+
+	nav a {
+		font-size: 20px;
+	}
+
+	nav img {
+		padding: 5px 0 0;
+		height: 20px;
+	}
 }
 
 main {
@@ -119,7 +157,6 @@ footer {
 	width: calc(100% - 80px); /* viewport width - padding */
 	padding: 10px 40px;
 	height: 50px;
-	color: white;
 	display: flex;
 	background-color: var(--color_bg_1);
 	border-top: 5px solid var(--color_bg_2);
