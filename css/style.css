@@ -127,9 +127,8 @@ nav a.current {
 	text-align: center;
 }
 
-.portrait img {
-	width: 100px;
-	padding: 20px;
+.portrait .img {
+	font-size: 80px;
 }
 
 .name {
@@ -156,7 +155,7 @@ nav a.current {
 main {
   justify-content: center;
 	text-align: justify;
-	padding: 1px 30px 50px 30px;
+	padding: 20px 50px 50px;
 	margin: 0 auto 0 auto;
 	min-height: calc(100vh - 370px); /* viewport-height - (header+footer+nav bar) */
 }
