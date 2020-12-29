@@ -122,7 +122,7 @@ nav a.current {
 }
 
 .portrait {
-	padding: 20px;
+	padding: 20px 40px;
 	min-width: 350px;
 	text-align: center;
 }
@@ -152,6 +152,26 @@ nav a.current {
 	display: flex;
 }
 
+a.linkbutton {
+	border-radius: 10px;
+	border: 2px solid var(--color_sep);
+	margin: 5px;
+	padding: 5px 10px;
+	font-size: 1.3em;
+	text-decoration: none;
+}
+
+a.linkbutton:hover {
+	transition-property: background-color;
+	background-color: var(--color_bg_3);
+	transition-duration: 0.5s;
+}
+
+.links {
+	display: flex;
+	margin: 5px;
+}
+
 main {
   justify-content: center;
 	text-align: justify;
@@ -175,7 +195,6 @@ main p {
 }
 
 a:link, a:visited {
-	text-decoration: underline;
 	color: var(--color_sep);
 }
 
