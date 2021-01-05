@@ -221,12 +221,12 @@ dl {
 	grid-template-columns: 1fr 3fr;
 }
 dl dt {
-	font-weight: 300;
 	grid-column: 1 / span 1;
 	justify-self: end;
 	text-align: right;
 	margin: 5px 10px;
 	font-weight: bold;
+	align-self: center;
 }
 dl dd {
 	margin: 5px 5px;
