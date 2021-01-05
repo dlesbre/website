@@ -63,7 +63,7 @@ header h1 {
 div.alternate a {
 	background-color: var(--color_bg_1);
 	display: flex;
-	justify-content: right;
+	place-content: right;
 	width: fit-content;
 	font-size: 30px;
 	padding: 0 20px;
@@ -75,7 +75,8 @@ div.alternate a:hover {
 
 nav {
 	display: flex;
-	justify-content: right;
+	align-items: right;
+	justify-content: flex-end;
 	background-color: var(--color_bg_1);
 	margin: 0;
 	padding: 0 20px;
