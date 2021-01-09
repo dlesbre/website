@@ -151,17 +151,25 @@ nav a.current {
 	width: 100%;
 }
 
-@media (max-width: 1200px) {
-	.row {
-		flex-direction: column;
-	}
-}
-
 .column {
 	width: calc(100% - 60px - 60px);
 	margin: 10px 60px;
 	padding-top: 20px;
 	place-content: center;
+}
+@media (max-width: 1200px) {
+	.portrait {
+		min-width: 0;
+		padding: 20px 10px
+	}
+	.row {
+		flex-direction: column;
+	}
+	.column {
+		margin: 10px 0px;
+		width: 100%;
+		padding: 0;
+	}
 }
 
 .links {
@@ -243,7 +251,11 @@ main {
 	max-width: 1250px;
 	min-height: calc(100vh - 370px); /* viewport-height - (header+footer+nav bar) */
 }
-
+@media (max-width: 600px) {
+	main {
+		padding: 20px 20px 50px;
+	}
+}
 main h2 {
 	padding-top: 10px;
 	font-size: 1.5rem;
@@ -284,8 +296,17 @@ footer p {
   position: relative;
   max-width: 1200px;
 	margin: 0 auto;
-	width: fit-content;
 	margin: 0 150px;
+}
+@media (max-width: 1000px) {
+	.timeline {
+		margin: 0 40px;
+	}
+}
+@media (max-width: 600px) {
+	.timeline {
+		margin: 0 20px;
+	}
 }
 /* vertical ruler */
 .timeline::after {
@@ -347,4 +368,3 @@ footer p {
 .container .content .desc {
 	padding: 10px;
 }
-
