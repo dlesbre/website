@@ -34,43 +34,30 @@ a {
 header {
 	display: flex;
 	background-color: var(--color_bg_1);
-	align-items: center;
-	padding: 0 40px;
+	width: calc(100% - 60px);
+	padding: 0 20px 0 40px;
 	border: 0;
-}
-
-header > * {
-	width: 100%;
 }
 
 header h1 {
 	text-decoration: none;
 	font-size: 80px;
+	flex: 1;
+	width: 100%;
 }
-
-@media (max-width: 1200px) {
-	header h1 {
-		margin: 10px 0;
-	}
-}
-
-@media (min-width: 1200px) {
-	header h1 {
-		margin: 10px 0 -45px;
-	}
-}
-
-div.alternate a {
-	background-color: var(--color_bg_1);
+header .hbuttons {
+	justify-content: right;
 	display: flex;
-	place-content: right;
-	width: fit-content;
+	align-items: flex-start;
 	font-size: 30px;
-	padding: 0 20px;
+	width: 100%;
+	flex: 0;
 }
-
-div.alternate a:hover {
-	background-color: var(--color_bg_2);
+.hbuttons a {
+	padding: 10px;
+}
+.hbuttons img {
+	height: 25px;
 }
 
 nav {
@@ -107,15 +94,37 @@ nav a.current {
 	background-color: var(--color_bg_2);
 }
 
+@media (min-width: 1200px) {
+	header h1 {
+		margin: 10px 0 -45px;
+	}
+}
+
+@media (max-width: 1200px) {
+	header h1 {
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 800px) {
+	header h1 {
+		font-size: 60px;
+	}
+	header .hbuttons {
+		font-size: 20px;
+	}
+	.hbuttons img {
+		height: 15px;
+	}
+}
+
 @media (max-width: 600px) {
 	header h1 {
-		font-size: 50px;
+		font-size: 40px;
 	}
-
 	nav a {
 		font-size: 20px;
 	}
-
 	nav img {
 		padding: 5px 0 0;
 		height: 20px;
