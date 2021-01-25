@@ -29,6 +29,7 @@ body {
 
 a {
 	cursor: pointer;
+	color: var(--color_sep);
 }
 
 header {
@@ -44,6 +45,10 @@ header h1 {
 	font-size: 80px;
 	flex: 1;
 	width: 100%;
+}
+header h1 a {
+	color: white;
+	text-decoration: none;
 }
 header .hbuttons {
 	justify-content: right;
@@ -77,10 +82,10 @@ nav img {
 }
 
 nav a {
+	color: white;
 	font-size: 35px;
 	padding: 5px 10px;
 	text-decoration: none;
-	text-emphasis: bold;
 	border-radius: 15px 15px 0 0;
 }
 
@@ -277,10 +282,6 @@ main h2 {
 
 main p {
 	font-size: 1rem;
-}
-
-a:link, a:visited {
-	color: var(--color_sep);
 }
 
 footer {

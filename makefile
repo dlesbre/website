@@ -6,7 +6,8 @@ color = on
 
 SRC = .
 WWW = ./www
-PP = pproc
+BASE = $(shell pwd)/$(WWW)/
+PP = pproc "-DBASE=$(BASE)"
 CP = cp -r
 
 HTMLS = \
@@ -91,15 +92,15 @@ all: $(HTML_TARGETS) $(COPY_TARGETS) | dirs
 
 firefox: all
 	echo "$(color_s)Opening in firefox$(color_e)"
-	firefox $(WWW)/index.html
+	firefox $(WWW)/fr/index.html
 
 chromium: all
 	echo "$(color_s)Opening in firefox$(color_e)"
-	chromium $(WWW)/index.html &
+	chromium $(WWW)/fr/index.html &
 
 clean:
 	echo "$(color_s)Removing html file$(color_e)"
-	rm -rf $(WWW)/*.html
+	rm -rf $(WWW)/**/*.html
 
 clean-all:
 	echo "$(color_s)Removing $(WWW) folder$(color_e)"
