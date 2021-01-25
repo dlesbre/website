@@ -16,6 +16,7 @@ COPIES = \
 	css/style.css \
 	imgs/FR_flag.svg \
 	imgs/UK_flag.svg \
+	favicon.ico \
 
 # =============================
 # makefile code and variable setting
