@@ -31,13 +31,16 @@ else
 	color_e=
 endif
 
+en = en
+fr = fr
+
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
-HTML_TARGETS = $(addprefix $(WWW)/, $(HTMLS))
+HTML_TARGETS = $(addprefix $(WWW)/, $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS)))
 
 COPY_SOURCES = $(addprefix $(SRC)/, $(COPIES))
 COPY_TARGETS = $(addprefix $(WWW)/, $(COPIES))
 
-DIRS = $(WWW) $(addprefix $(WWW)/, $(sort $(dir $(HTMLS) $(COPIES))))
+DIRS = $(WWW) $(addprefix $(WWW)/, $(sort $(dir $(HTMLS) $(COPIES)) en fr))
 
 # =============================
 # Default target
@@ -49,9 +52,13 @@ default:
 # General rules
 # =============================
 
-$(WWW)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
+$(WWW)/fr/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
-	$(PP) -o $@ $<
+	$(PP) -DLANG=FR -o $@ $<
+
+$(WWW)/en/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
+	echo "$(color_s)Rendering $@$(color_e)"
+	$(PP) -DLANG=EN -o $@ $<
 
 $(COPY_TARGETS): $(COPY_SOURCES)
 	$(foreach file,$(COPIES),\
