@@ -1,0 +1,11 @@
+{% if {% LANG %} == FR %}
+{% def slug fr/cv.html %}
+{% elif {% LANG %} == EN %}
+{% def slug en/cv.html %}
+{% endif %}
+
+{% include base.html %}
+
+{% atlabel main %}
+
+{% endatlabel %}

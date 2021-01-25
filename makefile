@@ -11,7 +11,9 @@ PP = pproc "-DBASE=$(BASE)"
 CP = cp -r
 
 HTMLS = \
-	index.html
+	index.html \
+	cv.html \
+	fichiers.html \
 
 COPIES = \
 	css/style.css \
