@@ -43,13 +43,13 @@ DIRS = $(WWW) $(addprefix $(WWW)/, $(sort $(dir $(HTMLS) $(COPIES))))
 # Default target
 # =============================
 
-default: $(DIRS)
+default:
 
 # =============================
 # General rules
 # =============================
 
-$(WWW)/%.html: $(SRC)/%.html | dirs
+$(WWW)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -o $@ $<
 
