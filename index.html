@@ -1,132 +1,95 @@
-<!doctype html>
-<html lang=fr>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% include base.html %}
 
-		<title>Dorian Lesbre</title>
-		<meta name="description" content="Page personnelle de Dorian Lesbre">
-		<meta name="keywords" content="Lesbre Dorian">
-		<meta name="author" content="Dorian Lesbre">
-		<link rel="icon" type="image/png" href="favicon.ico"/>
-
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<header>
-			<h1><a>Dorian Lesbre</a></h1>
-			<div class=hbuttons>
-				<a class="alternate" title="English Version"><img src="imgs/UK_flag.svg" alt="en_uk"></a>
+{% atlabel main %}
+<div class="row">
+	<div class="portrait">
+		<div class="img"><i class="fa fa-user-circle"></i></div>
+		<div class="name">Dorian Lesbre</div>
+		<div class="desc">Élève fonctionnaire stagiaire</div>
+		<div class="desc">Mastérien en informatique</div>
+		<div class="school">
+			<a href="https://www.ens.psl.eu/">
+				École Normale Supérieure
+			</a>
+		</div>
+	</div>
+	<div class="column">
+		<div class="links">
+			<a href="https://git.eleves.ens.fr/dlesbre" class="linkbutton">
+				<i class="fa fa-gitlab"></i>
+				Gitlab
+			</a>
+			<a href="https://github.com/Lesbre/" class="linkbutton">
+				<i class="fa fa-github"></i>
+				Github
+			</a>
+			<a href="https://www.linkedin.com/in/dorian-lesbre-78a002122/" class="linkbutton">
+				<i class="fa fa-linkedin-square"></i>
+				Linkedin
+			</a>
+		</div>
+		<div class="links">
+			<a href="TODO" class="downloadbutton">
+				<div class=icon><i class="fa fa-file-pdf-o"></i></div>
+				<div class=value>
+					<div class=info>
+						CV (fr)
+					</div>
+					<div class=details>
+						PDF &mdash; 40 ko
+					</div>
+				</div>
+			</a>
+			<a href="TODO" class="downloadbutton">
+				<div class=icon><i class="fa fa-file-pdf-o"></i></div>
+				<div class=value>
+					<div class=info>
+						CV (en)
+					</div>
+					<div class=details>
+						PDF &mdash; 40 ko
+					</div>
+				</div>
+			</a>
+		</div>
+		<h2><i class="fa fa-pencil" aria-hidden="true"></i> Contact</h2>
+		<div class="contactsheet">
+			<dl>
+				<dt><i class="fa fa-envelope"></i></dt>
+				<dd>prénom.nom@ens.fr</dd>
+				<dt><i class="fa fa-map-marker"></i></dt>
+				<dd>45 rue d'Ulm,<br>75005 Paris</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<h2><i class="fa fa-user"></i> Qui suis-je ?</h2>
+<p>Je suis étudiant en master au <a href="https://www.di.ens.fr/">département d'informatique</a> de <a href="">l'École Normale Supérieure de Paris</a>.</p>
+<p>Je m'intéresse notamment à l'informatique pratique bas niveau : systèmes d'exploitation, compilation,
+	circuits, programmation fonctionnelle, robotique et d'autres. En dehors de l'informatique je m'intéresse
+	aussi aux mathématiques et à la physique.
+</p>
+<p></p>
+<div class=timeline>
+	<div class=container>
+		<div class=content>
+			<div class=title>
+				Stage de recherche sur ....
 			</div>
-
-		</header>
-
-		<nav>
-
-			<a class="current"><i class="fa fa-home"></i></a>
-			<a>CV</a>
-			<a>Fichiers</a>
-
-		</nav>
-
-		<main>
-			<div class="row">
-				<div class="portrait">
-					<div class="img"><i class="fa fa-user-circle"></i></div>
-					<div class="name">Dorian Lesbre</div>
-					<div class="desc">Élève fonctionnaire stagiaire</div>
-					<div class="desc">Mastérien en informatique</div>
-					<div class="school">
-						<a href="https://www.ens.psl.eu/">
-							École Normale Supérieure
-						</a>
-					</div>
-				</div>
-				<div class="column">
-					<div class="links">
-						<a href="https://git.eleves.ens.fr/dlesbre" class="linkbutton">
-							<i class="fa fa-gitlab"></i>
-							Gitlab
-						</a>
-						<a href="https://github.com/Lesbre/" class="linkbutton">
-							<i class="fa fa-github"></i>
-							Github
-						</a>
-						<a href="https://www.linkedin.com/in/dorian-lesbre-78a002122/" class="linkbutton">
-							<i class="fa fa-linkedin-square"></i>
-							Linkedin
-						</a>
-					</div>
-					<div class="links">
-						<a href="TODO" class="downloadbutton">
-							<div class=icon><i class="fa fa-file-pdf-o"></i></div>
-							<div class=value>
-								<div class=info>
-									CV (fr)
-								</div>
-								<div class=details>
-									PDF &mdash; 40 ko
-								</div>
-							</div>
-						</a>
-						<a href="TODO" class="downloadbutton">
-							<div class=icon><i class="fa fa-file-pdf-o"></i></div>
-							<div class=value>
-								<div class=info>
-									CV (en)
-								</div>
-								<div class=details>
-									PDF &mdash; 40 ko
-								</div>
-							</div>
-						</a>
-					</div>
-					<h2><i class="fa fa-pencil" aria-hidden="true"></i> Contact</h2>
-					<div class="contactsheet">
-						<dl>
-							<dt><i class="fa fa-envelope"></i></dt>
-							<dd>prénom.nom@ens.fr</dd>
-							<dt><i class="fa fa-map-marker"></i></dt>
-							<dd>45 rue d'Ulm,<br>75005 Paris</dd>
-						</dl>
-					</div>
-				</div>
+			<div class=place>
+				<a href=TODO>LIRMM, Montpellier</a>
 			</div>
-			<h2><i class="fa fa-user"></i> Qui suis-je ?</h2>
-			<p>Je suis étudiant en master au <a href="https://www.di.ens.fr/">département d'informatique</a> de <a href="">l'École Normale Supérieure de Paris</a>.</p>
-			<p>Je m'intéresse notamment à l'informatique pratique bas niveau : systèmes d'exploitation, compilation,
-				circuits, programmation fonctionnelle, robotique et d'autres. En dehors de l'informatique je m'intéresse
-				aussi aux mathématiques et à la physique.
-			</p>
-			<p></p>
-			<div class=timeline>
-				<div class=container>
-					<div class=content>
-						<div class=title>
-							Stage de recherche sur ....
-						</div>
-						<div class=place>
-							<a href=TODO>LIRMM, Montpellier</a>
-						</div>
-						<div class=date>
-							Mars 2020 - Juillet 2020
-						</div>
-						<div class=desc>
-							hello there<br>
-							multiline
-						</div>
-					</div>
-				</div>
-				<div class=container>
-					general kenobi
-				</div>
+			<div class=date>
+				Mars 2020 - Juillet 2020
 			</div>
-		</main>
-
-		<footer>
-			<p>Fait à la main. Code source sur <a class="external" href="https://github.com/Lesbre/website/">github</a></p>
-			<p>Dernière mise à jour : {% date %}</p>
-		</footer>
-	</body>
-</html>
+			<div class=desc>
+				hello there<br>
+				multiline
+			</div>
+		</div>
+	</div>
+	<div class=container>
+		general kenobi
+	</div>
+</div>
+{% endatlabel %}
