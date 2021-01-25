@@ -1,0 +1,8 @@
+# Build folders
+venv/
+**/__pycache__/**
+www/
+
+# Files
+logo.png
+logo.svg
