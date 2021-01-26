@@ -91,5 +91,5 @@ chromium: all
 	chromium $(WWW)/fr/index.html &
 
 clean:
-	echo "$(color_s)Removing html file$(color_e)"
-	rm -rf $(WWW)/$(en) $(WWW)/$(fr)
+	echo "$(color_s)Removing html files$(color_e)"
+	rm -rf $(en) $(fr)

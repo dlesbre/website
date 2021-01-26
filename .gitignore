@@ -4,6 +4,7 @@ venv/
 *.egg-info/
 www/en/
 www/fr/
+www/files/
 
 # Files
 logo.png
