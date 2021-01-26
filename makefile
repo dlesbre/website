@@ -16,9 +16,9 @@ HTMLS = \
 	fichiers.html \
 
 COPIES = \
-	css/style.css \
-	imgs/FR_flag.svg \
-	imgs/UK_flag.svg \
+	css \
+	imgs \
+	webfonts \
 	favicon.ico \
 
 # =============================
@@ -50,7 +50,7 @@ HTML_TARGETS = $(addprefix $(WWW)/, $(addprefix $(en)/, $(HTMLS)) $(addprefix $(
 COPY_SOURCES = $(addprefix $(SRC)/, $(COPIES))
 COPY_TARGETS = $(addprefix $(WWW)/, $(COPIES))
 
-DIRS = $(WWW) $(addprefix $(WWW)/, $(sort $(dir $(HTMLS) $(COPIES)) en fr))
+DIRS = $(WWW) $(addprefix $(WWW)/, en fr)
 
 # =============================
 # Default target
@@ -73,7 +73,7 @@ $(WWW)/en/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 $(COPY_TARGETS): $(COPY_SOURCES)
 	$(foreach file,$(COPIES),\
 		echo "$(color_s)Copying $(file)$(color_e)"; \
-		$(CP) $(SRC)/$(file) $(WWW)/$(file); \
+		$(CP) -r $(SRC)/$(file) $(WWW)/$(file); \
 	)
 
 # =============================
