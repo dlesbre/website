@@ -4,6 +4,7 @@
 	--color_bg_2: #26263c;
 	--color_bg_3: #39395c;
 	--color_sep: #eb811b;
+	--pdf-red: #ff2222;
 }
 
 html, body {
@@ -206,8 +207,8 @@ a.linkbutton {
 
 a.downloadbutton {
 	display: flex;
-	border: 2px solid red;
-	color: red;
+	border: 2px solid var(--pdf-red);
+	color: var(--pdf-red);
 }
 
 a.linkbutton:hover, a.downloadbutton:hover {
@@ -217,9 +218,9 @@ a.linkbutton:hover, a.downloadbutton:hover {
 }
 
 a.downloadbutton .icon {
-	color: red;
+	color: var(--pdf-red);
 	vertical-align: middle;
-	border-right: 2px solid red;
+	border-right: 2px solid var(--pdf-red);
 	padding: 10px 10px 10px 5px;
 	margin-right: 10px;
 	font-size: 1em;
@@ -227,12 +228,12 @@ a.downloadbutton .icon {
 }
 
 a.downloadbutton .info {
-	color: red;
+	color: var(--pdf-red);
 	font-size: 0.9em;
 }
 
 a.downloadbutton .details {
-	color: red;
+	color: var(--pdf-red);
 	font-size: 9pt;
 }
 
@@ -359,22 +360,26 @@ footer p {
   border-width: 10px 10px 10px 0;
   border-color: transparent var(--color_sep) transparent transparent;
 }
-.container .content {
+.box {
 	background-color: var(--color_bg_1);
 	padding: 10px;
 	position: relative;
 	top: -10px;
 	border-radius: 20px;
 }
-.container .content .title {
+.box .title {
 	font-weight: bold;
 }
-.container .content .place a {
+.box .place a {
 	text-decoration: none;
 }
-.container .content .date {
+.box .date {
 	font-style: italic;
 }
-.container .content .desc {
+.box .desc {
 	padding: 10px;
+}
+.box .links {
+	margin: 5px;
+	justify-content: left;
 }
