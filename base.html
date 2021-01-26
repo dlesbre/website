@@ -3,15 +3,11 @@
 {% def slug {% lang fr en %}/{% name %} %}
 {% def alt {% lang en fr %}/{% name %} %}
 <!doctype html>
-{% if {% LANG %} == FR %}
-<html {% LANG %}="fr">
-{% elif {% LANG %} == EN %}
-<html {% LANG %}="en-US">
-{% endif %}
+<html lang="{% lang fr en-US %}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<base href="{% BASE %}">
+		<base href="{% URL %}">
 		<title>Dorian Lesbre</title>
 		{% if {% LANG %} == FR %}
 		<meta name="description" content="Site personnel de Dorian Lesbre">

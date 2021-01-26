@@ -3,11 +3,11 @@
 # =============================
 
 color = on
+local = true
 
 SRC = .
 WWW = ./www
-BASE = $(shell pwd)/$(WWW)/
-PP = pproc "-DBASE=$(BASE)"
+PPROC = pproc
 CP = cp -r
 
 HTMLS = \
@@ -32,6 +32,13 @@ ifeq ($(color),on)
 else
 	color_s=
 	color_e=
+endif
+
+ifeq ($(local),true)
+	URL = $(shell pwd)/$(WWW)/
+	PP = $(PPROC) "-DURL=$(URL)"
+else
+	PP = $(PPROC)
 endif
 
 en = en
