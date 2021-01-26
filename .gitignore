@@ -1,7 +1,9 @@
 # Build folders
 venv/
 **/__pycache__/**
-www/
+*.egg-info/
+www/en/
+www/fr/
 
 # Files
 logo.png

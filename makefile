@@ -5,7 +5,7 @@
 color = on
 local = true
 
-SRC = .
+SRC = ./htmls
 WWW = ./www
 PPROC = pproc
 CP = cp -r
@@ -14,12 +14,6 @@ HTMLS = \
 	index.html \
 	cv.html \
 	fichiers.html \
-
-COPIES = \
-	css \
-	imgs \
-	webfonts \
-	favicon.ico \
 
 # =============================
 # makefile code and variable setting
@@ -41,16 +35,13 @@ else
 	PP = $(PPROC)
 endif
 
-en = en
-fr = fr
+en = $(WWW)/en
+fr = $(WWW)/fr
 
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
-HTML_TARGETS = $(addprefix $(WWW)/, $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS)))
+HTML_TARGETS = $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS))
 
-COPY_SOURCES = $(addprefix $(SRC)/, $(COPIES))
-COPY_TARGETS = $(addprefix $(WWW)/, $(COPIES))
-
-DIRS = $(WWW) $(addprefix $(WWW)/, en fr)
+DIRS = $(en) $(fr)
 
 # =============================
 # Default target
@@ -62,29 +53,21 @@ default:
 # General rules
 # =============================
 
-$(WWW)/fr/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
+$(fr)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -DLANG=FR -o $@ $<
 
-$(WWW)/en/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
+$(en)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -DLANG=EN -o $@ $<
-
-$(COPY_TARGETS): $(COPY_SOURCES)
-	$(foreach file,$(COPIES),\
-		echo "$(color_s)Copying $(file)$(color_e)"; \
-		$(CP) -r $(SRC)/$(file) $(WWW)/$(file); \
-	)
 
 # =============================
 # Specific rules
 # =============================
 
 $(DIRS):
-	echo "$(color_s)Making build directory: $(WWW)$(color_e)"
+	echo "$(color_s)Making build directories$(color_e)"
 	mkdir -p $(DIRS)
-
-$(LINK_TARGETS):
 
 # =============================
 # Special Targets
@@ -93,7 +76,7 @@ $(LINK_TARGETS):
 # No display of executed commands.
 $(VERBOSE).SILENT:
 
-.PHONY: all clean clean-all dirs default firefox chromium
+.PHONY: all clean dirs default firefox chromium
 
 default: all
 dirs: $(DIRS)
@@ -109,8 +92,4 @@ chromium: all
 
 clean:
 	echo "$(color_s)Removing html file$(color_e)"
-	rm -rf $(WWW)/**/*.html
-
-clean-all:
-	echo "$(color_s)Removing $(WWW) folder$(color_e)"
-	rm -rf $(WWW)
+	rm -rf $(WWW)/$(en) $(WWW)/$(fr)
