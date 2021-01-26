@@ -383,3 +383,8 @@ footer p {
 	margin: 5px;
 	justify-content: left;
 }
+@media (max-width:700px) {
+	.box .links {
+		flex-direction: column;
+	}
+}
