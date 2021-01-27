@@ -1,12 +1,13 @@
 {% strip %}
 {% replace "\n" "" %}
-{% def target fr/index.html %}
+{% def defaultlang fr %}
+{% def target {% defaultlang %}/index.html %}
 <!DOCTYPE html>
-<html>
+<html lang="{% defaultlang %}">
 	<head>
 		<title>Dorian Lesbre</title>
 		<base href="{% URL %}">
-		<link rel="canonical" href="{% target %}">
+		<link rel="canonical" href="{% target %}" hreflang="{% defaultlang %}">
 		<meta name="robots" content="noindex">
 		<meta charset="utf-8">
 		<meta http-equiv="refresh" content="0; url={% target %}">
