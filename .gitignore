@@ -5,6 +5,7 @@ venv/
 www/en/
 www/fr/
 www/files/
+www/index.html
 
 # Files
 logo.png

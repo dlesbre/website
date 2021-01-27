@@ -39,7 +39,7 @@ en = $(WWW)/en
 fr = $(WWW)/fr
 
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
-HTML_TARGETS = $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS))
+HTML_TARGETS = $(WWW)/index.html $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS))
 
 DIRS = $(en) $(fr)
 
@@ -60,6 +60,10 @@ $(fr)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 $(en)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -DLANG=EN -o $@ $<
+
+$(WWW)/index.html: $(SRC)/redirect.html
+	echo "$(color_s)Rendering $@$(color_e)"
+	$(PP) -o $@ $<
 
 # =============================
 # Specific rules
@@ -84,12 +88,12 @@ all: $(HTML_TARGETS) $(COPY_TARGETS) | dirs
 
 firefox: all
 	echo "$(color_s)Opening in firefox$(color_e)"
-	firefox $(WWW)/fr/index.html
+	firefox $(WWW)/index.html &
 
 chromium: all
 	echo "$(color_s)Opening in firefox$(color_e)"
-	chromium $(WWW)/fr/index.html &
+	chromium $(WWW)/index.html &
 
 clean:
 	echo "$(color_s)Removing html files$(color_e)"
-	rm -rf $(en) $(fr)
+	rm -rf $(WWW)/index.html $(en) $(fr)

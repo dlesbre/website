@@ -1,0 +1,18 @@
+{% strip %}
+{% def target fr/index.html %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dorian Lesbre</title>
+		<base href="{% URL %}">
+		<link rel="canonical" href="{% target %}">
+		<meta name="robots" content="noindex">
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="1; url={% target %}">
+	</head>
+	<body>
+		<h1>Dorian Lesbre</h1>
+		Aller sur le <a class="internal" href="fr/index.html" hreflang="fr">site en français</a>.<br>
+		Go to the <a class="internal" href="en/index.html" hreflang="en">english website</a>.
+	</body>
+</html>
