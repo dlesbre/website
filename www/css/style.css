@@ -379,12 +379,10 @@ footer p {
 .box .desc {
 	padding: 10px;
 }
-.box .links {
+.llinks {
+	place-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
 	margin: 5px;
 	justify-content: left;
-}
-@media (max-width:700px) {
-	.box .links {
-		flex-direction: column;
-	}
 }
