@@ -3,8 +3,8 @@
 {% def slug {% lang fr en %}/{% name %} %}
 {% def alt {% lang en fr %}/{% name %} %}
 
-{% def dbutton(url, name, type, size)
-<a href="url" class="downloadbutton" download>
+{% def dbutton(url, name, type, size, lang)
+<a href="url" class="downloadbutton" hreflang="lang" download>
 	<div class=icon><i class="far fa-file-pdf"></i></div>
 	<div class=value>
 		<div class=info>name</div>
@@ -13,8 +13,8 @@
 </a> %}
 
 {% def CV
-{% dbutton "files/CV_fr.pdf" "{% lang "CV (fr)" "R&eacute;sum&eacute; (fr)" %}" PDF "0 ko" %}
-{% dbutton "files/CV_en.pdf" "{% lang "CV (en)" "R&eacute;sum&eacute; (en)" %}" PDF "0 ko" %} %}
+{% dbutton "files/CV_fr.pdf" "{% lang "CV (fr)" "R&eacute;sum&eacute; (fr)" %}" PDF "0 ko" fr %}
+{% dbutton "files/CV_en.pdf" "{% lang "CV (en)" "R&eacute;sum&eacute; (en)" %}" PDF "0 ko" en %} %}
 
 <!doctype html>
 <html lang="{% lang fr en %}">
