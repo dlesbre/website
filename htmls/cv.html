@@ -4,22 +4,7 @@
 
 {% atlabel main %}
 
-<div class="links">
-	<a href="TODO" class="downloadbutton">
-		<div class=icon><i class="far fa-file-pdf"></i></div>
-		<div class=value>
-			<div class=info>CV (fr)</div>
-			<div class=details>PDF &mdash; 40 ko</div>
-		</div>
-	</a>
-	<a href="TODO" class="downloadbutton">
-		<div class=icon><i class="far fa-file-pdf"></i></div>
-		<div class=value>
-			<div class=info>CV (en)</div>
-			<div class=details>PDF &mdash; 40 ko</div>
-		</div>
-	</a>
-</div>
+<div class="links">{% CV %}</div>
 
 <h2><i class="fa fa-user-tie"></i> Stages et expérience professionelle</h2>
 
@@ -35,20 +20,8 @@
 			Conception et implementation d'un bootloader sécurisé (vérifiant l'intégrité de l'OS
 			avant de la lancer et capable de le mettre à jour à partir de fournisseur authentifiés)
 			<div class="llinks">
-				<a href="TODO" class="downloadbutton">
-					<div class=icon><i class="far fa-file-pdf"></i></div>
-					<div class=value>
-						<div class=info>Rapport</div>
-						<div class=details>PDF &mdash; 40 ko</div>
-					</div>
-				</a>
-				<a href="TODO" class="downloadbutton">
-					<div class=icon><i class="far fa-file-pdf"></i></div>
-					<div class=value>
-						<div class=info>Diapositives</div>
-						<div class=details>PDF &mdash; 40 ko</div>
-					</div>
-				</a>
+				{% dbutton "files/Rapport_Stage_ProveNRun.pdf" Rapport PDF "612 ko" %}
+				{% dbutton "files/Diapos_Stage_ProveNRun.pdf" Diapositives PDF "448 ko" %}
 			</div>
 		</div></div>
 	</div>
@@ -66,20 +39,8 @@
 			entiers ou polynomiaux, notamment d'algorithmes de résolution modulaire qui permettent de gagner en complexité
 			lors de la résolution.
 			<div class="llinks">
-				<a href="TODO" class="downloadbutton">
-					<div class=icon><i class="far fa-file-pdf"></i></div>
-					<div class=value>
-						<div class=info>Rapport</div>
-						<div class=details>PDF &mdash; 40 ko</div>
-					</div>
-				</a>
-				<a href="TODO" class="downloadbutton">
-					<div class=icon><i class="far fa-file-pdf"></i></div>
-					<div class=value>
-						<div class=info>Diapositives</div>
-						<div class=details>PDF &mdash; 40 ko</div>
-					</div>
-				</a>
+				{% dbutton "files/Rapport_Stage_LIRMM.pdf" Rapport PDF "424 ko" %}
+				{% dbutton "files/Diapos_Stage_LIRMM.pdf" Diapositives PDF "371 ko" %}
 			</div>
 		</div>
 	</div></div>
