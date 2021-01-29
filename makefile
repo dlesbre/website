@@ -91,7 +91,7 @@ firefox: all
 	firefox $(WWW)/index.html &
 
 chromium: all
-	echo "$(color_s)Opening in firefox$(color_e)"
+	echo "$(color_s)Opening in chromium$(color_e)"
 	chromium $(WWW)/index.html &
 
 clean:
