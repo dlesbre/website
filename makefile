@@ -30,9 +30,9 @@ endif
 
 ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)/
-	PP = $(PPROC) "-DURL=$(URL)"
+	PP = $(PPROC) "-DURL=$(URL)" -Ddefaultlang=fr
 else
-	PP = $(PPROC)
+	PP = $(PPROC) -Ddefaultlang=fr
 endif
 
 en = $(WWW)/en
