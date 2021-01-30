@@ -288,8 +288,11 @@ main h2 {
 	border-image-slice: 1;
 }
 
-main p {
-	font-size: 1rem;
+main {
+	font-size: 1.1rem;
+}
+strong {
+	font-weight: bold;
 }
 
 footer {

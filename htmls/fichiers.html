@@ -9,31 +9,38 @@
 
 {% atlabel main %}
 
-<h2><i class="fas fa-file-alt"></i> Recherche non-publiée</h2>
+<h2><i class="fas fa-file-alt"></i> {% lang "Recherche non-publiée" "Unpublished works" %}</h2>
 <ul>
-	<li>Développement d’une chaîne de boot sécurisée, rapport de stage, 1ère année de master, à Paris (France) avec Patrice Hameau.
+	<li>{% lang
+		"<strong>Développement d’une chaîne de boot sécurisée</strong>, juillet 2020, rapport de stage, 1ère année de master, à Paris (France) avec Patrice Hameau."
+		"<strong>Secure bootloader development (fr)</strong>, July 2020, internship report, master's 1rst year, in Paris (France) with Patrice Hameau" %}
 		<div class="llinks">
 			{% dbutton "files/Rapport_Stage_ProveNRun.pdf" {% report %} PDF "612 ko" fr %}
 			{% dbutton "files/Diapos_Stage_ProveNRun.pdf" {% slides %} PDF "448 ko" fr %}
 		</div>
 		<br>
 	</li>
-	<li>Résolution efficace de systèmes d'équations linéaires à coefficients entiers ou	polynomiaux: étude et implémentation,
-		rapport de stage, 3ème année de licence, avec Romain Lebreton et Pascal Giorgi.
+	<li>{% lang
+		"<strong>Résolution efficace de systèmes d'équations linéaires à coefficients entiers ou polynomiaux: étude et implémentation</strong>, juillet 2019, rapport de stage, 3ème année de licence, à Montpellier (France) avec Romain Lebreton et Pascal Giorgi."
+		"<strong>Efficient resolution of linear systems with integer or polynomial coefficients: study and implementation (fr)</strong>, July 2019, internship report, bachelor's 3rd year, in Montpellier (France) with Romain Lebreton and Pascal Giorgi" %}
 		<div class="llinks">
 			{% dbutton "files/Rapport_Stage_LIRMM.pdf" {% report %} PDF "424 ko" fr %}
 			{% dbutton "files/Diapos_Stage_LIRMM.pdf" {% slides %} PDF "371 ko" fr %}
 		</div>
 		<br>
 	</li>
-	<li>Percolation dans un graphe plan, rapport de TIPE, 2ème année de classe préparatoire.
+	<li>{% lang
+		"<strong>Percolation dans un graphe plan</strong>, juin 2018, rapport de TIPE, 2ème année de classe préparatoire."
+		"<strong>Percolation in a planar graph (fr)</strong>, June 2018, TIPE report, preparatory school 2nd year." %}
 		<div class="llinks">
 			{% dbutton "files/Rapport_TIPE_Percolation.pdf" {% report %} PDF "403 ko" fr %}
 			{% dbutton "files/Diapos_TIPE_Percolation.pdf" {% slides %} PDF "491 ko" fr %}
 		</div>
 		<br>
 	</li>
-	<li>Codes correcteurs d'erreurs: code de Hamming et Reed-Solomon, rapport de TIPE, 1ère année de classe préparatoire.
+	<li>{% lang
+		"<strong>Codes correcteurs d'erreurs: code de Hamming et Reed-Solomon</strong>, juin 2017, rapport de TIPE, 1ère année de classe préparatoire."
+		"<strong>Error correction codes: Hamming and Reed-Solomon</strong>, June 2017, TIPE report, preparatory school 1rst year." %}"
 		<div class="llinks">
 			{% dbutton "files/Rapport_TIPE_Codes_Correcteurs.pdf" {% report %} PDF "572 ko" fr %}
 			{% dbutton "files/Diapos_TIPE_Codes_Correcteurs.pdf" {% slides %} PDF "358 ko" fr %}
@@ -43,17 +50,17 @@
 </ul>
 
 
-<h2><i class="fas fa-file-alt"></i> Documents divers</h2>
+<h2><i class="fas fa-file-alt"></i> {% lang "Documents divers" "Other documents" %}</h2>
 <ul>
-	<li>Mon CV :
+	<li>{% lang "Mon CV :" "My résumé:" %}
 		<div class="llinks">{% CV %}</div>
 	</li>
-	<li>Notes de cours de classe préparatoire :
+	<li>{% lang "Notes de cours de classe préparatoire :" "Preparatory school class notes:" %}
 		<div class="llinks">
-			{% dbutton "files/Cours_Maths_MP.pdf" "Cours maths MP" PDF "764 ko" fr %}
-			{% dbutton "files/Cours_Physique_Chimie_MP.pdf" "Cours physique MP" PDF "762 ko" fr %}
-			{% dbutton "files/Cours_Maths_MPSI.pdf" "Cours maths MPSI" PDF "1.1 Mo" fr %}
-			{% dbutton "files/Cours_Physique_Chimie_MPSI.pdf" "Cours physique MPSI" PDF "983 ko" fr %}
+			{% dbutton "files/Cours_Maths_MP.pdf" "{% lang "Cours maths MP" "2nd year math (fr)" %}" PDF "764 ko" fr %}
+			{% dbutton "files/Cours_Physique_Chimie_MP.pdf" "{% lang "Cours physique MP" "2nd year physics (fr)" %}" PDF "762 ko" fr %}
+			{% dbutton "files/Cours_Maths_MPSI.pdf" "{% lang "Cours maths MPSI" "1rst year math (fr)" %}" PDF "1.1 Mo" fr %}
+			{% dbutton "files/Cours_Physique_Chimie_MPSI.pdf" "{% lang "Cours physique MPSI" "1rst year physics (fr)" %}" PDF "983 ko" fr %}
 		</div>
 	</li>
 </ul>
