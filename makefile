@@ -53,15 +53,15 @@ default:
 # General rules
 # =============================
 
-$(fr)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
+$(fr)/%.html: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -DLANG=FR -o $@ $<
 
-$(en)/%.html: $(SRC)/%.html $(SRC)/base.html | dirs
+$(en)/%.html: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html | dirs
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -DLANG=EN -o $@ $<
 
-$(WWW)/index.html: $(SRC)/redirect.html
+$(WWW)/index.html: $(SRC)/redirect.html $(SRC)/formatter.html
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -o $@ $<
 

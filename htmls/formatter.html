@@ -1,0 +1,15 @@
+{% strip %}
+{% replace à &agrave; %}
+{% replace è &egrave; %}
+{% replace é &eacute; %}
+{% replace ç &ccedil; %}
+{% replace É &Eacute; %}
+{% if def LANG %}
+	{% if {% LANG %} == FR %}
+		{% replace -r "\ ([:?;!])" "&nbsp;\1" %}
+	{% endif %}
+{% endif %}
+{% if def RELEASE %}
+	{% replace ">\n" ">" %}
+	{% replace "\n<" "<" %}
+{% endif %}
