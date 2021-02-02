@@ -303,6 +303,12 @@ footer {
 	border-top: 4px solid var(--color_sep);
 	align-items: center;
 }
+@media (max-width: 600px) {
+	footer {
+		font-size: 9px;
+		height: 80px;
+	}
+}
 
 footer p {
 	text-align: center;
@@ -389,4 +395,20 @@ footer p {
 	flex-flow: row wrap;
 	margin: 5px;
 	justify-content: left;
+}
+
+.grid {
+	display: grid;
+	justify-content: space-evenly;
+	gap: 10px;
+	padding: 10px;
+	grid-template-columns: auto auto auto;
+}
+
+.grid > div {
+  text-align: center;
+  padding: 20px;
+}
+.grid img {
+	height: 60px;
 }

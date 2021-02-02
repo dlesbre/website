@@ -10,6 +10,8 @@ WWW = ./www
 PPROC = pproc
 CP = cp -r
 
+URL = https://www.eleves.ens.fr/home/dlesbre/
+
 HTMLS = \
 	index.html \
 	cv.html \
@@ -32,7 +34,7 @@ ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)/
 	PP = $(PPROC) "-DURL=$(URL)" -Ddefaultlang=fr
 else
-	PP = $(PPROC) -Ddefaultlang=fr
+	PP = $(PPROC) -Ddefaultlang=fr -DRELEASE
 endif
 
 en = $(WWW)/en

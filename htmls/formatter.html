@@ -1,9 +1,11 @@
 {% strip %}
 {% replace à &agrave; %}
+{% replace À &Agrave; %}
 {% replace è &egrave; %}
 {% replace é &eacute; %}
 {% replace ç &ccedil; %}
 {% replace É &Eacute; %}
+{% replace ê &ecirc; %}
 {% if def LANG %}
 	{% if {% LANG %} == FR %}
 		{% replace -r "\ ([:?;!])" "&nbsp;\1" %}
