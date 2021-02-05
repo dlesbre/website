@@ -13,7 +13,9 @@
 		{% else %}
 		<div class="desc">Master's Student in Computer Science</div>
 		{% endif %}
-		<div class="school"><a class="link" href="https://www.ens.psl.eu/">École Normale Supérieure</a></div>
+		<div class="school"><a class="link" href="{% lang
+			"https://www.ens.psl.eu/"
+			"https://www.ens.psl.eu/en" %}" hreflang="{% lang %}">École Normale Supérieure</a></div>
 	</div>
 	<div class="column">
 		<div class="links">
@@ -33,7 +35,7 @@
 		<div class="contactsheet">
 			<dl>
 				<dt><i class="far fa-envelope"></i></dt>
-				<dd>{% lang "prénom.nom@ens.fr" "firstname.surname@ens.fr" %}</dd>
+				<dd>dorian.lesbre [at] ens.psl.eu</dd>
 				<dt><i class="fa fa-key"></i></dt>
 				<dd><a class="link" href="files/Dorian_Lesbre_public.pgp" download>{% lang "Clé publique GPG" "GPG public key" %}</a><br>
 					<a class="link" href="files/Dorian_Lesbre_public.pub" download>{% lang "Clé publique SSH" "SSH public key" %}</a></dd>
@@ -48,21 +50,21 @@
 
 <h2><i class="fa fa-user"></i> Qui suis-je ?</h2>
 
-<p>Je suis étudiant en master au <a class="link" href="https://www.di.ens.fr/">département d'informatique</a> de <a class="link" href="">l'École Normale Supérieure de Paris</a>.</p>
+<p>Je suis étudiant en master au <a class="link" href="https://www.di.ens.fr/" hreflang="fr">département d'informatique</a> de <a class="link" href="https://www.ens.psl.eu" hreflang="fr">l'École Normale Supérieure de Paris</a>.</p>
 <p>Je m'intéresse notamment à l'informatique pratique bas niveau : systèmes d'exploitation, compilation,
 	circuits, programmation fonctionnelle, robotique et d'autres. En dehors de l'informatique je m'intéresse
 	aussi aux mathématiques et à la physique.</p>
 <p>Hors du domaine scolaire j'aime bien faire des sports d'extérieur comme l'escalade, la voile, la randonnée
-	et le ski. Je m'occupe également en jouant à des jeux de société et des jeux vidéos.</p>
+	et le ski. J'aime bien lire, notamment de la SF et des roman policiers. Je m'occupe également en jouant à des jeux de société et des jeux vidéos.</p>
 
 {% else %}
 
 <h2><i class="fa fa-user"></i> About me</h2>
 
-<p>I'm a master's student in the <a class="link" href="https://www.di.ens.fr/">computer science department</a> of the <a class="link" href="">École Normale Supérieure de Paris</a>.</p>
+<p>I'm a master's student in the <a class="link" href="https://www.di.ens.fr/news" hreflang="en">computer science department</a> of the <a class="link" href="https://www.ens.psl.eu/en" hreflang="en">École Normale Supérieure de Paris</a>.</p>
 <p>My research interests focus on low-level systems: operating systems, compilers, hardware, functionnal programming, robotics and more.
 	Besides computer science, I also enjoy mathematics and physics.</p>
-<p>My hobbies include external sport such as rock climbing, sailing, hiking and skiing. I also enjoy board games and video games</p>
+<p>My hobbies include external sport such as rock climbing, sailing, hiking and skiing. I enjoy reading, especially sci-fi and detective stories. I also enjoy board games and video games</p>
 
 {% endif %}
 

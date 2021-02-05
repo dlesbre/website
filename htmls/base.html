@@ -1,4 +1,5 @@
 {% def lang(fr, en) {% if {% LANG %} == FR %}fr{% else %}en{% endif %} %}
+{% def lang {% lang fr en %} %}
 {% def prefix {% lang fr en %} %}
 {% def slug {% lang fr en %}/{% name %} %}
 {% def alt {% lang en fr %}/{% name %} %}
@@ -55,9 +56,9 @@
 		<nav>
 			{% def navbutton(link_title, url, text)
 				{% call if url == {% slug %} %}
-					<a class="internal current" href="url" title="link_title">text</a>
+					<a class="internal current" href="url" title="link_title" hreflang="{% lang %}">text</a>
 				{% call else %}
-					<a class="internal" href="url" title="link_title">text</a>
+					<a class="internal" href="url" title="link_title" hreflang="{% lang %}">text</a>
 				{% call endif %}
 			 %}
 			{% if {% LANG %} == FR %}
@@ -81,7 +82,7 @@
 				Copyright &copy; 2020 Dorian Lesbre</p>
 				<p>Dernière mise à jour : {% date %}</p>
 			{% elif {% LANG %} == EN %}
-				<p>Coded by hand. Source on <a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
+				<p>Handcoded. Source on <a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
 				Copyright &copy; 2020 Dorian Lesbre</p>
 				<p>Last updated : {% date %}</p>
 			{% endif %}
