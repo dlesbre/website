@@ -275,7 +275,7 @@ a.linkbutton:hover, a.downloadbutton:hover {
 	background-color: var(--dark_bg_3);
 	transition-duration: 0.5s;
 }
-.light-theme a.linkbutton:hover, a.downloadbutton:hover {
+.light-theme a.linkbutton:hover,.light-theme a.downloadbutton:hover {
 	background-color: var(--light_bg_3);
 }
 
