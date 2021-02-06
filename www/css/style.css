@@ -54,7 +54,7 @@ header h1 {
 	flex: 1;
 	width: 100%;
 }
-header h1 a {
+header a {
 	color: white;
 	text-decoration: none;
 }
@@ -68,6 +68,12 @@ header .hbuttons {
 }
 .hbuttons a {
 	padding: 10px;
+	border-radius: 0 0 15px 15px;
+}
+.hbuttons a:hover {
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	background-color: var(--color_bg_3);
 }
 .hbuttons img {
 	height: 25px;
