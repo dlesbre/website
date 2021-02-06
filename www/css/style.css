@@ -5,14 +5,15 @@
 	--dark_fg: white;
 	--dark_sep: #eb811b;
 	--dark_hover: #f3b376;
-	--pdf-red: #ff2222;
+	--dark_red: #ff2222;
 
-	--light_bg_1: #999999;
-	--light_bg_2: #fefefe;
-	--light_bg_3: #aaaaaa;
+	--light_bg_1: #d8c3a5;
+	--light_bg_2: #eae7dc;
+	--light_bg_3: #e2d7c3;
 	--light_fg: #222222;
-	--light_sep: #5555ff;
-	--light_hover: #0000ff;
+	--light_sep: #e85a4f;
+	--light_hover: #cd544b;
+	--light_red: #e85a4f;
 }
 
 html, body {
@@ -261,8 +262,12 @@ a.linkbutton {
 
 a.downloadbutton {
 	display: flex;
-	border: 2px solid var(--pdf-red);
-	color: var(--pdf-red);
+	border: 2px solid var(--dark_red);
+	color: var(--dark_red);
+}
+.light-theme a.downloadbutton {
+	border: 2px solid var(--light_red);
+	color: var(--light_red);
 }
 
 a.linkbutton:hover, a.downloadbutton:hover {
@@ -275,23 +280,31 @@ a.linkbutton:hover, a.downloadbutton:hover {
 }
 
 a.downloadbutton .icon {
-	color: var(--pdf-red);
+	color: var(--dark_red);
 	vertical-align: middle;
-	border-right: 2px solid var(--pdf-red);
+	border-right: 2px solid var(--dark_red);
 	padding: 10px 10px 10px 5px;
 	margin-right: 10px;
 	font-size: 1em;
 	align-self: center;
 }
-
+.light-theme a.downloadbutton .icon {
+	color: var(--light_red);
+	border-right: 2px solid var(--light_red);
+}
 a.downloadbutton .info {
-	color: var(--pdf-red);
+	color: var(--dark_red);
 	font-size: 0.9em;
 }
-
+.light-theme a.downloadbutton .info {
+	color: var(--light_red);
+}
 a.downloadbutton .details {
-	color: var(--pdf-red);
+	color: var(--darkred);
 	font-size: 9pt;
+}
+.light-theme a.downloadbutton .details {
+	color: var(--light_red);
 }
 
 dl {
