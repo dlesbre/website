@@ -28,11 +28,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<base href="{% URL %}">
 		<title>Dorian Lesbre</title>
-		{% if {% LANG %} == FR %}
-		<meta name="description" content="Site personnel de Dorian Lesbre">
-		{% elif {% LANG %} == EN %}
-		<meta name="description" content="Dorian Lesbre's personal website">
-		{% endif %}
+		{% def desc {% lang "Site personnel de Dorian Lesbre" "Dorian Lesbre's personal website" %} %}
+		<meta name="description" content="{% desc %}">
 		<meta name="keywords" content="Lesbre Dorian dlesbre dorianlesbre">
 		<meta name="author" content="Dorian Lesbre">
 
