@@ -17,6 +17,8 @@ HTMLS = \
 	cv.html \
 	fichiers.html \
 
+SSH = dlesbre@sas.eleves.ens.fr:www/
+
 # =============================
 # makefile code and variable setting
 # =============================
@@ -82,7 +84,7 @@ $(DIRS):
 # No display of executed commands.
 $(VERBOSE).SILENT:
 
-.PHONY: all clean dirs default firefox chromium
+.PHONY: all clean dirs default firefox chromium sync
 
 default: all
 dirs: $(DIRS)
@@ -99,3 +101,12 @@ chromium: all
 clean:
 	echo "$(color_s)Removing html files$(color_e)"
 	rm -rf $(WWW)/index.html $(en) $(fr)
+
+ifeq ($(local),true)
+deploy:
+	echo "$(color_s)ERROR : Should not deploy in local mode$(color_e)"
+else
+deploy: all
+	echo "$(color_s)Deploying to online$(color_e)"
+	rsync -rv ./www/ "$(SSH)"
+endif
