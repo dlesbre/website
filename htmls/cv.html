@@ -6,19 +6,26 @@
 
 <div class="links">{% CV %}</div>
 
-<h2><i class="fa fa-user-tie"></i> Stages et expérience professionelle</h2>
+<h2><i class="fa fa-user-tie"></i> {% lang
+	"Stages et expérience professionelle"
+	"Internships and professional experience" %}</h2>
 
 <div class="timeline">
 	<div class="container"><div class="box">
-		<div class="title">Stage de recherche sur les bootloaders sécurisés</div>
+		<div class="title">{% lang
+			"Stage de recherche sur les bootloaders sécurisés"
+			"Research internship on secure bootloaders" %}</div>
 		<div class="place">
 			<a class="link" href="https://www.provenrun.com/" hreflang="en">Prove & Run, Paris</a>
 		</div>
-		<div class="date">Mars &mdash; Juillet 2020</div>
-		<div class="desc">
-			Encadré par Patrice Hameau.<br>
+		<div class="date">{% lang "Mars &mdash; Juillet 2020" "March &mdash; July 2020" %}</div>
+		<div class="desc">{% lang
+			"Encadré par Patrice Hameau.<br>
 			Conception et implementation d'un bootloader sécurisé (vérifiant l'intégrité de l'OS
-			avant de la lancer et capable de le mettre à jour à partir de fournisseur authentifiés)
+			avant de la lancer et capable de le mettre à jour à partir de fournisseur authentifiés)"
+			"Supervised by Patrice Hameau.<br>
+			Designed and implemented a secure bootloader, checking the kernel's integrity and signature
+			before booting it, and supporting kernel updates from verified sources." %}
 			<div class="llinks">
 				{% dbutton "files/Rapport_Stage_ProveNRun.pdf" {% report %} PDF "612 ko" fr %}
 				{% dbutton "files/Diapos_Stage_ProveNRun.pdf" {% slides %} PDF "448 ko" fr %}
@@ -26,20 +33,23 @@
 		</div></div>
 	</div>
 	<div class="container"><div class="box">
-		<div class="title">
-			Stage de recherche sur l'algorithmique de résolution efficace de systèmes linéaires
-		</div>
+		<div class="title">{% lang
+			"Stage de recherche sur l'algorithmique de résolution efficace de systèmes linéaires"
+			"Research internship on efficient algorithms to solve linear modular systems" %}</div>
 		<div class="place">
 			<a class="link" href="{% lang
 				'https://www.lirmm.fr/recherche/equipes/eco'
 				'https://www.lirmm.fr/lirmm_eng/research/teams/eco' %}" hreflang="{% lang %}">Équipe ECO, LIRMM, Montpellier</a>
 		</div>
-		<div class="date">6 Juin &mdash; 26 Juillet 2019</div>
-		<div class="desc">
-			Encadré par Pascal Giorgi et Romain Lebreton.<br>
+		<div class="date">{% lang "Juin &mdash; Août 2019" "June &mdash; August 2019" %}</div>
+		<div class="desc">{% lang
+			"Encadré par Pascal Giorgi et Romain Lebreton.<br>
 			Étude de la résolution de système d'équations linéaires à coefficients
 			entiers ou polynomiaux, notamment d'algorithmes de résolution modulaire qui permettent de gagner en complexité
-			lors de la résolution.
+			lors de la résolution."
+			"Supervised by Pascal Giorgi and Romain Lebreton.<br>
+			Studied the resolution of linear systems with integer or polynomial coefficients,
+			focusing on modular resolution algorithms which allow a small complexity gain in resolution." %}
 			<div class="llinks">
 				{% dbutton "files/Rapport_Stage_LIRMM.pdf" {% report %} PDF "424 ko" fr %}
 				{% dbutton "files/Diapos_Stage_LIRMM.pdf" {% slides %} PDF "371 ko" fr %}
@@ -47,7 +57,9 @@
 		</div>
 	</div></div>
 	<div class="container"><div class="box">
-		<div class="title">Interrogateur oral en mathématiques au niveau prépa MPSI</div>
+		<div class="title">{% lang
+			"Interrogateur oral en mathématiques au niveau prépa MPSI"
+			"Oral math interrogator in preparatory school" %}</div>
 		<div class="place"><a class="link" href="https://www.bginette.com/" hreflang="fr">Lycée Ste Geneviève, Versailles</a></div>
 		<div class="date">Septembre 2018 &mdash; Juin 2019</div>
 	</div></div>
@@ -57,68 +69,80 @@
 
 <div class="timeline">
 	<div class="container"><div class="box">
-		<div class="title">École normale supérieure Paris - Licence et Master d'informatique</div>
+		<div class="title">École normale supérieure Paris - {% lang
+			"Licence et Master d'informatique"
+			"Bachelors and masters in computer science" %}</div>
 		<div class="place"><a class="link" href="{% lang
 			'https://www.ens.psl.eu'
 			'https://www.ens.psl.eu/en' %}" hreflang="{% lang %}">École normale supérieure, Paris</a></div>
 		<div class="date">2018 &mdash;</div>
 		<dl>
-			<dt>2020-2021</dt><dd>Césure</dd>
-			<dt>2019-2020</dt><dd>Première année de master d'informatique</dd>
-			<dt>2018-2019</dt><dd>Licence d'informatique avec mention très bien</dd>
+			<dt>2020-2021</dt><dd>{% lang Césure "Off year" %}</dd>
+			<dt>2019-2020</dt><dd>{% lang "Première année de master d'informatique" "1rst year of masters' degree" %}</dd>
+			<dt>2018-2019</dt><dd>{% lang "Licence d'informatique avec mention très bien" "Bachelors' degree in computer science with highest honors" %}</dd>
 		</dl>
 	</div></div>
 
 	<div class="container"><div class="box">
-		<div class="title">Classe préparatoire MPSI - MPI</div>
+		<div class="title">{% lang "Classe préparatoire MPSI - MPI" "Preparatory school MPSI - MPI" %}</div>
 		<div class="place"><a class="link" href="https://www.bginette.com/" hreflang="fr">Lycée Ste Geneviève, Versailles</a></div>
 		<div class="date">2016 &mdash; 2018</div>
 		<div class="desc">
-			Réussi le concours d'entrée de l'ENS Ulm et de l'école polytechnique (<a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037548588" hreflang="fr">voir certificat</a>)
+			{% lang "Réussi le concours d'entrée de l'ENS Ulm et de l'école polytechnique"
+			"Passed the ENS's and Polytechnique's entrance exams" %}
+			(<a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037548588" hreflang="fr">{% lang "voir certificat" "see certificate" %}</a>)
 		</div>
 	</div></div>
 
 	<div class="container"><div class="box">
-		<div class="title">Lycée général scientifique spé maths</div>
+		<div class="title">{% lang "Lycée général scientifique spé maths" "Scientific general french high school" %}</div>
 		<div class="place"><a class="link" href="https://www.caousou.com/" hreflang="fr">Lycée le Caousou, Toulouse</a></div>
 		<div class="date">2014 &mdash; 2016</div>
 	</div></div>
 
 	<div class="container"><div class="box">
-		<div class="title">Collège lycée option internationale américaine (OIB)</div>
+		<div class="title">{% lang "Collège lycée option internationale américaine (OIB)" "High school with american international option (OIB)" %}</div>
 		<div class="place"><a class="link" href="https://www.saintvincent-rennes.org/" hreflang="fr">Lycée Saint Vincent, Rennes</a></div>
 		<div class="date">2009 &mdash; 2014</div>
 	</div></div>
 </div>
 
-<h2><i class="fa fa-globe"></i> Langues</h2>
+<h2><i class="fa fa-globe"></i> {% lang Langues Languages %}</h2>
 
 <div class="grid">
-	<div class="item"><img src="imgs/FR_flag.svg" alt="FR"><br><strong>Français</strong><br>C2</div>
-	<div class="item"><img src="imgs/UK_flag.svg" alt="UK"><br><strong>Anglais</strong><br>C2</div>
-	<div class="item"><img src="imgs/DE_flag.svg" alt="DE"><br><strong>Allemand</strong><br>A2 - B1</div>
+	<div class="item"><img src="imgs/FR_flag.svg" alt="FR"><br><strong>{% lang Français French %}</strong><br>C2</div>
+	<div class="item"><img src="imgs/UK_flag.svg" alt="UK"><br><strong>{% lang Anglais English %}</strong><br>C2</div>
+	<div class="item"><img src="imgs/DE_flag.svg" alt="DE"><br><strong>{% lang Allemand German %}</strong><br>A2 - B1</div>
 </div>
 <ul>
-	<li>Vécu trois ans à Londres de 2006 à 2009, dont une année à l'école anglaise.</li>
-	<li>Obtenu le Cambridge Certificate of Proficiency in English (CPE) validant le niveau C2.</li>
-	<li>Deux séjours linguistiques de 15 jour en Allemagne: à Iéna en 2011 et à Mannheim en 2014.</li>
+	<li>{% lang "Vécu trois ans à Londres de 2006 à 2009, dont une année à l'école anglaise."
+		"Lived in London for three years (2006 - 2009), including one in an english school." %}</li>
+	<li>{% lang "Obtenu le Cambridge Certificate of Proficiency in English (CPE) validant le niveau C2."
+		"Obtained the Cambridge Certificate of Proficiency in English (CPE)" %}</li>
+	<li>{% lang "Deux séjours linguistiques de 15 jour en Allemagne: à Iéna en 2011 et à Mannheim en 2014."
+		"Participated in two linguistic exchanges in Germany in Iéna (2011) and in Mannheim (2014)." %}</li>
 </ul>
 
-<h2><i class="fas fa-laptop-code"></i> Compétences informatiques</h2>
+<h2><i class="fas fa-laptop-code"></i> {% lang "Compétences informatiques" "Computer skills" %}</h2>
 
 <dl>
-<dt>Avancé</dt><dd>C, C++, Python, OCaml, GNU Make, Linux.</dd>
-<dt>Bonne</dt><dd>CMake, LaTeX et beamer, HTML, CSS, Libre Office, Windows, Django, Git, Bash, SQL, GIMP, Inkscape.</dd>
-<dt>Basique</dt><dd>Rust, Javascript, assembleur x86, Blender, Adobe Premiere et After Effects.</dd>
+<dt>{% lang Avancé Advanced %}</dt><dd>C, C++, Python, OCaml, GNU Make, Linux.</dd>
+<dt>{% lang Bonne Good %}</dt><dd>CMake, LaTeX et beamer, HTML, CSS, Libre Office, Windows, Django, Git, Bash, SQL, GIMP, Inkscape.</dd>
+<dt>{% lang Basique Basic %}</dt><dd>Rust, Javascript, assembleur x86, Blender, Adobe Premiere et After Effects.</dd>
 </dl>
 
-<p>Plusieurs gros projets :</p>
+<p>{% lang "Plusieurs gros projets :" "Multiple large projects:" %}</p>
 <ul>
-	<li>Compilateur de kotlin vers assembleur x86 écrit en OCaml (source sur <a class="link external" href="https://github.com/dlesbre/kotlin-compiler" hreflang="en">github</a>).</li>
-	<li>Conception et simulation d'un processeur simple en OCaml.</li>
-	<li>OS simplisimme (drivers clavier/console/disque dur ATA, scheduler) écrit en C et assembleur.</li>
-	<li>Code de contrôle d'un robot pour la coupe de France de robotique 2019 en C++ sur Arduino et RaspberryPi.</li>
-	<li>Bootloader sécurisé et algorithmes cryptographiques (AES, ECC, SHA) en C.</li>
+	<li>{% lang "Compilateur de kotlin vers assembleur x86 écrit en OCaml (source sur"
+		"kotlin to x86 assembly compiler written in OCaml (source on" %} <a class="link external" href="https://github.com/dlesbre/kotlin-compiler" hreflang="en">github</a>).</li>
+	<li>{% lang "Conception et simulation d'un processeur simple en OCaml."
+		"design and simulation of a simple processor in OCaml" %}</li>
+	<li>{% lang "OS simplisimme (drivers clavier/console/disque dur ATA, scheduler) écrit en C et assembleur x86."
+		"Minimalistic OS with basic functions (keyboard/screen/ATA hard drive drivers, scheduler) in C and assembly" %}</li>
+	<li>{% lang "Code de contrôle d'un robot pour la coupe de France de robotique 2019 en C++ sur Arduino et RaspberryPi."
+		"Robot control program on arduino and RaspberryPi written in C++ for France’s Robotic Cup." %}</li>
+	<li>{% lang "Bootloader sécurisé et algorithmes cryptographiques (AES, ECC, SHA) en C."
+		"Secure bootloader and cryptographic algorithms (AES, ECC, SHA) in C." %}</li>
 </ul>
 
 
