@@ -16,9 +16,13 @@
 </a> %}
 
 {% def CV
-{% dbutton "files/CV_fr.pdf" "{% lang "CV (fr)" "Résumé (fr)" %}" PDF "0 ko" fr %}
-{% dbutton "files/CV_en.pdf" "{% lang "CV (en)" "Résumé (en)" %}" PDF "0 ko" en %} %}
-
+{% if {% LANG %} == FR %}
+{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "CV (fr)" PDF "240 ko" fr %}
+{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "CV (en)" PDF "240 ko" en %}
+{% else %}
+{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "Résumé (en)" PDF "240 ko" en %}
+{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "Résumé (fr)" PDF "240 ko" fr %}
+{% endif %} %}
 {% include formatter.html %}
 
 <!doctype html>
