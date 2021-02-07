@@ -195,6 +195,9 @@ nav a.current {
 .portrait .img {
 	font-size: 80px;
 }
+.portrait img {
+	height: 300px;
+}
 .portrait .name {
 	font-size: 2.5em;
 	font-weight: bold;
