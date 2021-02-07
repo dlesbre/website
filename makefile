@@ -3,7 +3,7 @@
 # =============================
 
 color = on
-local = true
+local = false
 
 SRC = ./htmls
 WWW = ./www
@@ -34,7 +34,7 @@ ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)/
 	PP = $(PPROC) "-DURL=$(URL)" -Ddefaultlang=fr
 else
-	PP = $(PPROC) -Ddefaultlang=fr -DRELEASE
+	PP = $(PPROC) "-DURL=$(URL)" -Ddefaultlang=fr -DRELEASE
 endif
 
 en = $(WWW)/en
