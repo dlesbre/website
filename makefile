@@ -106,7 +106,7 @@ ifeq ($(local),true)
 deploy:
 	echo "$(color_s)ERROR : Should not deploy in local mode$(color_e)"
 else
-deploy: all
+deploy: clean all
 	echo "$(color_s)Deploying to online$(color_e)"
 	rsync -rv ./www/ "$(SSH)"
 endif
