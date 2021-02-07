@@ -6,6 +6,10 @@
 {% replace ç &ccedil; %}
 {% replace É &Eacute; %}
 {% replace ê &ecirc; %}
+{% replace û &ucirc; %}
+{% replace â &acirc; %}
+{% replace ô &ocirc; %}
+{% replace î &icirc; %}
 {% if def LANG %}
 	{% if {% LANG %} == FR %}
 		{% replace -r "\ ([:?;!])" "&nbsp;\1" %}
