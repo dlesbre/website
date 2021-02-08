@@ -1,0 +1,2 @@
+# robots.txt for https://www.eleves.ens.fr/home/dlesbre/
+Sitemap: https://www.eleves.ens.fr/home/dlesbre/sitemap.xml
