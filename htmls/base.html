@@ -26,19 +26,28 @@
 {% include formatter.html %}
 
 <!doctype html>
-<html lang="{% lang fr en %}">
+<html lang="{% lang %}">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<base href="{% URL %}">
+		<base href="{% URL %}/">
 		<title>Dorian Lesbre</title>
 		{% def desc {% lang "Site personnel de Dorian Lesbre" "Dorian Lesbre's personal website" %} %}
 		<meta name="description" content="{% desc %}">
 		<meta name="keywords" content="Lesbre Dorian dlesbre dorianlesbre">
 		<meta name="author" content="Dorian Lesbre">
 
-		<link rel="canonical" href="{% defaultlang %}/{% name %}" hreflang="{% defaultlang %}">
-		<link rel="alternate" type="text/html" href="{% alt %}" hreflang="{% lang en fr %}">
+		<link rel="canonical" type="text/html" href="{% URL %}/{% defaultlang %}/{% name %}" hreflang="{% defaultlang %}">
+		<link rel="alternate" type="text/html" href="{% URL %}/{% alt %}" hreflang="{% lang en fr %}">
+		{% if {% name %} == index.html %}
+			<link rel="alternate" type="text/html" href="{% URL %}/{% lang %}/" hreflang="{% lang %}">
+		{% endif %}
+		{% if def ALT_URL %}
+			<link rel="alternate" type="text/html" href="{% ALT_URL %}/{% slug %}" hreflang="{% lang %}">
+			{% if {% name %} == index.html %}
+				<link rel="alternate" type="text/html" href="{% ALT_URL %}/{% lang %}/" hreflang="{% lang %}">
+			{% endif %}
+		{% endif %}
 		<link rel="icon" type="image/png" href="favicon.ico"/>
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">

@@ -5,12 +5,13 @@
 color = on
 local = false
 
-SRC = ./htmls
-WWW = ./www
+SRC = htmls
+WWW = www
 PPROC = pproc
 CP = cp -r
 
-URL = https://www.eleves.ens.fr/home/dlesbre/
+URL = https://www.eleves.ens.fr/home/dlesbre
+ALT_URL = https://www.eleves.ens.fr/~dlesbre
 
 HTMLS = \
 	index.html \
@@ -33,10 +34,10 @@ else
 endif
 
 ifeq ($(local),true)
-	URL = $(shell pwd)/$(WWW)/
-	PP = $(PPROC) "-DURL=$(URL)" -Ddefaultlang=fr
+	URL = $(shell pwd)/$(WWW)
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr
 else
-	PP = $(PPROC) "-DURL=$(URL)" -Ddefaultlang=fr -DRELEASE
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr -DRELEASE
 endif
 
 en = $(WWW)/en
