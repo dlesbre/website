@@ -46,12 +46,16 @@
 <url>
   <loc>https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_fr.pdf</loc>
   <lastmod>2021-02-07T16:05:39+00:00</lastmod>
-  <priority>0.55</priority>
+  <priority>0.57</priority>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_fr.pdf" />
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_en.pdf" />
 </url>
 <url>
   <loc>https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_en.pdf</loc>
   <lastmod>2021-02-07T17:36:08+00:00</lastmod>
-  <priority>0.55</priority>
+  <priority>0.57</priority>
+  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_fr.pdf" />
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_en.pdf" />
 </url>
 <url>
   <loc>https://www.eleves.ens.fr/home/dlesbre/files/Dorian_Lesbre_public.pub</loc>
