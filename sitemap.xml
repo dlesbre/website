@@ -1,48 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% def lastmod {% date YYYY-MM-DDThh:mm:ss+00:00 %} %}
+{% strip %}
 
-<url>
-  <loc>https://www.eleves.ens.fr/home/dlesbre/fr/index.html</loc>
-  <lastmod>2021-02-07T18:30:36+00:00</lastmod>
-  <priority>0.80</priority>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/fr/index.html" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/en/index.html" />
-</url>
-<url>
-  <loc>https://www.eleves.ens.fr/home/dlesbre/en/index.html</loc>
-  <lastmod>2021-02-07T18:30:36+00:00</lastmod>
-  <priority>0.80</priority>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/fr/index.html" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/en/index.html" />
-</url>
-<url>
-  <loc>https://www.eleves.ens.fr/home/dlesbre/fr/cv.html</loc>
-  <lastmod>2021-02-07T18:30:36+00:00</lastmod>
-  <priority>0.64</priority>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/fr/cv.html" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/en/cv.html" />
-</url>
-<url>
-  <loc>https://www.eleves.ens.fr/home/dlesbre/fr/fichiers.html</loc>
-  <lastmod>2021-02-07T18:30:36+00:00</lastmod>
-  <priority>0.64</priority>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/fr/fichiers.html" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/en/fichiers.html" />
-</url>
-<url>
-  <loc>https://www.eleves.ens.fr/home/dlesbre/en/cv.html</loc>
-  <lastmod>2021-02-07T18:30:36+00:00</lastmod>
-  <priority>0.64</priority>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/fr/cv.html" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/en/cv.html" />
-</url>
-<url>
-  <loc>https://www.eleves.ens.fr/home/dlesbre/en/fichiers.html</loc>
-  <lastmod>2021-02-07T18:30:36+00:00</lastmod>
-  <priority>0.64</priority>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://www.eleves.ens.fr/home/dlesbre/fr/fichiers.html" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.eleves.ens.fr/home/dlesbre/en/fichiers.html" />
-</url>
+{% deflist pages index cv fichiers %}
+{% deflist priorities 0.80 0.64 0.64 %}
+
+{% for i in range(3) %}
+  {% for lang in fr en %}
+    <url>
+      <loc>{% URL %}/{% lang %}/{% pages {% i %} %}.html</loc>
+      <lastmod>{% lastmod %}</lastmod>
+      <priority>{% priorities {% i %} %}</priority>
+      <xhtml:link rel="alternate" hreflang="fr" href="{% URL %}/fr/{% pages {% i %} %}.html" />
+      <xhtml:link rel="alternate" hreflang="en" href="{% URL %}/en/{% pages {% i %} %}.html" />
+    </url>
+  {% endfor %}
+{% endfor %}
+
 <url>
   <loc>https://www.eleves.ens.fr/home/dlesbre/files/CV_Dorian_Lesbre_fr.pdf</loc>
   <lastmod>2021-02-07T16:05:39+00:00</lastmod>

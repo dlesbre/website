@@ -46,6 +46,8 @@ fr = $(WWW)/fr
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
 HTML_TARGETS = $(WWW)/index.html $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS))
 
+TARGETS = $(WWW)/sitemap.xml $(HTML_TARGETS)
+
 DIRS = $(en) $(fr)
 
 # =============================
@@ -70,6 +72,10 @@ $(WWW)/index.html: $(SRC)/redirect.html $(SRC)/formatter.html
 	echo "$(color_s)Rendering $@$(color_e)"
 	$(PP) -o $@ $<
 
+$(WWW)/sitemap.xml: sitemap.xml
+	echo "$(color_s)Rendering $@$(color_e)"
+	$(PP) -o $@ $<
+
 # =============================
 # Specific rules
 # =============================
@@ -89,7 +95,7 @@ $(VERBOSE).SILENT:
 
 default: all
 dirs: $(DIRS)
-all: $(HTML_TARGETS) $(COPY_TARGETS) | dirs
+all: $(TARGETS)| dirs
 
 firefox: all
 	echo "$(color_s)Opening in firefox$(color_e)"
@@ -101,7 +107,7 @@ chromium: all
 
 clean:
 	echo "$(color_s)Removing html files$(color_e)"
-	rm -rf $(WWW)/index.html $(en) $(fr)
+	rm -rf $(TARGETS) $(fr) $(en)
 
 ifeq ($(local),true)
 deploy:
