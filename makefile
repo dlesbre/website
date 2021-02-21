@@ -35,7 +35,7 @@ endif
 
 ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)
-	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr -DDEBUG
 else
 	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr -DRELEASE
 endif
