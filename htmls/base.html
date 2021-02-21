@@ -36,7 +36,18 @@
 		<meta name="description" content="{% desc %}">
 		<meta name="keywords" content="Lesbre Dorian dlesbre dorianlesbre">
 		<meta name="author" content="Dorian Lesbre">
+		<meta name="copyright" content="Dorian Lesbre">
+		<meta name="language" content="{% lang %}">
 
+		<!-- Facebook tags -->
+		<meta name="og:title" content="Dorian Lesbre">
+		<meta name="og:type" content="website">
+		<meta name="og:url" content="{% URL %}/{% lang %}/{% name %}">
+		<meta name="og:image" content="{% URL %}/favicon.ico">
+		<meta name="og:description" content="{% desc %}">
+		<meta name="og:locale" content="{% lang %}">
+
+		<!-- Links -->
 		<link rel="canonical" type="text/html" href="{% URL %}/{% defaultlang %}/{% name %}" hreflang="{% defaultlang %}">
 		<link rel="alternate" type="text/html" href="{% URL %}/{% alt %}" hreflang="{% lang en fr %}">
 		{% if {% name %} == index.html %}
