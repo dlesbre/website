@@ -18,4 +18,5 @@
 {% if def RELEASE %}
 	{% replace ">\n" ">" %}
 	{% replace "\n<" "<" %}
+	{% replace -r "<!\\-\\-.*?\\-\\->" "" %}
 {% endif %}
