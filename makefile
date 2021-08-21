@@ -94,18 +94,18 @@ $(VERBOSE).SILENT:
 .PHONY: all clean dirs default firefox chromium sync
 
 default: all
-dirs: $(DIRS)
-all: $(TARGETS)| dirs
+dirs: $(DIRS) ## Make directories
+all: $(TARGETS)| dirs ## Build everything
 
-firefox: all
+firefox: all ## Build and open in firefox
 	echo "$(color_s)Opening in firefox$(color_e)"
 	firefox $(WWW)/index.html &
 
-chromium: all
+chromium: all ## Build and open in chromium
 	echo "$(color_s)Opening in chromium$(color_e)"
 	chromium $(WWW)/index.html &
 
-clean:
+clean: ## Remove generated files
 	echo "$(color_s)Removing html files$(color_e)"
 	rm -rf $(TARGETS) $(fr) $(en)
 
@@ -113,7 +113,10 @@ ifeq ($(local),true)
 deploy:
 	echo "$(color_s)ERROR : Should not deploy in local mode$(color_e)"
 else
-deploy: clean all
+deploy: clean all ## Rebuild and rsync website
 	echo "$(color_s)Deploying to online$(color_e)"
 	rsync -rv ./www/ "$(SSH)"
 endif
+
+help: ## Show this help
+	@egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
