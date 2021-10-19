@@ -26,11 +26,12 @@ SSH = dlesbre@sas.eleves.ens.fr:www/
 
 ifeq ($(color),on)
 	# Bold orange text
-	color_s=\033[33;1m
-	color_e=\033[38;22m
+	color_yellow = \033[33;1m
+	color_orange = \033[33m
+	color_reset  = \033[38;22m
 else
-	color_s=
-	color_e=
+	color_yellow=
+	color_reset=
 endif
 
 ifeq ($(local),true)
@@ -61,19 +62,19 @@ default:
 # =============================
 
 $(fr)/%.html: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html | dirs
-	echo "$(color_s)Rendering $@$(color_e)"
+	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=FR -o $@ $<
 
 $(en)/%.html: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html | dirs
-	echo "$(color_s)Rendering $@$(color_e)"
+	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=EN -o $@ $<
 
 $(WWW)/index.html: $(SRC)/redirect.html $(SRC)/formatter.html
-	echo "$(color_s)Rendering $@$(color_e)"
+	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -o $@ $<
 
 $(WWW)/sitemap.xml: sitemap.xml
-	echo "$(color_s)Rendering $@$(color_e)"
+	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -o $@ $<
 
 # =============================
@@ -81,7 +82,7 @@ $(WWW)/sitemap.xml: sitemap.xml
 # =============================
 
 $(DIRS):
-	echo "$(color_s)Making build directories$(color_e)"
+	echo "$(color_yellow)Making build directories$(color_reset)"
 	mkdir -p $(DIRS)
 
 # =============================
@@ -98,25 +99,26 @@ dirs: $(DIRS) ## Make directories
 all: $(TARGETS)| dirs ## Build everything
 
 firefox: all ## Build and open in firefox
-	echo "$(color_s)Opening in firefox$(color_e)"
+	echo "$(color_yellow)Opening in firefox$(color_reset)"
 	firefox $(WWW)/index.html &
 
 chromium: all ## Build and open in chromium
-	echo "$(color_s)Opening in chromium$(color_e)"
+	echo "$(color_yellow)Opening in chromium$(color_reset)"
 	chromium $(WWW)/index.html &
 
 clean: ## Remove generated files
-	echo "$(color_s)Removing html files$(color_e)"
+	echo "$(color_yellow)Removing html files$(color_reset)"
 	rm -rf $(TARGETS) $(fr) $(en)
 
 ifeq ($(local),true)
 deploy:
-	echo "$(color_s)ERROR : Should not deploy in local mode$(color_e)"
+	echo "$(color_yellow)ERROR : Should not deploy in local mode$(color_reset)"
 else
 deploy: clean all ## Rebuild and rsync website
-	echo "$(color_s)Deploying to online$(color_e)"
+	echo "$(color_yellow)Deploying to online$(color_reset)"
 	rsync -rv ./www/ "$(SSH)"
 endif
 
 help: ## Show this help
-	@egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	echo "$(color_yellow)make:$(color_reset) usefull targets:"
+	egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  $(color_orange)%-10s$(color_reset) %s\n", $$1, $$2}'
