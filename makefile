@@ -7,8 +7,10 @@ local = false
 
 SRC = htmls
 WWW = www
+
 PPROC = pproc
 CP = cp -r
+CHECKER = tidy -eq -config .tidy-config
 
 URL = https://www.eleves.ens.fr/home/dlesbre
 ALT_URL = https://www.eleves.ens.fr/~dlesbre
@@ -59,18 +61,17 @@ default:
 $(WWW)/%.html.fr: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=FR -o $@ $<
+	$(CHECKER) $@
 
 $(WWW)/%.html.en: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=EN -o $@ $<
-
-# $(WWW)/index.html: $(SRC)/redirect.html $(SRC)/formatter.html
-# 	echo "$(color_yellow)Rendering $@$(color_reset)"
-# 	$(PP) -o $@ $<
+	$(CHECKER) $@
 
 $(WWW)/sitemap.xml: sitemap.xml
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -o $@ $<
+	$(CHECKER) -xml $@
 
 # =============================
 # Special Targets
