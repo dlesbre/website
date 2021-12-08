@@ -5,7 +5,7 @@ venv/
 www/en/
 www/fr/
 www/files/
-www/index.html
+www/*.html*
 www/sitemap.xml
 
 # Files

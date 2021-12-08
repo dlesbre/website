@@ -7,15 +7,13 @@
 {% deflist priorities 0.80 0.64 0.64 %}
 
 {% for i in range(3) %}
-  {% for lang in fr en %}
-    <url>
-      <loc>{% URL %}/{% lang %}/{% pages {% i %} %}.html</loc>
-      <lastmod>{% lastmod %}</lastmod>
-      <priority>{% priorities {% i %} %}</priority>
-      <xhtml:link rel="alternate" hreflang="fr" href="{% URL %}/fr/{% pages {% i %} %}.html" />
-      <xhtml:link rel="alternate" hreflang="en" href="{% URL %}/en/{% pages {% i %} %}.html" />
-    </url>
-  {% endfor %}
+  <url>
+    <loc>{% URL %}/{% lang %}/{% pages {% i %} %}.html</loc>
+    <lastmod>{% lastmod %}</lastmod>
+    <priority>{% priorities {% i %} %}</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="{% URL %}/{% pages {% i %} %}.html.fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="{% URL %}/{% pages {% i %} %}.html.en" />
+  </url>
 {% endfor %}
 
 <url>

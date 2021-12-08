@@ -1,8 +1,9 @@
 {% def lang(fr, en) {% if {% LANG %} == FR %}fr{% else %}en{% endif %} %}
 {% def lang {% lang fr en %} %}
+{% def langurl(slug) slug.{% lang %} %}
 {% def prefix {% lang %} %}
-{% def slug {% lang fr en %}/{% name %} %}
-{% def alt {% lang en fr %}/{% name %} %}
+{% def slug {% name %} %}
+{% def alt {% name %}.{% lang en fr %} %}
 {% def report "\"{% lang Rapport "Report (fr)" %}\"" %}
 {% def slides "\"{% lang Diapositives "Slides (fr)" %}\"" %}
 {% def slides_en "\"{% lang "Diapositives (en)" "Slides" %}\"" %}
@@ -43,27 +44,20 @@
 		<!-- Facebook tags -->
 		<meta name="og:title" content="Dorian Lesbre">
 		<meta name="og:type" content="website">
-		<meta name="og:url" content="{% URL %}/{% lang %}/{% name %}">
+		<meta name="og:url" content="{% URL %}/{% langurl {% name %} %}">
 		<meta name="og:image" content="{% URL %}/imgs/icon.png">
 		<meta name="og:description" content="{% desc %}">
 		<meta name="og:locale" content="{% lang %}">
 
 		<!-- Links -->
-		<link rel="canonical" type="text/html" href="{% URL %}/{% defaultlang %}/{% name %}" hreflang="{% defaultlang %}">
+		<link rel="canonical" type="text/html" href="{% URL %}/{% langurl {% name %} %}" hreflang="{% defaultlang %}">
 		<link rel="alternate" type="text/html" href="{% URL %}/{% alt %}" hreflang="{% lang en fr %}">
-		{% if {% name %} == index.html %}
-			<link rel="alternate" type="text/html" href="{% URL %}/{% lang %}/" hreflang="{% lang %}">
-		{% endif %}
-		{% if def ALT_URL %}
-			<link rel="alternate" type="text/html" href="{% ALT_URL %}/{% slug %}" hreflang="{% lang %}">
-			{% if {% name %} == index.html %}
-				<link rel="alternate" type="text/html" href="{% ALT_URL %}/{% lang %}/" hreflang="{% lang %}">
-			{% endif %}
-		{% endif %}
+
 		<link rel="icon" type="image/png" href="favicon.ico"/>
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome-all.min.css">
+
 		<script src="js/script.js"></script>
 	</head>
 	<body>
@@ -80,19 +74,19 @@
 		<nav>
 			{% def navbutton(link_title, url, text)
 				{% call if url == {% slug %} %}
-					<a class="internal current" href="url" title="link_title" hreflang="{% lang %}">text</a>
+					<a class="internal current" href="{% langurl url %}" title="link_title" hreflang="{% lang %}">text</a>
 				{% call else %}
-					<a class="internal" href="url" title="link_title" hreflang="{% lang %}">text</a>
+					<a class="internal" href="{% langurl url %}" title="link_title" hreflang="{% lang %}">text</a>
 				{% call endif %}
 			 %}
 			{% if {% LANG %} == FR %}
-				{% navbutton Acceuil fr/index.html '<i class="fas fa-home"></i>' %}
-				{% navbutton CV fr/cv.html CV %}
-				{% navbutton Fichiers fr/fichiers.html Fichiers %}
+				{% navbutton Acceuil index.html '<i class="fas fa-home"></i>' %}
+				{% navbutton CV cv.html CV %}
+				{% navbutton Fichiers fichiers.html Fichiers %}
 			{% elif {% LANG %} == EN %}
-				{% navbutton Home en/index.html '<i class="fas fa-home"></i>' %}
-				{% navbutton Résumé en/cv.html Résumé %}
-				{% navbutton Files en/fichiers.html Files %}
+				{% navbutton Home index.html '<i class="fas fa-home"></i>' %}
+				{% navbutton Résumé cv.html Résumé %}
+				{% navbutton Files fichiers.html Files %}
 			{% endif %}
 		</nav>
 

@@ -41,15 +41,10 @@ else
 	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr -DRELEASE
 endif
 
-en = $(WWW)/en
-fr = $(WWW)/fr
-
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
-HTML_TARGETS = $(WWW)/index.html $(addprefix $(en)/, $(HTMLS)) $(addprefix $(fr)/, $(HTMLS))
+HTML_TARGETS = $(addprefix $(WWW)/, $(addsuffix .en, $(HTMLS)) $(addsuffix .fr, $(HTMLS)))
 
 TARGETS = $(WWW)/sitemap.xml $(HTML_TARGETS)
-
-DIRS = $(en) $(fr)
 
 # =============================
 # Default target
@@ -61,29 +56,21 @@ default:
 # General rules
 # =============================
 
-$(fr)/%.html: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html | dirs
+$(WWW)/%.html.fr: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=FR -o $@ $<
 
-$(en)/%.html: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html | dirs
+$(WWW)/%.html.en: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=EN -o $@ $<
 
-$(WWW)/index.html: $(SRC)/redirect.html $(SRC)/formatter.html
-	echo "$(color_yellow)Rendering $@$(color_reset)"
-	$(PP) -o $@ $<
+# $(WWW)/index.html: $(SRC)/redirect.html $(SRC)/formatter.html
+# 	echo "$(color_yellow)Rendering $@$(color_reset)"
+# 	$(PP) -o $@ $<
 
 $(WWW)/sitemap.xml: sitemap.xml
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -o $@ $<
-
-# =============================
-# Specific rules
-# =============================
-
-$(DIRS):
-	echo "$(color_yellow)Making build directories$(color_reset)"
-	mkdir -p $(DIRS)
 
 # =============================
 # Special Targets
@@ -92,11 +79,10 @@ $(DIRS):
 # No display of executed commands.
 $(VERBOSE).SILENT:
 
-.PHONY: all clean dirs default firefox chromium sync
+.PHONY: all clean default firefox chromium sync
 
 default: all
-dirs: $(DIRS) ## Make directories
-all: $(TARGETS)| dirs ## Build everything
+all: $(TARGETS) ## Build everything
 
 firefox: all ## Build and open in firefox
 	echo "$(color_yellow)Opening in firefox$(color_reset)"
@@ -108,7 +94,7 @@ chromium: all ## Build and open in chromium
 
 clean: ## Remove generated files
 	echo "$(color_yellow)Removing html files$(color_reset)"
-	rm -rf $(TARGETS) $(fr) $(en)
+	rm -rf $(TARGETS)
 
 ifeq ($(local),true)
 deploy:
