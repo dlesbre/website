@@ -1,9 +1,8 @@
 {% def lang(fr, en) {% if {% LANG %} == FR %}fr{% else %}en{% endif %} %}
 {% def lang {% lang fr en %} %}
 {% def langurl(slug) slug.{% lang %} %}
-{% def prefix {% lang %} %}
-{% def slug {% name %} %}
 {% def alt {% name %}.{% lang en fr %} %}
+
 {% def report "\"{% lang Rapport "Report (fr)" %}\"" %}
 {% def slides "\"{% lang Diapositives "Slides (fr)" %}\"" %}
 {% def slides_en "\"{% lang "Diapositives (en)" "Slides" %}\"" %}
@@ -50,8 +49,9 @@
 		<meta name="og:locale" content="{% lang %}">
 
 		<!-- Links -->
-		<link rel="canonical" type="text/html" href="{% URL %}/{% langurl {% name %} %}" hreflang="{% defaultlang %}">
-		<link rel="alternate" type="text/html" href="{% URL %}/{% alt %}" hreflang="{% lang en fr %}">
+		<link rel="canonical" type="text/html" href="{% URL %}/{% name %}" hreflang="{% lang %}">
+		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.fr" hreflang="fr">
+		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.en" hreflang="en">
 
 		<link rel="icon" type="image/png" href="favicon.ico"/>
 
@@ -62,7 +62,7 @@
 	</head>
 	<body>
 		<header>
-			<h1><a class="internal" href="{% prefix %}/index.html">Dorian Lesbre</a></h1>
+			<h1><a class="internal" href="{% langurl index.html %}">Dorian Lesbre</a></h1>
 			<div class="hbuttons">
 				<a class="alternate" title="{% lang 'English version' 'Version française' %}" href="{% alt %}" hreflang="{% lang en fr %}">
 					<img src="{% lang 'imgs/UK_flag.svg' 'imgs/FR_flag.svg' %}" alt="{% lang EN FR %}">
@@ -73,7 +73,7 @@
 
 		<nav>
 			{% def navbutton(link_title, url, text)
-				{% call if url == {% slug %} %}
+				{% call if url == {% name %} %}
 					<a class="internal current" href="{% langurl url %}" title="link_title" hreflang="{% lang %}">text</a>
 				{% call else %}
 					<a class="internal" href="{% langurl url %}" title="link_title" hreflang="{% lang %}">text</a>
