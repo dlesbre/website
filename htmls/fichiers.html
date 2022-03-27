@@ -4,8 +4,8 @@
 
 {% atlabel main %}
 
-<h2><i class="fas fa-coffee"></i> {% lang "Recherche non-publiée" "Unpublished works" %}</h2>
-<ul>
+{% h2 '<i class="fas fa-coffee"></i>' "Recherche non-publiée" "Unpublished works" %}
+<ul class="content">
 	<li>{% lang
 		"<strong>Développement d'une ALU multiprécision (en)</strong>, juillet 2021, stage de césure à Chalmers (Suède) avec Carl Seger."
 		"<strong>Developing a multiprécision ALU</strong>, july 2021, off-year internship at Chalmers (Sweden) with Carl Seger." %}
@@ -61,8 +61,8 @@
 </ul>
 
 
-<h2><i class="far fa-copy"></i> {% lang "Documents divers" "Other documents" %}</h2>
-<ul>
+{% h2 '<i class="far fa-copy"></i>' "Documents divers" "Other documents" %}
+<ul class="content">
 	<li>{% lang "Mon CV :" "My résumé:" %}
 		<div class="llinks">{% CV %}</div>
 	</li>
@@ -75,8 +75,5 @@
 		</div>
 	</li>
 </ul>
-
-
-<br>
 
 {% endatlabel %}

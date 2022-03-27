@@ -525,3 +525,29 @@ footer p {
 		height: 40px;
 	}
 }
+
+/* ===========================================
+ * Collapsible sections
+ * =========================================== */
+
+.collapsible {
+  cursor: pointer;
+}
+
+.content {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+
+  content: '-';
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "+";
+}

@@ -1,3 +1,7 @@
+// ==================================================
+// Light/Dark theme
+// ==================================================
+
 const STORAGE = localStorage;
 // Key used to store theme in local storage
 const THEME_KEY = "theme";
@@ -42,7 +46,36 @@ function set_theme(theme) {
 	}
 }
 
-// Set the theme on document load to be consistent across multiple pages
-document.addEventListener('DOMContentLoaded', function () {
+// ==================================================
+// Callapsible sections
+// ==================================================
+
+function setup_collapsibles() {
+	const collapsibles = document.getElementsByClassName("collapsible");
+
+	for (const collapsible of collapsibles) {
+		// Get the content (next alement)
+		const content = collapsible.nextElementSibling;
+		// Add it's height (CSS sets it to null)
+		content.style.maxHeight = content.scrollHeight + "px";
+		// Add toggle on click
+		collapsible.addEventListener("click", function() {
+			this.classList.toggle("active");
+			if (content.style.maxHeight){
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			}
+		});
+	}
+}
+
+// ==================================================
+// Setup everything once the document loads
+// ==================================================
+
+
+window.onload = function () {
 	set_theme(get_current_theme());
-});
+	setup_collapsibles();
+}

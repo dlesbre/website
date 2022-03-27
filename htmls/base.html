@@ -16,6 +16,12 @@
 	</div>
 </a> %}
 
+{% def h2(icon, fr, en)
+<h2 class="collapsible" title="{% lang 'Afficher/Masquer' 'Show/Hide' %}">
+	icon {% lang fr en %}
+</h2>
+%}
+
 {% def CV
 {% if {% LANG %} == FR %}
 {% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "CV (fr)" PDF "240 ko" fr %}

@@ -6,11 +6,11 @@
 
 <div class="links">{% CV %}</div>
 
-<h2><i class="fa fa-user-tie"></i> {% lang
+{% h2 '<i class="fa fa-user-tie"></i>'
 	"Stages et expérience professionelle"
-	"Internships and professional experience" %}</h2>
+	"Internships and professional experience" %}
 
-<div class="timeline">
+<div class="timeline content">
 	<div class="container"><div class="box">
 		<div class="title">{% lang
 			"Stage de recherche sur la conception d'un processeur sécurisé pour l'IoT"
@@ -87,9 +87,9 @@
 	</div></div>
 </div>
 
-<h2><i class="fas fa-user-graduate"></i> {% lang "Parcours scolaire" "Education" %}</h2>
+{% h2 '<i class="fas fa-user-graduate"></i>' "Parcours scolaire" "Education" %}
 
-<div class="timeline">
+<div class="timeline content">
 	<div class="container"><div class="box">
 		<div class="title">École normale supérieure Paris - {% lang
 			"Licence et master d'informatique"
@@ -130,66 +130,70 @@
 	</div></div>
 </div>
 
-<h2><i class="fa fa-globe"></i> {% lang Langues Languages %}</h2>
+{% h2 '<i class="fa fa-globe"></i>' Langues Languages %}
 
-<div class="grid">
-	<div class="item"><img src="imgs/FR_flag.svg" alt="FR"><br><strong>{% lang Français French %}</strong><br>C2</div>
-	<div class="item"><img src="imgs/UK_flag.svg" alt="UK"><br><strong>{% lang Anglais English %}</strong><br>C2</div>
-	<div class="item"><img src="imgs/DE_flag.svg" alt="DE"><br><strong>{% lang Allemand German %}</strong><br>A2 - B1</div>
+<div class="content">
+	<div class="grid">
+		<div class="item"><img src="imgs/FR_flag.svg" alt="FR"><br><strong>{% lang Français French %}</strong><br>C2</div>
+		<div class="item"><img src="imgs/UK_flag.svg" alt="UK"><br><strong>{% lang Anglais English %}</strong><br>C2</div>
+		<div class="item"><img src="imgs/DE_flag.svg" alt="DE"><br><strong>{% lang Allemand German %}</strong><br>A2 - B1</div>
+	</div>
+	<ul>
+		<li>{% lang "Vécu trois ans à Londres de 2006 à 2009, dont une année à l'école anglaise."
+			"Lived in London for three years (2006 - 2009), including one in an english school." %}</li>
+		<li>{% lang "Obtenu le Cambridge Certificate of Proficiency in English (CPE) validant le niveau C2."
+			"Obtained the Cambridge Certificate of Proficiency in English (CPE)" %}</li>
+		<li>{% lang "Deux séjours linguistiques de 15 jour en Allemagne: à Iéna en 2011 et à Mannheim en 2014."
+			"Participated in two linguistic exchanges in Germany in Iéna (2011) and in Mannheim (2014)." %}</li>
+	</ul>
 </div>
-<ul>
-	<li>{% lang "Vécu trois ans à Londres de 2006 à 2009, dont une année à l'école anglaise."
-		"Lived in London for three years (2006 - 2009), including one in an english school." %}</li>
-	<li>{% lang "Obtenu le Cambridge Certificate of Proficiency in English (CPE) validant le niveau C2."
-		"Obtained the Cambridge Certificate of Proficiency in English (CPE)" %}</li>
-	<li>{% lang "Deux séjours linguistiques de 15 jour en Allemagne: à Iéna en 2011 et à Mannheim en 2014."
-		"Participated in two linguistic exchanges in Germany in Iéna (2011) and in Mannheim (2014)." %}</li>
-</ul>
 
-<h2><i class="fas fa-laptop-code"></i> {% lang "Compétences informatiques" "Computer skills" %}</h2>
+{% h2 '<i class="fas fa-laptop-code"></i>' "Compétences informatiques" "Computer skills" %}
 
-<dl>
-<dt>{% lang Avancées Advanced %}</dt><dd>C, C++, Python, OCaml, GNU Make, Linux, Django, Voss II.</dd>
-<dt>{% lang Bonnes Good %}</dt><dd>CMake, LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker.</dd>
-<dt>{% lang Basiques Basic %}</dt><dd>Rust, Javascript,  {% lang "assembleur x86" "x86 assembly" %}, Blender, Adobe Premiere {% lang et and %} After Effects.</dd>
-</dl>
+<div class="content">
+	<dl>
+	<dt>{% lang Avancées Advanced %}</dt><dd>C, C++, Python, OCaml, GNU Make, Linux, Django, Voss II.</dd>
+	<dt>{% lang Bonnes Good %}</dt><dd>CMake, LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker.</dd>
+	<dt>{% lang Basiques Basic %}</dt><dd>Rust, Javascript,  {% lang "assembleur x86" "x86 assembly" %}, Blender, Adobe Premiere {% lang et and %} After Effects.</dd>
+	</dl>
 
-<p>{% lang "Plusieurs gros projets :" "Multiple large projects:" %}</p>
-<ul>
-	<li>{% lang
-		"Compilateur de kotlin vers assembleur x86 écrit en OCaml (source sur"
-		"Kotlin to x86 assembly compiler written in OCaml (source on"
-		%} <a class="link external" href="https://github.com/dlesbre/kotlin-compiler" hreflang="en">github</a>).</li>
-	<li>{% lang
-		"Conception et simulation d'un processeur simple en OCaml."
-		"Design and simulation of a simple processor in OCaml"
-		%}</li>
-	<li>{% lang
-		"OS simplissimme (drivers clavier/console/disque dur ATA, scheduler) écrit en C et assembleur x86."
-		"Minimalistic OS with basic functions (keyboard/screen/ATA hard drive drivers, scheduler) in C and assembly."
-		%}</li>
-	<li>{% lang
-		"Code de contrôle d'un robot pour la coupe de France de robotique 2019 en C++ sur Arduino et RaspberryPi (source sur"
-		"Robot control program on arduino and RaspberryPi written in C++ for France’s Robotic Cup (source on"
-		%} <a class="link external" href="https://git.eleves.ens.fr/hackens/CDF2019" hreflang="fr">gitlab</a>).</li>
-	<li>{% lang
-		"Bootloader sécurisé et algorithmes cryptographiques (AES, ECC, SHA) en C."
-		"Secure bootloader and cryptographic algorithms (AES, ECC, SHA) in C."
-		%}</li>
-	<li>{%
-		lang 'Site web pour les <a class="link external" href="https://interludes.ens.fr/">interludes</a>, un évènement étudiant, avec inscription en ligne en python avec django (source sur'
-		'Website for the <a class="link external" href="https://interludes.ens.fr/">interludes</a> (a student\'s event) with online registration written in python with django (source on'
-		 %} <a class="link external" href="https://git.eleves.ens.fr/dlesbre/site-interludes" hreflang="fr">gitlab</a>).</li>
-	<li>{% lang
-		"Implémentation et vérification d'une ALU pour entiers à précision arbitraire au niveau RTL (source sur"
-		"Design and verification of an ALU for arbitrary-precision arithmetic at the RTL level (source on"
-		%} <a class="link external" href="https://github.com/dlesbre/cephalopode" hreflang="en">github</a>).
-	</li>
-</ul>
+	<p>{% lang "Plusieurs gros projets :" "Multiple large projects:" %}</p>
+	<ul>
+		<li>{% lang
+			"Compilateur de kotlin vers assembleur x86 écrit en OCaml (source sur"
+			"Kotlin to x86 assembly compiler written in OCaml (source on"
+			%} <a class="link external" href="https://github.com/dlesbre/kotlin-compiler" hreflang="en">github</a>).</li>
+		<li>{% lang
+			"Conception et simulation d'un processeur simple en OCaml."
+			"Design and simulation of a simple processor in OCaml"
+			%}</li>
+		<li>{% lang
+			"OS simplissimme (drivers clavier/console/disque dur ATA, scheduler) écrit en C et assembleur x86."
+			"Minimalistic OS with basic functions (keyboard/screen/ATA hard drive drivers, scheduler) in C and assembly."
+			%}</li>
+		<li>{% lang
+			"Code de contrôle d'un robot pour la coupe de France de robotique 2019 en C++ sur Arduino et RaspberryPi (source sur"
+			"Robot control program on arduino and RaspberryPi written in C++ for France’s Robotic Cup (source on"
+			%} <a class="link external" href="https://git.eleves.ens.fr/hackens/CDF2019" hreflang="fr">gitlab</a>).</li>
+		<li>{% lang
+			"Bootloader sécurisé et algorithmes cryptographiques (AES, ECC, SHA) en C."
+			"Secure bootloader and cryptographic algorithms (AES, ECC, SHA) in C."
+			%}</li>
+		<li>{%
+			lang 'Site web pour les <a class="link external" href="https://interludes.ens.fr/">interludes</a>, un évènement étudiant, avec inscription en ligne en python avec django (source sur'
+			'Website for the <a class="link external" href="https://interludes.ens.fr/">interludes</a> (a student\'s event) with online registration written in python with django (source on'
+			%} <a class="link external" href="https://git.eleves.ens.fr/dlesbre/site-interludes" hreflang="fr">gitlab</a>).</li>
+		<li>{% lang
+			"Implémentation et vérification d'une ALU pour entiers à précision arbitraire au niveau RTL (source sur"
+			"Design and verification of an ALU for arbitrary-precision arithmetic at the RTL level (source on"
+			%} <a class="link external" href="https://github.com/dlesbre/cephalopode" hreflang="en">github</a>).
+		</li>
+	</ul>
+</div>
 
-<h2><i class="fas fa-coffee"></i> {% lang "Autres expériences et loisirs" "Other accomplishments and hobbies" %}</h2>
+{% h2 '<i class="fas fa-coffee"></i>' "Autres expériences et loisirs" "Other accomplishments and hobbies" %}
 
-<dl>
+<dl class="content">
 	<dt>{% lang Événementiel "Event oganizer" %}</dt><dd>{% lang
 		"Organisation du Gala de l’ENS pour 1000 personnes en 2019.<br>
 		Organisation d’un voyage au ski d'une semaine pour 180 personnes en 2017."
