@@ -10,6 +10,7 @@
 {% replace â &acirc; %}
 {% replace ô &ocirc; %}
 {% replace î &icirc; %}
+{% replace "’" &#39; %}
 {% if def LANG %}
 	{% if {% LANG %} == FR %}
 		{% replace -r "\ ([:?;!])" "&nbsp;\1" %}

@@ -8,7 +8,7 @@ local = false
 SRC = htmls
 WWW = www
 
-PPROC = pproc
+PPROC = mlpp
 CP = cp -r
 CHECKER = tidy -eq -config .tidy-config
 
