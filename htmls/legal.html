@@ -1,0 +1,51 @@
+{% include defs.html %}
+{% def name legal.html %}
+{% def title {% lang "Mentions légales" "Legal disclaimers" %} %}
+
+{% include base.html %}
+
+{% atlabel main %}
+{% h2 '<i class="fas fa-balance-scale"></i>' "Mentions légales" "Legal disclaimers" %}
+
+<div class="content">
+{% if {% LANG %} == FR %}
+	<p>
+		Ce site web est personnel développé par Dorian Lesbre.
+		Pour toute demande, vous pouvez me contacter à {% email %}.
+	</p>
+	<p>
+		Ce site contient certaines de mes informations professionelles, mais
+		ces pages restent personnelles sauf mention explicite du contraire.
+		Les opinions exprimées ici n'engagent en rien mes employeurs actuels ou passés.
+	</p>
+	<p>
+		Son contenu est soumis au droit d'auteur habituel, sauf si une license explicite est fournie.
+		Si vous souhaitez réutiliser ou partager ce contenu d'une manière non prévue par ces termes,
+		n'hésitez pas m'en demander la permission.
+	</p>
+	<p>
+		Ce site n'utilise pas de cookies, et n'exécute pas de javascript provenant de sites tiers.
+		Il n'utilise qu'un script local pour le changement de thème et les sections repliables.
+	</p>
+{% else %}
+	<p>
+		This is a personnal website edited by Dorian Lesbre.
+		For any enquiries, feel free to contact me at {% email %}.
+	</p>
+	<p>
+		This website can contain professional information, but its pages remain
+		personnal unless explicitly stated otherwise.
+		Opinions expressed here are not endorsed by my past and present employers.
+	</p>
+	<p>
+		Its contents are under standard copyright law unless an explicit license is given.
+		If you would like to reuse or share this content in another manner, do not hesitate
+		to ask me for permission.
+	</p>
+	<p>
+		This website doesn't use cookies and doesn't run any third party javascript.
+		It only uses a small local script for theme changes and collapsible sections.
+	</p>
+{% endif %}
+</div>
+{% endatlabel %}

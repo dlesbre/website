@@ -71,12 +71,14 @@
 		{% def copydate 2022 %}
 		<footer>
 			{% if {% LANG %} == FR %}
-				<p>Fait à la main. Code&nbsp;sur&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
-				&copy; {% copydate %} Dorian Lesbre</p>
+				<p>Source&nbsp;sur&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
+				&copy; {% copydate %} Dorian Lesbre<br>
+				<a class="link" href="{% langurl legal.html %}">Mentions légales</a></p>
 				<p>Dernière mise à jour : {% date %}</p>
 			{% elif {% LANG %} == EN %}
-				<p>Handcoded. Source&nbsp;on&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
-				&copy; {% copydate %} Dorian Lesbre</p>
+				<p>Source&nbsp;on&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
+				&copy; {% copydate %} Dorian Lesbre<br>
+				<a class="link" href="{% langurl legal.html %}">Legal disclaimer</a></p>
 				<p>Last updated : {% date %}</p>
 			{% endif %}
 		</footer>

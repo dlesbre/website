@@ -19,6 +19,7 @@ HTMLS = \
 	index.html \
 	cv.html \
 	fichiers.html \
+	legal.html \
 
 SSH = dlesbre@sas.eleves.ens.fr:www/
 
