@@ -1,0 +1,31 @@
+{% def lang(fr, en) {% if {% LANG %} == FR %}fr{% else %}en{% endif %} %}
+{% def lang {% lang fr en %} %}
+{% def langurl(slug) slug.{% lang %} %}
+
+{% def report "\"{% lang Rapport "Report (fr)" %}\"" %}
+{% def slides "\"{% lang Diapositives "Slides (fr)" %}\"" %}
+{% def slides_en "\"{% lang "Diapositives (en)" "Slides" %}\"" %}
+
+{% def dbutton(url, name, type, size, lang)
+<a href="url" class="downloadbutton" hreflang="lang" download>
+	<div class="icon"><i class="far fa-file-pdf"></i></div>
+	<div class="value">
+		<div class="info">name</div>
+		<div class="details">type &mdash; size</div>
+	</div>
+</a> %}
+
+{% def h2(icon, fr, en)
+<h2 class="collapsible" title="{% lang 'Afficher/Masquer' 'Show/Hide' %}">
+	icon {% lang fr en %}
+</h2>
+%}
+
+{% def CV
+{% if {% LANG %} == FR %}
+{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "CV (fr)" PDF "240 ko" fr %}
+{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "CV (en)" PDF "240 ko" en %}
+{% else %}
+{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "Résumé (en)" PDF "240 ko" en %}
+{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "Résumé (fr)" PDF "240 ko" fr %}
+{% endif %} %}
