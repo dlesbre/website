@@ -15,15 +15,17 @@
 }
 
 html, body {
-	background-color:var(--dark_bg_2);
-	color: var(--dark_fg);
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.5;
 	font-family: Arial, Roboto, Helvetica, sans-serif;
 	align-items: center;
 }
-body.light-theme {
+html {
+	background-color:var(--dark_bg_2);
+	color: var(--dark_fg);
+}
+html.light-theme {
 	background-color: var(--light_bg_2);
 	color: var(--light_fg);
 }
@@ -339,7 +341,7 @@ main {
 	padding: 20px 50px 50px;
 	margin: 0 auto 0 auto;
 	max-width: 1250px;
-	min-height: calc(100vh - 380px); /* viewport-height - (header+footer+nav bar) */
+	min-height: calc(100vh - 390px); /* viewport-height - (header+footer+nav bar) */
 }
 @media (max-width: 700px) {
 	main {
@@ -381,7 +383,7 @@ footer {
 	bottom: 0;
 	width: calc(100% - 80px); /* viewport width - padding */
 	padding: 10px 40px;
-	height: 60px;
+	height: 70px;
 	display: flex;
 	background-color: var(--dark_bg_1);
 	border-top: 4px solid var(--dark_sep);
