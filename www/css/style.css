@@ -21,11 +21,11 @@ html, body {
 	font-family: Arial, Roboto, Helvetica, sans-serif;
 	align-items: center;
 }
-html {
+html, html > * {
 	background-color:var(--dark_bg_2);
 	color: var(--dark_fg);
 }
-html.light-theme {
+html.light-theme, html.light-theme > * {
 	background-color: var(--light_bg_2);
 	color: var(--light_fg);
 }
