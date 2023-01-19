@@ -3,10 +3,10 @@
 {% def lastmod {% date YYYY-MM-DDThh:mm:ss+00:00 %} %}
 {% strip %}
 
-{% deflist pages index cv fichiers legal %}
-{% deflist priorities 0.80 0.64 0.64 %}
+{% deflist pages index cv logiciels fichiers legal %}
+{% deflist priorities 0.80 0.64 0.64 0.64 0.5 %}
 
-{% for i in range(3) %}
+{% for i in range(5) %}
   <url>
     <loc>{% URL %}/{% pages {% i %} %}.html</loc>
     <lastmod>{% lastmod %}</lastmod>

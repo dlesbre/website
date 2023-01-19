@@ -18,6 +18,7 @@ ALT_URL = https://www.eleves.ens.fr/~dlesbre
 HTMLS = \
 	index.html \
 	cv.html \
+	logiciels.html \
 	fichiers.html \
 	legal.html \
 
@@ -108,5 +109,6 @@ deploy: clean all ## Rebuild and rsync website
 endif
 
 help: ## Show this help
-	echo "$(color_yellow)make:$(color_reset) usefull targets:"
+	echo "$(color_yellow)make:$(color_reset) useful targets:"
 	egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  $(color_orange)%-10s$(color_reset) %s\n", $$1, $$2}'
+	echo "Call with $(color_yellow)local=true$(color_reset) to build local links"

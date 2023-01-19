@@ -57,10 +57,12 @@
 			{% if {% LANG %} == FR %}
 				{% navbutton Acceuil index.html '<i class="fas fa-home"></i>' %}
 				{% navbutton CV cv.html CV %}
+				{% navbutton Logiciels logiciels.html Logiciels %}
 				{% navbutton Fichiers fichiers.html Fichiers %}
 			{% elif {% LANG %} == EN %}
 				{% navbutton Home index.html '<i class="fas fa-home"></i>' %}
 				{% navbutton Résumé cv.html Résumé %}
+				{% navbutton Software logiciels.html Software %}
 				{% navbutton Files fichiers.html Files %}
 			{% endif %}
 		</nav>
@@ -68,7 +70,7 @@
 		<main>
 			{% label main %}
 		</main>
-		{% def copydate 2022 %}
+		{% def copydate 2023 %}
 		<footer>
 			{% if {% LANG %} == FR %}
 				<p>Source&nbsp;sur&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br>
