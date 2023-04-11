@@ -40,9 +40,9 @@ endif
 
 ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)
-	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr -DDEBUG
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -DDEBUG
 else
-	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -Ddefaultlang=fr -DRELEASE
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -DRELEASE
 endif
 
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
@@ -89,11 +89,11 @@ all: $(TARGETS) ## Build everything
 
 firefox: all ## Build and open in firefox
 	echo "$(color_yellow)Opening in firefox$(color_reset)"
-	firefox $(WWW)/index.html &
+	firefox "$(shell pwd)/$(WWW)/index.html.fr" &
 
 chromium: all ## Build and open in chromium
 	echo "$(color_yellow)Opening in chromium$(color_reset)"
-	chromium $(WWW)/index.html &
+	chromium "$(shell pwd)/$(WWW)/index.html.fr" &
 
 clean: ## Remove generated files
 	echo "$(color_yellow)Removing html files$(color_reset)"
