@@ -8,9 +8,10 @@
 
 {% for i in range(5) %}
   <url>
-    <loc>{% URL %}/{% pages {% i %} %}.html</loc>
+    <loc>{% URL %}/{% pages {% i %} %}</loc>
     <lastmod>{% lastmod %}</lastmod>
     <priority>{% priorities {% i %} %}</priority>
+    <xhtml:link rel="alternate" href="{% URL %}/{% pages {% i %} %}.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="{% URL %}/{% pages {% i %} %}.html.fr" />
     <xhtml:link rel="alternate" hreflang="en" href="{% URL %}/{% pages {% i %} %}.html.en" />
   </url>
