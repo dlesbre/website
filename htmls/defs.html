@@ -9,14 +9,32 @@
 {% def slides "\"{% lang Diapositives "Slides (fr)" %}\"" %}
 {% def slides_en "\"{% lang "Diapositives (en)" "Slides" %}\"" %}
 
-{% def dbutton(url, name, type, size, lang)
-<a href="url" class="downloadbutton" hreflang="lang" download>
-	<div class="icon"><i class="far fa-file-pdf"></i></div>
+{% def fancybutton(symbol, url, name, info, attrs)
+<a href="url" class="downloadbutton"attrs>
+	<div class="icon">symbol</div>
 	<div class="value">
 		<div class="info">name</div>
-		<div class="details">type &mdash; size</div>
+		<div class="details">info</div>
 	</div>
 </a> %}
+
+{% def fancybutton(symbol, url, name, attrs)
+	<a href="url" class="downloadbutton"attrs>
+		<div class="icon">symbol</div>
+		<div class="value">
+			<div class="info">name</div>
+		</div>
+	</a> %}
+
+{% def dbutton(url, name, type, size, lang)
+	{% fancybutton
+		  '<i class="far fa-file-pdf"></i>'
+			'url' 'name' 'type &mdash; size' ' hreflang="lang" download' %}
+%}
+
+{% def linkbutton(url, text, lang)
+	<a class="linkbutton" href="url" hreflang="lang">text</a>
+%}
 
 {% def h2(icon, fr, en)
 <h2 class="collapsible" title="{% lang 'Afficher/Masquer' 'Show/Hide' %}">

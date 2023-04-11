@@ -286,14 +286,23 @@ a.linkbutton:hover, a.downloadbutton:hover {
 	background-color: var(--light_bg_3);
 }
 
+a.downloadbutton .value {
+	margin: auto;
+}
+
 a.downloadbutton .icon {
-	vertical-align: middle;
 	border-right: 2px solid var(--dark_sep);
-	padding: 10px 10px 10px 5px;
+	padding-left: 1px;
+	padding-right: 10px;
+	height: 100%;
 	margin-right: 10px;
 	font-size: 1em;
-	align-self: center;
+	display: flex;
 }
+a.downloadbutton .icon i {
+	margin: auto 0;
+}
+
 .light-theme a.downloadbutton .icon {
 	border-right: 2px solid var(--light_sep);
 }
