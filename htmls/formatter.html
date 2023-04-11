@@ -17,6 +17,7 @@
 	{% endif %}
 {% endif %}
 {% if def RELEASE %}
-	{% replace ">\n<" "><" %}
+	{% replace -r "\n+" "\n" %}
+	{% replace -r "[ \t]+" " " %}
 	{% replace -r "<!\\-\\-.*?\\-\\->" "" %}
 {% endif %}
