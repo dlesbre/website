@@ -15,6 +15,16 @@
 	</li>
 %}
 
+{% def filedesc(title_arg, type_arg, date_arg, extra, buttons)
+	<li>
+		<div class="title">title_arg</div>
+		<div class="type">type_arg</div>
+		<div class="date">date_arg</div>
+		extra
+		<div class="llinks">buttons</div>
+	</li>
+%}
+
 {% h2 '<i class="fas fa-coffee"></i>' "Recherche non-publiée" "Unpublished works" %}
 <ul class="content filelist">
 	{% filedesc
@@ -23,6 +33,16 @@
 			"Defining contextual refinement for capability machines" %}"
 		"{% lang "Rapport de stage M2, encadré par Lars Birkedal" "Internship Report M2, supevised by Lars Birkedal" %}"
 		"{% lang "Mars 2023" "March 2023" %}"
+		'<a class="collapsible folded">Abstract</a>
+		<div class="content" style="padding:0 30px;">
+			Contextual refinement is a useful notion to relate two open programs x and y by saying
+			that for all contexts C, any observable behavior of C[x] is also seen in C[y]. As such it
+			offers a strong relation based only on the operational semantics of closed programs. I
+			present here a definition of contextual refinement for capability machines, a type of CPU
+			which uses special hardware checks to enforce safety constraints on memory accesses. I
+			explain the challenges of porting refinement to low-level programs, show some results
+			obtained by combining refinement with capability safety, and explore how refinement can
+			be proven using a logical binary relation.</div>'
 		'{% dbutton "files/Internship_Report_Logsem.pdf" {% report_en %} PDF en %}
 			{% dbutton "files/Slides_Logsem.pdf" {% slides_en %} PDF en %}
 			{% fancybutton '<i class="fab fa-github"></i>'

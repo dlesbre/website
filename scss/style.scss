@@ -46,10 +46,14 @@ dl dd {
 .collapsible {
   cursor: pointer;
 	&:after {
-		content: '-';
+		font-family: "Font Awesome 5 Free";
+		content: "\f146";
 		float: right;
 		margin-left: 5px;
 	}
+}
+a.collapsible:after {
+	float: none;
 }
 .content {
 	padding: 0;
@@ -57,6 +61,7 @@ dl dd {
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 }
-.active:after {
-  content: "+";
+.folded:after {
+	font-family: "Font Awesome 5 Free";
+  content: "\f0fe";
 }
