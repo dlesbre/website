@@ -1,0 +1,84 @@
+// Basic link styling
+a {
+	cursor: pointer;
+	color: $dark_sep;
+
+	&.link:hover {
+		transition-property: font-style color;
+		transition-duration: 0.5s;
+		font-style: italic;
+		color: $dark_hover;
+	}
+
+  &.linkbutton, &.downloadbutton {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border: 2px solid $dark_sep;
+
+    &:hover {
+      transition-property: background-color;
+      background-color: $dark_bg_3;
+      transition-duration: 0.5s;
+    }
+  }
+
+  &.downloadbutton {
+    display: flex;
+    .value {
+      margin: auto;
+    }
+
+    .icon {
+      border-right: 2px solid $dark_sep;
+      padding-left: 1px;
+      padding-right: 10px;
+      height: 100%;
+      margin-right: 10px;
+      font-size: 1em;
+      display: flex;
+      i {
+        margin: auto 0;
+      }
+    }
+
+    .info {
+      font-size: 0.9em;
+    }
+    .details {
+      font-size: 9pt;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  a.linkbutton, a.downloadbutton {
+    font-size: 1em;
+  }
+  a.downloadbutton .icon {
+    padding: 5px 5px 5px 0;
+  }
+  a.downloadbutton .details {
+    font-size: 0.7em;
+  }
+}
+
+.light-theme a {
+	color: $light_sep;
+	&.link:hover {
+		color: $light_hover;
+	}
+
+  &.linkbutton, &.downloadbutton {
+    border: 2px solid $light_sep;
+    &:hover {
+      background-color: $light_bg_3;
+    }
+  }
+
+  &.downloadbutton .icon {
+    border-right: 2px solid $light_sep;
+  }
+}

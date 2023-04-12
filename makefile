@@ -15,14 +15,16 @@ CHECKER = tidy -eq -config .tidy-config
 URL = https://www.eleves.ens.fr/home/dlesbre
 ALT_URL = https://www.eleves.ens.fr/~dlesbre
 
-HTMLS = \
-	index.html \
-	cv.html \
-	logiciels.html \
-	fichiers.html \
-	legal.html \
+HTML = index cv logiciels fichiers legal
+SCSS = style
+SCSS_DEPS = variables main links header_footer home timeline table
 
 SSH = dlesbre@sas.eleves.ens.fr:www/
+
+SASS = sassc
+CSS_DIR = $(WWW)/css/
+SCSS_DIR = scss/
+
 
 # =============================
 # makefile code and variable setting
@@ -41,14 +43,21 @@ endif
 ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)
 	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -DDEBUG
+	SASSC = $(SASS)
 else
 	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -DRELEASE
+	SASSC = $(SASS) -t compressed
 endif
 
+HTMLS = $(addsuffix .html, $(HTML))
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
 HTML_TARGETS = $(addprefix $(WWW)/, $(addsuffix .en, $(HTMLS)) $(addsuffix .fr, $(HTMLS)))
 
-TARGETS = $(WWW)/sitemap.xml $(HTML_TARGETS)
+TARGETS = $(WWW)/sitemap.xml $(HTML_TARGETS) $(CSS_FILES)
+
+CSS_FILES = $(addsuffix .css, $(addprefix $(CSS_DIR), $(SCSS)))
+SCSS_DEPENDS = $(addsuffix .scss, $(addprefix $(SCSS_DIR), $(SCSS_DEPS)))
+SCSS_TARGETS = $(addsuffix .scss, $(addprefix $(SCSS_DIR), $(SCSS)))
 
 # =============================
 # Default target
@@ -75,6 +84,10 @@ $(WWW)/sitemap.xml: sitemap.xml
 	$(PP) -o $@ $<
 	$(CHECKER) -xml $@
 
+$(CSS_DIR)%.css: $(SCSS_DIR)%.scss $(SCSS_DEPENDS)
+	echo "$(color_yellow)Compiling scss to $@$(color_reset)"
+	$(SASSC) "$<" "$@"
+
 # =============================
 # Special Targets
 # =============================
@@ -82,23 +95,28 @@ $(WWW)/sitemap.xml: sitemap.xml
 # No display of executed commands.
 $(VERBOSE).SILENT:
 
-.PHONY: all clean default firefox chromium sync
-
+.PHONY: default
 default: all
+
+.PHONY: all
 all: $(TARGETS) ## Build everything
 
+.PHONY: firefox
 firefox: all ## Build and open in firefox
 	echo "$(color_yellow)Opening in firefox$(color_reset)"
 	firefox "$(shell pwd)/$(WWW)/index.html.fr" &
 
+.PHONY: chromium
 chromium: all ## Build and open in chromium
 	echo "$(color_yellow)Opening in chromium$(color_reset)"
 	chromium "$(shell pwd)/$(WWW)/index.html.fr" &
 
+.PHONY: clean
 clean: ## Remove generated files
 	echo "$(color_yellow)Removing html files$(color_reset)"
 	rm -rf $(TARGETS)
 
+.PHONY: deploy
 ifeq ($(local),true)
 deploy:
 	echo "$(color_yellow)ERROR : Should not deploy in local mode$(color_reset)"
@@ -108,6 +126,18 @@ deploy: clean all ## Rebuild and rsync website
 	rsync -rv ./www/ "$(SSH)"
 endif
 
+.PHONY: css
+css: $(CSS_FILES) ## (re)build css files from scss
+
+.PHONY: css-watch
+css-watch: ## continuously rebuild css files (blocking)
+	while [ 0 ]; \
+	do \
+		$(MAKE) --no-print-directory css; \
+		sleep 1; \
+	done
+
+.PHONY: help
 help: ## Show this help
 	echo "$(color_yellow)make:$(color_reset) useful targets:"
 	egrep -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  $(color_orange)%-10s$(color_reset) %s\n", $$1, $$2}'

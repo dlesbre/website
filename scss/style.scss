@@ -1,0 +1,62 @@
+// main style sheet, imports all others
+
+@import "variables.scss";
+@import "main.scss";
+@import "links.scss";
+@import "header_footer.scss";
+@import "home.scss";
+@import "timeline.scss";
+@import "table.scss";
+
+
+// Misc common elements
+.title {
+	font-weight: bold;
+}
+.date {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+.filelist li {
+	margin-bottom: 30px;
+}
+
+dl {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+dl dt {
+	grid-column: 1 / span 1;
+	justify-self: end;
+	text-align: right;
+	margin: 5px 10px;
+	font-weight: bold;
+	align-self: center;
+}
+dl dd {
+	margin: 5px 5px;
+	justify-self: start;
+	text-align: left;
+}
+
+// Collapsible sections
+.collapsible {
+  cursor: pointer;
+	&:after {
+		content: '-';
+		float: right;
+		margin-left: 5px;
+	}
+}
+.content {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+.active:after {
+  content: "+";
+}

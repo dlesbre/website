@@ -1,0 +1,102 @@
+// Layout and color of main document
+
+html, body {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.5;
+	font-family: Arial, Roboto, Helvetica, sans-serif;
+	align-items: center;
+}
+html, html > * {
+	background-color: $dark_bg_2;
+	color: $dark_fg;
+}
+html.light-theme, html.light-theme > * {
+	background-color: $light_bg_2;
+	color: $light_fg;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+}
+
+body {
+	min-height: 100%;
+	margin: 0 0 50px;
+}
+
+
+.llinks {
+	place-content: flex-start;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 5px;
+	justify-content: left;
+}
+
+.grid {
+	display: grid;
+	justify-content: space-evenly;
+	gap: 10px;
+	padding: 10px;
+	grid-template-columns: auto auto auto;
+	& > div {
+		text-align: center;
+		padding: 20px;
+	}
+	img {
+		height: 60px;
+	}
+
+	@media (max-width: 600px) {
+		gap: 5px;
+		padding: 5px;
+
+		& > div {
+			padding: 5px;
+		}
+		img {
+			height: 40px;
+		}
+	}
+}
+
+main {
+  place-content: center;
+	text-align: justify;
+	padding: 20px 50px 50px;
+	margin: 0 auto 0 auto;
+	max-width: 1250px;
+	min-height: calc(100vh - 390px); /* viewport-height - (header+footer+nav bar) */
+
+	@media (max-width: 700px) {
+		padding: 20px 20px 50px;
+	}
+
+	h2 {
+		padding-top: 10px;
+		font-size: 1.5em;
+		font-weight: 300;
+		text-align: left;
+		border-bottom: 2px solid $dark_sep;
+		border-image-source: linear-gradient(to right, $dark_sep) 0%, $dark_sep 25%, transparent 100%;
+		border-image-slice: 1;
+	}
+
+	@media (max-width: 500px) {
+		padding: 10px 10px 50px;
+		font-size: 0.8em;
+		ul {
+			padding: 15px;
+		}
+		h2 {
+			font-size: 1.2em;
+		}
+	}
+}
+.light-theme main h2 {
+	border-bottom: 2px solid $light_sep;
+	border-image-source: linear-gradient(to right, $light_sep) 0%, $light_sep 25%, transparent 100%;
+}

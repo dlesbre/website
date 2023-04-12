@@ -8,6 +8,8 @@ www/files/
 www/*.html*
 www/sitemap.xml
 
+www/css/style.css
+
 # Files
 logo.png
 logo.svg
