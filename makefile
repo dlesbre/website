@@ -16,6 +16,7 @@ URL = https://www.eleves.ens.fr/home/dlesbre
 ALT_URL = https://www.eleves.ens.fr/~dlesbre
 
 HTML = index cv logiciels fichiers legal
+HTML_DEPS = base defs formatter
 SCSS = style
 SCSS_DEPS = variables main links header_footer home timeline table
 
@@ -51,6 +52,7 @@ endif
 
 HTMLS = $(addsuffix .html, $(HTML))
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
+HTMLS_DEPS = $(addprefix $(SRC)/, $(addsuffix .html, $(HTML_DEPS)))
 HTML_TARGETS = $(addprefix $(WWW)/, $(addsuffix .en, $(HTMLS)) $(addsuffix .fr, $(HTMLS)))
 
 TARGETS = $(WWW)/sitemap.xml $(HTML_TARGETS) $(CSS_FILES)
@@ -69,12 +71,12 @@ default:
 # General rules
 # =============================
 
-$(WWW)/%.html.fr: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html
+$(WWW)/%.html.fr: $(SRC)/%.html $(HTMLS_DEPS)
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=FR -o $@ $<
 	$(CHECKER) $@
 
-$(WWW)/%.html.en: $(SRC)/%.html $(SRC)/base.html $(SRC)/formatter.html
+$(WWW)/%.html.en: $(SRC)/%.html $(HTMLS_DEPS)
 	echo "$(color_yellow)Rendering $@$(color_reset)"
 	$(PP) -DLANG=EN -o $@ $<
 	$(CHECKER) $@

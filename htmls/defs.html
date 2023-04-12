@@ -26,10 +26,14 @@
 		</div>
 	</a> %}
 
-{% def dbutton(url, name, type, size, lang)
+{% def downloadbutton(url, name, type, size, lang)
 	{% fancybutton
 		  '<i class="far fa-file-pdf"></i>'
 			'url' 'name' 'type &mdash; size' ' hreflang="lang" download' %}
+%}
+
+{% def dbutton(url, name, type, lang)
+	{% downloadbutton 'url' 'name' 'type' '{% call call fileprettysize www/url %}' 'lang' %}
 %}
 
 {% def linkbutton(url, text, lang)
@@ -44,9 +48,9 @@
 
 {% def CV
 {% if {% LANG %} == FR %}
-{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "CV (fr)" PDF "240 ko" fr %}
-{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "CV (en)" PDF "240 ko" en %}
+{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "CV (fr)" PDF fr %}
+{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "CV (en)" PDF en %}
 {% else %}
-{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "Résumé (en)" PDF "240 ko" en %}
-{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "Résumé (fr)" PDF "240 ko" fr %}
+{% dbutton "files/CV_Dorian_Lesbre_en.pdf" "Résumé (en)" PDF en %}
+{% dbutton "files/CV_Dorian_Lesbre_fr.pdf" "Résumé (fr)" PDF fr %}
 {% endif %} %}
