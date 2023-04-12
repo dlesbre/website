@@ -413,6 +413,10 @@ footer p {
 	width: 100%;
 }
 
+.filelist li {
+	margin-bottom: 30px;
+}
+
 /* ======== Timeline ======== */
 .timeline {
   position: relative;
@@ -493,10 +497,10 @@ footer p {
 .light-theme .box {
 	background-color: var(--light_bg_1);
 }
-.box .title {
+.title {
 	font-weight: bold;
 }
-.box .date {
+.date {
 	font-style: italic;
 }
 .box .desc {

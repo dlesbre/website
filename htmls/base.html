@@ -1,5 +1,5 @@
 {% include formatter.html %}
-{% def alt {% name %}.{% lang en fr %} %}
+{% def alt {% name %}.html.{% lang en fr %} %}
 
 <!doctype html>
 <html lang="{% lang %}">
@@ -18,15 +18,16 @@
 		<!-- Facebook tags -->
 		<meta name="og:title" content="Dorian Lesbre">
 		<meta name="og:type" content="website">
-		<meta name="og:url" content="{% URL %}/{% langurl {% name %} %}">
+		<meta name="og:url" content="{% URL %}/{% langurl {% name %}.html %}">
 		<meta name="og:image" content="{% URL %}/imgs/icon.png">
 		<meta name="og:description" content="{% desc %}">
 		<meta name="og:locale" content="{% lang %}">
 
 		<!-- Links -->
-		<link rel="canonical" type="text/html" href="{% URL %}/{% name %}" hreflang="{% lang %}">
-		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.fr" hreflang="fr">
-		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.en" hreflang="en">
+		<link rel="canonical" type="text/html" href="{% URL %}/{% name %}">
+		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.html">
+		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.html.fr" hreflang="fr">
+		<link rel="alternate" type="text/html" href="{% URL %}/{% name %}.html.en" hreflang="en">
 
 		<link rel="icon" type="image/png" href="favicon.ico"/>
 
@@ -49,21 +50,21 @@
 		<nav>
 			{% def navbutton(link_title, url, text)
 				{% call if url == {% name %} %}
-					<a class="internal current" href="{% langurl url %}" title="link_title" hreflang="{% lang %}">text</a>
+					<a class="internal current" href="{% langurl url.html %}" title="link_title" hreflang="{% lang %}">text</a>
 				{% call else %}
-					<a class="internal" href="{% langurl url %}" title="link_title" hreflang="{% lang %}">text</a>
+					<a class="internal" href="{% langurl url.html %}" title="link_title" hreflang="{% lang %}">text</a>
 				{% call endif %}
 			 %}
 			{% if {% LANG %} == FR %}
-				{% navbutton Acceuil index.html '<i class="fas fa-home"></i>' %}
-				{% navbutton CV cv.html CV %}
-				{% navbutton Logiciels logiciels.html Logiciels %}
-				{% navbutton Fichiers fichiers.html Fichiers %}
+				{% navbutton Acceuil index '<i class="fas fa-home"></i>' %}
+				{% navbutton CV cv CV %}
+				{% navbutton Logiciels logiciels Logiciels %}
+				{% navbutton Fichiers fichiers Fichiers %}
 			{% elif {% LANG %} == EN %}
-				{% navbutton Home index.html '<i class="fas fa-home"></i>' %}
-				{% navbutton Résumé cv.html Résumé %}
-				{% navbutton Software logiciels.html Software %}
-				{% navbutton Files fichiers.html Files %}
+				{% navbutton Home index '<i class="fas fa-home"></i>' %}
+				{% navbutton Résumé cv Résumé %}
+				{% navbutton Software logiciels Software %}
+				{% navbutton Files fichiers Files %}
 			{% endif %}
 		</nav>
 
