@@ -13,7 +13,7 @@ Building requires the following dependencies:
 - [mlpproc](https://github.com/dlesbre/mlpproc/), a custom preprocessor, to render html/xml files.
 
   ```console
-  pip3 install mlpprc
+  pip3 install mlpproc
   ```
 
 - [Sassc](https://github.com/sass/sassc) to render SCSS files
