@@ -62,6 +62,7 @@ function setup_collapsibles() {
 
 		// Add toggle on click
 		collapsible.addEventListener("click", function() {
+			this.classList.toggle("folded");
 			content.classList.toggle("folded");
 		});
 	}

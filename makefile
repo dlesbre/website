@@ -18,7 +18,7 @@ ALT_URL = https://www.eleves.ens.fr/~dlesbre
 HTML = index cv logiciels fichiers legal
 HTML_DEPS = base defs formatter
 SCSS = style
-SCSS_DEPS = variables main links header_footer home timeline table
+SCSS_DEPS = variables main links header_footer home timeline table collapsible
 
 SSH = dlesbre@sas.eleves.ens.fr:www/
 
