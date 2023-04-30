@@ -60,19 +60,9 @@ function setup_collapsibles() {
 		const content = collapsible.nextElementSibling;
 		if (content === null) continue;
 
-		// Add it's height (CSS sets it to null)
-		if (!collapsible.classList.contains("folded")) {
-			content.style.maxHeight = content.scrollHeight + "px";
-		}
-
 		// Add toggle on click
 		collapsible.addEventListener("click", function() {
-			this.classList.toggle("folded");
-			if (content.style.maxHeight){
-				content.style.maxHeight = null;
-			} else {
-				content.style.maxHeight = content.scrollHeight + "px";
-			}
+			content.classList.toggle("folded");
 		});
 	}
 }

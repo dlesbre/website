@@ -1,0 +1,26 @@
+// Collapsible sections
+.collapsible {
+  cursor: pointer;
+	&:after {
+		font-family: "Font Awesome 5 Free";
+		content: "\f146";
+		float: right;
+		margin-left: 5px;
+	}
+}
+a.collapsible:after {
+	float: none;
+}
+.content {
+	padding: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+.folded {
+	max-height: 0px;
+}
+
+.folded:after {
+	font-family: "Font Awesome 5 Free";
+  content: "\f0fe";
+}

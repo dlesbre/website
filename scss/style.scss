@@ -7,6 +7,7 @@
 @import "home.scss";
 @import "timeline.scss";
 @import "table.scss";
+@import "collapsible.scss";
 
 
 // Misc common elements
@@ -40,30 +41,6 @@ dl dd {
 	margin: 5px 5px;
 	justify-self: start;
 	text-align: left;
-}
-
-// Collapsible sections
-.collapsible {
-  cursor: pointer;
-	&:after {
-		font-family: "Font Awesome 5 Free";
-		content: "\f146";
-		float: right;
-		margin-left: 5px;
-	}
-}
-a.collapsible:after {
-	float: none;
-}
-.content {
-	padding: 0;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-}
-.folded:after {
-	font-family: "Font Awesome 5 Free";
-  content: "\f0fe";
 }
 
 .abstract {
