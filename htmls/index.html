@@ -26,7 +26,7 @@
 		</div>
 		<div class="links">{% CV %}</div>
 
-		<h2><i class="fas fa-pencil-alt" aria-hidden="true"></i> Contact</h2>
+		<h2><i class="fa fa-at"></i> Contact</h2>
 		<div class="contactsheet">
 			<dl>
 				<dt><i class="far fa-envelope"></i></dt>
@@ -41,12 +41,13 @@
 	</div>
 </div>
 
+<div class="smaller">
 {% h2 '<i class="fa fa-user"></i>' "Qui suis-je ?" "About me"%}
 
 {% if {% LANG %} == FR %}
 	<div class="content">
 		<p>Je suis étudiant en master au <a class="link" href="https://www.di.ens.fr/" hreflang="fr">département d’informatique</a> de <a class="link" href="https://www.ens.psl.eu" hreflang="fr">l’École Normale Supérieure de Paris</a>.</p>
-		<p>Je m’intéresse notamment à la vérification et l’informatique pratique bas niveau : méthodes formelles, système de types, systèmes d’exploitation, compilation,
+		<p>Je m’intéresse notamment à la vérification et l’informatique pratique bas niveau : méthodes formelles, système de types, Coq, systèmes d’exploitation, compilation,
 			circuits, programmation fonctionnelle et d’autres. En dehors de l’informatique je m’intéresse
 			aussi aux mathématiques et à la physique.</p>
 		<p>Hors du domaine scolaire j’aime bien faire des sports d’extérieur comme l’escalade, la voile, la randonnée
@@ -55,57 +56,60 @@
 {% else %}
 	<div class="content">
 		<p>I’m a master’s student in the <a class="link" href="https://www.di.ens.fr/news" hreflang="en">computer science department</a> of the <a class="link" href="https://www.ens.psl.eu/en" hreflang="en">École Normale Supérieure de Paris</a>.</p>
-		<p>My research interests focus on verification and low-level systems: formal methods, type systems, operating systems, compilers, hardware, functionnal programming and more.
+		<p>My research interests focus on verification and low-level systems: formal methods, type systems, Coq, operating systems, compilers, hardware, functionnal programming and more.
 			Besides computer science, I also enjoy mathematics and physics.</p>
 		<p>My hobbies include external sport such as rock climbing, sailing, hiking and skiing. I enjoy reading, especially sci-fi and detective stories. I also enjoy board games and video games</p>
 	</div>
 {% endif %}
 
-{% h2 '<i class="fa fa-link"></i>' "Liens divers" "Funny links" %}
+{% h2 '<i class="fa fa-link"></i>' "Liens divers" "Miscellaneous links" %}
 
-<ul class="content">
-	<li><a class="link" href="https://xkcd.com/" hreflang="en">XKCD</a> {% lang
-		"(en) un webcomic sur la physique, la science et plein d’autre choses"
-		"a webcomic about physics, science and other stuff" %}</li>
-	<li><a class="link" href="https://www.gocomics.com/garfield/" hreflang="en">Garfield</a> {% lang
-		"(en) un webcomic au sujet d’un (adorable) gros chat orange"
-		"a webcomic about an adorable fat orange cat" %}</li>
-	<li><a class="link" href="https://keepassxc.org/" hreflang="en">KeePassXC</a> {% lang
-		"très bon gestionnaire de mot de passe, il permet d’utiliser des mots de passe sécurisés sans risque d’oubli."
-		"a very good password manager. It allows you to use very secure passwords without fear of forgetting them."
-	%}</li>
-	<li>{% lang "Jeux vidéos :" "Video games:" %}
-	<ul>
-		<li><a class="link" href="https://www.kerbalspaceprogram.com/" hreflang="en">Kerbal Space Program</a> {% lang
+<div class="content">
+	{% h3 '<i class="fa fa-desktop"></i>' Logiciels Software %}
+	<ul class="content">
+		<li><a class="link external" href="https://keepassxc.org/" hreflang="en">KeePassXC</a> {% lang
+			"(en) est un gestionnaire de mot de passe, il permet d’utiliser des mots de passe sécurisés sans risque d’oubli."
+			"is a password manager. It allows you to use very secure passwords without fear of forgetting them."
+		%}</li>
+		<li><a class="link external" href="https://typst.app/" hreflang="en">Typst</a> {% lang
+			"(en) est une alternative a LaTeX assez complète qui adresse bon nombre de mes frustration avec TeX"
+			"is a interesting alternative to LaTeX which fixes a good chunk of what I find frustrating with TeX"
+		%}</li>
+	</ul>
+
+	{% h3 '<i class="fa fa-book-open"></i>' Webcomics Webcomics %}
+	<ul class="content">
+		<li><a class="link external" href="https://xkcd.com/" hreflang="en">XKCD</a> {% lang
+			"(en) un webcomic sur la physique, la science et plein d’autre choses"
+			"a webcomic about physics, science and other stuff" %}</li>
+		<li><a class="link external" href="https://www.gocomics.com/garfield/" hreflang="en">Garfield</a> {% lang
+			"(en) un webcomic au sujet d’un (adorable) gros chat orange"
+			"a webcomic about an adorable fat orange cat" %}</li>
+	</ul>
+
+	{% h3 '<i class="fa fa-gamepad"></i>' "Jeux vidéos" "Video games" %}
+	<ul class="content">
+		<li><a class="link external" href="https://www.kerbalspaceprogram.com/" hreflang="en">Kerbal Space Program</a> {% lang
 			"un jeu pour les fans de physique et d’espace ! Il permet de concevoir et lancer ses propres fusées."
 			"a game for space and physics fans! It allows you to design and launch your own rockets."
 		%}</li>
-		<li><a class="link" href="https://obradinn.com/" hreflang="en">Return of the Obra Dinn</a> {% lang
+		<li><a class="link external" href="https://store.steampowered.com/app/753640/Outer_Wilds/">Outer Wilds</a> {% lang
+			"Un jeu d'exploration et de découverte dans un système solaire miniature, il vous embarquera pour un voyage inoubliable."
+			"an exploration game set in a miniature solar system, this gem will take you on a memorable journey."
+		%}</li>
+		<li><a class="link external" href="https://obradinn.com/" hreflang="en">Return of the Obra Dinn</a> {% lang
 			"court jeu de détective qui fait confiance au joueur pour trouver des indices bien dissimulés et faire des déductions difficiles."
 			"short detective game which trusts players to find well hidden clues and make complex deductions"
 		%}</li>
-		<li><a class="link" href="https://www.factorio.com/" hreflang="en">Factorio</a> {% lang
+		<li><a class="link external" href="https://www.factorio.com/" hreflang="en">Factorio</a> {% lang
 			"derrière ses graphismes peu attirants, factorio cache un jeu d’optimisation et de logistique très prenant et satisfaisant."
 			"behind some unattractive graphics, factorio hides a very engaging and satisfying game about optimisation and logistics"
 		%}</li>
-	</ul></li>
-	<li>{% lang "Liens Youtube :" "Youtube links:" %}
-	<ul>
-	<li><a class="link" href="https://www.youtube.com/channel/UC2C_jShtL725hvbm1arSV9w" hreflang="en">CGP Grey</a> {% lang
-		"(en) une chaîne informative et humoristique sur des sujets très divers"
-		"a channel mixing information and humor on very diverse topics" %}</li>
-	<li><a class="link" href="https://www.youtube.com/channel/UCNIuvl7V8zACPpTmmNIqP2A" hreflang="en">Oversimplified</a> {% lang
-		"(en) l’histoire super simplifée en dessins"
-		"history oversimplified" %}</li>
-	<li><a class="link" href="https://www.youtube.com/playlist?list=PLAbMhAYRuCUhawCEV2oXZGrienoKTN16X" hreflang="en">Zero Punctuation</a> {% lang
-		"(en) des critiques de jeux vidéos très rapides"
-		"short and fast paced video game reviews" %}</li>
-	<li><a class="link" href="https://www.youtube.com/channel/UCfXXAQ-mp1uUcvSpvMcAAtw" hreflang="fr">LinksTheSun</a> {% lang
-		"une chaîne humouristique française"
-		"(fr) a good french humor channel" %}</li>
-	<li><a class="link" href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" hreflang="en">3Blue1Brown</a> {% lang
-		"(en) une chaîne de vulgarisation mathématique très bien faite"
-		"a great channel about maths" %}</li>
-	</ul></li>
-</ul>
+
+	</ul>
+
+
+
+</div>
+</div>
 {% endatlabel %}

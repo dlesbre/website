@@ -40,11 +40,14 @@
 	<a class="linkbutton" href="url" hreflang="lang">text</a>
 %}
 
-{% def h2(icon, fr, en)
-<h2 class="collapsible" title="{% lang 'Afficher/Masquer' 'Show/Hide' %}">
+{% def h(h, icon, fr, en)
+<h class="collapsible" title="{% lang 'Afficher/Masquer' 'Show/Hide' %}">
 	icon {% lang fr en %}
-</h2>
+</h>
 %}
+
+{% def h2(icon, fr, en) {% h h2 icon fr en %} %}
+{% def h3(icon, fr, en) {% h h3 icon fr en %} %}
 
 {% def CV
 {% if {% LANG %} == FR %}

@@ -84,6 +84,15 @@ main {
 		border-image-source: linear-gradient(to right, $dark_sep) 0%, $dark_sep 25%, transparent 100%;
 		border-image-slice: 1;
 	}
+	h3 {
+		padding-top: 5px;
+		font-size: 1.2em;
+		font-weight: 300;
+		text-align: left;
+		border-bottom: 2px solid $dark_sep;
+		border-image-source: linear-gradient(to right, $dark_sep) 0%, $dark_sep 25%, transparent 100%;
+		border-image-slice: 1;
+	}
 
 	@media (max-width: 500px) {
 		padding: 10px 10px 50px;
@@ -99,4 +108,7 @@ main {
 .light-theme main h2 {
 	border-bottom: 2px solid $light_sep;
 	border-image-source: linear-gradient(to right, $light_sep) 0%, $light_sep 25%, transparent 100%;
+}
+.smaller {
+	max-width: 800px;
 }
