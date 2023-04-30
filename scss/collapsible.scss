@@ -24,10 +24,8 @@ a.collapsible:after {
 	float: none;
 }
 
-
 // Content is the actual content to show/hide
 .content {
-  max-width: 700px;
 	padding: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;

@@ -72,7 +72,6 @@ function setup_collapsibles() {
 // Setup everything once the document loads
 // ==================================================
 
-
 window.onload = function () {
 	set_theme(get_current_theme());
 	setup_collapsibles();

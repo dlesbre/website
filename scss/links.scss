@@ -2,6 +2,7 @@
 a {
 	cursor: pointer;
 	color: $dark_sep;
+  text-decoration: none;
 
 	&.link:hover {
 		transition-property: font-style color;
