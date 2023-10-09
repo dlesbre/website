@@ -2,7 +2,8 @@
 {% def lang {% lang fr en %} %}
 {% def langurl(slug) slug.{% lang %} %}
 
-{% def email dorian.lesbre [{% lang arobase at %}] gmail.com %}
+{% def at [{% lang arobase at %}] %}
+{% def email dorian.lesbre{% at %}gmail.com %}
 
 {% def report "\"{% lang Rapport "Report (fr)" %}\"" %}
 {% def report_en "\"{% lang "Rapport (en)" "Report" %}\"" %}

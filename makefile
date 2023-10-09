@@ -12,15 +12,19 @@ PPROC = mlpp
 CP = cp -r
 CHECKER = tidy -eq -config .tidy-config
 
-URL = https://www.eleves.ens.fr/home/dlesbre
-ALT_URL = https://www.eleves.ens.fr/~dlesbre
+URL = https://www.normalesup.org/~dlesbre
+
+# Old website (eleves.ens.fr)
+URL_ELEVES = https://www.eleves.ens.fr/home/dlesbre
+ALT_URL_ELEVES = https://www.eleves.ens.fr/~dlesbre
 
 HTML = index cv logiciels fichiers legal
 HTML_DEPS = base defs formatter
 SCSS = style
 SCSS_DEPS = variables main links header_footer home timeline table collapsible
 
-SSH = dlesbre@sas.eleves.ens.fr:www/
+SSH = dlesbre@phare.normalesup.org:WWW/
+SSH_ELEVES = dlesbre@sas.eleves.ens.fr:www/
 
 SASS = sassc
 CSS_DIR = $(WWW)/css/
@@ -43,10 +47,10 @@ endif
 
 ifeq ($(local),true)
 	URL = $(shell pwd)/$(WWW)
-	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -DDEBUG
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" "-DOLD_URL=$(URL_ELEVES)" "-DOLD_ALT=$(ALT_URL_ELEVES)" -DDEBUG
 	SASSC = $(SASS)
 else
-	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" -DRELEASE
+	PP = $(PPROC) "-DURL=$(URL)" "-DALT_URL=$(ALT_URL)" "-DOLD_URL=$(URL_ELEVES)" "-DOLD_ALT=$(ALT_URL_ELEVES)" -DRELEASE
 	SASSC = $(SASS) -t compressed
 endif
 

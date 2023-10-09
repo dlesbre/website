@@ -9,14 +9,16 @@
 		<div class="img"><img src="imgs/profil.png" alt="Photo"></div>
 		<div class="name">Dorian Lesbre</div>
 		{% if {% LANG %} == FR %}
-		<div class="desc">Élève fonctionnaire stagiaire</div>
-		<div class="desc">Mastérien en informatique</div>
+		<div class="desc">Doctorant en informatique</div>
+		<div class="desc"><a class="link" href="https://binsec.github.io/" hreflang="en">Équipe BINSEC</a></div>
+		<div class="desc"><a class="link" href="https://www.cea.fr/paris-saclay/Pages/Accueil.aspx">CEA LIST, Paris-Saclay</a></div>
+		<div class="desc">Ancien élève de l’<a class="link" href="https://www.ens.psl.eu">ENS Ulm</a></div>
 		{% else %}
-		<div class="desc">Master’s Student in Computer Science</div>
+		<div class="desc">PhD. Student in Computer Science</div>
+		<div class="desc"><a class="link" href="https://binsec.github.io/" hreflang="en">BINSEC Team</a></div>
+		<div class="desc"><a class="link" href="https://www.cea.fr/paris-saclay/Pages/Accueil.aspx">CEA LIST, Paris-Saclay</a></div>
+		<div class="desc">Former student of <a class="link" href="https://www.ens.psl.eu/en">ENS Ulm</a></div>
 		{% endif %}
-		<div class="school"><a class="link" href="{% lang
-			'https://www.ens.psl.eu'
-			'https://www.ens.psl.eu/en' %}" hreflang="{% lang %}">École Normale Supérieure</a></div>
 	</div>
 	<div class="column">
 		<div class="links">
@@ -30,12 +32,13 @@
 		<div class="contactsheet">
 			<dl>
 				<dt><i class="far fa-envelope"></i></dt>
-				<dd>{% email %}</dd>
+				<dd>
+					<strong>{% lang "pro :" "work:" %}</strong> dorian.lesbre{%at%}cea.fr<br>
+					<strong>{% lang "perso :" "personal:" %}</strong> {%email%}
+				</dd>
 				<dt><i class="fa fa-key"></i></dt>
 				<dd><a class="link" href="files/Dorian_Lesbre_public.pgp" download>{% lang "Clé publique GPG" "GPG public key" %}</a><br>
 					<a class="link" href="files/Dorian_Lesbre_public.pub" download>{% lang "Clé publique SSH" "SSH public key" %}</a></dd>
-				<dt><i class="fas fa-map-marker-alt"></i></dt>
-				<dd>45 rue d’Ulm<br>75005 Paris</dd>
 			</dl>
 		</div>
 	</div>
@@ -46,19 +49,37 @@
 
 {% if {% LANG %} == FR %}
 	<div class="content">
-		<p>Je suis étudiant en master au <a class="link" href="https://www.di.ens.fr/" hreflang="fr">département d’informatique</a> de <a class="link" href="https://www.ens.psl.eu" hreflang="fr">l’École Normale Supérieure de Paris</a>.</p>
+		<p>
+			Je suis étudiant en doctorat à
+			l’<a class="link" href="https://binsec.github.io/" hreflang="en">équipe BINSEC</a>,
+			au centre NanoINNOV du
+			<a class="link" href="https://www.cea.fr/paris-saclay/Pages/Accueil.aspx">CEA Paris-Saclay</a>.
+			Je travaille sur l'interprétation abstraite par transformation SSA. Mon encadrant
+			de thèse est <a class="link" href="https://binsec.github.io/people/lemerre.html">Matthieu Lemerre</a>.
+		</p>
+
 		<p>Je m’intéresse notamment à la vérification et l’informatique pratique bas niveau : méthodes formelles, système de types, Coq, systèmes d’exploitation, compilation,
-			circuits, programmation fonctionnelle et d’autres. En dehors de l’informatique je m’intéresse
+			circuits, programmation fonctionnelle et d’autres. En dehors de l’informatique, je m’intéresse
 			aussi aux mathématiques et à la physique.</p>
-		<p>Hors du domaine scolaire j’aime bien faire des sports d’extérieur comme l’escalade, la voile, la randonnée
-			et le ski. J’aime bien lire, notamment de la SF et des roman policiers. Je m’occupe également en jouant à des jeux de société et des jeux vidéos.</p>
+		<p>Hors du domaine scolaire, j’aime bien faire des sports d’extérieur comme l’escalade, la voile, la randonnée
+			et le ski. J’aime bien lire, notamment de la SF et des romans policiers. Je m’occupe également en jouant à des jeux de société et des jeux vidéos.</p>
 	</div>
 {% else %}
 	<div class="content">
-		<p>I’m a master’s student in the <a class="link" href="https://www.di.ens.fr/news" hreflang="en">computer science department</a> of the <a class="link" href="https://www.ens.psl.eu/en" hreflang="en">École Normale Supérieure de Paris</a>.</p>
+		<p>
+			I’m a PhD student at the
+			l’<a class="link" href="https://binsec.github.io/" hreflang="en">BINSEC Team</a>,
+			working from NanoINNOV at
+			<a class="link" href="https://www.cea.fr/paris-saclay/Pages/Accueil.aspx">CEA Paris-Saclay</a>.
+			My PhD subject is centered around SSA translation by abstract interpretation.
+			I work under the supervision of
+			<a class="link" href="https://binsec.github.io/people/lemerre.html">Matthieu Lemerre</a>.
+		</p>
 		<p>My research interests focus on verification and low-level systems: formal methods, type systems, Coq, operating systems, compilers, hardware, functionnal programming and more.
 			Besides computer science, I also enjoy mathematics and physics.</p>
-		<p>My hobbies include external sport such as rock climbing, sailing, hiking and skiing. I enjoy reading, especially sci-fi and detective stories. I also enjoy board games and video games</p>
+		<p>My hobbies include outdoor sports such as rock climbing, sailing, hiking and skiing.
+			I also enjoy reading, especially sci-fi and detective stories.
+			You can also find me playing board games and video games</p>
 	</div>
 {% endif %}
 
@@ -70,6 +91,12 @@
 		<li><a class="link external" href="https://keepassxc.org/" hreflang="en">KeePassXC</a> {% lang
 			"(en) est un gestionnaire de mot de passe, il permet d’utiliser des mots de passe sécurisés sans risque d’oubli."
 			"is a password manager. It allows you to use very secure passwords without fear of forgetting them."
+		%}</li>
+		<li><a class="link external" href="https://obsidian.md/" hreflang="en">Obsidian</a> {% lang
+			"(en) est une application de prise de notes simple (à base de fichiers markdown)
+			et très riche grâce à un bel écosystème de greffons."
+			"is an note-taking app that is both simple (based on markdown files)
+			and very customizable thanks to a large plugin ecosystem."
 		%}</li>
 		<li><a class="link external" href="https://typst.app/" hreflang="en">Typst</a> {% lang
 			"(en) est une alternative a LaTeX assez complète qui adresse bon nombre de mes frustration avec TeX"
