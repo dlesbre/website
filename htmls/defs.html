@@ -37,8 +37,11 @@
 	{% downloadbutton 'url' 'name' 'type' '{% call call fileprettysize www/url %}' 'lang' %}
 %}
 
-{% def linkbutton(url, text, lang)
-	<a class="linkbutton" href="url" hreflang="lang">text</a>
+{% def linkbutton(url, icon, text, lang)
+	<a class="linkbutton" href="url" hreflang="lang" title="text">
+		<i class="icon"></i>
+		<span class="txt">text</span>
+	</a>
 %}
 
 {% def h(h, icon, fr, en)
