@@ -1,9 +1,11 @@
 # Personnal website
 
-![status](https://img.shields.io/website?url=https%3A%2F%2Fwww.eleves.ens.fr%2Fhome%2Fdlesbre%2F)
+![status](https://img.shields.io/website?url=https%3A%2F%2Fwww.normalesup.org%2F~dlesbre%2F)
+![mirror](https://img.shields.io/website?url=https%3A%2F%2Fwww.eleves.ens.fr%2Fhome%2Fdlesbre%2F&label=mirror)
 
 This repository contains my personnal website.
-This website can be found online at [https://www.eleves.ens.fr/home/dlesbre](https://www.eleves.ens.fr/home/dlesbre).
+This website can be found online at [https://www.normalesup.org/~dlesbre/](https://www.normalesup.org/~dlesbre/)
+and a mirror version at [https://www.eleves.ens.fr/home/dlesbre](https://www.eleves.ens.fr/home/dlesbre).
 
 ## Compiling the website
 
