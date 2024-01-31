@@ -96,7 +96,7 @@ nav {
 footer {
 	position: absolute;
 	bottom: 0;
-	width: calc(100% - 80px); /* viewport width - padding */
+	width: calc(100% - 80px); // viewport width - padding
 	padding: 10px 40px;
 	height: 70px;
 	display: flex;
@@ -106,6 +106,8 @@ footer {
 
 	@media (max-width: 600px) {
 		font-size: 0.7em;
+		padding: 10px 20px;
+		width: calc(100% - 40px); // viewport width - padding
 	}
 
 	p {

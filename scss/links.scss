@@ -36,7 +36,7 @@ a {
       border-right: 2px solid $dark_sep;
       padding-left: 1px;
       padding-right: 10px;
-      height: 100%;
+      // height: 100%;
       margin-right: 10px;
       font-size: 1em;
       display: flex;
@@ -54,7 +54,7 @@ a {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   a.linkbutton, a.downloadbutton {
     font-size: 1em;
   }
