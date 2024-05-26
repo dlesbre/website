@@ -1,0 +1,25 @@
+{% include includes/defs.html %}
+{% def name 404 %}
+{% def title {% lang "Erreur 404" "404 Error" %} %}
+
+{% include includes/base.html %}
+
+{% atlabel main %}
+
+{% if {% LANG %} == FR %}
+<h2><i class="fas fa-error"></i> Erreur 404</h2>
+
+<p>
+  La page que vous cherchez n'existe pas sur ce site web...
+</p>
+
+{% else %}
+<h2><i class="fas fa-error"></i> Error 404</h2>
+
+<p>
+  The requested URL was not found on this website.
+</p>
+
+{% endif %}
+
+{% endatlabel %}
