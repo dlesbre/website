@@ -6,6 +6,7 @@ color = on
 local = false
 
 SRC = htmls
+INCLUDES = $(SRC)/includes
 WWW = www
 
 PPROC = mlpp
@@ -56,7 +57,7 @@ endif
 
 HTMLS = $(addsuffix .html, $(HTML))
 HTML_SOURCES = $(addprefix $(SRC)/, $(HTMLS))
-HTMLS_DEPS = $(addprefix $(SRC)/, $(addsuffix .html, $(HTML_DEPS)))
+HTMLS_DEPS = $(addprefix $(INCLUDES)/, $(addsuffix .html, $(HTML_DEPS)))
 HTML_TARGETS = $(addprefix $(WWW)/, $(addsuffix .en, $(HTMLS)) $(addsuffix .fr, $(HTMLS)))
 
 TARGETS = $(WWW)/sitemap.xml $(HTML_TARGETS) $(CSS_FILES)
