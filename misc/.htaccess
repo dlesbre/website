@@ -1,0 +1,2 @@
+RedirectMatch permanent /home/dlesbre/(.*) https://www.normalesup.org/~dlesbre/$1
+RedirectMatch permanent /~dlesbre/(.*) https://www.normalesup.org/~dlesbre/$1
