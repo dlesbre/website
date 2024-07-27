@@ -20,7 +20,7 @@ URL_ELEVES = https://www.eleves.ens.fr/home/dlesbre
 ALT_URL_ELEVES = https://www.eleves.ens.fr/~dlesbre
 
 HTML = index cv logiciels fichiers legal 404
-HTML_DEPS = base defs formatter
+HTML_DEPS = base defs formatter papers
 SCSS = style
 SCSS_DEPS = variables main links header_footer home timeline table collapsible
 
