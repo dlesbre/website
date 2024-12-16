@@ -8,6 +8,8 @@
 
 <div class="links">{% CV %}</div>
 
+{% include includes/papers.html %}
+
 {% h2 '<i class="fa fa-user-tie"></i>'
 	"Stages et expérience professionnelle"
 	"Internships and professional experience" %}
@@ -147,8 +149,8 @@
 			"Teaching assistant for the 2nd year operating systems course (M1 level)" %}</div>
 		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
 		<div class="date">{% lang
-			"Octobre &mdash; Décembre 2023"
-			"October &mdash; December 2023"
+			"2023-2024 et 2024-2025"
+			"2023-2024 and 2024-2025"
 		%}</div>
 	</div></div>
 
@@ -218,6 +220,33 @@
 	</div></div>
 </div>
 
+
+{% h2 '<i class="fas fa-laptop-code"></i>' "Compétences informatiques" "Computer skills" %}
+<div class="content">
+	<div class="links">
+		{% linkbutton "https://github.com/dlesbre" "fab fa-github" Github en %}
+		{% linkbutton "https://git.eleves.ens.fr/dlesbre" "fab fa-gitlab" 'ENS' en %}
+		{% linkbutton "https://gitlab.mpi-sws.org/dlesbre" "fab fa-gitlab" 'MPI' en %}
+		{% linkbutton "https://git.frama-c.com/dlesbre" "fab fa-gitlab" 'Frama-C' en %}
+	</div>
+
+	<dl>
+	<dt>{% lang Avancées Advanced %}</dt><dd>Python, OCaml, C, C++, GNU Make, Linux, Django, Coq, Voss II.</dd>
+	<dt>{% lang Bonnes Good %}</dt><dd>LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker, CMake.</dd>
+	<dt>{% lang Basiques Basic %}</dt><dd>Rust, Javascript, {% lang "assembleur x86" "x86 assembly" %}, Blender, Adobe Premiere {% lang et and %} After Effects.</dd>
+	</dl>
+
+	<p>
+		{% lang
+			'La page <a class="link" href="{% langurl logiciels.html %}">logiciels</a> présente brièvement
+			 mes différents projets informatiques. La plupart sont également accesible sur '
+			'The <a class="link" href="{% langurl logiciels.html %}">software</a> page briefly presents
+			 my various programming projects. Most of them are also accessible on '
+		%}
+		<a class="link external" href="https://github.com/dlesbre">github</a>.
+	</p>
+</div>
+
 {% h2 '<i class="fa fa-globe"></i>' Langues Languages %}
 
 <div class="content">
@@ -236,31 +265,6 @@
 	</ul>
 </div>
 
-{% h2 '<i class="fas fa-laptop-code"></i>' "Compétences informatiques" "Computer skills" %}
-<div class="links">
-	{% linkbutton "https://github.com/dlesbre" "fab fa-github" Github en %}
-	{% linkbutton "https://git.eleves.ens.fr/dlesbre" "fab fa-gitlab" 'ENS' en %}
-	{% linkbutton "https://gitlab.mpi-sws.org/dlesbre" "fab fa-gitlab" 'MPI' en %}
-	{% linkbutton "https://git.frama-c.com/dlesbre" "fab fa-gitlab" 'Frama-C' en %}
-</div>
-
-<div class="content">
-	<dl>
-	<dt>{% lang Avancées Advanced %}</dt><dd>Python, OCaml, C, C++, GNU Make, Linux, Django, Coq, Voss II.</dd>
-	<dt>{% lang Bonnes Good %}</dt><dd>LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker, CMake.</dd>
-	<dt>{% lang Basiques Basic %}</dt><dd>Rust, Javascript, {% lang "assembleur x86" "x86 assembly" %}, Blender, Adobe Premiere {% lang et and %} After Effects.</dd>
-	</dl>
-
-	<p>
-		{% lang
-			'La page <a class="link" href="{% langurl logiciels.html %}">logiciels</a> présente brièvement
-			 mes différents projets informatiques. La plupart sont également accesible sur '
-			'The <a class="link" href="{% langurl logiciels.html %}">software</a> page briefly presents
-			 my various programming projects. Most of them are also accessible on '
-		%}
-		<a class="link external" href="https://github.com/dlesbre">github</a>.
-	</p>
-</div>
 
 {% h2 '<i class="fas fa-coffee"></i>' "Autres expériences et loisirs" "Other accomplishments and hobbies" %}
 
