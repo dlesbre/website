@@ -44,8 +44,10 @@ dl dd {
 }
 
 .abstract {
-	padding: 0 30px;
+	padding: 0 20px;
 	@media(max-width: 800px) {
-		padding: 0 15px;
+		padding: 0 10px;
 	}
+	border-left: 2px solid $dark_sep;
+	margin-left: 4px;
 }
