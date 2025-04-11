@@ -1,0 +1,35 @@
+// Collapsible sections
+// JS adds ".folded" class to both
+// the button (".collapsible") and the text (".content")
+// when folding
+
+// Collapsible is the button
+.collapsible {
+  cursor: pointer;
+
+  // Add "-" Icon at the end
+	&:after {
+		font-family: "Font Awesome 5 Free";
+		content: "\f146";
+		float: right;
+		margin-left: 5px;
+	}
+  // Change icond to "+" when folded
+  &.folded:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0fe";
+  }
+}
+a.collapsible:after {
+	float: none;
+}
+
+// Content is the actual content to show/hide
+.content {
+	padding: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+  &.folded {
+    max-height: 0px;
+  }
+}
