@@ -1,0 +1,1 @@
+<a class="internal{% if page.pagename == include.name %} current{% endif %}" href="{{ include.url | relative_url }}.html{% if include.lang %}.{{ include.lang }}{% endif %}" title="{{ include.title }}"{% if include.lang %} hreflang="{{ include.lang }}"{% endif %}>{{ include.text }}</a>
