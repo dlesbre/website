@@ -87,6 +87,8 @@ nav {
 			transition-property: background-color;
 			background-color: $dark_bg_3;
 			transition-duration: 0.5s;
+			color: $dark_fg;
+			font-style: normal;
 		}
 
 		&.current {
@@ -128,6 +130,8 @@ footer {
 
 		.hbuttons a:hover {
 			background-color: $light_bg_3;
+			color: $light_fg;
+			font-style: normal;
 		}
 	}
 

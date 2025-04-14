@@ -7,7 +7,7 @@ a {
 	color: $dark_sep;
   text-decoration: none;
 
-	&.link:hover {
+	&:hover {
 		transition-property: font-style color;
 		transition-duration: 0.5s;
 		font-style: italic;
@@ -25,7 +25,8 @@ a {
     &:hover {
       transition-property: background-color;
       background-color: $dark_bg_3;
-      transition-duration: 0.5s;
+      font-style: normal;
+      color: $dark_sep;
     }
 
     @media (max-width: 359px) {
@@ -77,7 +78,7 @@ a {
 
 .light-theme a {
 	color: $light_sep;
-	&.link:hover {
+	&:hover {
 		color: $light_hover;
 	}
 
@@ -85,6 +86,7 @@ a {
     border: 2px solid $light_sep;
     &:hover {
       background-color: $light_bg_3;
+      color: $light_sep;
     }
   }
 
