@@ -51,23 +51,36 @@
 
 		<nav>
 			{%- if lang == "fr" -%}
-				{%- include widgets/navbutton.html title='Acceuil' url='index' text='<i class="fas fa-home"></i>' lang=lang -%}
-				{%- include widgets/navbutton.html title='CV' url='cv' text='CV' lang=lang -%}
-				{%- include widgets/navbutton.html title='Logiciels' url='logiciels' text='Logiciels' lang=lang -%}
-				{%- include widgets/navbutton.html title='Fichiers' url='fichiers' text='Fichiers' lang=lang -%}
+				{%- include widgets/navbutton.html title='Acceuil' url='index' text='<i class="fas fa-home"></i>' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='CV' url='cv' text='CV' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Logiciels' url='logiciels' text='Logiciels' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Fichiers' url='fichiers' text='Fichiers' lang=lang pagename=page.pagename -%}
 			{%- else -%}
-				{%- include widgets/navbutton.html title='Home' url='index' text='<i class="fas fa-home"></i>' lang=lang -%}
-				{%- include widgets/navbutton.html title='Resumé' url='cv' text='Resumé' lang=lang -%}
-				{%- include widgets/navbutton.html title='Software' url='logiciels' text='Software' lang=lang -%}
-				{%- include widgets/navbutton.html title='Files' url='fichiers' text='Files' lang=lang -%}
+				{%- include widgets/navbutton.html title='Home' url='index' text='<i class="fas fa-home"></i>' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Resumé' url='cv' text='Resumé' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Software' url='logiciels' text='Software' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Files' url='fichiers' text='Files' lang=lang pagename=page.pagename -%}
 			{%- endif -%}
 		</nav>
 
 		<main>
 			{{ content }}
 		</main>
+
 		<footer>
-      hELLO
+			{%- if lang == "fr" -%}
+				<p>
+					<!-- Source&nbsp;sur&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br> -->
+				&copy; {{ site.time | date: '%Y' }} Dorian Lesbre<br>
+				<a class="link" href="{{ 'legal.html.fr' | relative_url }}">Mentions légales</a></p>
+				<p>Dernière mise à jour : {{ site.time | date: '%Y-%m-%d' }}</p>
+			{%- else -%}
+				<p>
+					<!-- Source&nbsp;on&nbsp;<a class="link external" href="https://github.com/Lesbre/website/" hreflang="en">github</a>.<br> -->
+				&copy; {{ site.time | date: '%Y' }} Dorian Lesbre<br>
+				<a class="link" href="{{ 'legal.html.en' | relative_url }}">Legal disclaimer</a></p>
+				<p>Last updated : {{ site.time | date: '%Y-%m-%d' }}</p>
+			{%- endif -%}
 		</footer>
 	</body>
 </html>
