@@ -2,6 +2,15 @@
 
 @use "variables.scss" as *;
 
+@mixin nohover {
+  font-style: normal;
+  color: inherit;
+}
+
+@mixin nohover_light{
+  color: inherit;
+}
+
 a {
 	cursor: pointer;
 	color: $dark_sep;
@@ -25,8 +34,7 @@ a {
     &:hover {
       transition-property: background-color;
       background-color: $dark_bg_3;
-      font-style: normal;
-      color: $dark_sep;
+      @include nohover();
     }
 
     @media (max-width: 359px) {
@@ -86,7 +94,7 @@ a {
     border: 2px solid $light_sep;
     &:hover {
       background-color: $light_bg_3;
-      color: $light_sep;
+      @include nohover_light();
     }
   }
 

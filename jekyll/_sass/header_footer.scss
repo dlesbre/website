@@ -1,6 +1,7 @@
 // header and footer and navbar styling
 
 @use "variables.scss" as *;
+@use "links.scss";
 
 header {
 	display: flex;
@@ -32,6 +33,10 @@ header {
 	a {
 		color: $dark_fg;
 		text-decoration: none;
+
+		&:hover {
+			@include links.nohover();
+		}
 	}
 
 	// Language and theme color buttons
@@ -51,6 +56,7 @@ header {
 				transition-property: background-color;
 				transition-duration: 0.5s;
 				background-color: $dark_bg_3;
+				@include links.nohover();
 			}
 		}
 
@@ -87,8 +93,7 @@ nav {
 			transition-property: background-color;
 			background-color: $dark_bg_3;
 			transition-duration: 0.5s;
-			color: $dark_fg;
-			font-style: normal;
+			@include links.nohover();
 		}
 
 		&.current {
@@ -126,12 +131,14 @@ footer {
 		background-color: $light_bg_1;
 		a {
 			color: $light_fg;
+			&:hover {
+				@include links.nohover_light();
+			}
 		}
 
 		.hbuttons a:hover {
 			background-color: $light_bg_3;
-			color: $light_fg;
-			font-style: normal;
+			@include links.nohover_light();
 		}
 	}
 
@@ -143,6 +150,7 @@ footer {
 			color: $light_fg;
 			&:hover {
 				background-color: $light_bg_3;
+				@include links.nohover_light();
 			}
 			&.current {
 				background-color: $light_bg_2;
