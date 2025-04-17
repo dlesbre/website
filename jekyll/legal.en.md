@@ -35,3 +35,6 @@ The icons used are [fontawesome](https://fontawesome.com/)’s free icons.
 They are used in accordance with the fontawesome free license:
 [Icons (CC BY 4.0) - Fonts (SIL OFL 1.1) - Code (MIT)](https://fontawesome.com/license/free).
 The relevant files contain attribution comments.
+
+This website is statically generated using [Jekyll](https://jekyllrb.com/). Its
+source is available on [my github](https://github.com/dlesbre/website).
