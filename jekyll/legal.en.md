@@ -6,9 +6,9 @@ pagename: legal
 permalink: legal.html.en
 lang: en
 ---
-{% comment %}
+{%- comment -%}
 <!-- LTeX: language=en-US -->
-{% endcomment %}
+{%- endcomment -%}
 
 ## <i class="fas fa-balance-scale"></i> Legal disclaimers
 
