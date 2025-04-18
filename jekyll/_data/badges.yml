@@ -1,0 +1,7 @@
+# Publication artifact badges information
+acm-available:
+  img: /path
+  size:
+acm-reusable:
+  img:
+  size:
