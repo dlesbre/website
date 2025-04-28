@@ -1,0 +1,73 @@
+{%- comment -%}
+List of all publications in this website. Parameters:
+- lang: en or fr
+{%- endcomment -%}
+{%- for paper in site.data.publications -%}
+<div class="content filelist">
+  <div>
+    <span class="title">{{ paper.title }}</span>
+    {%- if paper.doi %} &mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a>{%- endif -%}
+  </div>
+  <div class="type">
+    {% for author_id in paper.authors %}
+      {% assign author = site.data.authors[author_id] %}
+      {{ author.first-name }} {{ author.last-name }}
+      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}"><i class="fab fa-orcid"></i></a>{% endif %}
+      {%- unless forloop.last %}, {% endunless -%}
+    {% endfor %}
+  </div>
+  <div class="date"><span title="{{ paper.venue }}">{{ paper.venue-acronym }} {{ paper.year }}</span></div>
+  {%- if paper.artifact-badges -%}
+  <div>
+    {% for badge_id in paper.artifact-badges %}
+      {% assign badge = site.data.badges[badge_id] %}
+      {% if badge.link %}<a href="{{badge.link}}" class="external">{% endif %}
+      <img src="{{ badge.image | relative_url }}"
+           alt="{{ badge.title }}" title="{{ badge.title }}"
+           {% if badge.witdh %}width={{ badge.width }}{% endif %}
+           {% if badge.height %}height={{ badge.height }}{% endif %}/>
+      {% if badge.link %}</a>{% endif %}
+    {% endfor %}
+  </div>
+  {%- endif -%}
+  <details>
+    <summary>{% if include.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
+    <div class="abstract">
+      <strong>{% if include.lang == "fr" %}Mots-clés :{% else %}Keywords: {% endif %}</strong> {{ paper.keywords | join:", " }}
+      <p>{{ paper.abstract }}</p>
+    </div>
+  </details>
+
+
+  <div class="llinks paper">
+    <a class="linkbutton" href="https://codex.top/papers/2024-pldi-compiling-with-abstract-interpretation.html">
+      <i class="fas fa-lightbulb"></i>
+      <b>{% if include.lang == "fr" %}Aperçu{% else %}In a nutshell{% endif %}</b>
+    </a>
+    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation.pdf">
+      <i class="fas fa-file-pdf"></i>
+      <b>PDF</b>
+    </a>
+    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf">
+      <i class="fas fa-file-pdf"></i>
+      <b>{% if include.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
+    </a>
+    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation.bib">
+      <i class="fas fa-quote-left"></i>
+      <b>Bibtex</b>
+    </a>
+    <a class="linkbutton" href="https://doi.org/10.5281/zenodo.10895582">
+      <i class="fas fa-laptop-code"></i>
+      <b>{% if include.lang == "fr" %}Artefact{% else %}Artifact{% endif %}</b>
+    </a>
+    <a class="linkbutton" href="https://www.youtube.com/watch?v=2Btkn9AvM8o">
+      <i class="fas fa-play-circle"></i>
+      <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %} (18 min)</b>
+    </a>
+    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation-slides.pdf">
+      <i class="fas fa-file-powerpoint"></i>
+      <b>{% if include.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
+    </a>
+  </div>
+</div>
+{%- endfor -%}

@@ -1,7 +1,13 @@
 # Publication artifact badges information
 acm-available:
-  img: /path
-  size:
+  image: imgs/artifacts-available.png
+  title: ACM Artifacts Available
+  width: 35
+  height: 35
+  link: https://www.acm.org/publications/policies/artifact-review-and-badging-current
 acm-reusable:
-  img:
-  size:
+  image: imgs/artifacts-reusable.png
+  title: ACM Artifacts Reusable
+  width: 35
+  height: 35
+  link: https://www.acm.org/publications/policies/artifact-review-and-badging-current

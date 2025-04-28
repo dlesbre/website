@@ -3,6 +3,22 @@
 // the button (".collapsible") and the text (".content")
 // when folding
 
+@use "variables.scss" as *;
+
+summary {
+  cursor: pointer;
+
+  color: $dark_sep;
+  text-decoration: none;
+
+  &:hover {
+    transition-property: font-style color;
+    transition-duration: 0.5s;
+    font-style: italic;
+    color: $dark_hover;
+  }
+}
+
 // Collapsible is the button
 .collapsible {
   cursor: pointer;
