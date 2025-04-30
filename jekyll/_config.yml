@@ -56,3 +56,10 @@ exclude:
   - vendor/ruby/
   - makefile
   - .gitignore
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: katex

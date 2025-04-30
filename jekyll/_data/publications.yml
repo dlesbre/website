@@ -10,10 +10,11 @@
     - fbobot
   venue: 46th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
   venue-acronym: PLDI
+  venue-url: https://pldi25.sigplan.org/
   ranking: A*
   award: null
   year: 2025
-  month: 6
+  month: "06"
   doi: 10.1145/3729298
   artifact: https://zenodo.org/records/15165896
   summary: /papers/2025-pldi-relational-abstractions-labeled-uf.html
@@ -48,8 +49,9 @@
     - dlesbre
   venue: 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains
   venue-acronym: NSAD
+  venue-url: https://2024.splashcon.org/home/nsad-2024
   year: 2024
-  month: 10
+  month: "10"
   talk-video: https://www.youtube.com/watch?v=t2uaZ6VHhAY
   talk-video-length: 28  # Minutes
   keywords:
@@ -80,11 +82,12 @@
     - mlemerre
   venue: 45th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
   venue-acronym: PLDI
+  venue-url: https://pldi24.sigplan.org/
   ranking: A*
   award: null
   doi: 10.1145/3656392
   year: 2024
-  month: 6
+  month: "06"
   artifact: https://doi.org/10.5281/zenodo.10895582
   artifact-badges: # Must match a key in _data/badges.yml
     - acm-available

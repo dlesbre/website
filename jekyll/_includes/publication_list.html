@@ -40,62 +40,7 @@ List of all publications in this website. Parameters:
     </div>
   </details>
 
-
-  <div class="llinks paper">
-    {% if paper.summary %}
-    <a class="linkbutton" href="{{ paper.summary | relative_url }}">
-      <i class="fas fa-lightbulb"></i>
-      <b>{% if include.lang == "fr" %}Aperçu{% else %}In a nutshell{% endif %}</b>
-    </a>
-    {% endif %}
-
-    {% assign path = '/files/publications/' | append: paper.slug %}
-
-    {% assign pdf-path = path | append: '.pdf' %}
-    {% assign pdf = site.static_files | where: "path", pdf-path | first %}
-    {% if pdf %}
-    <a class="linkbutton" href="{{ pdf.path | relative_url }}">
-      <i class="fas fa-file-pdf"></i>
-      <b>PDF</b>
-    </a>
-    {% endif %}
-    {% assign pdf-appendix-path = path | append: '-with-appendices.pdf' %}
-    {% assign pdf-appendix = site.static_files | where: "path", pdf-appendix-path | first %}
-    {% if pdf-appendix %}
-    <a class="linkbutton" href="{{ pdf-appendix.path | relative_url }}">
-      <i class="fas fa-file-pdf"></i>
-      <b>{% if include.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
-    </a>
-    {% endif %}
-    {% assign bib-path = path | append: '.bib' %}
-    {% assign bib = site.static_files | where: "path", bib-path | first %}
-    {% if bib %}
-    <a class="linkbutton" href="{{ bib.path | relative_url }}">
-      <i class="fas fa-quote-left"></i>
-      <b>Bibtex</b>
-    </a>
-    {% endif %}
-    {% if paper.artifact %}
-    <a class="linkbutton" href="{{ paper.artifact }}">
-      <i class="fas fa-laptop-code"></i>
-      <b>{% if include.lang == "fr" %}Artefact{% else %}Artifact{% endif %}</b>
-    </a>
-    {% endif %}
-    {% if paper.talk-video %}
-    <a class="linkbutton" href="{{ paper.talk-video }}">
-      <i class="fas fa-play-circle"></i>
-      <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %}{% if paper.talk-video-length %} ({{ paper.talk-video-length }} min){% endif %}</b>
-    </a>
-    {% endif %}
-    {% assign slides-path = path | append: '-slides.pdf' %}
-    {% assign slides = site.static_files | where: "path", slides-path | first %}
-    {% if slides %}
-    <a class="linkbutton" href="{{ slides.path | relative_url }}">
-      <i class="fas fa-file-powerpoint"></i>
-      <b>{% if include.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
-    </a>
-    {% endif %}
-  </div>
+  {% include publication_links.html paper=paper lang=include.lang nutshell=true %}
 </div>
 {%- endfor -%}
 </div>
