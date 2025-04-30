@@ -2,7 +2,7 @@
 layout: base
 ---
 {%- assign lang = page.lang | default: site.lang -%}
-{%- assign slug = page.name | split: '.' | reverse | shift | reverse | join:'.'  -%}
+{%- assign slug = page.name | strip_extension  -%}
 {%- assign paper = site.data.publications | find: "slug", slug -%}
 
 {% if paper %}
