@@ -2,6 +2,7 @@
 
 # PLDI 2025
 - title: Relational Abstractions Based on Labeled Union-Find
+  slug: 2025-pldi-relational-abstractions-labeled-uf
   authors: # Authors must match a key in _data/authors.yml
     - dlesbre
     - mlemerre
@@ -15,9 +16,7 @@
   month: 6
   doi: 10.1145/3729298
   artifact: https://zenodo.org/records/15165896
-  bibtex: /assets/publications/bibtex/2025-pldi-relational-abstractions-labeled-uf.bib
   summary: /papers/2025-pldi-relational-abstractions-labeled-uf.html
-  pdf-with-appendix: /assets/publications/pdfs/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf
   keywords:
     - relational abstract domain
     - labeled union-find
@@ -42,6 +41,8 @@
 
 # NSAD 2024
 - title: Labeled Union-Find for Constraint Factorization
+  slug: 2024-nsad-labeled-union-find
+  short-paper: true
   authors:
     - mlemerre
     - dlesbre
@@ -49,8 +50,6 @@
   venue-acronym: NSAD
   year: 2024
   month: 10
-  bibtex:
-  pdf:
   talk-video: https://www.youtube.com/watch?v=t2uaZ6VHhAY
   talk-video-length: 28  # Minutes
   keywords:
@@ -75,6 +74,7 @@
 
 # PLDI 2024
 - title: Compiling with Abstract Interpretation
+  slug: 2024-pldi-compiling-with-abstract-interpretation
   authors:
     - dlesbre
     - mlemerre
@@ -90,12 +90,8 @@
     - acm-available
     - acm-reusable
   summary: /papers/2024-pldi-compiling-with-abstract-interpretation.html
-  pdf: /assets/publications/pdfs/2024-pldi-compiling-with-abstract-interpretation.pdf
-  pdf-with-appendix: /assets/publications/pdfs/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf
-  talk-slides: /assets/publications/slides/2024-pldi-compiling-with-abstract-interpretation.pdf
   talk-video: https://www.youtube.com/watch?v=2Btkn9AvM8o
   talk-video-length: 18  # Minutes
-  bibtex: /assets/publications/bibtex/2024-pldi-compiling-with-abstract-interpretation.bib
   comment: Also presented at AFADL 2024
   topics:
     - compilers

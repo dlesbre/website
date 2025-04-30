@@ -7,6 +7,7 @@ List of all publications in this website. Parameters:
 <div class="content filelist">
   <div>
     <span class="title">{{ paper.title }}</span>
+    {%- if paper.short-paper %} &mdash; {% if include.lang == "fr" %}Papier court{% else %}Short paper{% endif %}{% endif %}
     {%- if paper.doi %} &mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a>{%- endif -%}
   </div>
   <div class="type">
@@ -47,20 +48,29 @@ List of all publications in this website. Parameters:
       <b>{% if include.lang == "fr" %}Aperçu{% else %}In a nutshell{% endif %}</b>
     </a>
     {% endif %}
-    {% if paper.pdf %}
-    <a class="linkbutton" href="{{ paper.pdf | relative_url }}">
+
+    {% assign path = '/files/publications/' | append: paper.slug %}
+
+    {% assign pdf-path = path | append: '.pdf' %}
+    {% assign pdf = site.static_files | where: "path", pdf-path | first %}
+    {% if pdf %}
+    <a class="linkbutton" href="{{ pdf.path | relative_url }}">
       <i class="fas fa-file-pdf"></i>
       <b>PDF</b>
     </a>
     {% endif %}
-    {% if paper.pdf-with-appendix %}
-    <a class="linkbutton" href="{{ paper.pdf-with-appendix | relative_url }}">
+    {% assign pdf-appendix-path = path | append: '-with-appendices.pdf' %}
+    {% assign pdf-appendix = site.static_files | where: "path", pdf-appendix-path | first %}
+    {% if pdf-appendix %}
+    <a class="linkbutton" href="{{ pdf-appendix.path | relative_url }}">
       <i class="fas fa-file-pdf"></i>
       <b>{% if include.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
     </a>
     {% endif %}
-    {% if paper.bibtex %}
-    <a class="linkbutton" href="{{ paper.bibtex | relative_url }}">
+    {% assign bib-path = path | append: '.bib' %}
+    {% assign bib = site.static_files | where: "path", bib-path | first %}
+    {% if bib %}
+    <a class="linkbutton" href="{{ bib.path | relative_url }}">
       <i class="fas fa-quote-left"></i>
       <b>Bibtex</b>
     </a>
@@ -77,8 +87,10 @@ List of all publications in this website. Parameters:
       <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %}{% if paper.talk-video-length %} ({{ paper.talk-video-length }} min){% endif %}</b>
     </a>
     {% endif %}
-    {% if paper.slides %}
-    <a class="linkbutton" href="{{ paper.slides | relative_url }}">
+    {% assign slides-path = path | append: '-slides.pdf' %}
+    {% assign slides = site.static_files | where: "path", slides-path | first %}
+    {% if slides %}
+    <a class="linkbutton" href="{{ slides.path | relative_url }}">
       <i class="fas fa-file-powerpoint"></i>
       <b>{% if include.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
     </a>
