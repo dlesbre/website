@@ -1,7 +1,6 @@
 ---
 layout: base
-title: index
-pagename: index
+title: Index
 permalink: index.html.fr
 ---
 foobar

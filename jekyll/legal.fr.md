@@ -1,8 +1,8 @@
 ---
 layout: base
-title: legal
-pagename: legal
+title: Mention légales
 permalink: legal.html.fr
+lang: fr
 ---
 
 ## <i class="fas fa-balance-scale"></i> Mentions légales

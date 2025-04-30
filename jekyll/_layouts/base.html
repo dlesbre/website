@@ -1,7 +1,13 @@
 ---
 layout: html-escapes
 ---
-<!doctype html>{%- assign lang = page.lang | default: site.lang -%}
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign pagename = page.url | strip_extension | strip_prefix: "/" -%}
+{%- assign extension = page.url | extension -%}
+{%- if extension  == "fr" or extension  == "en" -%}
+	{%- assign pagename = pagename | strip_extension -%}
+{%- endif -%}
+<!doctype html>
 <html lang="{{ lang }}">
 	<head>
 		<meta charset="utf-8"/>
@@ -24,10 +30,12 @@ layout: html-escapes
 		<meta name="og:locale" content="{{ lang }}"/>
 
 		<!-- Links -->
-		<link rel="canonical" type="text/html" href="{{ page.pagename | absolute_url }}"/>
-		<link rel="alternate" type="text/html" href="{{ page.pagename | absolute_url }}.html"/>
-		<link rel="alternate" type="text/html" href="{{ page.pagename | absolute_url }}.html.fr" hreflang="fr"/>
-		<link rel="alternate" type="text/html" href="{{ page.pagename | absolute_url }}.html.en" hreflang="en"/>
+		<link rel="canonical" type="text/html" href="{{ pagename | absolute_url }}"/>
+		<link rel="alternate" type="text/html" href="{{ pagename | absolute_url }}.html"/>
+		{%- if extension == "fr" or extension == "en" -%}
+			<link rel="alternate" type="text/html" href="{{ pagename | absolute_url }}.html.fr" hreflang="fr"/>
+			<link rel="alternate" type="text/html" href="{{ pagename | absolute_url }}.html.en" hreflang="en"/>
+		{%- endif -%}
 
 		<link rel="icon" type="image/png" href="{{ page.icon | default:'favicon.ico' | relative_url }}"/>
 		<link rel="stylesheet" type="text/css" href="{{ 'css/style.css' | relative_url }}"/>
@@ -41,12 +49,12 @@ layout: html-escapes
 
 			<div class="hbuttons">
 				{%- if lang == "fr" -%}
-				<a class="alternate" title="English version" href="{{ page.pagename | relative_url }}.html.en" hreflang="en">
+				<a class="alternate" title="English version" href="{{ pagename | relative_url }}.html.en" hreflang="en">
 					<img src="{{ 'imgs/UK_flag.svg' | relative_url }}" alt="EN">
 				</a>
 				<a class="themetoggle" onclick="toggle_theme();" title="Thème clair/sombre"><i class="fas fa-palette"></i></a>
 				{%- else -%}
-				<a class="alternate" title="Version française" href="{{ page.pagename | relative_url }}.html.fr" hreflang="fr">
+				<a class="alternate" title="Version française" href="{{ pagename | relative_url }}.html.fr" hreflang="fr">
 					<img src="{{ 'imgs/FR_flag.svg' | relative_url }}" alt="FR">
 				</a>
 				<a class="themetoggle" onclick="toggle_theme();" title="Dark/light theme"><i class="fas fa-palette"></i></a>
@@ -56,15 +64,15 @@ layout: html-escapes
 
 		<nav>
 			{%- if lang == "fr" -%}
-				{%- include widgets/navbutton.html title='Acceuil' url='index' text='<i class="fas fa-home"></i>' lang=lang pagename=page.pagename -%}
-				{%- include widgets/navbutton.html title='CV' url='cv' text='CV' lang=lang pagename=page.pagename -%}
-				{%- include widgets/navbutton.html title='Logiciels' url='logiciels' text='Logiciels' lang=lang pagename=page.pagename -%}
-				{%- include widgets/navbutton.html title='Fichiers' url='fichiers' text='Fichiers' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Acceuil' url='index' text='<i class="fas fa-home"></i>' lang=lang pagename=pagename -%}
+				{%- include widgets/navbutton.html title='CV' url='cv' text='CV' lang=lang pagename=pagename -%}
+				{%- include widgets/navbutton.html title='Logiciels' url='logiciels' text='Logiciels' lang=lang pagename=pagename -%}
+				{%- include widgets/navbutton.html title='Fichiers' url='fichiers' text='Fichiers' lang=lang pagename=pagename -%}
 			{%- else -%}
-				{%- include widgets/navbutton.html title='Home' url='index' text='<i class="fas fa-home"></i>' lang=lang pagename=page.pagename -%}
-				{%- include widgets/navbutton.html title='Resumé' url='cv' text='Resumé' lang=lang pagename=page.pagename -%}
-				{%- include widgets/navbutton.html title='Software' url='logiciels' text='Software' lang=lang pagename=page.pagename -%}
-				{%- include widgets/navbutton.html title='Files' url='fichiers' text='Files' lang=lang pagename=page.pagename -%}
+				{%- include widgets/navbutton.html title='Home' url='index' text='<i class="fas fa-home"></i>' lang=lang pagename=pagename -%}
+				{%- include widgets/navbutton.html title='Resumé' url='cv' text='Resumé' lang=lang pagename=pagename -%}
+				{%- include widgets/navbutton.html title='Software' url='logiciels' text='Software' lang=lang pagename=pagename -%}
+				{%- include widgets/navbutton.html title='Files' url='fichiers' text='Files' lang=lang pagename=pagename -%}
 			{%- endif -%}
 		</nav>
 

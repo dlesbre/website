@@ -1,13 +1,9 @@
 ---
 layout: base
-title: legal
-pagename: legal
+title: Legal Disclaimers
 permalink: legal.html.en
 lang: en
 ---
-{%- comment -%}
-<!-- LTeX: language=en-US -->
-{%- endcomment -%}
 
 ## <i class="fas fa-balance-scale"></i> Legal disclaimers
 
