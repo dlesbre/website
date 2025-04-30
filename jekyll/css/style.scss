@@ -54,3 +54,9 @@ dl dd {
 		padding: 0 10px;
 	}
 }
+
+.paperlist {
+	> :not(:last-child) {
+		margin-bottom: 20px;
+	}
+}

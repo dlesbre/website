@@ -2,6 +2,7 @@
 List of all publications in this website. Parameters:
 - lang: en or fr
 {%- endcomment -%}
+<div class="paperlist">
 {%- for paper in site.data.publications -%}
 <div class="content filelist">
   <div>
@@ -40,34 +41,49 @@ List of all publications in this website. Parameters:
 
 
   <div class="llinks paper">
-    <a class="linkbutton" href="https://codex.top/papers/2024-pldi-compiling-with-abstract-interpretation.html">
+    {% if paper.summary %}
+    <a class="linkbutton" href="{{ paper.summary | relative_url }}">
       <i class="fas fa-lightbulb"></i>
       <b>{% if include.lang == "fr" %}Aperçu{% else %}In a nutshell{% endif %}</b>
     </a>
-    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation.pdf">
+    {% endif %}
+    {% if paper.pdf %}
+    <a class="linkbutton" href="{{ paper.pdf | relative_url }}">
       <i class="fas fa-file-pdf"></i>
       <b>PDF</b>
     </a>
-    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf">
+    {% endif %}
+    {% if paper.pdf-with-appendix %}
+    <a class="linkbutton" href="{{ paper.pdf-with-appendix | relative_url }}">
       <i class="fas fa-file-pdf"></i>
       <b>{% if include.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
     </a>
-    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation.bib">
+    {% endif %}
+    {% if paper.bibtex %}
+    <a class="linkbutton" href="{{ paper.bibtex | relative_url }}">
       <i class="fas fa-quote-left"></i>
       <b>Bibtex</b>
     </a>
-    <a class="linkbutton" href="https://doi.org/10.5281/zenodo.10895582">
+    {% endif %}
+    {% if paper.artifact %}
+    <a class="linkbutton" href="{{ paper.artifact }}">
       <i class="fas fa-laptop-code"></i>
       <b>{% if include.lang == "fr" %}Artefact{% else %}Artifact{% endif %}</b>
     </a>
-    <a class="linkbutton" href="https://www.youtube.com/watch?v=2Btkn9AvM8o">
+    {% endif %}
+    {% if paper.talk-video %}
+    <a class="linkbutton" href="{{ paper.talk-video }}">
       <i class="fas fa-play-circle"></i>
-      <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %} (18 min)</b>
+      <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %}{% if paper.talk-video-length %} ({{ paper.talk-video-length }} min){% endif %}</b>
     </a>
-    <a class="linkbutton" href="files/publications/2024-pldi-compiling-with-abstract-interpretation-slides.pdf">
+    {% endif %}
+    {% if paper.slides %}
+    <a class="linkbutton" href="{{ paper.slides | relative_url }}">
       <i class="fas fa-file-powerpoint"></i>
       <b>{% if include.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
     </a>
+    {% endif %}
   </div>
 </div>
 {%- endfor -%}
+</div>

@@ -52,6 +52,7 @@
   bibtex:
   pdf:
   talk-video: https://www.youtube.com/watch?v=t2uaZ6VHhAY
+  talk-video-length: 28  # Minutes
   keywords:
     - relational abstract domain
     - labeled union-find
@@ -93,6 +94,7 @@
   pdf-with-appendix: /assets/publications/pdfs/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf
   talk-slides: /assets/publications/slides/2024-pldi-compiling-with-abstract-interpretation.pdf
   talk-video: https://www.youtube.com/watch?v=2Btkn9AvM8o
+  talk-video-length: 18  # Minutes
   bibtex: /assets/publications/bibtex/2024-pldi-compiling-with-abstract-interpretation.bib
   comment: Also presented at AFADL 2024
   topics:
