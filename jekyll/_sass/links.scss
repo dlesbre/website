@@ -34,7 +34,7 @@ a {
     &:hover {
       transition-property: background-color;
       background-color: $dark_bg_3;
-      @include nohover();
+      font-style: normal;
     }
 
     @media (max-width: 359px) {
@@ -94,7 +94,6 @@ a {
     border: 2px solid $light_sep;
     &:hover {
       background-color: $light_bg_3;
-      @include nohover_light();
     }
   }
 
