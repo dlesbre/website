@@ -27,6 +27,12 @@ strong {
 .filelist li {
 	margin-bottom: 30px;
 }
+code {
+	color: $dark_code;
+}
+.light-theme code {
+	color: $light_code;
+}
 
 dl {
 	list-style: none;
