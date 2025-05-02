@@ -7,8 +7,10 @@ Parameters
 - nutshell: bool - include link to summary
 {%- endcomment -%}
 <div class="llinks paper">
-  {% if include.nutshell and include.paper.summary %}
-  <a class="linkbutton" href="{{ include.paper.summary | relative_url }}">
+  {% assign nutshell-path = "publications/" | append: include.paper.slug | append: '.md' %}
+  {% assign nutshell = site.pages | find: "path", nutshell-path %}
+  {% if include.nutshell and nutshell %}
+  <a class="linkbutton" href="{{ nutshell.url | relative_url }}">
     <i class="fas fa-lightbulb"></i>
     <b>{% if include.lang == "fr" %}Aperçu{% else %}Overview{% endif %}</b>
   </a>

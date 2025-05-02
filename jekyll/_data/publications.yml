@@ -20,7 +20,6 @@
   artifact-badges: # Must match a key in _data/badges.yml
     - acm-available
     - acm-reusable
-  summary: /papers/2025-pldi-relational-abstractions-labeled-uf.html
   keywords:
     - relational abstract domain
     - labeled union-find
@@ -95,7 +94,6 @@
   artifact-badges: # Must match a key in _data/badges.yml
     - acm-available
     - acm-reusable
-  summary: /papers/2024-pldi-compiling-with-abstract-interpretation.html
   talk-video: https://www.youtube.com/watch?v=2Btkn9AvM8o
   talk-video-length: 18  # Minutes
   comment: Also presented at AFADL 2024
