@@ -4,6 +4,7 @@ layout: paper-summary
 title: "PLDI 2024"
 date: 2024-04-22
 nav_order: 2024-04-22
+lang: en
 ---
 
 ## Context
@@ -36,12 +37,12 @@ in parallel (using a product of the relevant domains), and have them collaborate
 
 Below is an example of compiling a source program to SSA using our technique (you can see the labels in the nodes as just different names for each node). Our analyzer is capable of eliminating the dead else branch inside the loop. Doing so requires simultaneously
 performing
-**numerical analysis** (to learn that z is even), some **syntactic transformations** (to learn
-that F(j + z%2) is F(j)), optimistic **global value numbering** (to learn that i = j), and
+**numerical analysis** (to learn that `z` is even), some **syntactic transformations** (to learn
+that `F(j + z%2)` is `F(j)`), optimistic **global value numbering** (to learn that `i = j`), and
 **dead code elimination** so that no analysis takes the else branch (which breaks all those properties).
 
-<img src="/assets/publications/imgs/2024-pldi-full-example.svg"
-style="width:700px; display:block; margin-left:auto; margin-right:auto">
+<img class="transparent" src="{{ '/imgs/publications/2024-pldi-full-example.svg' | relative_url }}"
+style="width:900px; display:block; margin-left:auto; margin-right:auto">
 
 ## Contributions
 
@@ -59,8 +60,8 @@ Our paper shows the following novel results:
   Here is a small example of a sound and complete functor transformation:
   replacing a ternary operator with explicit control flow jumps.
 
-  <img src="/assets/publications/imgs/2024-pldi-transformation-example.svg"
-  style="width:450px; display:block; margin-left:auto; margin-right:auto">
+  <img class="transparent" src="{{ '/imgs/publications/2024-pldi-transformation-example.svg' | relative_url }}"
+  style="width:600px; display:block; margin-left:auto; margin-right:auto">
 
 - **Compiling to SSA recovers missing context and improves numerical analysis precision**.
   We describe a functor for compiling a small imperative language to SSA.
@@ -74,7 +75,7 @@ Our paper shows the following novel results:
   instruction sequences with multiple intermediate variables is recovered thanks to our SSA-based analysis.
 
   Here are a few examples of assertion this domain can prove:
-  - Propagate information across statements
+  - Propagate information across statements:
     ```c
     c = (y >= 0);
     if (c) {
@@ -91,7 +92,7 @@ Our paper shows the following novel results:
     }
     ```
   - Increase precision of the numeric abstraction: even though intervals
-    can't represent `x != 0`, using our domain with interval abstraction can prove this
+    can't represent `x != 0`, using our domain with interval abstraction can prove this:
     ```c
     if (x != 0) {
         assert(x != 0);
