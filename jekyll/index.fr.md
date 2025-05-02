@@ -2,6 +2,7 @@
 layout: base
 title: Index
 permalink: index.html.fr
+lang: fr
 ---
 foobar
 

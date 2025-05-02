@@ -31,7 +31,11 @@ sections repliables.
 Les icônes utilisées sont les icônes gratuites de [fontawesome](https://fontawesome.com/).
 Elles sont utilisées en accord avec la licence fontawesome :
 [Icônes (CC BY 4.0) - Police (SIL OFL 1.1) - Code (MIT)](https://fontawesome.com/license/free).
+Les polices mathématiques et la feuille de style associée proviennent de
+[KaTeX](https://katex.org/), sous une
+[licence MIT](https://github.com/KaTeX/KaTeX/blob/main/LICENSE).
 Les fichiers concernés contiennent des commentaires d'attribution.
+
 
 Ce site est généré statiquement avec [Jekyll](https://jekyllrb.com/), et son
 code source est disponible sur [mon github](https://github.com/dlesbre/website).
