@@ -17,6 +17,9 @@
   month: "06"
   doi: 10.1145/3729298
   artifact: https://zenodo.org/records/15165896
+  artifact-badges: # Must match a key in _data/badges.yml
+    - acm-available
+    - acm-reusable
   summary: /papers/2025-pldi-relational-abstractions-labeled-uf.html
   keywords:
     - relational abstract domain

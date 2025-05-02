@@ -11,15 +11,7 @@ layout: base
 
     {%- if paper.artifact-badges -%}
       <span style="float: right;">
-      {% for badge_id in paper.artifact-badges %}
-        {% assign badge = site.data.badges[badge_id] %}
-        {% if badge.link %}<a href="{{badge.link}}" class="external">{% endif %}
-        <img src="{{ badge.image | relative_url }}"
-            alt="{{ badge.title }}" title="{{ badge.title }}"
-            {% if badge.witdh %}width={{ badge.width | times: 2 }}{% endif %}
-            {% if badge.height %}height={{ badge.height | times: 2 }}{% endif %}/>
-        {% if badge.link %}</a>{% endif %}
-      {% endfor %}
+        {% include publication_badges.html scale=2 badges=paper.artifact-badges %}
       </span>
     {%- endif -%}
   </div>
@@ -50,6 +42,8 @@ layout: base
     </div>
   {% endif %}
   {% endcomment %}
+{% else %}
+  {{ fail | paper_not_found }}
 {% endif %}
 
 {{ content }}
