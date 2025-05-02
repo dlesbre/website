@@ -101,7 +101,7 @@ Our paper shows the following novel results:
 
 ## Further information
 
-- Read the **paper**: either [published version](/assets/publications/pdfs/2024-pldi-compiling-with-abstract-interpretation.pdf) or the [version with appendices](/assets/publications/pdfs/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf)
-- Presented at the [Programming Language Design and Implementation (PLDI) 2024 conference](https://pldi24.sigplan.org/). Watch the [**talk video**](https://www.youtube.com/watch?v=2Btkn9AvM8o) or look at the [**slides**](/assets/publications/slides/2024-pldi-compiling-with-abstract-interpretation.pdf).
-- Download the [**software artifact**](https://doi.org/10.5281/zenodo.10895582) from
+- Read the **paper**: either [published version]({{ '/files/publications/2024-pldi-compiling-with-abstract-interpretation.pdf' | relative_url }}) or the [version with appendices]({{ '/files/publications/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf' | relative_url }})
+- Presented at the [Programming Language Design and Implementation (PLDI) 2024 conference](https://pldi24.sigplan.org/). Watch the [talk video](https://www.youtube.com/watch?v=2Btkn9AvM8o) or look at the [slides]({{ '/files/publications/2024-pldi-compiling-with-abstract-interpretation-slides.pdf' | relative_url }}).
+- Download the [software artifact](https://doi.org/10.5281/zenodo.10895582) from
   Zenodo to try out our example analyzer and explore the code.

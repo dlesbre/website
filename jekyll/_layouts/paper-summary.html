@@ -43,18 +43,17 @@ layout: base
   {% endfor %}
 
   {%- include publication_links.html paper=paper lang=lang nutshell=false -%}
-  {% comment %}
-  {%- include paper_artifacts.html paper=paper -%}
 
-  {% if paper.topics %}
-    <div style="margin-top: 10px;">
-      <b>Topics:</b>
-      {% for a in paper.topics %}
-      {{ a }}{% if forloop.last %}.{% else %}; {% endif %}
-      {% endfor %}
+  <div style="margin-top: 10px;">
+    <strong>{% if lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {{ paper.keywords | join:", " }}
+  </div>
+
+  <details open>
+    <summary>{% if include.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
+    <div class="abstract">
+      <p>{{ paper.abstract }}</p>
     </div>
-  {% endif %}
-  {% endcomment %}
+  </details>
 {% else %}
   {{ fail | paper_not_found }}
 {% endif %}

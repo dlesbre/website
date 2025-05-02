@@ -97,7 +97,7 @@
   talk-video: https://www.youtube.com/watch?v=2Btkn9AvM8o
   talk-video-length: 18  # Minutes
   comment: Also presented at AFADL 2024
-  topics:
+  keywords:
     - compilers
     - abstract interpretation
     - static single assignement (SSA)

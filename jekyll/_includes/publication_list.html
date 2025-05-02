@@ -30,7 +30,7 @@ List of all publications in this website. Parameters:
   <details>
     <summary>{% if include.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
     <div class="abstract">
-      <strong>{% if include.lang == "fr" %}Mots-clés :{% else %}Keywords: {% endif %}</strong> {{ paper.keywords | join:", " }}
+      <strong>{% if include.lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {{ paper.keywords | join:", " }}
       <p>{{ paper.abstract }}</p>
     </div>
   </details>
