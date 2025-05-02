@@ -80,6 +80,13 @@ layout: html-escapes
 		</nav>
 
 		<main>
+			{% if page.lang-disclaimer %}
+				{% if lang == "fr" %}
+					FRFR
+				{% else %}
+					ENEN
+				{% endif %}
+			{% endif %}
 			{{ content }}
 		</main>
 
