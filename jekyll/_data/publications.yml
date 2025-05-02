@@ -4,10 +4,10 @@
 - title: Relational Abstractions Based on Labeled Union-Find
   slug: 2025-pldi-relational-abstractions-labeled-uf
   authors: # Authors must match a key in _data/authors.yml
-    - dlesbre
-    - mlemerre
-    - haitelhara
-    - fbobot
+    - dlesbre: Université Paris-Saclay, CEA List
+    - mlemerre: Université Paris-Saclay, CEA List
+    - haitelhara: [OCamlPro, "Université Paris-Saclay, CEA List"]
+    - fbobot: Université Paris-Saclay, CEA List
   venue: 46th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
   venue-acronym: PLDI
   venue-url: https://pldi25.sigplan.org/
@@ -47,8 +47,8 @@
   slug: 2024-nsad-labeled-union-find
   short-paper: true
   authors:
-    - mlemerre
-    - dlesbre
+    - mlemerre: Université Paris-Saclay, CEA List
+    - dlesbre: Université Paris-Saclay, CEA List
   venue: 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains
   venue-acronym: NSAD
   venue-url: https://2024.splashcon.org/home/nsad-2024
@@ -80,8 +80,8 @@
 - title: Compiling with Abstract Interpretation
   slug: 2024-pldi-compiling-with-abstract-interpretation
   authors:
-    - dlesbre
-    - mlemerre
+    - dlesbre: Université Paris-Saclay, CEA List
+    - mlemerre: Université Paris-Saclay, CEA List
   venue: 45th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
   venue-acronym: PLDI
   venue-url: https://pldi24.sigplan.org/

@@ -21,11 +21,24 @@ layout: base
     {% if paper.doi %}&mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a> {% endif %}
   </div>
 
-  {% for author_id in paper.authors %}
-    {% assign author = site.data.authors[author_id] %}
+  {% for aut in paper.authors %}
     <div>
-    {{ author.first-name }} {{ author.last-name }}
-    {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}"><i class="fab fa-orcid"></i></a>{% endif %}
+      {% for author_and_affiliation in aut %}
+      {% assign author = author_and_affiliation[0] %}
+      {% assign author = site.data.authors[author] %}
+      {{ author.first-name }} {{ author.last-name }}
+      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}"><i class="fab fa-orcid"></i></a>{% endif %}
+      &mdash;
+      <i>{% if author_and_affiliation[1].first %}
+        {% if lang == "en" %}
+          {{ author_and_affiliation[1] | array_to_sentence: 'and', '; ' }}
+        {% else %}
+          {{ author_and_affiliation[1] | array_to_sentence: 'et', ' ; ' }}
+        {% endif %}
+      {% else %}
+        {{ author_and_affiliation[1] }}
+      {% endif %}</i>
+      {% endfor %}
     </div>
   {% endfor %}
 

@@ -49,6 +49,20 @@ module StringFilters
       text
     end
   end
+
+  # Variant of array_to_sentence_string that allows customizing the other connector
+  def array_to_sentence(array, last_connector = "and", connector=", ")
+    case array.length
+    when 0
+      ""
+    when 1
+      array[0].to_s
+    when 2
+      "#{array[0]} #{last_connector} #{array[1]}"
+    else
+      "#{array[0...-1].join(connector)}, #{last_connector} #{array[-1]}"
+    end
+  end
 end
 
 Liquid::Template.register_filter(StringFilters)
