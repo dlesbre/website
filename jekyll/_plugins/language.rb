@@ -4,19 +4,6 @@
 # - Change it to .html.<page.lang> (or .fr if no page.lang)
 # - Create a copy for the other language (so .en if page.lang=fr), adding a disclaimer
 #   "this page is only available in french" at the top of the content.
-module Jekyll
-  class Page
-    def url=(permalink)
-      @url = URL.new(
-        :template     => template,
-        :placeholders => url_placeholders,
-        :permalink    => permalink
-      ).to_s
-
-    end
-  end
-end
-
 module LanguageAlternatePagePlugin
   class LanguageAlternateGenerator < Jekyll::Generator
     def generate(site)
@@ -27,8 +14,9 @@ module LanguageAlternatePagePlugin
         end
       end
       alt_pages.each do |page|
+        # Delete and recreate page, since side-effects mean the URL can't
+        # easily be changed
         site.pages.delete(page)
-        puts page.dir + " " + page.basename + page.name
         site.pages << LanguageAlternatePage.new(site, page, "fr")
         site.pages << LanguageAlternatePage.new(site, page, "en")
       end

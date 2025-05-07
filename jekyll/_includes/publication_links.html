@@ -11,7 +11,7 @@ Parameters
   {% assign nutshell = site.pages | find: "url", nutshell-path %}
   {% if include.nutshell and nutshell %}
   <a class="linkbutton" href="{{ nutshell.url | relative_url }}">
-    <i class="fas fa-lightbulb"></i>
+    {% include icon.html icon="lightbulb" %}
     <b>{% if include.lang == "fr" %}Aperçu{% else %}Overview{% endif %}</b>
   </a>
   {% endif %}
@@ -21,44 +21,44 @@ Parameters
   {% assign pdf-path = path | append: '.pdf' %}
   {% assign pdf = site.static_files | find: "path", pdf-path %}
   {% if pdf %}
-  <a class="linkbutton" href="{{ pdf.path | relative_url }}">
-    <i class="fas fa-file-pdf"></i>
+  <a class="linkbutton" href="{{ pdf.path | relative_url }}" title="PDF - {{ pdf-path | file_size | pretty_size }}">
+    {% include icon.html icon="pdf" %}
     <b>PDF</b>
   </a>
   {% endif %}
   {% assign pdf-appendix-path = path | append: '-with-appendices.pdf' %}
   {% assign pdf-appendix = site.static_files | find: "path", pdf-appendix-path %}
   {% if pdf-appendix %}
-  <a class="linkbutton" href="{{ pdf-appendix.path | relative_url }}">
-    <i class="fas fa-file-pdf"></i>
+  <a class="linkbutton" href="{{ pdf-appendix.path | relative_url }}" title="PDF - {{ pdf-appendix-path | file_size | pretty_size }}">
+    {% include icon.html icon="pdf" %}
     <b>{% if include.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
   </a>
   {% endif %}
   {% assign bib-path = path | append: '.bib' %}
   {% assign bib = site.static_files | find: "path", bib-path %}
   {% if bib %}
-  <a class="linkbutton" href="{{ bib.path | relative_url }}">
-    <i class="fas fa-quote-left"></i>
+  <a class="linkbutton" href="{{ bib.path | relative_url }}" title="BIB - {{ bib-path | file_size | pretty_size }}">
+    {% include icon.html icon="quote" %}
     <b>Bibtex</b>
   </a>
   {% endif %}
   {% if include.paper.artifact %}
   <a class="linkbutton" href="{{ include.paper.artifact }}">
-    <i class="fas fa-laptop-code"></i>
+    {% include icon.html icon="laptop" %}
     <b>{% if include.lang == "fr" %}Artefact{% else %}Artifact{% endif %}</b>
   </a>
   {% endif %}
   {% if include.paper.talk-video %}
   <a class="linkbutton" href="{{ include.paper.talk-video }}">
-    <i class="fas fa-play-circle"></i>
+    {% include icon.html icon="video" %}
     <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %}{% if paper.talk-video-length %} ({{ paper.talk-video-length }} min){% endif %}</b>
   </a>
   {% endif %}
   {% assign slides-path = path | append: '-slides.pdf' %}
   {% assign slides = site.static_files | find: "path", slides-path %}
   {% if slides %}
-  <a class="linkbutton" href="{{ slides.path | relative_url }}">
-    <i class="fas fa-file-powerpoint"></i>
+  <a class="linkbutton" href="{{ slides.path | relative_url }}" title="PDF - {{ slides-path | file_size | pretty_size }}">
+    {% include icon.html icon="powerpoint" %}
     <b>{% if include.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
   </a>
   {% endif %}

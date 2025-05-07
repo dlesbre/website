@@ -90,7 +90,7 @@
   doi: 10.1145/3656392
   year: 2024
   month: "06"
-  artifact: https://doi.org/10.5281/zenodo.10895582
+  artifact: https://zenodo.org/records/10895582
   artifact-badges: # Must match a key in _data/badges.yml
     - acm-available
     - acm-reusable

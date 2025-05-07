@@ -32,7 +32,7 @@ $(VERBOSE).SILENT:
 
 .PHONY: serve
 serve: ## Serve a development version of the site
-	$(jekyll) serve --livereload
+	$(jekyll) serve --livereload --trace
 
 .PHONY: build
 build: ## Remove the site generated files

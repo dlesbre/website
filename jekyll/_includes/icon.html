@@ -1,0 +1,5 @@
+{% comment %}
+  Include a fontawesome icon
+  Parameters:
+  - icon: must match a key in _data/fontawesome.yml
+{% endcomment %}{% assign icon = site.data.fontawesome[include.icon] %}{% if icon %}<i class="{{ icon.class }}"></i>{% else %}{{ "Undefined icon: " | append: include.icon | error }}{% endif -%}

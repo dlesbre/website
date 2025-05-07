@@ -27,7 +27,7 @@ layout: base
       {% assign author = author_and_affiliation[0] %}
       {% assign author = site.data.authors[author] %}
       {{ author.first-name }} {{ author.last-name }}
-      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}"><i class="fab fa-orcid"></i></a>{% endif %}
+      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}">{% include icon.html icon="orcid" %}</a>{% endif %}
       &mdash;
       <i>{% if author_and_affiliation[1].first %}
         {% if lang == "en" %}
@@ -55,7 +55,7 @@ layout: base
     </div>
   </details>
 {% else %}
-  {{ fail | paper_not_found }}
+  {{ "Paper not found in _data/publications.yml: " | append: slug | error }}
 {% endif %}
 
 {{ content }}

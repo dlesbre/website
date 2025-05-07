@@ -16,7 +16,7 @@ List of all publications in this website. Parameters:
       {% assign author_id = author_i[0] %}
       {% assign author = site.data.authors[author_id] %}
       {{ author.first-name }} {{ author.last-name }}
-      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}"><i class="fab fa-orcid"></i></a>{% endif %}
+      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}">{% include icon.html icon="orcid" %}</a>{% endif %}
       {%- endfor -%}
       {%- unless forloop.last %}, {% endunless -%}
     {% endfor %}

@@ -1,0 +1,10 @@
+{%- comment -%}
+Linkbutton, aka button with an icon and a link, parameters
+- url: the page the button points to (relative_url, excluding lang)
+- lang: the language ("fr" or "en")
+- icon (optional, defaults to text|lowercase): the link fontawesome icon ("fab fa-github")
+- text: the link text and title
+{%- endcomment -%}
+{%- assign ltext = include.text | downcase -%}
+{%- assign icon = include.icon | default: ltext -%}
+<a class="linkbutton" href="{{ include.url }}" hreflang="{{ include.lang }}" title="{{ include.text }}">{% include icon.html icon=icon %} <span class="txt">{{include.text}}</span></a>

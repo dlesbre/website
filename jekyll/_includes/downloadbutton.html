@@ -1,0 +1,49 @@
+{%- comment -%}
+  Fancy button with an icon on the left, text and optional subtext on the right.$
+  Parameters:
+  - url: relative path for files, absolute for external (starts with 'http')
+  - text: the main text
+  - info (optional): the sub info, autocompleted to "size -- format" for files
+  - icon (optional): The icon to use, default to:
+    - PDF if url ends with PDF
+    - File if url is relative
+    - Globe otherwise (url start with 'http')
+{%- endcomment -%}
+
+{%- assign is_external = include.url | has_prefix: 'http' -%}
+{%- assign extension = include.url | extension -%}
+
+{%- if is_external -%}
+  {%- assign url = include.url -%}
+{%- else -%}
+  {%- assign url = include.url | relative_url -%}
+{%- endif -%}
+
+{%- if include.icon -%}
+  {%- assign icon = include.icon -%}
+{%- elsif is_external -%}
+  {%- assign icon = "globe" -%}
+{%- elsif extension == "pdf" -%}
+  {%- assign icon = "pdf" -%}
+{%- else -%}
+  {%- assign icon = "file" -%}
+{%- endif -%}
+
+{%- if include.info -%}
+  {%- assign info = include.info -%}
+{%- elsif is_external -%}
+
+{%- else -%}
+  {% assign filesize = include.url | file_size | pretty_size %}
+  {% assign info = extension | upcase | append: " &mdash; " | append: filesize %}
+{%- endif -%}
+
+<a href="{{ url }}" class="downloadbutton{% if is_external %} external{% endif %}"{{ include.attrs }}>
+  <div class="icon">{% include icon.html icon=icon %}</div>
+  <div class="value">
+    <div class="info">{{ include.text }}</div>
+    {% if info %}
+    <div class="details">{{ info }}</div>
+    {% endif %}
+  </div>
+</a>

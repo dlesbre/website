@@ -1,0 +1,97 @@
+# More human friendly names for fontawesome icons
+globe:
+  class: fa-solid fa-globe
+  unicode: f0ac
+palette:
+  class: fa-solid fa-palette
+  unicode: f53f
+house:
+  class: fa-solid fa-house
+  unicode: f015
+quote:
+  class: fa-solid fa-quote-left
+  unicode: f015
+laptop:
+  class: fa-solid fa-laptop-code
+  unicode: f5fc
+computer:
+  class: fa-solid fa-display
+  unicode: e163
+lightbulb:
+  class: fa-solid fa-lightbulb
+  unicode: f0eb
+video:
+  class: fa-solid fa-circle-play
+  unicode: f144
+link:
+  class: fa-solid fa-link
+  unicode: f0c1
+gamepad:
+  class: fa-solid fa-gamepad
+  unicode: f11b
+book:
+  class: fa-solid fa-book
+  unicode: f02d
+email:
+  class: fa-regular fa-envelope
+  unicode: f0e0
+key:
+  class: fa-solid fa-key
+  unicode: f084
+arobase:
+  class: fa-solid fa-at
+  unicode: "40"
+book-open:
+  class: fa-solid fa-book-open
+  unicode: f518
+coffee:
+  class: fa-solid fa-mug-saucer
+  unicode: f0f4
+
+user:
+  class: fa-solid fa-user
+  unicode: f007
+graduate:
+  class: fa-solid fa-user-graduate
+  unicode: f501
+user-tie:
+  class: fa-solid fa-user-tie
+  unicode: f508
+teacher:
+  class: fa-solid fa-chalkboard-user
+  unicode: f51c
+academic-cap:
+  class: fa-solid fa-graduation-cap
+  unicode: f19d
+presenter:
+  class: fa-solid fa-person-chalkboard
+  unicode: e53d
+
+pdf:
+  class: fa-solid fa-file-pdf
+  unicode: f1c1
+powerpoint:
+  class: fa-solid fa-file-powerpoint
+  unicode: f1c4
+file:
+  class: fa-solid fa-file-lines
+  unicode: f15c
+
+github:
+  class: fa-brands fa-github
+  unicode: f09b
+gitlab:
+  class: fa-brands fa-gitlab
+  unicode: f296
+orcid:
+  class: fa-brands fa-orcid
+  unicode: f8d2
+linkedin:
+  class: fa-brands fa-linkedin
+  unicode: f08c
+youtube:
+  class: fa-brands fa-youtube
+  unicode: f167
+scholar:
+  class: fa-brands fa-google-scholar
+  unicode: e63b

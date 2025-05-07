@@ -63,6 +63,60 @@ module StringFilters
       "#{array[0...-1].join(connector)}, #{last_connector} #{array[-1]}"
     end
   end
+
+  # Pretty print a number with a unit:
+  # pretty_size(123) -> "123 B"
+  # pretty_size(1100000) -> "1.1 MB"
+  def pretty_size(num, suffix="B", base=1000, sep=" ")
+    base = base.to_f
+    units = ["", "k", "M", "G", "T", "P", "E", "Z"]
+
+    units.each do |unit|
+      if num.abs < base then
+        return format("%.1f%s%s%s", num, sep, unit, suffix)
+      end
+      num /= base
+    end
+
+    format("%.1f%sY%s", num, sep, suffix)
+  end
+
+  # Return the size of the given file, path is assumed to start with a slash "/"
+  # and to be relative to the current working directory
+  def file_size(path)
+    if File.exist?(Dir.pwd + path) then
+      File.size(Dir.pwd + path)
+    else
+      raise "File not found: #{Dir.pwd + path}"
+    end
+  end
+
+  # Emit a warning
+  def warn(message, context = nil)
+    context ||= @context
+    Kernel.warn "Liquid Warning:#{get_location(context)} #{message}"
+  end
+
+  # Emit an error
+  def error(message, context = nil)
+    context ||= @context
+    raise RuntimeError, "Liquid Error:#{get_location(context)} #{message}"
+  end
+
+  private
+
+  # Get file name and line number
+  def get_location(context)
+    return "" unless context && context.registers
+
+    page = context.registers[:page]
+    return "" unless page
+
+    file = page['path'] || 'unknown file'
+    line = context.registers[:line_number] || '?'
+
+    " #{file}:#{line}:"
+  end
 end
 
 Liquid::Template.register_filter(StringFilters)
