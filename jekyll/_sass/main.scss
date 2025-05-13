@@ -87,7 +87,7 @@ main {
 		font-weight: 300;
 		text-align: left;
 		border-bottom: 2px solid $dark_sep;
-		border-image-source: linear-gradient(to right, $dark_sep) 0%, $dark_sep 25%, transparent 100%;
+		border-image-source: linear-gradient(to right, $dark_sep 0%, $dark_sep 25%, transparent 100%);
 		border-image-slice: 1;
 	}
 	h3 {
@@ -96,7 +96,7 @@ main {
 		font-weight: 300;
 		text-align: left;
 		border-bottom: 2px solid $dark_sep;
-		border-image-source: linear-gradient(to right, $dark_sep) 0%, $dark_sep 25%, transparent 100%;
+		border-image-source: linear-gradient(to right, $dark_sep 0%, $dark_sep 25%, transparent 100%);
 		border-image-slice: 1;
 	}
 
