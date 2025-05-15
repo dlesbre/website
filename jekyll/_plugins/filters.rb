@@ -103,6 +103,24 @@ module StringFilters
     raise RuntimeError, "Liquid Error:#{get_location(context)} #{message}"
   end
 
+  # lang filter: usage {{ my_variable | lang: "en" }}
+  # If my variable is a string, return it unchanged (no translation)
+  # If my variable is a hash, return {{ my_variable["en"] }}
+  def lang(text, lang, context = nil)
+    context ||= @context
+    if text.is_a?(Hash) then
+      if text.key?(lang) then
+        text[lang]
+      else
+        raise RuntimeError, "Liquid Error: #{get_location(context)} lang filter: hash has no key '#{lang}'"
+      end
+    elsif text.is_a?(String)
+      text
+    else
+          raise RuntimeError, "Liquid Error:#{get_location(context)} lang filter: expected String or Hash"
+    end
+  end
+
   private
 
   # Get file name and line number

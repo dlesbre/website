@@ -1,4 +1,5 @@
 # Papers
+# Keep this list in chronological order, with most recent at the top
 
 # PLDI 2025
 - title: Relational Abstractions Based on Labeled Union-Find
@@ -11,19 +12,28 @@
   venue: 46th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
   venue-acronym: PLDI
   venue-url: https://pldi25.sigplan.org/
+  venue-location:
+    en: Seoul, South Korea
+    fr: Séoul, Corée du Sud
   ranking: A*
   award: null
   year: 2025
   month: "06"
   doi: 10.1145/3729298
+  date:
+    submitted: 2024-11-15
+    accepted: 2025-03-06
+    conference: 2025-06-16
   artifact: https://zenodo.org/records/15165896
   artifact-badges: # Must match a key in _data/badges.yml
     - acm-available
     - acm-reusable
   keywords:
-    - relational abstract domain
+    - en: relational abstract domain
+      fr: domaine abstrait relationel
     - labeled union-find
-    - abstract interpretation
+    - en: abstract interpretation
+      fr: interprétation abstraite
   abstract: |
     We introduce a new family of abstractions based on a data structure that we
     call labeled union-find, an extension of the classic efficient union-find
@@ -52,12 +62,18 @@
   venue: 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains
   venue-acronym: NSAD
   venue-url: https://2024.splashcon.org/home/nsad-2024
+  venue-location: Pasadena, USA
   year: 2024
   month: "10"
   talk-video: https://www.youtube.com/watch?v=t2uaZ6VHhAY
   talk-video-length: 28  # Minutes
+  date:
+    submitted: 2024-07-15
+    accepted: 2024-08-16
+    conference: 2024-10-22
   keywords:
-    - relational abstract domain
+    - en: relational abstract domain
+      fr: domaine abstrait relationel
     - labeled union-find
   abstract: |
       In this work-in-progress paper, we present labeled union-find, an
@@ -85,11 +101,18 @@
   venue: 45th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
   venue-acronym: PLDI
   venue-url: https://pldi24.sigplan.org/
+  venue-location:
+    en: Copenhagen, Denmark
+    fr: Copenhague, Danemark
   ranking: A*
   award: null
   doi: 10.1145/3656392
   year: 2024
   month: "06"
+  date:
+    submitted: 2023-11-06
+    accepted: 2024-03-01
+    conference: 2024-06-24
   artifact: https://zenodo.org/records/10895582
   artifact-badges: # Must match a key in _data/badges.yml
     - acm-available
@@ -98,8 +121,10 @@
   talk-video-length: 18  # Minutes
   comment: Also presented at AFADL 2024
   keywords:
-    - compilers
-    - abstract interpretation
+    - en: compilers
+      fr: compilateurs
+    - en: abstract interpretation
+      fr: interprétation abstraite
     - static single assignement (SSA)
   abstract: |
     Rewriting and static analyses are mutually beneficial techniques: program

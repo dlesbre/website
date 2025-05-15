@@ -45,7 +45,7 @@ layout: base
   {%- include publication_links.html paper=paper lang=lang nutshell=false -%}
 
   <div style="margin-top: 10px;">
-    <strong>{% if lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {{ paper.keywords | join:", " }}
+    <strong>{% if lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {% for kw in paper.keywords %}{{ kw | lang:lang }}{% unless forloop.last %}, {% endunless %}{% endfor %}
   </div>
 
   <details open>
