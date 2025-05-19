@@ -1,4 +1,8 @@
 # More human friendly names for fontawesome icons
+warning:
+  class: fa-solid fa-triangle-exclamation
+  unicode: f071
+
 globe:
   class: fa-solid fa-globe
   unicode: f0ac

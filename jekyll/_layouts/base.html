@@ -82,12 +82,16 @@ layout: html-escapes
 
 		<main>
 			{% if page.lang-disclaimer %}
-				{% if lang == "fr" %}
-					FRFR
-				{% else %}
-					ENEN
-				{% endif %}
+				<div class="callout">
+					{% include icon.html icon='warning' %} &ThickSpace;
+					{% if lang == "fr" %}
+						Cette page n’est disponible qu’en anglais.
+					{% else %}
+						This page is only available in french.
+					{% endif %}
+				</div>
 			{% endif %}
+
 			{{ content }}
 		</main>
 
