@@ -7,7 +7,7 @@ List of all publications in this website. Parameters:
 <div class="content filelist">
   <div>
     <span class="title">{{ paper.title }}</span>
-    {%- if paper.short-paper %} &mdash; {% if include.lang == "fr" %}Papier court{% else %}Short paper{% endif %}{% endif %}
+    {%- if paper.type == "workshop" %} &mdash; {% if include.lang == "fr" %}Papier court{% else %}Workshop paper{% endif %}{% endif %}
     {%- if paper.doi %} &mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a>{%- endif -%}
   </div>
   <div class="type">
@@ -31,7 +31,7 @@ List of all publications in this website. Parameters:
     <summary>{% if include.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
     <div class="abstract">
       <strong>{% if include.lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {% for kw in paper.keywords %}{{ kw | lang:include.lang }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-      <p>{{ paper.abstract }}</p>
+      <p>{{ paper.abstract | lang:include.lang }}</p>
     </div>
   </details>
 

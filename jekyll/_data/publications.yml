@@ -64,22 +64,42 @@
     - labeled union-find
     - en: abstract interpretation
       fr: interprétation abstraite
-  abstract: |
-    We introduce a new family of abstractions based on a data structure that we
-    call labeled union-find, an extension of the classic efficient union-find
-    data structure where edges carry labels. These labels have a composition
-    operation that obey the group axioms. Like union-find, the labeled version
-    can efficiently compute the transitive closure of a relation, but it is not
-    limited to equivalence relations; it can represent any injective
-    transformation between equivalence classes, which includes two-variables per
-    equality (TVPE) constraints of the form <code>y = ax + b</code>. Using
-    abstract interpretation theory, we study the properties deriving from the
-    use of abstract relations as labels, and the combination of labeled
-    union-find with other representations of constraints, allowing both
-    improvements in precision and simplification of existing constraints. Due to
-    its efficiency, the labeled union-find abstractions could find many uses; we
-    use it in two use cases, program analysis based on abstract interpretation
-    and constraint solving for SMT, with encouraging preliminary results.
+  abstract:
+    en:
+      We introduce a new family of abstractions based on a data structure that we
+      call <i>labeled union-find</i>, an extension of the classic efficient union-find
+      data structure where edges carry labels. These labels have a composition
+      operation that obey the group axioms. Like union-find, the labeled version
+      can efficiently compute the transitive closure of a relation, but it is not
+      limited to equivalence relations; it can represent any injective
+      transformation between equivalence classes, which includes two-variables per
+      equality (TVPE) constraints of the form <code>y = ax + b</code>. Using
+      abstract interpretation theory, we study the properties deriving from the
+      use of abstract relations as labels, and the combination of labeled
+      union-find with other representations of constraints, allowing both
+      improvements in precision and simplification of existing constraints. Due to
+      its efficiency, the labeled union-find abstractions could find many uses; we
+      use it in two use cases, program analysis based on abstract interpretation
+      and constraint solving for SMT, with encouraging preliminary results.
+    fr: |
+      Nous introduisons une nouvelle famille d’abstractions centrée autour d’une
+      structure de donnée que nous appelons <i>labeled union-find</i>, une
+      extension de l'union-find classique et rapide où les arêtes portent des
+      labels. Ces labels sont munis d’une opération de composition et forment un
+      groupe. Comme l’union-find, cette version avec labels permet de calculer
+      efficacement la clôture transitive, mais elle n'est pas limitée aux
+      relations d'équivalences. Elle peut représenter n’importe quelle
+      transformation injective entre classes d’équivalence, ce qui inclut
+      notamment les contraintes d’égalité linéaire entre deux variables de la
+      forme <code>y = ax + b</code>. En utilisant la théorie d’interprétation
+      abstraite, nous étudions les propriétés qui découlent de l’usage de
+      relations abstraites comme labels, ainsi que la combinaison de labeled
+      union-find avec d’autres représentations de contraintes, ce qui permet à la
+      fois un gain en précision et une simplification de ces contraintes.
+      Grâce à son efficacité, le labeled union-find pourrait avoir de nombreuses
+      applications. Nous nous en servons dans deux cas : l’analyse de programme
+      par interprétation abstraite et la résolution de contraintes SMT, avec des
+      résultats préliminaires intéressants.
 
 
 # NSAD 2024
@@ -104,8 +124,9 @@
     - en: relational abstract domain
       fr: domaine abstrait relationel
     - labeled union-find
-  abstract: |
-      In this work-in-progress paper, we present labeled union-find, an
+  abstract:
+    en: |
+      In this work-in-progress paper, we present <i>labeled union-find</i>, an
       extension of the union-find data structure where edges are annotated with
       labels that form a group algebraic structure. This structure allows to
       very efficiently represent the transitive closure of many useful binary
@@ -119,6 +140,23 @@
       believe that this structure could be used as a low-cost relational domain
       or decision procedure, and that it could make other relational domains
       more efficient by removing the need to track some variables.
+    fr: |
+      Ce papier de travaux en cours décrit le <i>labeled union-find</i>, une
+      extension de la structure d’union-find où les arêtes sont annotées par des
+      labels qui forment un groupe algébrique. Cette structure permet de
+      représenter efficacement la clôture transitive de nombreuses relations
+      binaires utiles, telles que les relations d’égalité linéaire entre deux
+      variables (TVPE) de la forme <code>y = ax+b</code>. Nous caractérisons
+      les propriétés nécessaires pour utiliser le labeled union-find afin de
+      représenter des relations binaires entre des variables. Plus précisément,
+      nous étudions l’utilisation de ce domaine dans une analyse statique, soit
+      pour représenter des relations binaires, soit comme produit réduit avec
+      des domaines abstraits non-relationnels. Nous présentons aussi un
+      algorithme de jointure sur cette structure de donnée. Nous pensons que
+      cette structure peut-être utilisée pour représenter des domaines
+      relationnels à faible cout, et qu’elle pourrait rendre d’autres domaines
+      relationnels plus efficaces en retirant certaines variables.
+
 
 
 # PLDI 2024
@@ -155,23 +193,46 @@
     - en: abstract interpretation
       fr: interprétation abstraite
     - static single assignement (SSA)
-  abstract: |
-    Rewriting and static analyses are mutually beneficial techniques: program
-    transformations change the intensional aspects of the program, and can
-    thus improve analysis precision, while some efficient transformations are
-    enabled by specific knowledge of some program invariants. Despite the strong
-    interaction between these techniques, they are usually considered distinct.
-    In this paper, we demonstrate that we can turn abstract interpreters into
-    compilers, using a simple free algebra over the standard signature of
-    abstract domains. Functor domains correspond to compiler passes, for which
-    soundness is translated to a proof of forward simulation, and completeness
-    to backward simulation. We achieve translation to SSA using an abstract do-
-    main with a non-standard SSA signature. Incorporating such an SSA
-    translation to an abstract interpreter improves its precision; in particular
-    we show that an SSA-based non-relational domain is always more precise than
-    a standard non-relational domain for similar time and memory complexity.
-    Moreover, such a domain allows recovering from precision losses that occur
-    when analyzing low-level machine code instead of source code. These results
-    help implement analyses or compilation passes where symbolic and semantic
-    methods simultaneously refine each other, and improves precision when
-    compared to doing the passes in sequence.
+  abstract:
+    en: |
+      Rewriting and static analyses are mutually beneficial techniques: program
+      transformations change the intensional aspects of the program, and can
+      thus improve analysis precision, while some efficient transformations are
+      enabled by specific knowledge of some program invariants. Despite the strong
+      interaction between these techniques, they are usually considered distinct.
+      In this paper, we demonstrate that we can turn abstract interpreters into
+      compilers, using a simple free algebra over the standard signature of
+      abstract domains. Functor domains correspond to compiler passes, for which
+      soundness is translated to a proof of forward simulation, and completeness
+      to backward simulation. We achieve translation to SSA using an abstract do-
+      main with a non-standard SSA signature. Incorporating such an SSA
+      translation to an abstract interpreter improves its precision; in particular
+      we show that an SSA-based non-relational domain is always more precise than
+      a standard non-relational domain for similar time and memory complexity.
+      Moreover, such a domain allows recovering from precision losses that occur
+      when analyzing low-level machine code instead of source code. These results
+      help implement analyses or compilation passes where symbolic and semantic
+      methods simultaneously refine each other, and improves precision when
+      compared to doing the passes in sequence.
+    fr: |
+      Les réécritures et les analyses statiques sont des techniques mutuellement
+      bénéfiques : d’une part, les transformations changent les aspects
+      intentionnels d’un programme et peuvent donc rendre l’analyse plus précise
+      ; d’autre part, la connaissance d’invariants précis peut permettre des
+      transformations plus efficaces. Malgré cette forte interaction, ces
+      techniques sont souvent considérées comme disjointes. Dans ce papier, nous
+      montrons qu’il est possible de transformer un interprète abstrait en
+      compilateur à l’aide d’un simple domaine d’algèbre libre sur la signature
+      des domaines. Des foncteurs de domaines correspondent aux passes de
+      compilation : leur correction implique une simulation avant tandis que
+      leur complétude implique une simulation arrière. Nous transformons un
+      programme en forme SSA à l’aide d’un domaine abstrait à signature
+      non-standard. Nous montrons qu’une telle transformation améliore la
+      précision d’un interprète abstrait. En particulier, une analyse
+      non-relationnelle basée sur le SSA est toujours plus précise qu’une
+      analyse classique pour un coût et temps et mémoire comparable. De plus,
+      une telle analyse permet de décompiler du code machine bas niveau et
+      l’analyser avec la même précision que du code source. Ces résultats permettent
+      d’implémenter des analyseurs ou des compilateurs utilisant simultanément des
+      méthodes symbolique et sémantique, ce qui est plus précis que de les faire
+      séquentiellement.
