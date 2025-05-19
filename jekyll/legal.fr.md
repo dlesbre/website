@@ -1,7 +1,6 @@
 ---
 layout: base
 title: Mention légales
-permalink: legal.html.fr
 lang: fr
 ---
 

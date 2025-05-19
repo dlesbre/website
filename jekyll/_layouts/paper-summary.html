@@ -49,9 +49,9 @@ layout: base
   </div>
 
   <details open>
-    <summary>{% if include.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
+    <summary>{% if lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
     <div class="abstract">
-      <p>{{ paper.abstract }}</p>
+      <p>{{ paper.abstract | lang:lang }}</p>
     </div>
   </details>
 {% else %}

@@ -1,7 +1,6 @@
 ---
 layout: base
 title: Legal Disclaimers
-permalink: legal.html.en
 lang: en
 ---
 

@@ -7,24 +7,28 @@
 module LanguageAlternatePagePlugin
   class LanguageAlternateGenerator < Jekyll::Generator
     def generate(site)
-      alt_pages = []
+      pages = []
       site.pages.each do |page|
-        if page.url.end_with? '.html' then
-          alt_pages << page
+        if page.url.end_with? '.en.html' or page.url.end_with? '.fr.html' then
+          pages << {page: page, url: page.url[..-9], lang: page.data["lang"]}
+        elsif page.url.end_with? '.html' then
+          pages << {page: page, url: page.url[..-6], lang: "en"}
+          pages << {page: page, url: page.url[..-6], lang: "fr"}
         end
       end
-      alt_pages.each do |page|
+      pages.each do |page|
         # Delete and recreate page, since side-effects mean the URL can't
         # easily be changed
-        site.pages.delete(page)
-        site.pages << LanguageAlternatePage.new(site, page, "fr")
-        site.pages << LanguageAlternatePage.new(site, page, "en")
+        site.pages.delete(page[:page])
+        site.pages << LanguageAlternatePage.new(site, page[:page], page[:url], page[:lang])
       end
     end
   end
 
   class LanguageAlternatePage < Jekyll::Page
-    def initialize(site, page, lang)
+    def initialize(site, page, url, lang)
+      # Create a new language page
+      # URL is the permalink minus the extension (.html.<lang> added automatically)
       @site = site
       @base = site.source
       @dir = page.dir
@@ -37,7 +41,8 @@ module LanguageAlternatePagePlugin
         @data["lang-disclaimer"] = true
       end
       @data["lang"] = lang
-      @data["permalink"] = page.url + '.' + lang
+      @data["permalink"] = url + '.html.' + lang
+      # puts "generating #{@data["permalink"]}"
     end
   end
 end
