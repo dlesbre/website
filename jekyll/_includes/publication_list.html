@@ -21,7 +21,7 @@ List of all publications in this website. Parameters:
       {%- unless forloop.last %}, {% endunless -%}
     {% endfor %}
   </div>
-  <div class="date"><span title="{{ paper.venue }}">{{ paper.venue-acronym }} {{ paper.year }}</span></div>
+  <div class="date"><span title="{{ paper.venue.fullname }}">{{ paper.venue.acronym }} {{ paper.year }}</span></div>
   {%- if paper.artifact-badges -%}
   <div>
     {% include publication_badges.html badges=paper.artifact-badges %}

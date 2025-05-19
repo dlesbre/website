@@ -17,7 +17,7 @@ layout: base
   </div>
 
   <div style="clear: both;">
-    <strong>{{ paper.year }}-{{ paper.month }}</strong> &mdash; {{ paper.venue }} ({{ paper.venue-acronym }})
+    <strong>{{ paper.year }}-{{ paper.month }}</strong> &mdash; {{ paper.venue.fullname }} ({{ paper.venue.acronym }})
     {% if paper.doi %}&mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a> {% endif %}
   </div>
 
@@ -26,7 +26,7 @@ layout: base
       {% for author_and_affiliation in aut %}
       {% assign author = author_and_affiliation[0] %}
       {% assign author = site.data.authors[author] %}
-      {{ author.first-name }} {{ author.last-name }}
+      {{ author.first-name }} <span class="sc">{{ author.last-name }}</span>
       {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}">{% include icon.html icon="orcid" %}</a>{% endif %}
       &mdash;
       <i>{% if author_and_affiliation[1].first %}

@@ -1,31 +1,61 @@
 # Papers
 # Keep this list in chronological order, with most recent at the top
+#
+# A paper entry should have the following type:
+# - title: string
+#   type: 'conference' | 'workshop' | 'journal'
+#   slug: string, match files names associated with this paper
+#         files/publications/<slug>.bib -> Bibtex file
+#         files/publications/<slug>.pdf -> Official paper (published version)
+#         files/publications/<slug>-with-appendices.pdf -> Extended version
+#         files/publications/<slug>-slides.pdf -> Slides
+#         publications/<slug>.md -> Summary
+#   authors: list of 'author_id: affiliation'
+#     - author_id must match a key in _data/authors.yml
+#     - Affiliation is either a string or a list of strings
+#   doi: the DOI string, format '10.nnnn/mmmmmmmmmm'
+#   venue:
+#     fullname: string - Full name, including number
+#     acronym: string - ex PLDI
+#     url: string - the website
+#     location: langstring
+#   ranking: conference ranking: A*, A, B...
+#   date:
+#     submitted: date
+#     accepted: date - Used to generate news
+#     published: required date - Official date for the paper - used to generate year and month attributes
+#   artifact: string - url to artifact
+#   artifact-badges: list of keys in _data/badges.yml
+#   talk-video: url to a video
+#   talk-video-length: int - video length in minutes
+#   keywords: list of langurl
+#   abstract: langurl
 
 # PLDI 2025
 - title: Relational Abstractions Based on Labeled Union-Find
+  type: conference
   slug: 2025-pldi-relational-abstractions-labeled-uf
-  authors: # Authors must match a key in _data/authors.yml
+  authors:
     - dlesbre: Université Paris-Saclay, CEA List
     - mlemerre: Université Paris-Saclay, CEA List
     - haitelhara: [OCamlPro, "Université Paris-Saclay, CEA List"]
     - fbobot: Université Paris-Saclay, CEA List
-  venue: 46th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
-  venue-acronym: PLDI
-  venue-url: https://pldi25.sigplan.org/
-  venue-location:
-    en: Seoul, South Korea
-    fr: Séoul, Corée du Sud
+  venue:
+    fullname: 46th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
+    acronym: PLDI
+    url: https://pldi25.sigplan.org/
+    location:
+      en: Seoul, South Korea
+      fr: Séoul, Corée du Sud
   ranking: A*
   award: null
-  year: 2025
-  month: "06"
   doi: 10.1145/3729298
   date:
     submitted: 2024-11-15
     accepted: 2025-03-06
-    conference: 2025-06-16
+    published: 2025-06-16
   artifact: https://zenodo.org/records/15165896
-  artifact-badges: # Must match a key in _data/badges.yml
+  artifact-badges:
     - acm-available
     - acm-reusable
   keywords:
@@ -54,23 +84,22 @@
 
 # NSAD 2024
 - title: Labeled Union-Find for Constraint Factorization
+  type: workshop
   slug: 2024-nsad-labeled-union-find
-  short-paper: true
   authors:
     - mlemerre: Université Paris-Saclay, CEA List
     - dlesbre: Université Paris-Saclay, CEA List
-  venue: 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains
-  venue-acronym: NSAD
-  venue-url: https://2024.splashcon.org/home/nsad-2024
-  venue-location: Pasadena, USA
-  year: 2024
-  month: "10"
+  venue:
+    fullname: 10th ACM SIGPLAN International Workshop on Numerical and Symbolic Abstract Domains
+    acronym: NSAD
+    url: https://2024.splashcon.org/home/nsad-2024
+    location: Pasadena, USA
   talk-video: https://www.youtube.com/watch?v=t2uaZ6VHhAY
-  talk-video-length: 28  # Minutes
+  talk-video-length: 28
   date:
     submitted: 2024-07-15
     accepted: 2024-08-16
-    conference: 2024-10-22
+    published: 2024-10-22
   keywords:
     - en: relational abstract domain
       fr: domaine abstrait relationel
@@ -94,31 +123,31 @@
 
 # PLDI 2024
 - title: Compiling with Abstract Interpretation
+  type: conference
   slug: 2024-pldi-compiling-with-abstract-interpretation
   authors:
     - dlesbre: Université Paris-Saclay, CEA List
     - mlemerre: Université Paris-Saclay, CEA List
-  venue: 45th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
-  venue-acronym: PLDI
-  venue-url: https://pldi24.sigplan.org/
-  venue-location:
-    en: Copenhagen, Denmark
-    fr: Copenhague, Danemark
+  venue:
+    fullname: 45th ACM-SIGPLAN Symposium on Programming Language Design and Implementation
+    acronym: PLDI
+    url: https://pldi24.sigplan.org/
+    location:
+      en: Copenhagen, Denmark
+      fr: Copenhague, Danemark
   ranking: A*
   award: null
   doi: 10.1145/3656392
-  year: 2024
-  month: "06"
   date:
     submitted: 2023-11-06
     accepted: 2024-03-01
-    conference: 2024-06-24
+    published: 2024-06-24
   artifact: https://zenodo.org/records/10895582
-  artifact-badges: # Must match a key in _data/badges.yml
+  artifact-badges:
     - acm-available
     - acm-reusable
   talk-video: https://www.youtube.com/watch?v=2Btkn9AvM8o
-  talk-video-length: 18  # Minutes
+  talk-video-length: 18
   comment: Also presented at AFADL 2024
   keywords:
     - en: compilers
