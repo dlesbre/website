@@ -83,7 +83,22 @@ dl dd {
 
 img.transparent {
 	filter: invert(100%) hue-rotate(180deg);
+
+	// Center the image
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .light-theme img.transparent {
 	filter: none;
+}
+
+.caption {
+	font-style: italic;
+	width: 80%;
+
+	// Centered
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }

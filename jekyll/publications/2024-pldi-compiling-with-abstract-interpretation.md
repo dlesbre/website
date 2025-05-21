@@ -41,8 +41,7 @@ performing
 that `F(j + z%2)` is `F(j)`), optimistic **global value numbering** (to learn that `i = j`), and
 **dead code elimination** so that no analysis takes the else branch (which breaks all those properties).
 
-<img class="transparent" src="{{ '/imgs/publications/2024-pldi-full-example.svg' | relative_url }}"
-style="width:900px; display:block; margin-left:auto; margin-right:auto">
+![Example of compilation to SSA]({{ '/imgs/publications/2024-pldi-full-example.svg' | relative_url }}){: style="width:min(900px,100%);" .transparent }
 
 ## Contributions
 
@@ -60,8 +59,7 @@ Our paper shows the following novel results:
   Here is a small example of a sound and complete functor transformation:
   replacing a ternary operator with explicit control flow jumps.
 
-  <img class="transparent" src="{{ '/imgs/publications/2024-pldi-transformation-example.svg' | relative_url }}"
-  style="width:600px; display:block; margin-left:auto; margin-right:auto">
+  ![Example of a functor transformation]({{ '/imgs/publications/2024-pldi-transformation-example.svg' | relative_url }}){: style="width:min(700px,100%);" .transparent }
 
 - **Compiling to SSA recovers missing context and improves numerical analysis precision**.
   We describe a functor for compiling a small imperative language to SSA.

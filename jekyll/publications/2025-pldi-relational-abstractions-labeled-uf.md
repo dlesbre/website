@@ -23,23 +23,30 @@ store relations $$\pm x \pm y \leqslant c$$ for some constant $$c$$. These abstr
 polyhedra, but still expensive, in large part due to having to compute
 a transitive closure to find all known relations, which costs $$\mathcal O(|\mathbb X|^3)$$.
 
-; Il manque des idées clés comme la constraint factorization pour supprimer des variables des domaines existants
-
 Our goal is to find **a new family of relational abstract domains that are cheaper than the weakly-relational domains**.
 For this, a central question is **can we compute the expensive transitive closure much more cheaply?** The answer is yes, if we assume that the relation obtained on each path between
 two variables is always the same. This allows eliminating the vast majority of relations, **we only need to
 store a spanning tree** and can still recover any arbitrary relation in amortized almost-constant time, using a variation
 of the efficient union-find data structure.
 
-<img class="transparent" src="{{ '/imgs/publications/2025-pldi-spanning-tree.svg' | relative_url }}"
-style="width:900px; display:block; margin-left:auto; margin-right:auto">
+![saturate and eliminate constraints]({{ 'imgs/publications/2025-pldi-spanning-tree.svg' | relative_url }}){: style="width:min(900px,100%);" .transparent }
 
-<center>
 Fig. Graph of relations between variables. Each arrow represents a relation, labels have been omitted.
 Left is the initial configuration, middle is the computed closure, and right is the minimal spanning tree that our domains only have to maintain.
-</center>
+{: .caption }
 
 ## Labeled union-find
+
+![Labeled union-find example]({{ 'imgs/publications/2025-pldi-labeled-uf-example.svg' | relative_url }}){:
+style="width:min(1100px,100%)" .transparent }
+
+Fig. Example of a labeled union-find data structure. Left is the actual data structure
+(each arrow is a pointer). Right is the implied transitive closure
+(each dashed arrow can be computed in constant time).
+At the bottom, we have an example of path compression:
+shortening the path from z to the representative r
+without changing the transitive closure (the dotted arrow is replaced by the dashed one).
+{: .caption }
 
 We can use an extension of the classical
 [union-find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) data
@@ -52,13 +59,29 @@ have a [**group structure**](https://en.wikipedia.org/wiki/Group_(mathematics)).
 This requirement also derives fairly naturally from our previous assumption
 (same relation on each path).
 
-<img class="transparent" src="{{ '/imgs/publications/2025-pldi-labeled-uf.svg' | relative_url }}"
-style="width:700px; display:block; margin-left:auto; margin-right:auto">
-<center>
-Fig. Main operation of labeled union-find. Compared to classical union-find,
-the "union" operation has been renamed "add_relation", and the get_relation operation
-is new.
-</center>
+$$
+\begin{array}{lcl}
+  \begin{array}{rcl}
+    \mathbb N & : & \text{nodes} \\
+    \mathbb L & : & \text{labels}
+  \end{array}
+  & \quad &
+    \begin{array}{rcl}
+    \mathtt{find} & : & \mathbb N \to \mathbb N \times \mathbb L \\
+    \mathtt{add\_relation} & : & \mathbb N \to \mathbb N \to \mathbb L \to \mathtt{unit} \\
+    \mathtt{get\_relation} & : & \mathbb N \to \mathbb N \to \text{Option}\langle\mathbb L\rangle
+  \end{array}
+\end{array}
+$$
+
+![Labeled union-find operations]({{ 'imgs/publications/2025-pldi-labeled-uf.svg' | relative_url }}){:
+style="width:min(700px,100%);" .transparent }
+
+Fig. Main operations of labeled union-find. Compared to classical union-find,
+`find` is modified to also return the relation from the current node to the
+representative; the `union` operation has been renamed `add_relation`, and the
+`get_relation` operation is new.
+{: .caption }
 
 ## The labeled union-find relational abstraction
 
@@ -87,6 +110,14 @@ only need to store intervals on representative elements, not on all variables, s
 recovered. If we know that $$y \xrightarrow{+2} x$$ and $$x \in [0:2]$$ then we do not need to store
 $$y \in [2:4]$$. This reduces storage cost and propagation time, since all related variables are
 updated at once any time new information is learned.
+
+![Using labeled union-find with a non-relational domain]({{ 'imgs/publications/2025-pldi-factorization.svg' | relative_url }}){: style="width:min(1200px,100%);" .transparent }
+
+Fig. Using labeled union-find to factorize a non-relational abstraction.
+Left: without LUF, we store an interval value on all nodes of this term graph.
+Right: using LUF, we can group related nodes together and only store an interval value
+on the representative. We can recompute the values of other nodes as needed without precision loss.
+{: .caption }
 
 Labeled union-find can also help relational abstraction similarly, shrinking their size and thus their
 computation cost. Furthermore, it can be modified to detect any entailed equalities and notify other
@@ -121,5 +152,5 @@ easy cases such as these.
 - Read the [paper]({{ '/files/publications/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf' | relative_url }}).
 - You can also read the [WIP workshop paper]({{ '/files/publications/2024-nsad-labeled-union-find.pdf' | relative_url }}). It is only 4 pages long and less technical.
 - To be presented at the [Programming Language Design and Implementation (PLDI) 2025 conference](https://pldi25.sigplan.org/).
-- Download the [software artifact](https://zenodo.org/records/15261356) from
+- Download the [**software artifact**](https://zenodo.org/records/15261356) from
   Zenodo to explore the code and see the performance results.
