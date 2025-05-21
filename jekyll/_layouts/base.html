@@ -65,7 +65,7 @@ layout: html-escapes
 			</div>
 		</header>
 
-		<nav>
+		<nav id="site">
 			{% capture home %}{% include icon.html icon="house" %}{% endcapture %}
 			{%- if lang == "fr" -%}
 				{%- include navbutton.html title='Acceuil' url='index' text=home lang=lang pagename=pagename -%}
@@ -79,6 +79,8 @@ layout: html-escapes
 				{%- include navbutton.html title='Files' url='fichiers' text='Files' lang=lang pagename=pagename -%}
 			{%- endif -%}
 		</nav>
+
+		{% include breadcrumbs.html %}
 
 		<main>
 			{% if page.lang-disclaimer %}

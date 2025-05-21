@@ -67,7 +67,7 @@ header {
 }
 
 // Navigation bar and buttons
-nav {
+nav#site {
 	display: flex;
 	align-items: right;
 	justify-content: flex-end;
@@ -142,7 +142,7 @@ footer {
 		}
 	}
 
-	nav {
+	nav#site {
 		background-color: $light_bg_1;
 		border-bottom: 4px solid $light_sep;
 
@@ -181,10 +181,10 @@ footer {
 	header h1 {
 		font-size: 40px;
 	}
-	nav a {
+	nav#site a {
 		font-size: 20px;
 	}
-	nav img {
+	nav#site img {
 		padding: 5px 0 0;
 		height: 20px;
 	}
@@ -203,7 +203,22 @@ footer {
 	header h1 {
 		font-size: 20px;
 	}
-	nav a {
+	nav#site a {
 		font-size: 15px;
+	}
+}
+
+
+nav#breadcrumbs {
+
+	margin: 10px;
+
+	a::after {
+		font-size: 90%;
+		display: inline-block;
+		margin-right: 0.5rem;
+		margin-left: 0.5rem;
+		color: #959396;
+		content: "/";
 	}
 }

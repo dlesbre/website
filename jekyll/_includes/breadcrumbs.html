@@ -1,0 +1,26 @@
+{% assign crumbs = page.url | remove:'/index.html' | remove:'/index.html.fr' | remove:'/index.html.en' | split: '/' | shift %}
+{% if crumbs != empty %}
+<nav id="breadcrumbs">
+  {%- if page.lang %}
+    {% assign index = "/index.html." | append: page.lang %}
+  {% else %}
+    {% assign index = "/index.html" | append: page.lang %}
+  {% endif -%}
+  {%- assign baseurl = '' -%}
+<a href="{{ index | relative_url }}">{% include icon.html icon='house' %} {% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>
+{%- for crumb in crumbs -%}
+  {%- if forloop.last -%}
+    {{ page.title }}
+  {%- else -%}
+    {%- assign baseurl = baseurl | append:'/' | append: crumb -%}
+    {%- assign url = baseurl | append: index -%}
+    {%- assign parent = site.pages | find: 'url', url -%}
+    {%- if parent -%}
+      <a href="{{ url | relative_url }}">{{ parent.title }}</a>
+    {%- else -%}
+      {{ "Could not find parent breadcrumb '" | append: url | append: "'" | error }}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+</nav>
+{% endif %}

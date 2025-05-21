@@ -9,7 +9,7 @@
 #         files/publications/<slug>.pdf -> Official paper (published version)
 #         files/publications/<slug>-with-appendices.pdf -> Extended version
 #         files/publications/<slug>-slides.pdf -> Slides
-#         publications/<slug>.md -> Summary
+#         research/<slug>.md -> Summary
 #   authors: list of 'author_id: affiliation'
 #     - author_id must match a key in _data/authors.yml
 #     - Affiliation is either a string or a list of strings
