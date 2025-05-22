@@ -3,7 +3,7 @@ Navbutton, aka button that appear on the navbar. Parameters:
 - url: the page the button points to (relative_url, excluding lang)
 - pagename: the name of the including page, use to color the current page if it matches the url
 - lang: the language ("fr" or "en")
-- title: the link title
+- title: the link title (optional, defaults to link text)
 - text: the link text
 {%- endcomment -%}
-<a class="internal{% if include.pagename == include.url %} current{% endif %}" href="{{ include.url | relative_url }}.html{% if include.lang %}.{{ include.lang }}{% endif %}" title="{{ include.title }}"{% if include.lang %} hreflang="{{ include.lang }}"{% endif %}>{{ include.text }}</a>
+<a class="internal{% if include.pagename == include.url %} current{% endif %}" href="{{ include.url | relative_url }}.html{% if include.lang %}.{{ include.lang }}{% endif %}" title="{{ include.title | default: include.text }}"{% if include.lang %} hreflang="{{ include.lang }}"{% endif %}>{{ include.text }}</a>

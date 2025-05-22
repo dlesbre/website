@@ -1,11 +1,14 @@
 - date: 2025-05-15
   venue: Équipe Épicure - Inria Rennes
+  title: Improving the precision of fast abstract interpreters
   url: https://team.inria.fr/epicure/
 
 - date: 2024-11-29
   venue: Équipe ANTIQUE - ENS Ulm
+  title: Compiling with abstract interpretation
   url: https://team.inria.fr/antique/
 
 - date: 2024-10-09
   venue: Laboratoire Méthodes Formelles (LMF)
+  title: Compiling with abstract interpretation
   url: https://lmf.cnrs.fr/Main/HomePage

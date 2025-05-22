@@ -50,6 +50,7 @@ spécifiquement, j’étudie des domaines abstraits rapides (non-relationnels ou
 faiblement relationnel), comme ceux obtenus par une transformation SSA. Mon
 encadrant de thèse est [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
 
+Mes travaux récents et publications sont disponibles sur la [page recherche]({{ '/research/index.html.fr' | relative_url }}).
 
 Je m’intéresse notamment à la vérification et l’informatique pratique bas niveau :
 méthodes formelles, interprétation abstraite, système de types, Coq, systèmes

@@ -52,6 +52,8 @@ interpretation. Specifically, my work centers around fast abstract domains
 (non-relational or weakly-relational) obtained by translating to a program to
 SSA form. I work under the supervision of [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
 
+You will find my current work and publications on the [research page]({{ '/research/index.html.en' | relative_url }}).
+
 My research interests focus on verification and low-level systems: formal
 methods, abstract interpretation, type systems, Coq, operating systems,
 compilers, hardware, functionnal programming and more. Besides computer science,
@@ -65,8 +67,6 @@ on the [software]({{ 'logiciels.html.en' | relative_url }}) page.
 My hobbies include outdoor sports such as rock climbing, sailing, hiking and skiing.
 I also enjoy reading, especially sci-fi and detective stories.
 You can also find me playing board games and video games.
-
-{% include publication_list.html lang="en" %}
 
 ## {% include icon.html icon="link" %} Recommendations
 
