@@ -11,7 +11,7 @@
 #   - prefix (langstring) placed before event, but not in the url
 #   - url (string) optional
 #   - location (langstring) optional
-# - type=invited-talk
+# - type=invited-talk, single field "talk", the _date/talks.yml object
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
 
 - date: 2025-08-06

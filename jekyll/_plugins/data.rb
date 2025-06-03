@@ -27,6 +27,15 @@ module DataPlugin
         accepted["paper"] = publication
         site.data["news"] << accepted
       end
+
+      # Create a news item for invited talks
+      site.data["talks"].each do |talk|
+        event = Hash.new
+        event["date"] = talk["date"]
+        event["type"] = "invited-talk"
+        event["talk"] = talk
+        site.data["news"] << event
+      end
     end
   end
 end
