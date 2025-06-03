@@ -5,9 +5,21 @@ Parameters:
 {% endcomment %}
 
 {% assign allnews = site.data.news | sort: "date" | reverse %}
+<style>
+  .news-other {
+    display: none;
+  }
+
+  p:has(#news-other:checked) ~ dl > .news-other {
+    display: block;
+  }
+</style>
+
+<input type="checkbox" id="news-other" checked=true> Other
+
 {% for news in allnews %}
-{{ news.date }}
-:
+{: .news-{{ news.type | default: "other" }} } {{ news.date }}
+: {: .news-{{ news.type | default: "other" }} }
 {%- if news.type == "accepted-paper" %}
   {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: include.lang %}
   {%- assign nutshell = site.pages | find: "url", nutshell-path %}
