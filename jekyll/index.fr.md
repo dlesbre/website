@@ -68,10 +68,6 @@ l’escalade, la voile, la randonnée et le ski. J’aime bien lire, notamment d
 SF et des romans policiers. Je m’occupe également en jouant à des jeux de
 société et des jeux vidéos.
 
-## {% include icon.html icon="book" %} Publications
-
-{% include publication_list.html lang="fr" %}
-
 ## {% include icon.html icon="link" %} Recommandations
 
 Sans ordre particulier, voici quelques liens allant d'outils que j’utilise
