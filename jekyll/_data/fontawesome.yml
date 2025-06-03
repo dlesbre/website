@@ -51,6 +51,9 @@ book-open:
 coffee:
   class: fa-solid fa-mug-saucer
   unicode: f0f4
+newspaper:
+  class: fa-solid fa-newspaper
+  unicode: f1ea
 
 user:
   class: fa-solid fa-user

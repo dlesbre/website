@@ -4,7 +4,7 @@ List of all publications in this website. Parameters:
 {%- endcomment -%}
 <div class="paperlist">
 {%- for paper in site.data.publications -%}
-<div class="content filelist">
+<div class="content filelist" id="{{ paper.slug }}">
   <div>
     <span class="title">{{ paper.title }}</span>
     {%- if paper.type == "workshop" %} &mdash; {% if include.lang == "fr" %}Papier court{% else %}Workshop paper{% endif %}{% endif %}

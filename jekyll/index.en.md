@@ -68,6 +68,10 @@ My hobbies include outdoor sports such as rock climbing, sailing, hiking and ski
 I also enjoy reading, especially sci-fi and detective stories.
 You can also find me playing board games and video games.
 
+## {% include icon.html icon="newspaper" %} Latest news
+
+{% include news.md lang="en" %}
+
 ## {% include icon.html icon="link" %} Recommendations
 
 In no particular order, here are a few links ranging from useful software

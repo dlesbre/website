@@ -8,6 +8,24 @@ module DataPlugin
       site.data["publications"].each do |publication|
         publication["year"] ||= publication["date"]["published"].year
         publication["month"] ||= "%02d" % publication["date"]["published"].month
+
+        # Create a news item for attending publication conferences
+        if publication["venue"]["attending"] then
+          event = Hash.new
+          event["date"] = publication["date"]["published"]
+          event["type"] = "attending"
+          event["event"] = "#{publication["venue"]["acronym"]} #{publication["year"]}"
+          event["url"] = publication["venue"]["url"]
+          event["location"] = publication["venue"]["location"]
+          site.data["news"] << event
+        end
+
+        # Create a news item for accepted papers
+        accepted = Hash.new
+        accepted["date"] = publication["date"]["accepted"]
+        accepted["type"] = "accepted-paper"
+        accepted["paper"] = publication
+        site.data["news"] << accepted
       end
     end
   end

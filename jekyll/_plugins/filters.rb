@@ -116,8 +116,10 @@ module StringFilters
       end
     elsif text.is_a?(String)
       text
+    elsif text.nil?
+      ""
     else
-          raise RuntimeError, "Liquid Error:#{get_location(context)} lang filter: expected String or Hash"
+      raise RuntimeError, "Liquid Error:#{get_location(context)} lang filter: expected String or Hash"
     end
   end
 
