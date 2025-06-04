@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Nouvelles
+title: News
 lang: en
 ---
 
