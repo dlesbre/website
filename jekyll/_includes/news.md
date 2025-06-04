@@ -5,6 +5,13 @@ Parameters:
 - on_main: true on index, false on news page
     on main page: only 5 items, no filter
     on news page: all items and filter
+
+The filter uses CSS only:
+- items with class `.news-XXX` are hidden by `display:none;`
+- When the checkbox with matching is checked, `#news-XXX:checked`, this changes to `display:block;`
+This uses the CSS `~` selector (selects two siblings). Since the checkbox (wrapped in a `p`) and
+news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors to combine them:
+`p:has(#news-XXX:checked) ~ dl > .news-XXX`
 {% endcomment %}
 
 {%- assign allnews = site.data.news | sort: "date" | reverse -%}
