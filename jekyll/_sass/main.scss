@@ -166,3 +166,7 @@ input[type="checkbox"] {
 				box-shadow: inset 1em 1em color.adjust($light_sep, $lightness: -20%);
 	}
 }
+
+p.center {
+	text-align: center;
+}

@@ -6,7 +6,7 @@
 # Each item must have a 'date'
 # Items are then sorted by their 'type' attribute:
 # - no type, single 'content' field, markdown langstring
-# - type=attending, attending an event, fields:
+# - type=conference or type=summer-school, attending an event, fields:
 #   - event (langstring)
 #   - prefix (langstring) placed before event, but not in the url
 #   - url (string) optional
@@ -15,7 +15,7 @@
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
 
 - date: 2025-08-06
-  type: attending
+  type: summer-school
   prefix:
     fr: l’
     en: "the "
@@ -28,7 +28,7 @@
   url: https://www.congresscenter.philosophie.uni-muenchen.de/kongresse/mod25/index.html
 
 - date: 2024-09-01
-  type: attending
+  type: summer-school
   prefix:
     fr: l’
     en: "the "
@@ -41,7 +41,7 @@
   url: https://absint24.liparischool.it/
 
 - date: 2024-06-02
-  type: attending
+  type: conference
   prefix:
     fr: "les "
     en: "the "
@@ -53,11 +53,13 @@
 
 
 - date: 2023-10-09
+  type: other
   content:
     fr: Début de ma thèse au CEA List, supervisé par [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html)
     en: Started of my PhD at CEA List, under the supervision of [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html)
 
 - date: 2018-09-01
+  type: other
   content:
     fr: Entrée à l’[ENS Ulm](https://www.ens.psl.eu") par concours MPI
     en: Admitted to [ENS Ulm](https://www.ens.psl.eu") via the MPI entrance exam

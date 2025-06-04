@@ -70,7 +70,7 @@ You can also find me playing board games and video games.
 
 ## {% include icon.html icon="newspaper" %} Latest news
 
-{% include news.md lang="en" %}
+{% include news.md lang="en" on_main=true %}
 
 ## {% include icon.html icon="link" %} Recommendations
 

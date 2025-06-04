@@ -13,7 +13,7 @@ module DataPlugin
         if publication["venue"]["attending"] then
           event = Hash.new
           event["date"] = publication["date"]["published"]
-          event["type"] = "attending"
+          event["type"] = "conference"
           event["event"] = "#{publication["venue"]["acronym"]} #{publication["year"]}"
           event["url"] = publication["venue"]["url"]
           event["location"] = publication["venue"]["location"]

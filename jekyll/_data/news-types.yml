@@ -1,0 +1,24 @@
+# The various type of news, matching _data/news.yml types
+
+- type: accepted-paper
+  name: Publications
+
+- type: invited-talk
+  name:
+    fr: Séminaires
+    en: Talks
+
+- type: conference
+  name:
+    fr: Conférences
+    en: Conferences
+
+- type: summer-school
+  name:
+    fr: Écoles d'été
+    en: Summer schools
+
+- type: other
+  name:
+    en: Other
+    fr: Autres
