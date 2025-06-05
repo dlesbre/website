@@ -19,17 +19,22 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
 
 <style>
   {%- for type in site.data.news-types -%}
-  .news-{{ type.type }}{ display: none; } p.checkbox:has(#news-{{ type.type }}:checked) ~ dl > .news-{{ type.type }} { display: block; }
-  {% endfor %}
+  .news-{{ type.type }}{ display: none; } p:has(#news-{{ type.type }}:checked) ~ dl > .news-{{ type.type }} { display: block; }
+  {%- endfor -%}
 </style>
 
-{: .checkbox .center}
-**{% if include.lang=="fr" %}Filtrer {%else%}Filter{%endif%}:** {% for type in site.data.news-types %}<input type="checkbox" id="news-{{ type.type }}" checked=true> {{ type.name | lang:include.lang }}
-({{ allnews | where: "type", type.type | size }})
+**{% if include.lang=="fr" %}Filtrer {%else%}Filter{%endif%}:** {% for type in site.data.news-types %}<span style="white-space:nowrap;"><input type="checkbox" id="news-{{ type.type }}" checked=true /> {{ type.name | lang:include.lang }} ({{ allnews | where: "type", type.type | size }})</span>
 {%- unless forloop.last %} &ensp; {% endunless %}{% endfor %}
 {% endif %}
 
 {% for news in allnews %}
+{%- comment %}
+  {%- assign year = news.date | date: "%Y" -%}
+  {%- if year != prevyear and include.on_main != true %}
+  ### {{ year }}
+  {% assign prevyear = year %}
+  {% endif %}
+{% endcomment %}
 {: .news-{{ news.type | default: "other" }} } {{ news.date }}
 : {: .news-{{ news.type | default: "other" }} }
 {%- if news.type == "accepted-paper" %}
