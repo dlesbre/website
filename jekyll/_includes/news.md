@@ -28,13 +28,13 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
 {% endif %}
 
 {% for news in allnews %}
-{%- comment %}
-  {%- assign year = news.date | date: "%Y" -%}
-  {%- if year != prevyear and include.on_main != true %}
-  ### {{ year }}
-  {% assign prevyear = year %}
-  {% endif %}
-{% endcomment %}
+
+{%- assign year = news.date | date: "%Y" -%}
+{%- if year != prevyear and include.on_main != true %}
+**{{ year }}**
+{% assign prevyear = year %}
+{% endif %}
+
 {: .news-{{ news.type | default: "other" }} } {{ news.date }}
 : {: .news-{{ news.type | default: "other" }} }
 {%- if news.type == "accepted-paper" %}
@@ -44,8 +44,8 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
     {%- assign paperurl = nutshell.url %}
   {%- else %}
     {%- assign paperurl = "/research/index.html." | append: include.lang | append: "#" | append: news.paper.slug %}
-  {%- endif %} [*{{ news.paper.title }}*]({{ paperurl | relative_url }}) {% if include.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
-{%- elsif news.type == "conference" or news.type == "summer-school" %} {% if include.lang=="fr" %}Présent à{% else %}Attending{%endif%} {{ news.prefix|lang:include.lang }}{% if news.url %}[{{ news.event | lang: include.lang }}]({{news.url}}){% else %}{{ news.event | lang: include.lang }}{% endif %}{% if news.location %} {% if include.lang=="fr" %}à{% else %}in{%endif%} {{ news.location|lang:include.lang }}{% endif %}
+  {%- endif %} {% include icon.html icon="file" %} [*{{ news.paper.title }}*]({{ paperurl | relative_url }}) {% if include.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
+{%- elsif news.type == "conference" or news.type == "summer-school" %} {% if include.lang=="fr" %}Présent{% else %}Attending{%endif%} {{ news.prefix|lang:include.lang }}{% if news.url %}[{{ news.event | lang: include.lang }}]({{news.url}}){% else %}{{ news.event | lang: include.lang }}{% endif %}{% if news.location %} {% if include.lang=="fr" %}à{% else %}in{%endif%} {{ news.location|lang:include.lang }}{% endif %}
 {%- elsif news.type == "invited-talk" %} {% if include.lang=="fr" %}Séminaire invité :{% else %}Invited talk:{%endif%} "{{ news.talk.title }}", {% if news.talk.url %}[{{ news.talk.venue }}]({{news.talk.url}}){% else %}{{ news.talk.venue }}{% endif %}
 {%- elsif news.type=="other" %} {{ news.content | lang:include.lang }}
 {%- else %} {{ "unknown news type: " | append: news.type | error }}

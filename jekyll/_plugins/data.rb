@@ -14,6 +14,7 @@ module DataPlugin
           event = Hash.new
           event["date"] = publication["date"]["published"]
           event["type"] = "conference"
+          event["prefix"] = { "fr" => "à ", "en" => "" }
           event["event"] = "#{publication["venue"]["acronym"]} #{publication["year"]}"
           event["url"] = publication["venue"]["url"]
           event["location"] = publication["venue"]["location"]

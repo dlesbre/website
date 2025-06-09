@@ -17,7 +17,7 @@
 - date: 2025-08-06
   type: summer-school
   prefix:
-    fr: l’
+    fr: à l’
     en: "the "
   event:
     fr: école d’été de Marktoberdorf
@@ -30,7 +30,7 @@
 - date: 2024-09-01
   type: summer-school
   prefix:
-    fr: l’
+    fr: à l’
     en: "the "
   event:
     fr: école d’été d’interprétation abstraite de Lipari
@@ -43,7 +43,7 @@
 - date: 2024-06-02
   type: conference
   prefix:
-    fr: "les "
+    fr: "aux "
     en: "the "
   event:
     fr: journées nationales du GDR GPL
