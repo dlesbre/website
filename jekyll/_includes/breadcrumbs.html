@@ -1,10 +1,10 @@
-{% assign crumbs = page.url | remove:'/index.html' | remove:'/index.html.fr' | remove:'/index.html.en' | split: '/' | shift %}
+{% assign crumbs = page.url | remove:'/header.html' | remove:'/index.html' | remove:'/index.html.fr' | remove:'/index.html.en' | split: '/' | shift %}
 {% if crumbs != empty %}
 <nav id="breadcrumbs">
   {%- if page.lang %}
     {% assign index = "/index.html." | append: page.lang %}
   {% else %}
-    {% assign index = "/index.html" | append: page.lang %}
+    {% assign index = "/index.html" %}
   {% endif -%}
   {%- assign baseurl = '' -%}
 <a href="{{ index | relative_url }}">{% include icon.html icon='house' %} {% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>

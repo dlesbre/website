@@ -9,6 +9,7 @@ module LanguageAlternatePagePlugin
     def generate(site)
       pages = []
       site.pages.each do |page|
+        next if page.data["layout"] == "listings" or page.data["layout"] == "listings-footer"
         if page.url.end_with? '.en.html' or page.url.end_with? '.fr.html' then
           pages << {page: page, url: page.url[..-9], lang: page.data["lang"]}
         elsif page.url.end_with? '.html' then

@@ -1,0 +1,58 @@
+---
+# CSS style for file listing pages
+---
+
+@use "variables.scss" as *;
+
+body {
+	background: $dark_bg_2;
+	margin: 33px;
+	color: white;
+	}
+h1 {
+	font: 2.0em Georgia, serif;
+	}
+h1 a:hover, h1 a:active {
+	text-decoration: none;
+	}
+a:link {
+	text-decoration: none;
+	color: $dark_sep;
+	}
+a:visited {
+	text-decoration: none;
+	color: $dark_visited;
+	}
+a:hover, a:active {
+	text-decoration: underline;
+	color: $dark_hover;
+	}
+pre {
+	font-size: 0.9em;
+	line-height: 1.3em;
+	font-family: "Courier New", Courier, monospace;
+	margin: 3px 0;
+	color: white;
+	}
+pre img {
+	display: inline;
+	}
+img {
+	margin: 3px 0;
+	}
+.description {
+	font-style: italic;
+	font-size: 90%;
+	color: #ccc;
+	}
+nav {
+    margin-bottom: 20px;
+}
+nav a::after {
+	font-size: 90%;
+	display: inline-block;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	color: #959396;
+	content: "/";
+}
