@@ -9,7 +9,7 @@ title: Recherche
 
 # Recherche
 
-Mes sujets de recherches sont concentré autour des langages de programmation
+Mes sujets de recherches sont concentrés autour des langages de programmation
 et la vérification de programmes, notamment tous les outils qui permettent de
 facilité l’écriture de code correct. Mon sujet de thèse est l’analyse de programme par interprétation abstraite. Plus
 spécifiquement, j’étudie des domaines abstraits rapides (non-relationnels ou

@@ -45,8 +45,6 @@ module HeaderFooterPlugin
       @content = ""
       @data["layout"] = "listings-footer"
       @url = page.url[..-12] + "footer.html"
-      puts page.dir
-      puts url
     end
   end
 end

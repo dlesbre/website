@@ -4,13 +4,15 @@
 <nav id="breadcrumbs">
   {%- if page.lang %}
     {% assign index = "/index.html." | append: page.lang %}
-  {% elsif listings %}
-    {% assign index = "/header.html" %}
   {% else %}
     {% assign index = "/index.html" %}
   {% endif -%}
   {%- assign baseurl = '' -%}
-<a href="{{ index | relative_url }}">{% include icon.html icon='house' %} {% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>
+<a href="{{ index | relative_url }}">{% unless listings %}{% include icon.html icon='house' %} {% endunless %}{% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>
+{% if listings %}
+  {% assign index = "/header.html" %}
+{% endif %}
+
 {%- for crumb in crumbs -%}
   {%- if forloop.last -%}
     <span>{{ page.short-title | default: page.title }}</span>
