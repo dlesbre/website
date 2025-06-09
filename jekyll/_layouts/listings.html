@@ -3,7 +3,7 @@
 ---
 
 <html><head>
-  <title>{{ page.title }} | Dorian Lesbre</title>
+  <title>{{ page.short-title | default: page.title }} | Dorian Lesbre</title>
   <meta name="author" content="Dorian Lesbre">
   <meta name="copyright" content="Dorian Lesbre">
   <link rel="icon" type="image/png" href="{{ 'favicon.ico' | relative_url }}"/>
@@ -12,6 +12,8 @@
 <body>
 <h1>{{ page.title }}</h1>
 {% include breadcrumbs.html %}
+
+{{ content }}
 
 <pre style="margin-top:20px;">Copyright (C) Dorian Lesbre</pre>
 <pre><a href="{{ '/' | relative_url }}" title="Home">Home Page</a> | <a href="{{ 'files' | relative_url }}">File list</a> | <a href="{{ 'legal' | relative_url }}">Legal disclaimers</a></pre>
