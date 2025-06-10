@@ -29,24 +29,33 @@ two variables is always the same. This allows eliminating the vast majority of r
 store a spanning tree** and can still recover any arbitrary relation in amortized almost-constant time, using a variation
 of the efficient union-find data structure.
 
-![saturate and eliminate constraints]({{ 'imgs/publications/2025-pldi-spanning-tree.svg' | relative_url }}){: style="width:min(900px,100%);" .transparent }
-
+<figure>
+<img class="transparent"
+  src="{{ 'imgs/publications/2025-pldi-spanning-tree.svg' | relative_url }}"
+  alt="Saturate and eliminate constraints"
+  style="width:900px;" />
+<figcaption>
 Fig. Graph of relations between variables. Each arrow represents a relation, labels have been omitted.
 Left is the initial configuration, middle is the computed closure, and right is the minimal spanning tree that our domains only have to maintain.
-{: .caption }
+</figcaption>
+</figure>
 
 ## Labeled union-find
 
-![Labeled union-find example]({{ 'imgs/publications/2025-pldi-labeled-uf-example.svg' | relative_url }}){:
-style="width:min(1100px,100%)" .transparent }
-
+<figure>
+<img class="transparent"
+  src="{{ 'imgs/publications/2025-pldi-labeled-uf-example.svg' | relative_url }}"
+  alt="Labeled union-find example"
+  style="width:1100px;" />
+<figcaption>
 Fig. Example of a labeled union-find data structure. Left is the actual data structure
 (each arrow is a pointer). Right is the implied transitive closure
 (each dashed arrow can be computed in constant time).
 At the bottom, we have an example of path compression:
 shortening the path from z to the representative r
 without changing the transitive closure (the dotted arrow is replaced by the dashed one).
-{: .caption }
+</figcaption>
+</figure>
 
 We can use an extension of the classical
 [union-find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) data
@@ -74,14 +83,18 @@ $$
 \end{array}
 $$
 
-![Labeled union-find operations]({{ 'imgs/publications/2025-pldi-labeled-uf.svg' | relative_url }}){:
-style="width:min(700px,100%);" .transparent }
-
+<figure>
+<img class="transparent"
+  src="{{ 'imgs/publications/2025-pldi-labeled-uf.svg' | relative_url }}"
+  alt="Labeled union-find operations"
+  style="width:700px;" />
+<figcaption>
 Fig. Main operations of labeled union-find. Compared to classical union-find,
-`find` is modified to also return the relation from the current node to the
-representative; the `union` operation has been renamed `add_relation`, and the
-`get_relation` operation is new.
-{: .caption }
+<code>find</code> is modified to also return the relation from the current node to the
+representative; the <code>union</code> operation has been renamed <code>add_relation</code>, and the
+<code>get_relation</code> operation is new.
+</figcaption>
+</figure>
 
 ## The labeled union-find relational abstraction
 
@@ -111,13 +124,18 @@ recovered. If we know that $$y \xrightarrow{+2} x$$ and $$x \in [0:2]$$ then we 
 $$y \in [2:4]$$. This reduces storage cost and propagation time, since all related variables are
 updated at once any time new information is learned.
 
-![Using labeled union-find with a non-relational domain]({{ 'imgs/publications/2025-pldi-factorization.svg' | relative_url }}){: style="width:min(1200px,100%);" .transparent }
-
+<figure>
+<img class="transparent"
+  src="{{ 'imgs/publications/2025-pldi-factorization.svg' | relative_url }}"
+  alt="Using labeled union-find with a non-relational domain"
+  style="width:1200px;" />
+<figcaption>
 Fig. Using labeled union-find to factorize a non-relational abstraction.
 Left: without LUF, we store an interval value on all nodes of this term graph.
 Right: using LUF, we can group related nodes together and only store an interval value
 on the representative. We can recompute the values of other nodes as needed without precision loss.
-{: .caption }
+</figcaption>
+</figure>
 
 Labeled union-find can also help relational abstraction similarly, shrinking their size and thus their
 computation cost. Furthermore, it can be modified to detect any entailed equalities and notify other
