@@ -5,7 +5,7 @@
 
 header {
 	display: flex;
-	background-color: $dark_bg_1;
+	background-color: $dark_header_bg;
 	width: calc(100% - 60px);
 	padding: 0 20px 0 40px;
 	border: 0;
@@ -55,7 +55,7 @@ header {
 			&:hover {
 				transition-property: background-color;
 				transition-duration: 0.5s;
-				background-color: $dark_bg_3;
+				background-color: $dark_hover_bg;
 				@include links.nohover();
 			}
 		}
@@ -71,7 +71,7 @@ nav#site {
 	display: flex;
 	align-items: right;
 	justify-content: flex-end;
-	background-color: $dark_bg_1;
+	background-color: $dark_header_bg;
 	margin: 0;
 	padding: 0 20px;
 	border-bottom: 4px solid $dark_sep;
@@ -91,13 +91,13 @@ nav#site {
 
 		&:hover {
 			transition-property: background-color;
-			background-color: $dark_bg_3;
+			background-color: $dark_hover_bg;
 			transition-duration: 0.5s;
 			@include links.nohover();
 		}
 
 		&.current {
-			background-color: $dark_bg_2;
+			background-color: $dark_body_bg;
 		}
 	}
 }
@@ -109,7 +109,7 @@ footer {
 	padding: 10px 40px;
 	height: 70px;
 	display: flex;
-	background-color: $dark_bg_1;
+	background-color: $dark_header_bg;
 	border-top: 4px solid $dark_sep;
 	align-items: center;
 
@@ -128,7 +128,7 @@ footer {
 // light-theme color changes
 .light-theme {
 	header {
-		background-color: $light_bg_1;
+		background-color: $light_header_bg;
 		a {
 			color: $light_fg;
 			&:hover {
@@ -137,29 +137,29 @@ footer {
 		}
 
 		.hbuttons a:hover {
-			background-color: $light_bg_3;
+			background-color: $light_hover_bg;
 			@include links.nohover_light();
 		}
 	}
 
 	nav#site {
-		background-color: $light_bg_1;
+		background-color: $light_header_bg;
 		border-bottom: 4px solid $light_sep;
 
 		a {
 			color: $light_fg;
 			&:hover {
-				background-color: $light_bg_3;
+				background-color: $light_hover_bg;
 				@include links.nohover_light();
 			}
 			&.current {
-				background-color: $light_bg_2;
+				background-color: $light_body_bg;
 			}
 		}
 	}
 
 	footer {
-		background-color: $light_bg_1;
+		background-color: $light_header_bg;
 		border-top: 4px solid $light_sep;
 	}
 }

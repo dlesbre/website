@@ -11,11 +11,11 @@ html, body {
 	align-items: center;
 }
 html, html > * {
-	background-color: $dark_bg_2;
+	background-color: $dark_body_bg;
 	color: $dark_fg;
 }
 html.light-theme, html.light-theme > * {
-	background-color: $light_bg_2;
+	background-color: $light_body_bg;
 	color: $light_fg;
 }
 
@@ -123,7 +123,7 @@ main {
 // Checkbox styling
 input[type="checkbox"] {
 	appearance: none;
-	background-color: $dark_bg_3;
+	background-color: $dark_hover_bg;
 	margin: 0;
 	font: inherit;
 	color: $dark_sep;
@@ -134,7 +134,7 @@ input[type="checkbox"] {
 	transform: translateY(0.1em);
 
 	&:hover {
-		background-color: $dark_bg_2;
+		background-color: $dark_body_bg;
 	}
 
 	&::before {
@@ -154,12 +154,12 @@ input[type="checkbox"] {
 }
 
 .light-theme input[type="checkbox"] {
-	background-color: $light_bg_3;
+	background-color: $light_hover_bg;
 	color: $light_sep;
 	border: 2px solid $light_sep;
 
 	&:hover {
-		background-color: $light_bg_2;
+		background-color: $light_body_bg;
 	}
 
 	&::before {

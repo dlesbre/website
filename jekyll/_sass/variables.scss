@@ -1,17 +1,17 @@
 // Common variables
 
-$dark_bg_1: #4c4c7c;
-$dark_bg_2: #26263c;
-$dark_bg_3: #39395c;
+$dark_header_bg: #4c4c7c; // Header background color
+$dark_body_bg: #26263c;   // Body background color
+$dark_hover_bg: #39395c;  // Background color for some link hovers
 $dark_fg: white;
-$dark_sep: #eb811b;
-$dark_hover: #f3b376;
-$dark_visited: #9d540e;
-$dark_code: #FFD787;
+$dark_sep: #eb811b;       // Link and separator color
+$dark_hover: #f3b376;     // Hover color for links
+$dark_visited: #9d540e;   // Visited color for links
+$dark_code: #FFD787;      // Font color for inline code elements
 
-$light_bg_1: #d8c3a5;
-$light_bg_2: #eae7dc;
-$light_bg_3: #e2d7c3;
+$light_header_bg: #d8c3a5;
+$light_body_bg: #eae7dc;
+$light_hover_bg: #e2d7c3;
 $light_fg: #222222;
 $light_sep: #e85a4f;
 $light_hover: #cd544b;

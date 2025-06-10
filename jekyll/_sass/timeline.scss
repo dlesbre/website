@@ -47,7 +47,7 @@
 		width: 15px;
 		height: 15px;
 		left: -12px;
-		background-color: $dark_bg_1;
+		background-color: $dark_header_bg;
 		border: 4px solid $dark_sep;
 		top: 15px;
 		border-radius: 50%;
@@ -78,7 +78,7 @@
 }
 
 .box {
-	background-color: $dark_bg_1;
+	background-color: $dark_header_bg;
 	padding: 10px;
 	position: relative;
 	top: -10px;
@@ -92,7 +92,7 @@
 .light-theme {
 	.container {
 		&::after {
-			background-color: $light_bg_1;
+			background-color: $light_header_bg;
 			border: 4px solid $light_sep;
 		}
 		&::before {
@@ -103,6 +103,6 @@
 	}
 
 	.box {
-		background-color: $light_bg_1;
+		background-color: $light_header_bg;
 	}
 }

@@ -33,7 +33,7 @@ a {
 
     &:hover {
       transition-property: background-color;
-      background-color: $dark_bg_3;
+      background-color: $dark_hover_bg;
       font-style: normal;
     }
 
@@ -93,7 +93,7 @@ a {
   &.linkbutton, &.downloadbutton {
     border: 2px solid $light_sep;
     &:hover {
-      background-color: $light_bg_3;
+      background-color: $light_hover_bg;
     }
   }
 
