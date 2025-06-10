@@ -1,14 +1,13 @@
 ---
 layout: base
 ---
-{%- assign lang = page.lang | default: site.lang -%}
-{%- assign slug = page.name | strip_extension  -%}
-{%- assign paper = site.data.publications | find: "slug", slug -%}
+{% assign lang = page.lang | default: site.lang %}
+{% assign slug = page.name | strip_extension  %}
+{% assign paper = site.data.publications | find: "slug", slug %}
 
-{% if paper %}
+{%- if paper -%}
   <div>
   <h1 style="float: left;">{{ paper.title }}</h1>
-
     {%- if paper.artifact-badges -%}
       <span style="float: right;">
         {% include publication_badges.html scale=2 badges=paper.artifact-badges %}
@@ -21,26 +20,26 @@ layout: base
     {% if paper.doi %}&mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a> {% endif %}
   </div>
 
-  {% for aut in paper.authors %}
+  {%- for aut in paper.authors -%}
     <div>
-      {% for author_and_affiliation in aut %}
-      {% assign author = author_and_affiliation[0] %}
-      {% assign author = site.data.authors[author] %}
+      {%- for author_and_affiliation in aut -%}
+      {%- assign author = author_and_affiliation[0] -%}
+      {%- assign author = site.data.authors[author] -%}
       {{ author.first-name }} <span class="sc">{{ author.last-name }}</span>
-      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}">{% include icon.html icon="orcid" %}</a>{% endif %}
+      {%- if author.orcid %} <a class="external" href="https://orcid.org/{{ author.orcid }}" title="{{ author.orcid }}">{% include icon.html icon="orcid" %}</a>{%- endif -%}
       &mdash;
-      <i>{% if author_and_affiliation[1].first %}
-        {% if lang == "en" %}
+      <i>{%- if author_and_affiliation[1].first -%}
+        {%- if lang == "en" -%}
           {{ author_and_affiliation[1] | array_to_sentence: 'and', '; ' }}
-        {% else %}
+        {%- else -%}
           {{ author_and_affiliation[1] | array_to_sentence: 'et', ' ; ' }}
-        {% endif %}
-      {% else %}
+        {%- endif -%}
+      {%- else -%}
         {{ author_and_affiliation[1] }}
-      {% endif %}</i>
-      {% endfor %}
+      {%- endif -%}</i>
+      {%- endfor -%}
     </div>
-  {% endfor %}
+  {%- endfor -%}
 
   {%- include publication_links.html paper=paper lang=lang nutshell=false -%}
 

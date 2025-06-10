@@ -83,7 +83,7 @@ layout: html-escapes
 		{% include breadcrumbs.html %}
 
 		<main>
-			{% if page.lang-disclaimer %}
+			{%- if page.lang-disclaimer %}
 				<div class="callout">
 					{% include icon.html icon='warning' %} &ThickSpace;
 					{% if lang == "fr" %}
@@ -92,7 +92,7 @@ layout: html-escapes
 						This page is only available in french.
 					{% endif %}
 				</div>
-			{% endif %}
+			{%- endif -%}
 
 			{{ content }}
 		</main>

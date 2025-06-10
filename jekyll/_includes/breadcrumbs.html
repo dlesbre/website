@@ -1,5 +1,5 @@
-{% assign listings = page.url | has_suffix:"/header.html" %}
-{% assign crumbs = page.url | remove:'/header.html' | remove:'/index.html' | remove:'/index.html.fr' | remove:'/index.html.en' | split: '/' | shift %}
+{%- assign listings = page.url | has_suffix:"/header.html" %}
+{%- assign crumbs = page.url | remove:'/header.html' | remove:'/index.html' | remove:'/index.html.fr' | remove:'/index.html.en' | split: '/' | shift %}
 {%- if crumbs != empty %}
 <nav id="breadcrumbs">
   {%- if page.lang %}
@@ -28,4 +28,4 @@
   {%- endif -%}
 {%- endfor -%}
 </nav>
-{% endif %}
+{%- endif %}
