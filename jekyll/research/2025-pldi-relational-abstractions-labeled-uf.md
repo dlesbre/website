@@ -3,7 +3,6 @@ layout: paper-summary
 title:  "PLDI 2025"
 date: 2025-06-15
 nav_order: 2025-06-15
-katex: True
 lang: en
 ---
 

@@ -40,7 +40,7 @@ layout: html-escapes
 		<link rel="icon" type="image/png" href="{{ page.icon | default:'favicon.ico' | relative_url }}"/>
 		<link rel="stylesheet" type="text/css" href="{{ 'css/style.css' | relative_url }}"/>
 		<link rel="stylesheet" type="text/css" href="{{ 'css/font-awesome-all.css' | relative_url }}"/>
-		{%- if page.katex -%}
+		{%- if content contains '<span class="katex">' -%}
 			<link rel="stylesheet" type="text/css" href="{{ 'css/katex.css' | relative_url }}"/>
 		{%- endif -%}
 
