@@ -58,8 +58,8 @@ Computing the relation between some variables may also require
 inverting relations; for instance, the relation between $$y$$ and $$x$$ is
 the composition of $$y = 2*r$$ and the inverse of $$x = 3*r+2$$,
 i.e. $$\displaystyle r = \frac x 3 - \frac 2 3$$, yielding $$\displaystyle y = \frac 2 3 x - \frac 4 3$$. In general, the
-labels thus have an associative composition operation, and an inverse
-operation. Formally, labels must have a [**group
+labels need an associative composition operation $$\cdot \mathop{\mathbb ;} \cdot$$, and an inverse
+operation $$\cdot^{-1}$$. Formally, labels must have a [**group
 structure**](https://en.wikipedia.org/wiki/Group_(mathematics)).  This
 requirement also derives fairly naturally from our previous assumption
 (same relation on each path).
