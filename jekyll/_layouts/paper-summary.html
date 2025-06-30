@@ -15,9 +15,10 @@ layout: base
     {%- endif -%}
   </div>
 
-  <div style="clear: both;">
+  <div style="clear: both; margin-bottom: 20px;">
     <strong>{{ paper.year }}-{{ paper.month }}</strong> &mdash; {{ paper.venue.fullname }} ({{ paper.venue.acronym }})
     {% if paper.doi %}&mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a> {% endif %}
+    {{ paper.comment | lang: lang | opt_prepend: "<br>" }}
   </div>
 
   {%- for aut in paper.authors -%}

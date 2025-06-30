@@ -10,6 +10,24 @@ module StringFilters
     text.end_with? suffix
   end
 
+  # Append if non-null/empty
+  def opt_append(text, suffix)
+    if text.nil? or text == "" then
+      text
+    else
+      text + suffix
+    end
+  end
+
+  # Prepend if non-null/empty
+  def opt_prepend(text, prefix)
+    if text.nil? or text == "" then
+      text
+    else
+      prefix + text
+    end
+  end
+
   # Remove extension (last .XXX of path)
   # index -> index
   # index.html -> index
