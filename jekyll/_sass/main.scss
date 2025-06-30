@@ -112,9 +112,15 @@ main {
 		}
 	}
 }
-.light-theme main h2 {
-	border-bottom: 2px solid $light_sep;
-	border-image-source: linear-gradient(to right, $light_sep) 0%, $light_sep 25%, transparent 100%;
+.light-theme main {
+	h2 {
+		border-bottom: 2px solid $light_sep;
+		border-image-source: linear-gradient(to right, $light_sep 0%, $light_sep 25%, transparent 100%);
+	}
+	h3 {
+		border-bottom: 2px solid $light_sep;
+		border-image-source: linear-gradient(to right, $light_sep 0%, $light_sep 25%, transparent 100%);
+	}
 }
 .smaller {
 	max-width: 800px;

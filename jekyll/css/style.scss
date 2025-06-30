@@ -49,6 +49,7 @@ code {
 
 .light-theme .callout {
 	background-color: $light_hover_bg;
+	border-left: 4px solid $light_sep;
 }
 
 dl {
@@ -77,6 +78,9 @@ dl dd {
 	@media(max-width: 800px) {
 		padding: 0 10px;
 	}
+}
+.light-theme .abstract {
+	border-left: 2px solid $light_sep;
 }
 
 .paperlist {

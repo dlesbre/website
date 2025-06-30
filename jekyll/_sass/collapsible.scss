@@ -18,6 +18,9 @@ summary {
     color: $dark_hover;
   }
 }
+.light-theme summary {
+  color: $light_sep;
+}
 
 // Collapsible is the button
 .collapsible {
