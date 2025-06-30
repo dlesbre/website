@@ -8,6 +8,7 @@ module DataPlugin
       site.data["publications"].each do |publication|
         publication["year"] ||= publication["date"]["published"].year
         publication["month"] ||= "%02d" % publication["date"]["published"].month
+        shortname = "#{publication["venue"]["acronym"]} #{publication["year"]}"
 
         # Create a news item for attending publication conferences
         if publication["venue"]["attending"] then
@@ -15,10 +16,23 @@ module DataPlugin
           event["date"] = publication["date"]["published"]
           event["type"] = "conference"
           event["prefix"] = { "fr" => "à ", "en" => "" }
-          event["event"] = "#{publication["venue"]["acronym"]} #{publication["year"]}"
+          event["event"] = shortname
           event["url"] = publication["venue"]["url"]
           event["location"] = publication["venue"]["location"]
           site.data["news"] << event
+        end
+
+        # Create a news item for awards
+        if publication["award"]
+          publication["award"].each do |award|
+            award = award.dup() # Duplicate to avoid recursion
+            unless award.key?("date")
+              award["date"] = publication["date"]["published"]
+            end
+            award["type"] = "award"
+            award["paper"] = publication
+            site.data["news"] << award
+          end
         end
 
         # Create a news item for accepted papers

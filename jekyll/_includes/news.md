@@ -46,7 +46,16 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
     {%- assign paperurl = "/research/index.html." | append: include.lang | append: "#" | append: news.paper.slug %}
   {%- endif %} {% include icon.html icon="file" %} [*{{ news.paper.title }}*]({{ paperurl | relative_url }}) {% if include.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
 {%- elsif news.type == "conference" or news.type == "summer-school" %} {% if include.lang=="fr" %}Présent{% else %}Attending{%endif%} {{ news.prefix|lang:include.lang }}{% if news.url %}[{{ news.event | lang: include.lang }}]({{news.url}}){% else %}{{ news.event | lang: include.lang }}{% endif %}{% if news.location %} {% if include.lang=="fr" %}à{% else %}in{%endif%} {{ news.location|lang:include.lang }}{% endif %}
-{%- elsif news.type == "invited-talk" %} {% if include.lang=="fr" %}Séminaire invité :{% else %}Invited talk:{%endif%} "{{ news.talk.title }}", {% if news.talk.url %}[{{ news.talk.venue }}]({{news.talk.url}}){% else %}{{ news.talk.venue }}{% endif %}
+{%- elsif news.type == "award" %} {% include icon.html icon="award" %} {% if include.lang=="fr" %}J’ai eu l’honneur de recevoir le{% else %}I am honored to receive the{% endif %} {% if news.url %}[{{ news.name | lang:include.lang }}]({{ news.url }}){% else %}{{ news.name | lang:include.lang }}{% endif %}{% if news.paper %}
+  {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: include.lang %}
+  {%- assign nutshell = site.pages | find: "url", nutshell-path %}
+  {%- if nutshell %}
+    {%- assign paperurl = nutshell.url %}
+  {%- else %}
+    {%- assign paperurl = "/research/index.html." | append: include.lang | append: "#" | append: news.paper.slug %}
+  {%- endif %} {% if include.lang=="fr" %}pour ma publication à{% else %}for my paper at{% endif %} [{{ news.paper.venue.acronym }} {{news.paper.year }}]({{ paperurl | relative_url }})
+{% endif %}
+{%- elsif news.type == "invited-talk" %} {% if include.lang=="fr" %}Séminaire invité :{% else %}Invited talk:{%endif%} *{{ news.talk.title }}*, {% if news.talk.url %}[{{ news.talk.venue }}]({{news.talk.url}}){% else %}{{ news.talk.venue }}{% endif %}
 {%- elsif news.type=="other" %} {{ news.content | lang:include.lang }}
 {%- else %} {{ "unknown news type: " | append: news.type | error }}
 {%- endif %}

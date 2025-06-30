@@ -13,6 +13,7 @@
 #   - location (langstring) optional
 # - type=invited-talk, single field "talk", the _date/talks.yml object
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
+# - type=award, field "name" (langstring), field "url" (optional), field "paper" optional
 
 - date: 2025-08-06
   type: summer-school

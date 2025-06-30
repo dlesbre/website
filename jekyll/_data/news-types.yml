@@ -3,6 +3,11 @@
 - type: accepted-paper
   name: Publications
 
+- type: award
+  name:
+    fr: Prix
+    en: Awards
+
 - type: invited-talk
   name:
     fr: Séminaires
