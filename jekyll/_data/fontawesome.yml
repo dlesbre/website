@@ -54,7 +54,11 @@ coffee:
 newspaper:
   class: fa-solid fa-newspaper
   unicode: f1ea
+award:
+  class: fa-solid fa-award
+  unicode: f559
 
+# People
 user:
   class: fa-solid fa-user
   unicode: f007
@@ -74,6 +78,7 @@ presenter:
   class: fa-solid fa-person-chalkboard
   unicode: e53d
 
+# Files
 pdf:
   class: fa-solid fa-file-pdf
   unicode: f1c1
@@ -84,6 +89,7 @@ file:
   class: fa-solid fa-file-lines
   unicode: f15c
 
+# Brands
 github:
   class: fa-brands fa-github
   unicode: f09b

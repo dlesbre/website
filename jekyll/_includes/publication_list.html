@@ -22,6 +22,13 @@ List of all publications in this website. Parameters:
     {% endfor %}
   </div>
   <div class="date"><span title="{{ paper.venue.fullname }}">{{ paper.venue.acronym }} {{ paper.year }}</span>{{ paper.comment | lang:include.lang | opt_prepend: " &mdash; " }}</div>
+  {%- if paper.award -%}
+  <div><strong>{% include icon.html icon="award" %}
+    {%- for award in paper.award %}
+    {{ award.name | lang:include.lang }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  </strong></div>
+  {%- endif -%}
   {%- if paper.artifact-badges -%}
   <div>
     {% include publication_badges.html badges=paper.artifact-badges %}

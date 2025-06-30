@@ -20,6 +20,13 @@ layout: base
     {% if paper.doi %}&mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a> {% endif %}
     {{ paper.comment | lang: lang | opt_prepend: "<br>" }}
   </div>
+  {%- if paper.award -%}
+  <div style="margin-bottom: 20px;"><strong>{% include icon.html icon="award" %}
+    {%- for award in paper.award %}
+    {{ award.name | lang: lang }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  </strong></div>
+  {%- endif -%}
 
   {%- for aut in paper.authors -%}
     <div>

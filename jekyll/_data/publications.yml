@@ -30,7 +30,7 @@
 #   talk-video-length: int - video length in minutes
 #   keywords: list of langstring
 #   abstract: langstring
-#   award: list of {name: langstring, url: optional string}
+#   award: list of {name: langstring, url: optional string, date: optional}
 
 # PLDI 2025
 - title: Relational Abstractions Based on Labeled Union-Find
@@ -179,7 +179,12 @@
       fr: Copenhague, Danemark
     attending: true
   ranking: A*
-  award: null
+  award:
+    - date: 2025-06-27
+      name:
+        fr: Prix Doctorant STIC 2024 de l’université Paris Saclay et l’Institut Polytechnique de Paris
+        en: ICST Doctoral Students 2024 prize of Université Paris Saclay and Institut Polytechnique de Paris
+      url: https://www.universite-paris-saclay.fr/ecoles-doctorales/sciences-et-technologies-de-linformation-et-de-la-communication-stic#prix
   doi: 10.1145/3656392
   date:
     submitted: 2023-11-06
