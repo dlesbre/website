@@ -47,6 +47,10 @@ code {
 	border-left: 4px solid $dark_sep;
 }
 
+.light-theme .callout {
+	background-color: $light_hover_bg;
+}
+
 dl {
 	list-style: none;
 	display: grid;
