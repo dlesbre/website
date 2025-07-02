@@ -65,6 +65,49 @@
     fr: Diplomé de l’[ENS Ulm](https://www.ens.psl.eu") avec le master [MPRI](https://wikimpri.dptinfo.ens-cachan.fr/doku.php) d’informatique et une licence de mathématiques
     en: Graduated from [ENS Ulm](https://www.ens.psl.eu") with the [MPRI](https://wikimpri.dptinfo.ens-cachan.fr/doku.php) master of computer science and a bachelor in mathematics
 
+- date: 2023-04-24
+  type: other
+  content:
+    fr: "Stage de recherche de 6 mois à l’[équipe Binsec](https://binsec.github.io) (CEA List, Paris-Saclay), *interprétation abstraite basée sur une forme SSA*"
+    en: "6 month research intership at the [Binsec team](https://binsec.github.io) (CEA List, Paris-Saclay), *SSA-based abstract interpretation*"
+
+- date: 2022-10-03
+  type: other
+  content:
+    fr: "Stage de recherche de 6 mois à l’[équipe LogSem](https://cs.au.dk/research/logic-and-semantics) (université d’Aarhus, Danemark), *vérification de programmes par logique de séparation avec IRIS et Coq*"
+    en: "6 month research intership at the [LogSem team](https://cs.au.dk/research/logic-and-semantics) (Aarhus University, Denmark), *program verification with separation logic in IRIS and Coq*"
+
+
+- date: 2022-03-14
+  type: other
+  content:
+    fr: "Stage de recherche de 6 mois à l’[équipe Binsec](https://binsec.github.io) (CEA List, Paris-Saclay), *vérification non-interférence dans un noyau d’OS*"
+    en: "6 month research intership at the [Binsec team](https://binsec.github.io) (CEA List, Paris-Saclay), *verification of non-interference properties in an OS kernel*"
+
+- date: 2021-02-15
+  type: other
+  content:
+    fr: "Stage de recherche de 6 mois à l’[équipe Octopi](https://octopi.chalmers.se/) (Université de Chalmers, Suède), *design de hardware en Verilog*"
+    en: "6 month research intership at the [Octopi team](https://octopi.chalmers.se/) (Chalmers University, Sweden), *hardware design in Verilog*"
+
+- date: 2020-03-18
+  type: other
+  content:
+    fr: "Stage de recherche de 6 mois à [Prove &amp; Run](https://provenrun.com/) (Paris), *chaîne de boot sécurisée*"
+    en: "6 month research intership at [Prove &amp; Run](https://provenrun.com/) (Paris), *secure bootloader and chain of trust*"
+
+# - date: 2019-06-13
+#   type: other
+#   content:
+#     fr: Je valide une Licence d’Informatique avec mention très bien
+#     en: I obtain a Computer Science Bachelor with high honors
+
+- date: 2019-06-06
+  type: other
+  content:
+    fr: "Stage de recherche de 2 mois au l’[équipe ECO du LIRMM](https://www.lirmm.fr/equipes/eco/) (Montpellier), *algorithmes de résolution efficace de systèmes linéaires*"
+    en: "2 month research intership at the [ECO team of LIRMM](https://www.lirmm.fr/equipes/eco/) (Montpellier), *efficient algorithms for modular linear system solving*"
+
 - date: 2018-09-01
   type: other
   content:
