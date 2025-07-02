@@ -24,8 +24,22 @@ programming, compilers and more.
 : "{{ talk.title }}" at {% if talk.url %}[{{ talk.venue }}]({{talk.url}}){% else %}{{ talk.venue }}{% endif %}
 {% endfor %}
 
-## Previous work
+## {% include icon.html icon="graduate" %} Teaching
 
+<div class="timeline content">
+	<div class="container"><div class="box">
+		<div class="title">Teaching assistant for the 2nd year <a href="{{ 'files/teaching/os-ensta' | relative_url }}">operating systems course</a> (M1 level)</div>
+		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
+		<div class="date">2023-2024 and 2024-2025</div>
+	</div></div>
+	<div class="container"><div class="box">
+		<div class="title">Oral mathematics interrogator in preparatory school</div>
+		<div class="place"><a class="link" href="https://www.bginette.com/" hreflang="fr">Lycée Ste Geneviève, Versailles</a></div>
+		<div class="date">September 2018 &mdash; June 2019</div>
+	</div></div>
+</div>
+
+## Previous work
 
 <div class="timeline content">
 	<div class="container"><div class="box">

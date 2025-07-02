@@ -28,8 +28,22 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 : "{{ talk.title }}", {% if talk.url %}[{{ talk.venue }}]({{talk.url}}){% else %}{{ talk.venue }}{% endif %}
 {% endfor %}
 
-## Travaux précédents
+## {% include icon.html icon="graduate" %} Enseignement
 
+<div class="timeline content">
+	<div class="container"><div class="box">
+		<div class="title">Chargé de TP de <a href="{{ 'files/teaching/os-ensta' | relative_url }}">cours de système d'exploitation</a> en 2ème année (niveau M1)</div>
+		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
+		<div class="date">2023-2024 et 2024-2025</div>
+	</div></div>
+	<div class="container"><div class="box">
+		<div class="title">Interrogateur oral en mathématiques au niveau prépa MPSI</div>
+		<div class="place"><a class="link" href="https://www.bginette.com/" hreflang="fr">Lycée Ste Geneviève, Versailles</a></div>
+		<div class="date">Septembre 2018 &mdash; Juin 2019</div>
+	</div></div>
+</div>
+
+## Travaux précédents
 
 <div class="timeline content">
 	<div class="container"><div class="box">
