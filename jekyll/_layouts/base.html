@@ -66,14 +66,13 @@ layout: html-escapes
 		</header>
 
 		<nav id="site">
-			{% capture home %}{% include icon.html icon="house" %}{% endcapture %}
 			{%- if lang == "fr" -%}
-				{%- include navbutton.html title='Acceuil' url='index' text=home lang=lang pagename=pagename -%}
+				{%- include navbutton.html title='Acceuil' url='index' icon="house" lang=lang pagename=pagename -%}
 				{%- include navbutton.html url='research/index' text='Recherche' lang=lang pagename=pagename -%}
 				{%- include navbutton.html url='software/index' text='Logiciels' lang=lang pagename=pagename -%}
 				{%- include navbutton.html url='fichiers' text='Fichiers' lang=lang pagename=pagename -%}
 			{%- else -%}
-				{%- include navbutton.html title='Home' url='index' text=home lang=lang pagename=pagename -%}
+				{%- include navbutton.html title='Home' url='index' icon="house" lang=lang pagename=pagename -%}
 				{%- include navbutton.html url='research/index' text='Research' lang=lang pagename=pagename -%}
 				{%- include navbutton.html url='software/index' text='Software' lang=lang pagename=pagename -%}
 				{%- include navbutton.html url='fichiers' text='Files' lang=lang pagename=pagename -%}

@@ -57,6 +57,9 @@ newspaper:
 award:
   class: fa-solid fa-award
   unicode: f559
+microscope:
+  class: fa-solid fa-microscope
+  unicode: f610
 
 # People
 user:

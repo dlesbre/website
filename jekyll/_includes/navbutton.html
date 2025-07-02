@@ -4,6 +4,7 @@ Navbutton, aka button that appear on the navbar. Parameters:
 - pagename: the name of the including page, use to color the current page if it matches the url
 - lang: the language ("fr" or "en")
 - title: the link title (optional, defaults to link text)
+- icon: the link icon (optional)
 - text: the link text
 {%- endcomment -%}
-<a class="internal{% if include.pagename == include.url %} current{% endif %}" href="{{ include.url | relative_url }}.html{% if include.lang %}.{{ include.lang }}{% endif %}" title="{{ include.title | default: include.text }}"{% if include.lang %} hreflang="{{ include.lang }}"{% endif %}>{{ include.text }}</a>
+<a class="internal{% if include.pagename == include.url %} current{% endif %}" href="{{ include.url | relative_url }}.html{% if include.lang %}.{{ include.lang }}{% endif %}" title="{{ include.title | default: include.text }}"{% if include.lang %} hreflang="{{ include.lang }}"{% endif %}>{% if include.icon %}{% include icon.html icon=include.icon %}{% endif %}{% if include.icon and include.text %}&nbsp;{% endif %}{{ include.text }}</a>
