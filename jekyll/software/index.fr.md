@@ -69,9 +69,11 @@ Bonnes
 Basiques
 : JavaScript, TypeScript, assembleur, Blender.</dd>
 
+## Projets
+
 {% for category in site.data.software %}
-## {{ category.title | lang:page.lang }}
+### {{ category.title | lang:page.lang }}
 
 {% for project in category.projects %}
-- {% include software.md project=project %} {% endfor %}
+- {% include software.md project=project %}{%- endfor %}
 {% endfor %}

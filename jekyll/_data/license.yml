@@ -13,6 +13,11 @@ BSD-3-Clause:
     Do what you want, but mention it came from me (i.e. MIT)
     but also do NOT use my name to advertise stuff.
 
+ISC:
+  name: ISC License
+  url: https://choosealicense.com/licenses/isc/
+  comment: Same as MIT, slightly shorter
+
 Apache-2.0:
   name: Apache License 2.0
   url: https://choosealicense.com/licenses/apache-2.0/

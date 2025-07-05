@@ -23,7 +23,7 @@
         fr: Site Interludes
         en: Interludes Website
       desc:
-        fr: Site web pour un événement étudiant, gérant inscriptions, planning et répartitions d'activités
+        fr: Site web pour un événement étudiant, gérant inscriptions, planning et répartitions d’activités
         en: Website for a student event, handles registrations, event planning and activities
       lang: Python (Django)
       license: MIT
@@ -32,7 +32,7 @@
 
     - name: Patricia Tree
       desc:
-        fr: Librairie OCaml d'arbres préfixes basés sur la représentation binaire de la clé
+        fr: Librairie OCaml d’arbres préfixes basés sur la représentation binaire de la clé
         en: OCaml prefix-tree library based on the binary representation of the key
       lang: OCaml
       license: LGPL-2.1
@@ -74,7 +74,7 @@
   projects:
     - name: Codex
       desc:
-        fr: Librairie d'interprétation abstraite pour l'analyse de C et de binaire
+        fr: Librairie d’interprétation abstraite pour l’analyse de C et de binaire
         en: Abstract interpretation library for binary and C code analysis
       lang: OCaml
       license: LGPL-2.1
@@ -83,7 +83,7 @@
 
     - name: Binsec
       desc:
-        fr: Outil pour l'analyse et la vérification de code au niveau binaire
+        fr: Outil pour l’analyse et la vérification de code au niveau binaire
         en: Toolset for binary-level code analysis and verification
       lang: OCaml
       license: LGPL-2.1
@@ -92,7 +92,7 @@
 
     - name: Cerise
       desc:
-        fr: Formalisation en coq d'une machine à capabilités
+        fr: Formalisation en coq d’une machine à capabilités
         en: Coq program logic for a capability machine
       lang: Coq
       license: BSD-3-Clause
@@ -114,7 +114,7 @@
   projects:
     - name: Coq prettier Makefile
       desc:
-        fr: Wrapper qui améliore l'affichage des makefiles Coq
+        fr: Wrapper qui améliore l’affichage des makefiles Coq
         en: Wrapper to improve the display of Coq makefiles
       lang: OCaml
       license: BSD-3-Clause
@@ -135,3 +135,87 @@
       lang: LaTeX, Python
       license: MIT
       repo: https://github.com/dlesbre/tex
+
+    - name: csv2mdtable
+      desc:
+        fr: Script transformant un fichier CSV en table markdown
+        en: Small script to translate a CSV file into a markdown table
+      lang: C++
+      repo: https://github.com/dlesbre/csv2mdtable
+      license: MIT
+
+- title:
+    fr: Autres projets auxquels j’ai contribué
+    en: Other projects I’ve contributed to
+  projects:
+    - name: std++
+      desc:
+        fr: Extension de la librairie standard de Coq
+        en: An extended standard library for Coq
+      lang: Coq
+      license: BSD-3-Clause
+      url: https://plv.mpi-sws.org/coqdoc/stdpp/
+      repo: https://gitlab.mpi-sws.org/iris/stdpp/
+
+    - name: VS Code OCaml Platform
+      desc:
+        fr: Extension OCaml de VS Code
+        en: VS Code extension for OCaml
+      lang: OCaml, Typescript
+      license: ISC
+      url: https://open-vsx.org/extension/ocamllabs/ocaml-platform
+      repo: https://github.com/ocamllabs/vscode-ocaml-platform
+
+    - name: VSCoq
+      desc:
+        fr: Extension VS Code pour le language Coq
+        en: Extension that adds Coq support to VS Code
+      lang: OCaml, Typescript
+      license: MIT
+      repo: https://github.com/rocq-prover/vsrocq
+      url: https://open-vsx.org/extension/maximedenes/vscoq
+
+- title: Archive
+  projects:
+  - name: pkotlinc
+    desc:
+      fr: Compilateur d’un fragment de kotlin vers l’assembleur x86
+      en: Compileur from a subset of kotlin to x86 assembly
+    lang: OCaml
+    license: MIT
+    repo: https://github.com/dlesbre/kotlin-compiler
+
+  - name: CDF2019
+    desc:
+      fr: Contrôle d’un robot (Arduino/RaspberryPi), coupe de France de robotique 2019
+      en: Robot control program (Arduino/RaspberryPi), France’s 2019 Robotics Cup
+    lang: C++
+    repo: https://git.eleves.ens.fr/hackens/CDF2019
+
+  - name: GrOS
+    desc:
+      fr: OS simplissimme (drivers clavier/console/disque dur ATA, scheduler)
+      en: Minimalistic OS with basic functions (keyboard/screen/ATA hard drive drivers, scheduler)
+    lang: C, assembly
+
+  - name:
+      fr: Mini processeur
+      en: Tiny processor
+    desc:
+      fr: Processeur programmable simpliste et simulateur associé
+      en: Simple programmable processor and simulator
+    lang: OCaml, MiniJazz
+
+  - name: SecBoot
+    desc:
+      fr: Bootloader sécurisé et algorithmes cryptographiques (AES, ECC, SHA)
+      en: Secure bootloader and cryptographic algorithms (AES, ECC, SHA)
+    lang: C
+
+  - name: Voss II Extension
+    desc:
+      fr: Support langage de Voss II (FL et Bifröst) dans VS Code
+      en: Voss II (FL and Bifröst) language support in VS Code
+    lang: Javascript
+    repo: https://github.com/dlesbre/vossii-fl
+    license: Apache-2.0
