@@ -1,14 +1,17 @@
 ---
 layout: base
-title: Logiciels
-lang: fr
+title: Software
+lang: en
 ---
+{% comment %}
+<!-- LTeX: language=en-US -->
+{% endcomment %}
 
-# {% include icon.html icon='laptop' %} Logiciels
 
-La plupart de mes projets de programmation sont open-source et disponibles sur
-Github (pour mes projets personnels) et sur diverses instances Gitlab (pour mes
-projets professionnels ou scolaire).
+# {% include icon.html icon='laptop' %} Software
+
+Most of my programming project are open-source and available on Github (for my
+personal projects) or various Gitlab instances (for professional or scholarly projects).
 
 {: .links }
 {% include linkbutton.html url="https://github.com/dlesbre" icon="github" text="Github" lang="en" %}
@@ -32,16 +35,16 @@ projets professionnels ou scolaire).
   </a>
 </div>
 
-## Compétences informatique
+## Known languages and tools
 
-Avancées
+Advanced
 : OCaml, Python, GNU Make, Linux, Django, Coq, Voss II.</dd>
 
-Bonnes
+Good
 : Rust, C, C++, LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker.</dd>
 
-Basiques
-: JavaScript, TypeScript, assembleur, Blender.</dd>
+Basic
+: JavaScript, TypeScript, assembly, Blender.</dd>
 
 {% for category in site.data.software %}
 ## {{ category.title | lang:page.lang }}

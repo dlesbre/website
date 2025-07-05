@@ -60,6 +60,9 @@ award:
 microscope:
   class: fa-solid fa-microscope
   unicode: f610
+balance:
+  class: fas fa-balance-scale
+  unicode: f24e
 
 # People
 user:

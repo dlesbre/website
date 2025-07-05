@@ -104,6 +104,11 @@ figure img {
 	filter: none;
 }
 
+.light-theme img.dark-transparent {
+	// If the dark image has a transparent background, invert it for light theme
+	filter: invert(100%) hue-rotate(180deg);
+}
+
 figcaption {
 	font-style: italic;
 	width: 80%;

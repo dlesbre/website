@@ -4,7 +4,7 @@ title: Legal Disclaimers
 lang: en
 ---
 
-## <i class="fas fa-balance-scale"></i> Legal disclaimers
+## {% include icon.html icon="balance" %} Legal disclaimers
 
 This is a personal website edited by Dorian Lesbre. For any inquiries, feel free
 to contact me by e-mail at `dorian.lesbre[at]gmail.com`.

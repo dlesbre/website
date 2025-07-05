@@ -4,7 +4,7 @@ title: Mention légales
 lang: fr
 ---
 
-## <i class="fas fa-balance-scale"></i> Mentions légales
+## {% include icon.html icon="balance" %} Mentions légales
 
 Ce site web est personnel développé par Dorian Lesbre.
 Pour toute demande, vous pouvez me contacter par e-mail à `dorian.lesbre[arobase]gmail.com`.
