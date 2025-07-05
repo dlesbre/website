@@ -1,0 +1,44 @@
+# Use SPDX identifiers for the license keys:
+# https://spdx.org/licenses/
+
+MIT:
+  name: MIT
+  url: https://choosealicense.com/licenses/mit/
+  comment: Do what you want, but mention it came from me.
+
+BSD-3-Clause:
+  name: BSD 3-Clause "New" or "Revised" License
+  url: https://choosealicense.com/licenses/bsd-3-clause/
+  comment: |
+    Do what you want, but mention it came from me (i.e. MIT)
+    but also do NOT use my name to advertise stuff.
+
+Apache-2.0:
+  name: Apache License 2.0
+  url: https://choosealicense.com/licenses/apache-2.0/
+  comment:
+    Do what you can (including patent it). You must mention it came from me and
+    document any changes you made.
+
+GPL-3.0:
+  name: GNU General Public License v3.0
+  url: https://choosealicense.com/licenses/gpl-3.0/
+  comment:
+    Strong copyleft license. You can use the work (including in patents) and
+    modify/redistribute it BUT you must mention it came from me, make you source
+    code available under the same license, and describe your changes.
+
+AGPL-3.0:
+  name: GNU Affero General Public License v3.0
+  url: https://choosealicense.com/licenses/agpl-3.0/
+  comment: |
+    Same as GPL, but explicitly states that providing service over a network
+    counts as distribution (so source must be provided under the same license).
+
+LGPL-2.1:
+  name: GNU Lesser General Public License v2.1
+  url: https://choosealicense.com/licenses/lgpl-2.1/
+  comment:
+    Same as GPL, with an exception for dynamic linking. If you just link to my
+    work, you can license your software however you like and can keep it closed
+    source.
