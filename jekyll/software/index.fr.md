@@ -15,3 +15,21 @@ projets professionnels ou scolaire).
 {%- include linkbutton.html url="https://git.frama-c.com/dlesbre" icon="gitlab" text='Frama-C' lang="en" %}
 {%- include linkbutton.html url="https://git.eleves.ens.fr/dlesbre" icon="gitlab" text='ENS' lang="en" %}
 {%- include linkbutton.html url="https://gitlab.mpi-sws.org/dlesbre" icon="gitlab" text='MPI' lang="en" %}
+
+## Compétences informatique
+
+Avancées
+: OCaml, Python, GNU Make, Linux, Django, Coq, Voss II.</dd>
+
+Bonnes
+: Rust, C, C++, LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker.</dd>
+
+Basiques
+: JavaScript, TypeScript, assembleur, Blender.</dd>
+
+{% for category in site.data.software %}
+## {{ category.title | lang:page.lang }}
+
+{% for project in category.projects %}
+- {% include software.md project=project %} {{ project.desc | lang:page.lang }} {% endfor %}
+{% endfor %}
