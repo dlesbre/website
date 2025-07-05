@@ -21,7 +21,7 @@ programming, compilers and more.
 
 {%- for talk in site.data.talks %}
 {{ talk.date }}
-: "{{ talk.title }}" at {% if talk.url %}[{{ talk.venue }}]({{talk.url}}){% else %}{{ talk.venue }}{% endif %}
+: *{{ talk.title }}* at {{ talk.venue | opt_url: talk.url }}
 {% endfor %}
 
 ## {% include icon.html icon="graduate" %} Teaching

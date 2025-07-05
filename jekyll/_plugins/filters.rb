@@ -141,6 +141,17 @@ module StringFilters
     end
   end
 
+  # opt_url filter: usage {{ my_text | opt_url: url }}
+  # returns my_text unchanged if opt_url is none
+  # else wraps it in a markdown url
+  def opt_url(text, url)
+    if url.is_a?(String) and url != "" then
+      "[#{text}](#{url})"
+    else
+      text
+    end
+  end
+
   private
 
   # Get file name and line number
