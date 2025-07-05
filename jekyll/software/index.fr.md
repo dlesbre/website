@@ -32,6 +32,32 @@ projets professionnels ou scolaire).
   </a>
 </div>
 
+<style>
+.badge {
+  display: inline-flex;
+  font-family: Verdana, sans-serif;
+  line-height: 1;
+  border-radius: 0.25em;
+  overflow: hidden;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+.label, .value {
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+
+.label {
+  background-color: #555; /* Dark gray */
+}
+</style>
+
+<div class="badge">
+  <span class="label">license</span>
+  <span class="value">MIT</span>
+</div>
+
 ## Compétences informatique
 
 Avancées
@@ -47,5 +73,5 @@ Basiques
 ## {{ category.title | lang:page.lang }}
 
 {% for project in category.projects %}
-- {% include software.md project=project %} {{ project.desc | lang:page.lang }} {% endfor %}
+- {% include software.md project=project %} {% endfor %}
 {% endfor %}

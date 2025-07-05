@@ -50,5 +50,5 @@ Basic
 ## {{ category.title | lang:page.lang }}
 
 {% for project in category.projects %}
-- {% include software.md project=project %} {{ project.desc | lang:page.lang }} {% endfor %}
+- {% include software.md project=project %}{% endfor %}
 {% endfor %}
