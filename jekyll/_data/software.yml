@@ -1,0 +1,137 @@
+# List all my various software projects, grouped by categories
+# Each project has
+# - name: langstring
+#   desc: langstring
+#   license: optional id, matching _data/license.yml
+#   lang: optional string, the language used (OCaml, Python, ...)
+#   url: optional link to the project, may be relative
+#   repo: optional link to the source code
+- title:
+    fr: Projets personnels
+    en: Personal projects
+  projects:
+    - name: Bibtex autocomplete
+      desc:
+        fr: Script console pour compléter des entrées bibtex à partir de crossref et autres
+        en: Console script to complete bibtex entries by polling crossref and other sources
+      lang: Python
+      license: MIT
+      url: https://pypi.org/project/bibtexautocomplete/
+      repo: https://github.com/dlesbre/bibtex-autocomplete
+
+    - name:
+        fr: Site Interludes
+        en: Interludes Website
+      desc:
+        fr: Site web pour un événement étudiant, gérant inscriptions, planning et répartitions d'activités
+        en: Website for a student event, handles registrations, event planning and activities
+      lang: Python (Django)
+      license: MIT
+      url: https://interludes.ens.fr
+      repo: https://github.com/dlesbre/site-interludes
+
+    - name: Patricia Tree
+      desc:
+        fr: Librairie OCaml d'arbres préfixes basés sur la représentation binaire de la clé
+        en: OCaml prefix-tree library based on the binary representation of the key
+      lang: OCaml
+      license: LGPL-2.1
+      url: https://codex.top/api/patricia-tree
+      repo: https://github.com/codex-semantics-library/patricia-tree
+
+    - name:
+        fr: Serveur photos
+        en: Photo server
+      desc:
+        fr: Site web pour le partage de photos des événements étudiants
+        en: Photo sharing website for student events
+      lang: Python (Django)
+      license: MIT
+      repo: https://git.eleves.ens.fr/klub-dev-ens/serveur-photos
+
+    - name: VSCode Embers
+      desc:
+        fr: Thème sombre pour VSCode
+        en: VSCode dark theme
+      license: BSD-3-Clause
+      url: https://open-vsx.org/extension/dlesbre/embers-dark-color-theme
+      repo: https://github.com/dlesbre/vscode-embers
+
+    - name:
+        fr: Site personnel
+        en: Personal website
+      desc:
+        fr: Ce site web
+        en: This website
+      lang: Jekyll
+      license: BSD-3-Clause
+      url: /
+      repo: https://github.com/dlesbre/website
+
+- title:
+    fr: Projets de recherche
+    en: Research projects
+  projects:
+    - name: Codex
+      desc:
+        fr: Librairie d'interprétation abstraite pour l'analyse de C et de binaire
+        en: Abstract interpretation library for binary and C code analysis
+      lang: OCaml
+      license: LGPL-2.1
+      url: https://codex.top/
+      repo: https://github.com/codex-semantics-library/codex
+
+    - name: Binsec
+      desc:
+        fr: Outil pour l'analyse et la vérification de code au niveau binaire
+        en: Toolset for binary-level code analysis and verification
+      lang: OCaml
+      license: LGPL-2.1
+      url: https://binsec.github.io/
+      repo: https://github.com/binsec/binsec/
+
+    - name: Cerise
+      desc:
+        fr: Formalisation en coq d'une machine à capabilités
+        en: Coq program logic for a capability machine
+      lang: Coq
+      license: BSD-3-Clause
+      repo: https://github.com/logsem/cerise
+
+    - name:
+        fr: Céphalopode
+        en: Cephalopod
+      desc:
+        fr: Processeur IoT pour la programmation fonctionnelle avec un ALU multi-precision
+        en: IoT processor for functional programming with an arbitrary-precision ALU
+      lang: FL, Bifröst
+      license: Apache-2.0
+      repo: https://github.com/dlesbre/cephalopode
+
+- title:
+    fr: Scripts et petits projets
+    en: Scripts and small projects
+  projects:
+    - name: Coq prettier Makefile
+      desc:
+        fr: Wrapper qui améliore l'affichage des makefiles Coq
+        en: Wrapper to improve the display of Coq makefiles
+      lang: OCaml
+      license: BSD-3-Clause
+      repo: https://github.com/dlesbre/coq-prettier-makefile
+
+    - name: mld2md
+      desc:
+        fr: Convertisseur du format odoc au format markdown
+        en: odoc to markdown text converter
+      lang: OCaml
+      license: AGPL-3.0
+      repo: https://github.com/dlesbre/mld2md
+
+    - name: TeX
+      desc:
+        fr: Templates LaTeX, fichiers style beamer et script de compilation
+        en: LaTeX templates, beamer style files and compile script
+      lang: LaTeX, Python
+      license: MIT
+      repo: https://github.com/dlesbre/tex
