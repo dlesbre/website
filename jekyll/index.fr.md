@@ -70,7 +70,7 @@ société et des jeux vidéos.
 
 ## {% include icon.html icon="newspaper" %} Dernières nouvelles
 
-{% include news.md lang="fr" on_main=true %}
+{% include news.md on_main=true %}
 
 ## {% include icon.html icon="link" %} Recommandations
 

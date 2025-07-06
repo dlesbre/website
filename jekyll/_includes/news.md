@@ -1,7 +1,6 @@
 {% comment %}
 List of news.
 Parameters:
-- lang: "en" or "fr", the language used
 - on_main: true on index, false on news page
     on main page: only 5 items, no filter
     on news page: all items and filter
@@ -23,7 +22,7 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
   {%- endfor -%}
 </style>
 
-**{% if include.lang=="fr" %}Filtrer {%else%}Filter{%endif%}:** {% for type in site.data.news-types %}<span style="white-space:nowrap;"><input type="checkbox" id="news-{{ type.type }}" checked=true /> {{ type.name | lang:include.lang }} ({{ allnews | where: "type", type.type | size }})</span>
+**{% if page.lang=="fr" %}Filtrer {%else%}Filter{%endif%}:** {% for type in site.data.news-types %}<span style="white-space:nowrap;"><input type="checkbox" id="news-{{ type.type }}" checked=true /> {{ type.name | lang:page.lang }} ({{ allnews | where: "type", type.type | size }})</span>
 {%- unless forloop.last %} &ensp; {% endunless %}{% endfor %}
 {% endif %}
 
@@ -38,25 +37,25 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
 {: .news-{{ news.type | default: "other" }} } {{ news.date }}
 : {: .news-{{ news.type | default: "other" }} }
 {%- if news.type == "accepted-paper" %}
-  {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: include.lang %}
+  {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: page.lang %}
   {%- assign nutshell = site.pages | find: "url", nutshell-path %}
   {%- if nutshell %}
     {%- assign paperurl = nutshell.url %}
   {%- else %}
-    {%- assign paperurl = "/research/index.html." | append: include.lang | append: "#" | append: news.paper.slug %}
-  {%- endif %} {% include icon.html icon="file" %} [*{{ news.paper.title }}*]({{ paperurl | relative_url }}) {% if include.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
-{%- elsif news.type == "conference" or news.type == "summer-school" %} {% if include.lang=="fr" %}Présent{% else %}Attending{%endif%} {{ news.prefix|lang:include.lang }}{{ news.event | lang: include.lang | opt_url: news.url }}{% if news.location %} {% if include.lang=="fr" %}à{% else %}in{%endif%} {{ news.location|lang:include.lang }}{% endif %}
-{%- elsif news.type == "award" %} {% include icon.html icon="award" %} {% if include.lang=="fr" %}J’ai eu l’honneur de recevoir le{% else %}I am honored to receive the{% endif %} {{ news.name | lang:include.lang | opt_url: news.url }}{% if news.paper %}
-  {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: include.lang %}
+    {%- assign paperurl = "/research/index.html." | append: page.lang | append: "#" | append: news.paper.slug %}
+  {%- endif %} {% include icon.html icon="file" %} [*{{ news.paper.title }}*]({{ paperurl | relative_url }}) {% if page.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
+{%- elsif news.type == "conference" or news.type == "summer-school" %} {% if page.lang=="fr" %}Présent{% else %}Attending{%endif%} {{ news.prefix|lang:page.lang }}{{ news.event | lang: page.lang | opt_url: news.url }}{% if news.location %} {% if page.lang=="fr" %}à{% else %}in{%endif%} {{ news.location|lang:page.lang }}{% endif %}
+{%- elsif news.type == "award" %} {% include icon.html icon="award" %} {% if page.lang=="fr" %}J’ai eu l’honneur de recevoir le{% else %}I am honored to receive the{% endif %} {{ news.name | lang:page.lang | opt_url: news.url }}{% if news.paper %}
+  {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: page.lang %}
   {%- assign nutshell = site.pages | find: "url", nutshell-path %}
   {%- if nutshell %}
     {%- assign paperurl = nutshell.url %}
   {%- else %}
-    {%- assign paperurl = "/research/index.html." | append: include.lang | append: "#" | append: news.paper.slug %}
-  {%- endif %} {% if include.lang=="fr" %}pour ma publication à{% else %}for my paper at{% endif %} [{{ news.paper.venue.acronym }} {{news.paper.year }}]({{ paperurl | relative_url }})
+    {%- assign paperurl = "/research/index.html." | append: page.lang | append: "#" | append: news.paper.slug %}
+  {%- endif %} {% if page.lang=="fr" %}pour ma publication à{% else %}for my paper at{% endif %} [{{ news.paper.venue.acronym }} {{news.paper.year }}]({{ paperurl | relative_url }})
 {% endif %}
-{%- elsif news.type == "invited-talk" %} {% if include.lang=="fr" %}Séminaire invité :{% else %}Invited talk:{%endif%} *{{ news.talk.title }}*, {{ news.talk.venue | opt_url: news.talk.url }}
-{%- elsif news.type=="other" %} {{ news.content | lang:include.lang }}
+{%- elsif news.type == "invited-talk" %} {% if page.lang=="fr" %}Séminaire invité :{% else %}Invited talk:{%endif%} *{{ news.talk.title }}*, {{ news.talk.venue | opt_url: news.talk.url }}
+{%- elsif news.type=="other" %} {{ news.content | lang:page.lang }}
 {%- else %} {{ "unknown news type: " | append: news.type | error }}
 {%- endif %}
 {%- if limit and forloop.index >= limit %}{%break%}{%endif%}
@@ -64,7 +63,7 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
 
 {% if include.on_main %}
 {: .center }
-{% if include.lang=="fr" -%}
+{% if page.lang=="fr" -%}
 [Voir les nouvelles plus anciennes]({{ 'news.html.fr' | relative_url }})
 {%- else -%}
 [See older news]({{ 'news.html.en' | relative_url }})

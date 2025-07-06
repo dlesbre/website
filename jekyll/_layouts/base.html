@@ -67,15 +67,15 @@ layout: html-escapes
 
 		<nav id="site">
 			{%- if lang == "fr" -%}
-				{%- include navbutton.html title='Acceuil' url='index' icon="house" lang=lang pagename=pagename -%}
-				{%- include navbutton.html url='research/index' text='Recherche' lang=lang pagename=pagename -%}
-				{%- include navbutton.html url='software/index' text='Logiciels' lang=lang pagename=pagename -%}
-				{%- include navbutton.html url='fichiers' text='Fichiers' lang=lang pagename=pagename -%}
+				{%- include navbutton.html title='Acceuil' url='index' icon="house" pagename=pagename -%}
+				{%- include navbutton.html url='research/index' text='Recherche' pagename=pagename -%}
+				{%- include navbutton.html url='software/index' text='Logiciels' pagename=pagename -%}
+				{%- include navbutton.html url='fichiers' text='Fichiers' pagename=pagename -%}
 			{%- else -%}
-				{%- include navbutton.html title='Home' url='index' icon="house" lang=lang pagename=pagename -%}
-				{%- include navbutton.html url='research/index' text='Research' lang=lang pagename=pagename -%}
-				{%- include navbutton.html url='software/index' text='Software' lang=lang pagename=pagename -%}
-				{%- include navbutton.html url='fichiers' text='Files' lang=lang pagename=pagename -%}
+				{%- include navbutton.html title='Home' url='index' icon="house" pagename=pagename -%}
+				{%- include navbutton.html url='research/index' text='Research' pagename=pagename -%}
+				{%- include navbutton.html url='software/index' text='Software' pagename=pagename -%}
+				{%- include navbutton.html url='fichiers' text='Files' pagename=pagename -%}
 			{%- endif -%}
 		</nav>
 

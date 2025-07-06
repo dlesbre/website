@@ -2,17 +2,16 @@
 Link to various ressources associated to a publication (PDF, bib, slides, etc...)
 
 Parameters
-- lang: en or fr
 - paper: the paper info, as given in _data/publications.yml
-- nutshell: bool - include link to summary
+- nutshell: bool - include link to summary (true on research page, false on paper page)
 {%- endcomment -%}
 <div class="llinks paper">
-  {% assign nutshell-path = "/research/" | append: include.paper.slug | append: '.html.' | append: include.lang %}
+  {% assign nutshell-path = "/research/" | append: include.paper.slug | append: '.html.' | append: page.lang %}
   {% assign nutshell = site.pages | find: "url", nutshell-path %}
   {% if include.nutshell and nutshell %}
   <a class="linkbutton" href="{{ nutshell.url | relative_url }}">
     {% include icon.html icon="lightbulb" %}
-    <b>{% if include.lang == "fr" %}Aperçu{% else %}Overview{% endif %}</b>
+    <b>{% if page.lang == "fr" %}Aperçu{% else %}Overview{% endif %}</b>
   </a>
   {% endif %}
 
@@ -31,7 +30,7 @@ Parameters
   {% if pdf-appendix %}
   <a class="linkbutton" href="{{ pdf-appendix.path | relative_url }}" title="PDF - {{ pdf-appendix-path | file_size | pretty_size }}">
     {% include icon.html icon="pdf" %}
-    <b>{% if include.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
+    <b>{% if page.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
   </a>
   {% endif %}
   {% assign bib-path = path | append: '.bib' %}
@@ -45,13 +44,13 @@ Parameters
   {% if include.paper.artifact %}
   <a class="linkbutton" href="{{ include.paper.artifact }}">
     {% include icon.html icon="laptop" %}
-    <b>{% if include.lang == "fr" %}Artefact{% else %}Artifact{% endif %}</b>
+    <b>{% if page.lang == "fr" %}Artefact{% else %}Artifact{% endif %}</b>
   </a>
   {% endif %}
   {% if include.paper.talk-video %}
   <a class="linkbutton" href="{{ include.paper.talk-video }}">
     {% include icon.html icon="video" %}
-    <b>{% if include.lang == "fr" %}Présentation{% else %}Talk{% endif %}{% if paper.talk-video-length %} ({{ paper.talk-video-length }} min){% endif %}</b>
+    <b>{% if page.lang == "fr" %}Présentation{% else %}Talk{% endif %}{% if paper.talk-video-length %} ({{ paper.talk-video-length }} min){% endif %}</b>
   </a>
   {% endif %}
   {% assign slides-path = path | append: '-slides.pdf' %}
@@ -59,7 +58,7 @@ Parameters
   {% if slides %}
   <a class="linkbutton" href="{{ slides.path | relative_url }}" title="PDF - {{ slides-path | file_size | pretty_size }}">
     {% include icon.html icon="powerpoint" %}
-    <b>{% if include.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
+    <b>{% if page.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
   </a>
   {% endif %}
 </div>

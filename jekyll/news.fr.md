@@ -6,4 +6,4 @@ lang: fr
 
 ## {% include icon.html icon="newspaper" %} Nouvelles
 
-{% include news.md lang="fr" %}
+{% include news.md %}

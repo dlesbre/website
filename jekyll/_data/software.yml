@@ -49,6 +49,14 @@
       license: MIT
       repo: https://git.eleves.ens.fr/klub-dev-ens/serveur-photos
 
+    - name: Advent of Code
+      desc:
+        fr: Mes solutions aux problèmes de l’[advent of code](https://adventofcode.com/)
+        en: My [advent of code](https://adventofcode.com/) puzzle solutions
+      lang: OCaml, Rust
+      license: MIT
+      repo: https://github.com/dlesbre/advent-of-code
+
     - name: VSCode Embers
       desc:
         fr: Thème sombre pour VSCode

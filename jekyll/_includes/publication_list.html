@@ -1,13 +1,12 @@
 {%- comment -%}
 List of all publications in this website. Parameters:
-- lang: en or fr
 {%- endcomment -%}
 <div class="paperlist">
 {%- for paper in site.data.publications -%}
 <div class="content filelist" id="{{ paper.slug }}">
   <div>
     <span class="title">{{ paper.title }}</span>
-    {%- if paper.type == "workshop" %} &mdash; {% if include.lang == "fr" %}Papier court{% else %}Workshop paper{% endif %}{% endif %}
+    {%- if paper.type == "workshop" %} &mdash; {% if page.lang == "fr" %}Papier court{% else %}Workshop paper{% endif %}{% endif %}
     {%- if paper.doi %} &mdash; <a class="external" href="https://dx.doi.org/{{ paper.doi }}">{{ paper.doi }}</a>{%- endif -%}
   </div>
   <div class="type">
@@ -21,11 +20,11 @@ List of all publications in this website. Parameters:
       {%- unless forloop.last %}, {% endunless -%}
     {% endfor %}
   </div>
-  <div class="date"><span title="{{ paper.venue.fullname }}">{{ paper.venue.acronym }} {{ paper.year }}</span>{{ paper.comment | lang:include.lang | opt_prepend: " &mdash; " }}</div>
+  <div class="date"><span title="{{ paper.venue.fullname }}">{{ paper.venue.acronym }} {{ paper.year }}</span>{{ paper.comment | lang:page.lang | opt_prepend: " &mdash; " }}</div>
   {%- if paper.award -%}
   <div><strong>{% include icon.html icon="award" %}
     {%- for award in paper.award %}
-    {{ award.name | lang:include.lang }}{% unless forloop.last %},{% endunless %}
+    {{ award.name | lang:page.lang }}{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
   </strong></div>
   {%- endif -%}
@@ -35,14 +34,14 @@ List of all publications in this website. Parameters:
   </div>
   {%- endif -%}
   <details>
-    <summary>{% if include.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
+    <summary>{% if page.lang == "fr" %}Résumé{% else %}Abstract{% endif %}</summary>
     <div class="abstract">
-      <strong>{% if include.lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {% for kw in paper.keywords %}{{ kw | lang:include.lang }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-      <p>{{ paper.abstract | lang:include.lang }}</p>
+      <strong>{% if page.lang == "fr" %}Mots-clés :{% else %}Keywords:{% endif %}</strong> {% for kw in paper.keywords %}{{ kw | lang:page.lang }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+      <p>{{ paper.abstract | lang:page.lang }}</p>
     </div>
   </details>
 
-  {% include publication_links.html paper=paper lang=include.lang nutshell=true %}
+  {% include publication_links.html paper=paper nutshell=true %}
 </div>
 {%- endfor -%}
 </div>

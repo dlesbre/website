@@ -19,7 +19,7 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 
 ## {% include icon.html icon='book' %} Publications
 
-{% include publication_list.html lang="fr" %}
+{% include publication_list.html %}
 
 ## {% include icon.html icon='presenter' %} Séminaires invités
 
