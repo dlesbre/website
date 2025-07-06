@@ -32,7 +32,7 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Chargé de TP de <a href="{{ 'files/teaching/os-ensta' | relative_url }}">cours de système d'exploitation</a> en 2ème année (niveau M1)</div>
+		<div class="title">Chargé de TP de <a href="{% include url.txt url='files/teaching/os-ensta' %}">cours de système d'exploitation</a> en 2ème année (niveau M1)</div>
 		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
 		<div class="date">2023-2024 et 2024-2025</div>
 	</div></div>

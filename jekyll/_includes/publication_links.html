@@ -9,7 +9,7 @@ Parameters
   {% assign nutshell-path = "/research/" | append: include.paper.slug | append: '.html.' | append: page.lang %}
   {% assign nutshell = site.pages | find: "url", nutshell-path %}
   {% if include.nutshell and nutshell %}
-  <a class="linkbutton" href="{{ nutshell.url | relative_url }}">
+  <a class="linkbutton" href="{% include url.txt url=nutshell.url %}">
     {% include icon.html icon="lightbulb" %}
     <b>{% if page.lang == "fr" %}Aperçu{% else %}Overview{% endif %}</b>
   </a>
@@ -20,7 +20,7 @@ Parameters
   {% assign pdf-path = path | append: '.pdf' %}
   {% assign pdf = site.static_files | find: "path", pdf-path %}
   {% if pdf %}
-  <a class="linkbutton" href="{{ pdf.path | relative_url }}" title="PDF - {{ pdf-path | file_size | pretty_size }}">
+  <a class="linkbutton" href="{% include url.txt url=pdf.path %}" title="PDF - {{ pdf-path | file_size | pretty_size }}">
     {% include icon.html icon="pdf" %}
     <b>PDF</b>
   </a>
@@ -28,7 +28,7 @@ Parameters
   {% assign pdf-appendix-path = path | append: '-with-appendices.pdf' %}
   {% assign pdf-appendix = site.static_files | find: "path", pdf-appendix-path %}
   {% if pdf-appendix %}
-  <a class="linkbutton" href="{{ pdf-appendix.path | relative_url }}" title="PDF - {{ pdf-appendix-path | file_size | pretty_size }}">
+  <a class="linkbutton" href="{% include url.txt url=pdf-appendix.path %}" title="PDF - {{ pdf-appendix-path | file_size | pretty_size }}">
     {% include icon.html icon="pdf" %}
     <b>{% if page.lang == "fr" %}PDF avec annexes{% else %}PDF with appendix{% endif %}</b>
   </a>
@@ -36,7 +36,7 @@ Parameters
   {% assign bib-path = path | append: '.bib' %}
   {% assign bib = site.static_files | find: "path", bib-path %}
   {% if bib %}
-  <a class="linkbutton" href="{{ bib.path | relative_url }}" title="BIB - {{ bib-path | file_size | pretty_size }}">
+  <a class="linkbutton" href="{% include url.txt url=bib.path %}" title="BIB - {{ bib-path | file_size | pretty_size }}">
     {% include icon.html icon="quote" %}
     <b>Bibtex</b>
   </a>
@@ -56,7 +56,7 @@ Parameters
   {% assign slides-path = path | append: '-slides.pdf' %}
   {% assign slides = site.static_files | find: "path", slides-path %}
   {% if slides %}
-  <a class="linkbutton" href="{{ slides.path | relative_url }}" title="PDF - {{ slides-path | file_size | pretty_size }}">
+  <a class="linkbutton" href="{% include url.txt url=slides.path %}" title="PDF - {{ slides-path | file_size | pretty_size }}">
     {% include icon.html icon="powerpoint" %}
     <b>{% if page.lang == "fr" %}Diapositives{% else %}Slides{% endif %}</b>
   </a>

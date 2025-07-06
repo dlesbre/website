@@ -1,5 +1,5 @@
 {%- assign listings = page.url | has_suffix:"/header.html" %}
-{%- assign crumbs = page.url | remove:'/header.html' | remove:'/index.html' | remove:'/index.html.fr' | remove:'/index.html.en' | split: '/' | shift %}
+{%- assign crumbs = page.url | strip_suffix:'/header.html' | strip_suffix:'/index.html' | strip_suffix:'/index.html.fr' | strip_suffix:'/index.html.en' | split: '/' | shift %}
 {%- if crumbs != empty %}
 <nav id="breadcrumbs">
   {%- if page.lang %}
@@ -8,7 +8,7 @@
     {% assign index = "/index.html" %}
   {% endif -%}
   {%- assign baseurl = '' -%}
-<a href="{{ index | relative_url }}">{% unless listings %}{% include icon.html icon='house' %} {% endunless %}{% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>
+<a href="{% include url.txt url=index %}">{% unless listings %}{% include icon.html icon='house' %} {% endunless %}{% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>
 {% if listings %}
   {% assign index = "/header.html" %}
 {% endif %}
@@ -21,7 +21,7 @@
     {%- assign url = baseurl | append: index -%}
     {%- assign parent = site.pages | find: 'url', url -%}
     {%- if parent -%}
-      <a href="{% if listings %}{{ baseurl | append:'/' | relative_url }}{% else %}{{ url | relative_url }}{% endif %}">{{ parent.short-title | default: parent.title }}</a>
+      <a href="{% include url.txt url=url %}">{{ parent.short-title | default: parent.title }}</a>
     {%- else -%}
       {{ "Could not find parent breadcrumb '" | append: url | append: "'" | error }}
     {%- endif -%}

@@ -3,5 +3,5 @@
 ---
 
 <pre style="margin-top:20px;">Copyright (C) Dorian Lesbre</pre>
-<pre><a href="{{ '/' | relative_url }}" title="Home">Home Page</a> | <a href="{{ 'files' | relative_url }}">File list</a> | <a href="{{ 'legal' | relative_url }}">Legal disclaimers</a></pre>
+<pre><a href="{% include url.txt url='/' %}" title="Home">Home Page</a> | <a href="{% include url.txt url='/files/' %}">File list</a> | <a href="{% include url.txt url='/legal.html' %}">Legal disclaimers</a></pre>
 </body>

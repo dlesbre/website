@@ -1,0 +1,77 @@
+{%- comment -%}
+  Sanitize a relative_url, i.e. make sure thay are all formatted the same,
+  and that the page they point to exists.
+  Parameters:
+  - url: the url
+{%- endcomment -%}
+
+{%- assign is_external = include.url | has_prefix: "http" -%}
+{%- assign url = include.url -%}
+
+{%- unless is_external -%}
+  {%- assign has_leading_slash = url | has_prefix: '/' -%}
+  {%- unless has_leading_slash -%}
+    {%- assign url = url | prepend: '/' -%}
+  {%- endunless -%}
+
+  {%- if url contains "#" -%}
+    {%- assign spliturl = url | split: '#' -%}
+    {%- assign url = spliturl | first -%}
+    {%- assign suffix = spliturl | shift | join: '#' | prepend: '#' -%}
+  {%- endif -%}
+  {%- assign url = url | strip_suffix: "header.html" -%}
+
+  {%- assign page_exists = site.pages | find: 'url', url -%}
+  {%- assign static_exists = site.static_files | find: 'path', url -%}
+  {%- unless page_exists or static_exists -%}
+    {%- assign try_extensions = page.lang | prepend: "."
+              | append: ",index.html." | append: page.lang
+              | append: ",/index.html." | append: page.lang
+              | append: ",.html." | append: page.lang
+              | append: ",/"
+              | append: ",index.html"
+              | append: ",/index.html"
+              | append: ",.html"
+              | split: "," -%}
+    {%- for extension in try_extensions -%}
+      {%- assign turl = url | append: extension -%}
+      {%- assign page_exists = site.pages | find: 'url', turl -%}
+      {%- if page_exists -%}
+        {%- assign url = turl -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- unless page_exists -%}
+      {%- assign try_extensions = ",index.html,/index.html" | split: "," -%}
+      {%- for extension in try_extensions -%}
+        {%- assign turl = url | append: extension -%}
+        {%- assign fr = turl | append: ".fr" -%}
+        {%- assign en = turl | append: ".en" -%}
+        {%- assign fr_exists = site.pages | find: 'url', fr -%}
+        {%- assign en_exists = site.pages | find: 'url', en -%}
+        {%- if fr_exists or en_exists -%}
+          {%- assign url = turl -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- unless fr_exists or en_exists -%}
+        {%- assign file_url = url | has_prefix: "/files" -%}
+        {%- if file_url -%}
+          {%- assign url = url | strip_suffix: "header.html" | strip_suffix: "index.html" | strip_suffix: "/" | append: "/" -%}
+          {%- assign turl = url | append: "header.html" -%}
+          {%- assign exists = site.pages | find: 'url', turl -%}
+          {%- unless exists -%}
+            {{- include.url | wrap:"Could not find file relative url: '", "'" | error -}}
+          {%- endunless -%}
+        {%- else -%}
+          {{- include.url | wrap:"Could not find relative url: '", "'" | error -}}
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endunless -%}
+  {%- endunless -%}
+  {%- assign url = url | relative_url -%}
+{%- endunless --%}
+
+{{- url -}}{{- suffix -}}

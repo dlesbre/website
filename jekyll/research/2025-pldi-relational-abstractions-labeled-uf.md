@@ -32,7 +32,7 @@ of the efficient [union-find](https://en.wikipedia.org/wiki/Disjoint-set_data_st
 
 <figure>
 <img class="transparent"
-  src="{{ 'imgs/publications/2025-pldi-labeled-uf-simple.svg' | relative_url }}"
+  src="{% include url.txt url='imgs/publications/2025-pldi-labeled-uf-simple.svg' %}"
   alt="Labeled union-find example"
   style="width:500px;" />
 <figcaption>
@@ -84,7 +84,7 @@ $$
 <figure>
 {{ math | markdownify }}
 <img class="transparent"
-  src="{{ 'imgs/publications/2025-pldi-labeled-uf.svg' | relative_url }}"
+  src="{% include url.txt url='imgs/publications/2025-pldi-labeled-uf.svg' %}"
   alt="Labeled union-find operations"
   style="width:700px;" />
 <figcaption>
@@ -151,7 +151,7 @@ updated at once any time new information is learned.
 
 <figure>
 <img class="transparent"
-  src="{{ 'imgs/publications/2025-pldi-factorization.svg' | relative_url }}"
+  src="{% include url.txt url='imgs/publications/2025-pldi-factorization.svg' %}"
   alt="Using labeled union-find with a non-relational domain"
   style="width:1200px;" />
 <figcaption>
@@ -168,8 +168,8 @@ abstractions of these facts.
 
 ## Going further
 
-- Read the [paper]({{ '/files/publications/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf' | relative_url }}).
-- You can also read the [WIP workshop paper]({{ '/files/publications/2024-nsad-labeled-union-find.pdf' | relative_url }}). It is only 4 pages long and less technical.
+- Read the [paper]({% include url.txt url='/files/publications/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf' %}).
+- You can also read the [WIP workshop paper]({% include url.txt url='/files/publications/2024-nsad-labeled-union-find.pdf' %}). It is only 4 pages long and less technical.
 - To be presented at the [Programming Language Design and Implementation (PLDI) 2025 conference](https://pldi25.sigplan.org/).
 - Download the [**software artifact**](https://zenodo.org/records/15261356) from
   Zenodo to explore the code and see the performance results.

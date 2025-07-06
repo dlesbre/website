@@ -43,7 +43,7 @@ that `F(j + z%2)` is `F(j)`), optimistic **global value numbering** (to learn th
 
 <figure>
 <img class="transparent"
-  src="{{ 'imgs/publications/2024-pldi-full-example.svg' | relative_url }}"
+  src="{% include url.txt url='imgs/publications/2024-pldi-full-example.svg' %}"
   alt="Example of compilation to SSA"
   style="width:900px;" />
 <figcaption>
@@ -68,7 +68,7 @@ Our paper shows the following novel results:
 
   <figure>
   <img class="transparent"
-    src="{{ 'imgs/publications/2024-pldi-transformation-example.svg' | relative_url }}"
+    src="{% include url.txt url='imgs/publications/2024-pldi-transformation-example.svg' %}"
     alt="Example of a functor transformation"
     style="width:700px;" />
   <figcaption>
@@ -115,7 +115,7 @@ Our paper shows the following novel results:
 
 ## Further information
 
-- Read the **paper**: either [published version]({{ '/files/publications/2024-pldi-compiling-with-abstract-interpretation.pdf' | relative_url }}) or the [version with appendices]({{ '/files/publications/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf' | relative_url }})
-- Presented at the [Programming Language Design and Implementation (PLDI) 2024 conference](https://pldi24.sigplan.org/). Watch the [talk video](https://www.youtube.com/watch?v=2Btkn9AvM8o) or look at the [slides]({{ '/files/publications/2024-pldi-compiling-with-abstract-interpretation-slides.pdf' | relative_url }}).
+- Read the **paper**: either [published version]({% include url.txt url='/files/publications/2024-pldi-compiling-with-abstract-interpretation.pdf' %}) or the [version with appendices]({% include url.txt url='/files/publications/2024-pldi-compiling-with-abstract-interpretation-with-appendices.pdf' %})
+- Presented at the [Programming Language Design and Implementation (PLDI) 2024 conference](https://pldi24.sigplan.org/). Watch the [talk video](https://www.youtube.com/watch?v=2Btkn9AvM8o) or look at the [slides]({% include url.txt url='/files/publications/2024-pldi-compiling-with-abstract-interpretation-slides.pdf' %}).
 - Download the [software artifact](https://doi.org/10.5281/zenodo.10895582) from
   Zenodo to try out our example analyzer and explore the code.

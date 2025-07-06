@@ -7,8 +7,8 @@ layout: html-escapes
   <title>{{ page.short-title | default: page.title }} | Dorian Lesbre</title>
   <meta name="author" content="Dorian Lesbre">
   <meta name="copyright" content="Dorian Lesbre">
-  <link rel="icon" type="image/png" href="{{ 'favicon.ico' | relative_url }}"/>
-  <link rel="stylesheet" type="text/css" href="{{ 'css/listing.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{% include url.txt url='favicon.ico' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% include url.txt url='css/listing.css' %}">
 </head>
 <body>
 <h1>{{ page.title }}</h1>
@@ -17,6 +17,6 @@ layout: html-escapes
 {{ content }}
 
 <pre style="margin-top:20px;">Copyright (C) Dorian Lesbre</pre>
-<pre><a href="{{ '/' | relative_url }}" title="Home">Home Page</a> | <a href="{{ 'files' | relative_url }}">File list</a> | <a href="{{ 'legal' | relative_url }}">Legal disclaimers</a></pre>
+<pre><a href="{% include url.txt url='/' %}" title="Home">Home Page</a> | <a href="{% include url.txt url='/files/' %}">File list</a> | <a href="{% include url.txt url='legal.html' %}">Legal disclaimers</a></pre>
 </body>
 </html>

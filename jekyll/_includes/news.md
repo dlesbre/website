@@ -43,7 +43,7 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
     {%- assign paperurl = nutshell.url %}
   {%- else %}
     {%- assign paperurl = "/research/index.html." | append: page.lang | append: "#" | append: news.paper.slug %}
-  {%- endif %} {% include icon.html icon="file" %} [*{{ news.paper.title }}*]({{ paperurl | relative_url }}) {% if page.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
+  {%- endif %} {% include icon.html icon="file" %} [*{{ news.paper.title }}*]({% include url.txt url=paperurl %}) {% if page.lang=="fr" %}a été accepté à{% else %} was accepted at{%endif%} <span title="{{news.paper.venue.fullname}}">{{ news.paper.venue.acronym }} {{ news.paper.year }}</span>
 {%- elsif news.type == "conference" or news.type == "summer-school" %} {% if page.lang=="fr" %}Présent{% else %}Attending{%endif%} {{ news.prefix|lang:page.lang }}{{ news.event | lang: page.lang | opt_url: news.url }}{% if news.location %} {% if page.lang=="fr" %}à{% else %}in{%endif%} {{ news.location|lang:page.lang }}{% endif %}
 {%- elsif news.type == "award" %} {% include icon.html icon="award" %} {% if page.lang=="fr" %}J’ai eu l’honneur de recevoir le{% else %}I am honored to receive the{% endif %} {{ news.name | lang:page.lang | opt_url: news.url }}{% if news.paper %}
   {%- assign nutshell-path = "/research/" | append: news.paper.slug | append: '.html.' | append: page.lang %}
@@ -52,7 +52,7 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
     {%- assign paperurl = nutshell.url %}
   {%- else %}
     {%- assign paperurl = "/research/index.html." | append: page.lang | append: "#" | append: news.paper.slug %}
-  {%- endif %} {% if page.lang=="fr" %}pour ma publication à{% else %}for my paper at{% endif %} [{{ news.paper.venue.acronym }} {{news.paper.year }}]({{ paperurl | relative_url }})
+  {%- endif %} {% if page.lang=="fr" %}pour ma publication à{% else %}for my paper at{% endif %} [{{ news.paper.venue.acronym }} {{news.paper.year }}]({% include url.txt url=paperurl %})
 {% endif %}
 {%- elsif news.type == "invited-talk" %} {% if page.lang=="fr" %}Séminaire invité :{% else %}Invited talk:{%endif%} *{{ news.talk.title }}*, {{ news.talk.venue | opt_url: news.talk.url }}
 {%- elsif news.type=="other" %} {{ news.content | lang:page.lang }}
@@ -64,8 +64,8 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
 {% if include.on_main %}
 {: .center }
 {% if page.lang=="fr" -%}
-[Voir les nouvelles plus anciennes]({{ 'news.html.fr' | relative_url }})
+[Voir les nouvelles plus anciennes]({% include url.txt url='news.html.fr' %})
 {%- else -%}
-[See older news]({{ 'news.html.en' | relative_url }})
+[See older news]({% include url.txt url='news.html.en' %})
 {%- endif %}
 {% endif %}

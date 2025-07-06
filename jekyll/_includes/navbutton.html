@@ -6,4 +6,5 @@ Navbutton, aka button that appear on the navbar. Parameters:
 - icon: the link icon (optional)
 - text: the link text
 {%- endcomment -%}
-<a class="internal{% if include.pagename == include.url %} current{% endif %}" href="{{ include.url | relative_url }}.html{{ page.lang | opt_prepend: '.' }}" title="{{ include.title | default: include.text }}"{% if page.lang %} hreflang="{{ page.lang }}"{% endif %}>{% if include.icon %}{% include icon.html icon=include.icon %}{% endif %}{% if include.icon and include.text %}&nbsp;{% endif %}{{ include.text }}</a>
+{%- capture url -%}{{ include.url }}.html{{ page.lang | opt_prepend: '.' }}{%- endcapture -%}
+<a class="internal{% if include.pagename == include.url %} current{% endif %}" href="{% include url.txt url=url %}" title="{{ include.title | default: include.text }}"{% if page.lang %} hreflang="{{ page.lang }}"{% endif %}>{% if include.icon %}{% include icon.html icon=include.icon %}{% endif %}{% if include.icon and include.text %}&nbsp;{% endif %}{{ include.text }}</a>

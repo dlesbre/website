@@ -28,7 +28,7 @@ programming, compilers and more.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Teaching assistant for the 2nd year <a href="{{ 'files/teaching/os-ensta' | relative_url }}">operating systems course</a> (M1 level)</div>
+		<div class="title">Teaching assistant for the 2nd year <a href="{% include url.txt url='files/teaching/os-ensta' %}">operating systems course</a> (M1 level)</div>
 		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
 		<div class="date">2023-2024 and 2024-2025</div>
 	</div></div>

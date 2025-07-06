@@ -6,7 +6,7 @@ lang: fr
 
 <div class="row">
 	<div class="portrait">
-		<div class="img"><img src="{{ 'imgs/profil.png' | relative_url }}" alt="Photo"></div>
+		<div class="img"><img src="{% include url.txt url='imgs/profil.png' %}" alt="Photo"></div>
 		<div class="name">Dorian Lesbre</div>
 		<div class="desc">Doctorant en informatique</div>
 		<div class="desc"><a class="link" href="https://binsec.github.io/" hreflang="en">Équipe BINSEC</a></div>
@@ -34,8 +34,8 @@ lang: fr
 					<strong>perso :</strong> dorian.lesbre[arobase]gmail.com
 				</dd>
 				<dt>{% include icon.html icon="key" %}</dt>
-				<dd><a class="link" href="{{ 'files/Dorian_Lesbre_public.pgp' | relative_url }}" download>Clé publique GPG</a><br>
-					<a class="link" href="{{ 'files/Dorian_Lesbre_public.pub' | relative_url }}" download>Clé publique SSH</a></dd>
+				<dd><a class="link" href="{% include url.txt url='files/Dorian_Lesbre_public.pgp' %}" download>Clé publique GPG</a><br>
+					<a class="link" href="{% include url.txt url='files/Dorian_Lesbre_public.pub' %}" download>Clé publique SSH</a></dd>
 			</dl>
 		</div>
 	</div>
@@ -50,7 +50,7 @@ spécifiquement, j’étudie des domaines abstraits rapides (non-relationnels ou
 faiblement relationnel), comme ceux obtenus par une transformation SSA. Mon
 encadrant de thèse est [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
 
-Mes travaux récents et publications sont disponibles sur la [page recherche]({{ '/research/index.html.fr' | relative_url }}).
+Mes travaux récents et publications sont disponibles sur la [page recherche]({% include url.txt url='/research/index.html.fr' %}).
 
 Je m’intéresse notamment à la vérification et l’informatique pratique bas niveau :
 méthodes formelles, interprétation abstraite, système de types, Coq, systèmes
@@ -59,7 +59,7 @@ En dehors de l’informatique, je m’intéresse aussi aux mathématiques et à 
 physique.
 
 J’aime aussi programmer dans mon temps libre, vous trouverez sur la page
-[logiciels]({{ "logiciels.html.fr" | relative_url }}) mes projets
+[logiciels]({% include url.txt url="software/index.html.fr" %}) mes projets
 personnels comme [bibtex autocomplete&nbsp;{% include icon.html icon="github" %}](https://github.com/dlesbre/bibtex-autocomplete)
 ou mes solutions de l’[advent of code&nbsp;{% include icon.html icon="github" %}](https://github.com/dlesbre/advent-of-code).
 

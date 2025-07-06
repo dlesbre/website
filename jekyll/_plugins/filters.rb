@@ -2,12 +2,12 @@
 module StringFilters
   # Check if text has the given prefix
   def has_prefix(text, prefix)
-    text.start_with? prefix
+    text.is_a?(String) and text.start_with? prefix
   end
 
   # Check if text has the given suffix
   def has_suffix(text, suffix)
-    text.end_with? suffix
+    text.is_a?(String) and text.end_with? suffix
   end
 
   # Append if non-null/empty
@@ -75,7 +75,7 @@ module StringFilters
   # If the text has the given suffix, remove it
   def strip_suffix(text, suffix)
     if has_suffix(text, suffix) then
-      text[..-suffix.length]
+      text[..-suffix.length-1]
     else
       text
     end

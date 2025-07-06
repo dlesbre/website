@@ -7,7 +7,7 @@ lang: en
 
 <div class="row">
 	<div class="portrait">
-		<div class="img"><img src="{{ 'imgs/profil.png' | relative_url }}" alt="Photo"></div>
+		<div class="img"><img src="{% include url.txt url='imgs/profil.png' %}" alt="Photo"></div>
 		<div class="name">Dorian Lesbre</div>
 		<div class="desc">PhD student in computer science</div>
 		<div class="desc"><a class="link" href="https://binsec.github.io/" hreflang="en">BINSEC team</a></div>
@@ -35,8 +35,8 @@ lang: en
 					<strong>personal :</strong> dorian.lesbre[at]gmail.com
 				</dd>
 				<dt>{% include icon.html icon="key" %}</dt>
-				<dd><a class="link" href="{{ 'files/Dorian_Lesbre_public.pgp' | relative_url }}" download>GPG public key</a><br>
-					<a class="link" href="{{ 'files/Dorian_Lesbre_public.pub' | relative_url }}" download>SSH public key</a></dd>
+				<dd><a class="link" href="{% include url.txt url='files/Dorian_Lesbre_public.pgp' %}" download>GPG public key</a><br>
+					<a class="link" href="{% include url.txt url='files/Dorian_Lesbre_public.pub' %}" download>SSH public key</a></dd>
 			</dl>
 		</div>
 	</div>
@@ -52,7 +52,7 @@ interpretation. Specifically, my work centers around fast abstract domains
 (non-relational or weakly-relational) obtained by translating to a program to
 SSA form. I work under the supervision of [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
 
-You will find my current work and publications on the [research page]({{ '/research/index.html.en' | relative_url }}).
+You will find my current work and publications on the [research page]({% include url.txt url='/research/index.html.en' %}).
 
 My research interests focus on verification and low-level systems: formal
 methods, abstract interpretation, type systems, Coq, operating systems,
@@ -62,7 +62,7 @@ I also enjoy mathematics and physics.
 I like to code in my free time. You can find my personal projects,
 such as [bibtex autocomplete&nbsp;{% include icon.html icon="github" %}](https://github.com/dlesbre/bibtex-autocomplete)
 or my solutions for [advent of code&nbsp;{% include icon.html icon="github" %}](https://github.com/dlesbre/advent-of-code)
-on the [software]({{ 'logiciels.html.en' | relative_url }}) page.
+on the [software]({% include url.txt url='software/index.html.en' %}) page.
 
 My hobbies include outdoor sports such as rock climbing, sailing, hiking and skiing.
 I also enjoy reading, especially sci-fi and detective stories.
