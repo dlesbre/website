@@ -26,4 +26,4 @@
 {{-     'Unknown license: ' | append: include.project.license | error -}}
 {%-   endif -%}
 {%- endif -%}
-{{ include.project.name | lang:page.lang | opt_url: include.project.url }}{{ data | opt_prepend:' (' | opt_append: ')' | default: ' &mdash;' }} {{ include.project.desc | lang:page.lang -}}
+{{ include.project.name | lang:page.lang | opt_url: include.project.url }}{{ data | opt_wrap:' (', ')' | default: ' &mdash;' }} {{ include.project.desc | lang:page.lang -}}

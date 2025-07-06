@@ -28,6 +28,19 @@ module StringFilters
     end
   end
 
+  # Single filter for both append and prepend
+  def wrap(text, prefix, suffix)
+    prefix + text + suffix
+  end
+
+  def opt_wrap(text, prefix, suffix)
+    if text.nil? or text == "" then
+      text
+    else
+      wrap(text, prefix, suffix)
+    end
+  end
+
   # Remove extension (last .XXX of path)
   # index -> index
   # index.html -> index
