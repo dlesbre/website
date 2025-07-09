@@ -118,3 +118,31 @@ figcaption {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+// img.shield.io like badge
+.badge {
+  display: inline-flex;
+  font-family: Verdana, sans-serif;
+  line-height: 1;
+  border-radius: 0.30em;
+  overflow: hidden;
+	color: #fff;
+	font-size: 14px;
+	.label, .value {
+		height: 100%;
+		margin: 0;
+		display: inline-block;
+		padding: 4px 6px;
+	}
+
+	.label {
+		background-color: #555;
+	}
+	.value {
+		background-color: #555;
+	}
+	&:hover {
+		color: #fff;
+		font-style: normal;
+	}
+}
