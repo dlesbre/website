@@ -1,0 +1,14 @@
+{%- comment -%}
+  img.shield.io like badge
+  Parameters:
+  - text: the badge text
+  - label: optional, the label text
+  - bg: optional, the badge background color
+  - fg: optional, the badge foreground color
+{%- endcomment -%}
+{%- assign bg=include.bg -%}
+{%- assign fg=include.fg -%}
+<a class="badge" {% if include.url %} href="{% include url.txt url=include.url %}"{% endif -%}>
+  {%- if include.label -%}<span class="label">{{ include.label }}</span>{%- endif -%}
+  <span class="value"{% if fg or bg %} style="{{ fg | opt_wrap: 'color:', ';' }}{{ bg | opt_wrap: 'background-color:', ';' }}"{% endif %}>{{ include.text }}</span>
+</a>

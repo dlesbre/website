@@ -1,0 +1,25 @@
+# Colors for programming language badges
+# https://github.com/markembling/github-languages-palette/blob/master/palettes/githublangs.csv
+# As a list so to preserve ordre when multiple languages match
+- name: OCaml
+  color: "#ec6813"
+- name: TeX
+  color: "#3D6016"
+- name: Django
+  color: "#103224"
+- name: Python
+  color: "#3572a5"
+- name: Jekyll
+  color: "#701516"
+- name: Ruby
+  color: "#701516"
+- name: Rust
+  color: "#dea584"
+- name: Coq
+  color: "#bfa57c"
+- name: C++
+  color: "#f34b7d"
+- name: C
+  color: "#333"
+- name: Javascript
+  color: "#d1c059"

@@ -37,33 +37,54 @@
 
 ## {% if page.lang=="fr" %}Projets{% else %}Projects{% endif %}
 
+{% if page.lang=="fr" -%}
+  {% assign license_txt="Licence" %}
+  {% assign lang_txt="Langage" %}
+{%- else -%}
+  {% assign license_txt="License" %}
+  {% assign lang_txt="Language" %}
+{%- endif -%}
+
 {% for category in site.data.software %}
 ### {{ category.title | lang:page.lang }}
 
 {% for project in category.projects %}
 - {% assign data = "" -%}
 {%- if project.lang -%}
-{%-   assign data = data | append: project.lang -%}
+  {%- assign bg="#339" -%}
+  {%- for lang in site.data.colors -%}
+    {%- if project.lang contains lang.name -%}
+      {%- assign bg=lang.color -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- capture text -%}{% include badge.html label=lang_txt text=project.lang bg=bg %}{%- endcapture -%}
+  {%- assign data = text -%}
 {%- endif -%}
 {%- if project.repo -%}
-      {%- capture text -%}[
-        {%- if project.repo contains 'github' -%}
-          {% include icon.html icon="github" %}
-        {%- else -%}
-          {% include icon.html icon="gitlab" %}
-        {%- endif %} {% if page.lang == 'fr' %}code source{% else %}source code{% endif %}]({{ project.repo }})
-      {%- endcapture -%}
-{%-   assign data = data | opt_append: ", " | append: text -%}
+  {%- if project.repo contains 'github' -%}
+    {%- capture text -%}{% include icon.html icon="github" %} {{  project.repo | strip_prefix: "https://github.com/" | strip_suffix:"/" }}{%- endcapture -%}
+    {%- assign bg = "#33c" -%}
+  {%- else -%}
+    {%- capture text -%}{% include icon.html icon="gitlab" %} {{  project.repo | strip_prefix: "https://" | strip_suffix: "/" }}{%- endcapture -%}
+    {%- assign bg = "#c83" -%}
+  {%- endif -%}
+  {%- capture text -%}{% include badge.html label="Source" url=project.repo text=text bg=bg %}{%- endcapture -%}
+{%-   assign data = data | opt_append: " " | append: text -%}
 {%- endif -%}
 {%- if project.license -%}
 {%-   assign license = site.data.license[project.license] -%}
 {%-   if license -%}
-        {%- capture text -%}[{% include icon.html icon="balance" %} {{ project.license }}]({{ license.url }}) {%- endcapture -%}
-{%-     assign data = data | opt_append: ", " | append: text -%}
+      {%- capture text -%}
+      {% include badge.html label=license_txt url=license.url text=project.license bg=license.color %}
+      {%- endcapture -%}
+{%-     assign data = data | opt_append: " " | append: text -%}
 {%-   else -%}
 {{-     'Unknown license: ' | append: project.license | error -}}
 {%-   endif -%}
 {%- endif -%}
 {%- capture url -%}{% if project.url %}{% include url.txt url = project.url %}{% endif %}{%-endcapture-%}
-{{ project.name | lang:page.lang | opt_url: url }}{{ data | opt_wrap:' (', ')' | default: ' &mdash;' }} {{ project.desc | lang:page.lang -}}{% endfor %}
+**{{ project.name | lang:page.lang | opt_url: url }}** {{ project.desc | lang:page.lang | opt_prepend: " &mdash; " }}{{ data | opt_prepend: "<br>" }}
+
+{% endfor %}
 {% endfor %}
