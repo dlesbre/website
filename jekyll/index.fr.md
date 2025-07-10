@@ -2,6 +2,7 @@
 layout: base
 title: Index
 lang: fr
+priority: 0.9
 ---
 
 <div class="row">

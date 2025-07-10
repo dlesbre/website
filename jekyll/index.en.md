@@ -2,6 +2,7 @@
 layout: base
 title: Index
 lang: en
+priority: 0.9
 ---
 
 

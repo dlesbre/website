@@ -2,6 +2,7 @@
 layout: base
 lang: fr
 title: Recherche
+priority: 0.8
 ---
 {% comment %}
 <!-- LTeX: language=fr -->

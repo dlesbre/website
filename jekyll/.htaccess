@@ -1,3 +1,7 @@
+---
+sitemap: false
+---
+
 ErrorDocument 404 /~dlesbre/404.html
 
 # IGNORE THESE FILES

@@ -2,6 +2,7 @@
 layout: base
 title: Research
 lang: en
+priority: 0.8
 ---
 
 # Research
