@@ -49,30 +49,9 @@ function set_theme(theme) {
 }
 
 // ==================================================
-// Callapsible sections
-// ==================================================
-
-function setup_collapsibles() {
-	const collapsibles = document.getElementsByClassName("collapsible");
-
-	for (const collapsible of collapsibles) {
-		// Get the content (next alement)
-		const content = collapsible.nextElementSibling;
-		if (content === null) continue;
-
-		// Add toggle on click
-		collapsible.addEventListener("click", function() {
-			this.classList.toggle("folded");
-			content.classList.toggle("folded");
-		});
-	}
-}
-
-// ==================================================
 // Setup everything once the document loads
 // ==================================================
 
 window.onload = function () {
 	set_theme(get_current_theme());
-	setup_collapsibles();
 }

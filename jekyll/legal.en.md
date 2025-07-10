@@ -22,8 +22,8 @@ Its contents are under standard copyright law unless an explicit license is
 given. If you would like to reuse or share this content in another manner, do
 not hesitate to ask me for permission.
 
-This website doesn't use cookies and doesn't run any third party JavaScript.
-It only uses a small local script for theme changes and collapsible sections.
+This website doesn’t use cookies and doesn’t run any third party JavaScript.
+It only uses a small local script for theme changes.
 
 The icons used are [fontawesome](https://fontawesome.com/)’s free icons.
 They are used in accordance with the fontawesome free license:
