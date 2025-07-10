@@ -43,7 +43,7 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 	</div></div>
 </div>
 
-## Travaux précédents
+## {% include icon.html icon="clock-back" %} Travaux précédents
 
 <div class="timeline content">
 	<div class="container"><div class="box">

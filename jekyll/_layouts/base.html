@@ -95,7 +95,7 @@ layout: html-escapes
 				</div>
 			{%- endif -%}
 
-			{{ content }}
+			{{ content | replace: 'id="-', 'id="' }}
 		</main>
 
 		<footer>

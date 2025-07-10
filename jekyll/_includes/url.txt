@@ -7,6 +7,7 @@
 
 {%- assign is_external = include.url | has_prefix: "http" -%}
 {%- assign url = include.url -%}
+{%- assign suffix = "" -%}
 
 {%- unless is_external -%}
   {%- assign has_leading_slash = url | has_prefix: '/' -%}
@@ -17,7 +18,7 @@
   {%- if url contains "#" -%}
     {%- assign spliturl = url | split: '#' -%}
     {%- assign url = spliturl | first -%}
-    {%- assign suffix = spliturl | shift | join: '#' | prepend: '#' -%}
+    {%- assign suffix = spliturl | shift | join: '#' | opt_prepend: '#' -%}
   {%- endif -%}
   {%- assign url = url | strip_suffix: "header.html" -%}
 

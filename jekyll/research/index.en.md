@@ -39,7 +39,7 @@ programming, compilers and more.
 	</div></div>
 </div>
 
-## Previous work
+## {% include icon.html icon="clock-back" %} Previous work
 
 <div class="timeline content">
 	<div class="container"><div class="box">

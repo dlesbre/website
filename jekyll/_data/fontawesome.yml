@@ -61,8 +61,11 @@ microscope:
   class: fa-solid fa-microscope
   unicode: f610
 balance:
-  class: fas fa-balance-scale
+  class: fa-solid fa-balance-scale
   unicode: f24e
+clock-back:
+  class: fa-solid fa-clock-rotate-left
+  unicode: f1da
 
 # People
 user:
@@ -94,6 +97,9 @@ powerpoint:
 file:
   class: fa-solid fa-file-lines
   unicode: f15c
+folder:
+  class: fa-regular fa-folder-open
+  unicode: f07c
 
 # Brands
 github:
