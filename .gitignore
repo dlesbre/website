@@ -1,15 +1,5 @@
-# Build folders
-venv/
-**/__pycache__/**
-*.egg-info/
-www/en/
-www/fr/
-www/files/
-www/*.html*
-www/sitemap.xml
-
-www/css/style.css
-
-# Files
-logo.png
-logo.svg
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
