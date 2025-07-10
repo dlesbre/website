@@ -14,9 +14,11 @@ layout: html-escapes
 <h1>{{ page.title }}</h1>
 {% include breadcrumbs.html %}
 
-{{ content }}
+{{- content -}}
 
+{%- comment -%}
 <pre style="margin-top:20px;">Copyright (C) Dorian Lesbre</pre>
 <pre><a href="{% include url.txt url='/' %}" title="Home">Home Page</a> | <a href="{% include url.txt url='/files/' %}">File list</a> | <a href="{% include url.txt url='legal.html' %}">Legal disclaimers</a></pre>
 </body>
 </html>
+{%- endcomment -%}

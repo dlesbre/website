@@ -1,6 +1,7 @@
 ---
 # Replace unicode character with their HTML espace sequence: "é" -> "&eacute;"
 # Also place non-breaking spaces in front of punctuation ":;?!" in french.
+layout: compress
 ---
 {%- assign lang = page.lang | default: site.lang -%}
 {%- assign content = content

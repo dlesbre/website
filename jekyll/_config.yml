@@ -67,3 +67,7 @@ kramdown:
 liquid:
   error_mode: strict
   strict_filters: true
+
+compress_html:
+  clippings: all
+  comments: all
