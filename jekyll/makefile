@@ -2,6 +2,8 @@ color = on
 
 jekyll = bundle exec jekyll
 
+CHECKER = tidy -eq --drop-empty-elements no --fix-style-tags no
+
 # ==============================================================================
 # makefile code and variable setting
 # ==============================================================================
@@ -35,9 +37,13 @@ serve: ## Serve a development version of the site
 	$(jekyll) serve --livereload --trace
 
 .PHONY: build
-build: ## Remove the site generated files
+build: ## Build the website
 	$(jekyll) build
 
 .PHONY: clean
 clean: ## Remove the site generated files
 	$(jekyll) clean
+
+check: build
+	find _site \( -name '*.html' -or -name '*.html.en' -or -name '*.html.fr' \) \
+	  -exec bash -c "echo \"{}:\" && cat \"{}\" | $(CHECKER)" ';'
