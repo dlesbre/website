@@ -9,19 +9,8 @@ and a mirror version at [https://www.eleves.ens.fr/home/dlesbre](https://www.ele
 
 ## Compiling the website
 
-The website can be build via `make`. Call `make local=true` to link locally and
-in debug mode (no file minimization).
-Building requires the following dependencies:
-- [mlpproc](https://github.com/dlesbre/mlpproc/), a custom preprocessor, to render html/xml files.
+The website is built using `jekyll`. Run `bundle install` to install dependencies
+and then `make serve` to create a local version of the website, to which you can
+connect at https://localhost:4000/~dlesbre/.
 
-  ```console
-  pip3 install mlpproc
-  ```
-
-- [Sassc](https://github.com/sass/sassc) to render SCSS files
-
-  ```console
-  apt install sassc
-  ```
-
-- [HTML Tidy](https://www.html-tidy.org/) to verify the output HTML/XML files.
+To build and deploy, run `make build`. The website is then available in the `_site` folder.
