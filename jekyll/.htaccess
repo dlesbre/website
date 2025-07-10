@@ -1,0 +1,21 @@
+ErrorDocument 404 /~dlesbre/404.html
+
+# IGNORE THESE FILES
+IndexIgnore header.html footer.html favicon.ico .htaccess .ftpquota .DS_Store icons *.log *,v *,t .??* *~ *#
+
+# Customize auto index
+IndexOptions FancyIndexing FoldersFirst SuppressHTMLPreamble
+IndexOrderDefault Ascending Name
+
+HeaderName header.html
+ReadmeName footer.html
+
+AddDescription "<span class='description'>Portable document format</span>" .pdf
+AddDescription "<span class='description'>Plain text file</span>" .txt .nfo .faq .readme .md
+
+AddDescription "<span class='description'>C source file</span>" .c
+AddDescription "<span class='description'>Assembly source file</span>" .s
+AddDescription "<span class='description'>Binary file</span>" .out .romfs
+AddDescription "<span class='description'>Windows executable file</span>" .exe
+
+AddDescription "<span class='description'>Public key file</span>" .pgp .pub
