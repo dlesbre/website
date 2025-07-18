@@ -1,4 +1,7 @@
-ErrorDocument 404 /~dlesbre/404.html
+---
+sitemap: false
+---
+ErrorDocument 404 {{ "404.html" | relative_url }}
 
 # IGNORE THESE FILES
 IndexIgnore header.html footer.html favicon.ico .htaccess .ftpquota .DS_Store icons *.log *,v *,t .??* *~ *#
