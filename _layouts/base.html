@@ -30,11 +30,23 @@ layout: html-escapes
 		<meta name="og:locale" content="{{ lang }}"/>
 
 		<!-- Links -->
-		<link rel="canonical" type="text/html" href="{{ pagename | absolute_url }}"/>
-		<link rel="alternate" type="text/html" href="{{ pagename | absolute_url }}.html"/>
-		{%- if extension == "fr" or extension == "en" -%}
-			<link rel="alternate" type="text/html" href="{{ pagename | absolute_url }}.html.fr" hreflang="fr"/>
-			<link rel="alternate" type="text/html" href="{{ pagename | absolute_url }}.html.en" hreflang="en"/>
+	  {%- assign html = page.url | has_suffix: ".html" -%}
+  	{%- assign html_fr = page.url | has_suffix: ".html.fr" -%}
+  	{%- assign html_en = page.url | has_suffix: ".html.en" -%}
+  	{%- assign normalized = page.url -%}
+  	{%- if html_en or html_fr -%}
+    	{%- assign normalized = page.url | strip_suffix: ".fr" | strip_suffix: ".en" -%}
+  	{%- endif -%}
+		{%- assign ends_with_index = normalized | has_suffix: "/index.html" -%}
+		{%- if ends_with_index -%}
+			<link rel="canonical" type="text/html" href="{{ normalized | strip_suffix: 'index.html' | absolute_url }}"/>
+  	{%- else -%}
+			<link rel="canonical" type="text/html" href="{{ normalized | absolute_url }}"/>
+		{%- endif -%}
+		{%- if html_en -%}
+			<link rel="alternate" type="text/html" href="{{ normalized | absolute_url }}.fr" hreflang="fr"/>
+		{%- elsif html_fr -%}
+			<link rel="alternate" type="text/html" href="{{ normalized | absolute_url }}.en" hreflang="en"/>
 		{%- endif -%}
 
 		<link rel="icon" type="image/png" href="{{ page.icon | default:'favicon.ico' | relative_url }}"/>
