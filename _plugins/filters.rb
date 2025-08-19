@@ -51,6 +51,11 @@ module StringFilters
     path.reverse().sub(/^.+?\./, '').reverse()
   end
 
+  # Force convert to string
+  def to_string(integer)
+    integer.to_s
+  end
+
   # Return extension of path, without leading dot
   # index -> ""
   # index.html -> html

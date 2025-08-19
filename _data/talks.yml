@@ -2,13 +2,22 @@
   venue: Équipe Épicure - Inria Rennes
   title: Improving the precision of fast abstract interpreters
   url: https://team.inria.fr/epicure/
+  slides: /files/talks/2025-05-Epicure-Seminar.pdf
 
 - date: 2024-11-29
   venue: Équipe ANTIQUE - ENS Ulm
   title: Compiling with abstract interpretation
   url: https://team.inria.fr/antique/
+  slides: /files/talks/2024-11-Antique-Seminar.pdf
 
 - date: 2024-10-09
   venue: Laboratoire Méthodes Formelles (LMF)
   title: Compiling with abstract interpretation
   url: https://lmf.cnrs.fr/Main/HomePage
+  slides: /files/talks/2024-10-LMF-Seminar.pdf
+
+- date: 2024-06-06
+  venue: <span title="Journées Approches Formelles dans l'Assistance au Développement de Logiciels">AFADL 2024</span>
+  title: Compiling with abstract interpretation
+  url: https://gdrgpl2024.sciencesconf.org/resource/page/id/4
+  slides: /files/talks/2024-06-AFADL.pdf

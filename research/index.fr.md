@@ -22,12 +22,10 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 
 {% include publication_list.html %}
 
-## {% include icon.html icon='presenter' %} Séminaires invités
+## {% include icon.html icon='presenter' %} Séminaires et présentations
 
-{%- for talk in site.data.talks %}
-{{ talk.date }}
-: *{{ talk.title }}*, {{ talk.venue | opt_url: talk.url }}
-{% endfor %}
+{% include pages/talks.md %}
+
 
 ## {% include icon.html icon="graduate" %} Enseignement
 

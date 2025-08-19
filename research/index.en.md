@@ -18,12 +18,9 @@ programming, compilers and more.
 
 {% include publication_list.html %}
 
-## {% include icon.html icon='presenter' %} Invited Talks
+## {% include icon.html icon='presenter' %} Talks
 
-{%- for talk in site.data.talks %}
-{{ talk.date }}
-: *{{ talk.title }}* at {{ talk.venue | opt_url: talk.url }}
-{% endfor %}
+{% include pages/talks.md %}
 
 ## {% include icon.html icon="graduate" %} Teaching
 

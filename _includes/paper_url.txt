@@ -1,0 +1,16 @@
+{%- comment -%}
+  Find the paper url for a given publication object:
+  i.e. the nutshell URL, when it exists, or the link to the ID on the
+  research/index page.
+
+  Parameters:
+  - slug: the paper slug, as defined in _data/publications.yml
+{%- endcomment -%}
+{%- assign nutshell-path = "/research/" | append: include.slug | append: '.html.' | append: page.lang %}
+{%- assign nutshell = site.pages | find: "url", nutshell-path %}
+{%- if nutshell -%}
+  {%- assign paperurl = nutshell.url -%}
+{%- else -%}
+  {%- assign paperurl = "/research/index.html." | append: page.lang | append: "#" | append: include.slug -%}
+{%- endif -%}
+{%- include url.txt url=paperurl -%}

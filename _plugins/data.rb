@@ -5,6 +5,15 @@
 module DataPlugin
   class DataGenerator < Jekyll::Generator
     def generate(site)
+      # Create a news item for invited talks
+      site.data["talks"].each do |talk|
+        event = Hash.new
+        event["date"] = talk["date"]
+        event["type"] = "invited-talk"
+        event["talk"] = talk
+        site.data["news"] << event
+      end
+
       site.data["publications"].each do |publication|
         publication["year"] ||= publication["date"]["published"].year
         publication["month"] ||= "%02d" % publication["date"]["published"].month
@@ -35,21 +44,20 @@ module DataPlugin
           end
         end
 
+        # Create a talk item for presented publications
+        if publication["date"]["presented"]
+          talk = Hash.new
+          talk["date"] = publication["date"]["presented"]
+          talk["paper"] = publication
+          site.data["talks"] << talk
+        end
+
         # Create a news item for accepted papers
         accepted = Hash.new
         accepted["date"] = publication["date"]["accepted"]
         accepted["type"] = "accepted-paper"
         accepted["paper"] = publication
         site.data["news"] << accepted
-      end
-
-      # Create a news item for invited talks
-      site.data["talks"].each do |talk|
-        event = Hash.new
-        event["date"] = talk["date"]
-        event["type"] = "invited-talk"
-        event["talk"] = talk
-        site.data["news"] << event
       end
     end
   end
