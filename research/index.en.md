@@ -16,7 +16,7 @@ programming, compilers and more.
 
 ## {% include icon.html icon='book' %} Publications
 
-{% include publication_list.html %}
+{% include pages/publication_list.html %}
 
 ## {% include icon.html icon='presenter' %} Talks
 

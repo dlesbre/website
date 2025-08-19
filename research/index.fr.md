@@ -20,7 +20,7 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 
 ## {% include icon.html icon='book' %} Publications
 
-{% include publication_list.html %}
+{% include pages/publication_list.html %}
 
 ## {% include icon.html icon='presenter' %} Séminaires et présentations
 

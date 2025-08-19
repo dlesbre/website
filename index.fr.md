@@ -71,7 +71,7 @@ société et des jeux vidéos.
 
 ## {% include icon.html icon="newspaper" %} Dernières nouvelles
 
-{% include news.md on_main=true %}
+{% include pages/news.md on_main=true %}
 
 ## {% include icon.html icon="link" %} Recommandations
 

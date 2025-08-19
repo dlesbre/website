@@ -71,7 +71,7 @@ You can also find me playing board games and video games.
 
 ## {% include icon.html icon="newspaper" %} Latest news
 
-{% include news.md on_main=true %}
+{% include pages/news.md on_main=true %}
 
 ## {% include icon.html icon="link" %} Recommendations
 

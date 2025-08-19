@@ -6,4 +6,4 @@ lang: en
 
 ## {% include icon.html icon="newspaper" %} News
 
-{% include news.md %}
+{% include pages/news.md %}
