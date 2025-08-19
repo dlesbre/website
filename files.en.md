@@ -14,7 +14,7 @@ lang: en
 
 My publications are listed on the [research page]({% include url.txt url="/research/index#publications" %}).
 
-## {% include icon.html icon="graduate" %} Enseignement
+## {% include icon.html icon="graduate" %} Teaching
 
 2023-2025 &mdash; OS course at ENSTA &mdash;
 [Course slides, practical session material and correction (in french)]({% include url.txt url="/files/teaching/os-ensta" %}).
