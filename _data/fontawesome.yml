@@ -66,6 +66,9 @@ balance:
 clock-back:
   class: fa-solid fa-clock-rotate-left
   unicode: f1da
+list:
+  class: fa-solid fa-list
+  unicode: f03a
 
 # People
 user:

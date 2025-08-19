@@ -1,0 +1,38 @@
+// Table of contents
+
+@use "variables.scss" as *;
+
+nav#toc {
+  background-color: $dark_hover_bg;
+  width: 35ex;
+  position: sticky;
+  top: 20px;
+  margin: 15px;
+  border-radius: 5px;
+  overflow: auto;
+  align-self: start;
+  span {
+    padding-left: 15px;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 0;
+    padding-bottom: 5px;
+
+    li li {
+      border-left: 1px solid $dark_sep;
+      padding-left: 15px;
+    }
+  }
+
+}
+
+.light-theme nav#toc {
+  background-color: $light_hover_bg;
+  ul li li {
+    border-left: 1px solid $light_sep;
+  }
+}
