@@ -21,7 +21,7 @@ My publications are listed on the [research page]({% include url.txt url="/resea
 
 ## {% include icon.html icon="file" %} Other documents
 
-- My résumé : [in english]({% include url.txt url="/files/CV_Dorian_Lesbre_en.pdf" %}) and [in french]({% include url.txt url="/files/CV_Dorian_Lesbre_fr.pdf" %})
+- My résumé: [in english]({% include url.txt url="/files/CV_Dorian_Lesbre_en.pdf" %}) and [in french]({% include url.txt url="/files/CV_Dorian_Lesbre_fr.pdf" %})
 
 - Preparatory school course notes: 2<sup>nd</sup> year &mdash; MPI &mdash; 2017-2018
   <div class="llinks">

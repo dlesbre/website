@@ -30,10 +30,10 @@
 : OCaml, Python, GNU Make, Linux, Django, Coq, Voss II.
 
 {% if page.lang=="fr" %}Bonnes{% else %}Good{% endif %}
-: Rust, C, C++, LaTeX, beamer, HTML, CSS, LibreOffice, Windows, Git, Bash, SQL, GIMP, Inkscape, Verilog, Docker.
+: Rust, C, C++, LaTeX, beamer, HTML, CSS, LibreOffice, Git, Bash, SQL, GIMP, Docker.
 
 {% if page.lang=="fr" %}Basiques{% else %}Basic{% endif %}
-: JavaScript, TypeScript, {% if page.lang=="fr" %}assembleur{% else %}assembly{% endif %}, Blender.
+: JavaScript, TypeScript, {% if page.lang=="fr" %}assembleur{% else %}assembly{% endif %}, Blender Inkscape, Verilog, Adobe Premiere.
 
 ## {% if page.lang=="fr" %}Projets{% else %}Projects{% endif %}
 
