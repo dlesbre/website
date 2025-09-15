@@ -16,6 +16,8 @@ My publications are listed on the [research page]({% include url.txt url="/resea
 
 ## {% include icon.html icon="graduate" %} Teaching
 
+2024-2025 &mdash; Database course at IUT Orsay &mdash; Course material is on [moodle](https://cours.iut-orsay.fr/course/view.php?id=925). The project has its own [moodle](https://cours.iut-orsay.fr/course/view.php?id=2503).
+
 2023-2025 &mdash; OS course at ENSTA &mdash;
 [Course slides, practical session material and correction (in french)]({% include url.txt url="/files/teaching/os-ensta" %}).
 

@@ -26,14 +26,19 @@ programming, compilers and more.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
+		<div class="title">Teaching assistant for <a href="https://cours.iut-orsay.fr/course/view.php?id=925">course R105 introduction to databases</a> in L1</div>
+		<div class="place"><a class="link" href="https://www.iut-orsay.universite-paris-saclay.fr/" hreflang="fr">IUT Orsay</a></div>
+		<div class="date">2025 &ndash; 2026</div>
+	</div></div>
+	<div class="container"><div class="box">
 		<div class="title">Teaching assistant for the 2nd year <a href="{% include url.txt url='files/teaching/os-ensta' %}">operating systems course</a> (M1 level)</div>
 		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
-		<div class="date">2023-2024 and 2024-2025</div>
+		<div class="date">2023 &ndash; 2024 and 2024 &ndash; 2025</div>
 	</div></div>
 	<div class="container"><div class="box">
 		<div class="title">Oral mathematics interrogator in preparatory school</div>
 		<div class="place"><a class="link" href="https://www.bginette.com/" hreflang="fr">Lycée Ste Geneviève, Versailles</a></div>
-		<div class="date">September 2018 &mdash; June 2019</div>
+		<div class="date">2018 &ndash; 2019</div>
 	</div></div>
 </div>
 

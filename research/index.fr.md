@@ -16,7 +16,7 @@ facilité l’écriture de code correct. Mon sujet de thèse est l’analyse de 
 spécifiquement, j’étudie des domaines abstraits rapides (non-relationnels ou
 faiblement relationnel), comme ceux obtenus par une transformation SSA.
 Cependant, je suis aussi intéressé par les systèmes de type, les assistants de preuve,
-la programmation fonctionnelle, la compilation, et d'autres sujets.
+la programmation fonctionnelle, la compilation, et d’autres sujets.
 
 ## {% include icon.html icon='book' %} Publications
 
@@ -31,14 +31,19 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Chargé de TP de <a href="{% include url.txt url='files/teaching/os-ensta' %}">cours de système d'exploitation</a> en 2ème année (niveau M1)</div>
+		<div class="title">Chargé de TD/TP de <a href="https://cours.iut-orsay.fr/course/view.php?id=925">cours R105 Introduction aux bases de données</a> en L1</div>
+		<div class="place"><a class="link" href="https://www.iut-orsay.universite-paris-saclay.fr/" hreflang="fr">IUT d’Orsay</a></div>
+		<div class="date">2025 &ndash; 2026</div>
+	</div></div>
+	<div class="container"><div class="box">
+		<div class="title">Chargé de TP de <a href="{% include url.txt url='files/teaching/os-ensta' %}">cours de système d’exploitation</a> en 2ème année (niveau M1)</div>
 		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
-		<div class="date">2023-2024 et 2024-2025</div>
+		<div class="date">2023 &ndash; 2024 et 2024 &ndash; 2025</div>
 	</div></div>
 	<div class="container"><div class="box">
 		<div class="title">Interrogateur oral en mathématiques au niveau prépa MPSI</div>
 		<div class="place"><a class="link" href="https://www.bginette.com/" hreflang="fr">Lycée Ste Geneviève, Versailles</a></div>
-		<div class="date">Septembre 2018 &mdash; Juin 2019</div>
+		<div class="date">2018 &ndash; 2019</div>
 	</div></div>
 </div>
 
@@ -46,9 +51,9 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Stage de recherche : vérification de programmes concurrents à l'aide d'IRIS</div>
+		<div class="title">Stage de recherche : vérification de programmes concurrents à l’aide d’IRIS</div>
 		<div class="place">
-			<a class="link" href="https://cs.au.dk/research/logic-and-semantics" hreflang="en">Équipe logique et sémantique, Département d'informatique, Université d'Aarhus, Danemark</a>
+			<a class="link" href="https://cs.au.dk/research/logic-and-semantics" hreflang="en">Équipe logique et sémantique, Département d’informatique, Université d’Aarhus, Danemark</a>
 		</div>
 		<div class="date">Octobre 2022 &mdash; Mars 2023</div>
 		<div class="desc">Encadré par Lars Birkedal.<br>
@@ -62,7 +67,7 @@ la programmation fonctionnelle, la compilation, et d'autres sujets.
 				{%- include downloadbutton.html icon="github"
 					url="https://github.com/logsem/cerise/tree/dorian/contextual-refinement"
 					text="Preuves coq"
-					info='Github logsem/cerise'
+					info="Github logsem/cerise"
 				-%}
 			</div>
 		</div></div>

@@ -15,6 +15,8 @@ Mes publications sont disponibles sur la [page recherche]({% include url.txt url
 
 ## {% include icon.html icon="graduate" %} Enseignement
 
+2024-2025 &mdash; Cours de bases de données à l’IUT d’Orsay &mdash; Les polys et TD/TP sont sur le [moodle du cours](https://cours.iut-orsay.fr/course/view.php?id=925). Le projet a son propre [moodle](https://cours.iut-orsay.fr/course/view.php?id=2503).
+
 2023-2025 &mdash; Cours d’OS à l’ENSTA &mdash;
 [Supports de cours, sujet et corrigés de TPs]({% include url.txt url="/files/teaching/os-ensta" %}).
 
