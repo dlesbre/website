@@ -18,6 +18,11 @@
     fr: Conférences
     en: Conferences
 
+- type: reviewing
+  name:
+    fr: Service
+    en: Reviewing
+
 - type: summer-school
   name:
     fr: Écoles d'été

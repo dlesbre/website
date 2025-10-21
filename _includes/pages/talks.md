@@ -39,5 +39,5 @@
 	{%- assign extras = extras | push: video -%}
 {%- endif %}
 {{ talk.date }}
-: {% if talk.paper %}[*{{ talk.paper.title }}*]({% include paper_url.txt slug=talk.paper.slug %}) &mdash; [{{ talk.paper.venue.acronym }} {{talk.paper.year }}]({{ talk.paper.venue.url }}){% else %}*{{ talk.title }}* &mdash; {{ talk.venue | opt_url: talk.url }}{% endif %}{{ extras | join: " &ndash; " | opt_prepend: "<br>" }}
+: {% if talk.paper %}[*{{ talk.paper.title }}*]({% include paper_url.txt slug=talk.paper.slug %}) &mdash; [{{ talk.paper.venue.acronym }} {{talk.paper.year }}]({{ talk.paper.venue.url }}){% else %}*{{ talk.title }}* &mdash; {{ talk.venue | lang:page.lang | opt_url: talk.url }}{% endif %}{{ extras | join: " &ndash; " | opt_prepend: "<br>" }}
 {% endfor %}

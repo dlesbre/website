@@ -15,6 +15,20 @@
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
 # - type=award, field "name" (langstring), field "url" (optional), field "paper" optional
 
+- date: 2025-10-01
+  type: reviewing
+  subtype: artifact
+  venue: 27th International Conference on Verification, Model Checking, and Abstract Interpretation
+  venue-acronym: VMCAI 2026
+  url: https://conf.researchr.org/home/VMCAI-2026
+
+- date: 2025-10-01
+  type: reviewing
+  subtype: subreview
+  venue: 27th International Conference on Verification, Model Checking, and Abstract Interpretation
+  venue-acronym: VMCAI 2026
+  url: https://conf.researchr.org/home/VMCAI-2026
+
 - date: 2025-08-06
   type: summer-school
   prefix:
@@ -52,6 +66,12 @@
   location: Strasbourg, France
   url: https://gdrgpl2024.sciencesconf.org/
 
+- date: 2024-06-01
+  type: reviewing
+  subtype: artifact
+  venue: 29th International Conference on Functional Programming
+  venue-acronym: ICFP 2024
+  url: https://icfp24.sigplan.org/track/icfp-2024-artifact-evaluation
 
 - date: 2023-10-09
   type: other
