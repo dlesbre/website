@@ -26,7 +26,7 @@ programming, compilers and more.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Teaching assistant for <a href="https://cours.iut-orsay.fr/course/view.php?id=925">course R105 introduction to databases</a> in L1</div>
+		<div class="title">Teaching assistant for <a href="https://cours.iut-orsay.fr/course/view.php?id=925">course R105 introduction to databases</a> (L1 level)</div>
 		<div class="place"><a class="link" href="https://www.iut-orsay.universite-paris-saclay.fr/" hreflang="fr">IUT Orsay</a></div>
 		<div class="date">2025 &ndash; 2026</div>
 	</div></div>

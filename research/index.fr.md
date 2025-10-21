@@ -31,7 +31,7 @@ la programmation fonctionnelle, la compilation, et d’autres sujets.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Chargé de TD/TP de <a href="https://cours.iut-orsay.fr/course/view.php?id=925">cours R105 Introduction aux bases de données</a> en L1</div>
+		<div class="title">Chargé de TD/TP de <a href="https://cours.iut-orsay.fr/course/view.php?id=925">cours R105 Introduction aux bases de données</a> en BUT d’informatique (niveau L1)</div>
 		<div class="place"><a class="link" href="https://www.iut-orsay.universite-paris-saclay.fr/" hreflang="fr">IUT d’Orsay</a></div>
 		<div class="date">2025 &ndash; 2026</div>
 	</div></div>
