@@ -15,6 +15,12 @@
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
 # - type=award, field "name" (langstring), field "url" (optional), field "paper" optional
 
+- date: 2026-01-04
+  type: other
+  content:
+    fr: Présent au séminaire Dagstuhl [26022 Optimisation de programmes par E-Graphes](https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/26022)
+    en: Attending Dagstuhl seminar [26022 Program Optimization with E-Graphs](https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/26022)
+
 - date: 2025-10-01
   type: reviewing
   subtype: artifact
