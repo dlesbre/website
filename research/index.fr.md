@@ -37,7 +37,7 @@ la programmation fonctionnelle, la compilation, et d’autres sujets.
 	</div></div>
 	<div class="container"><div class="box">
 		<div class="title">Chargé de TP de <a href="{% include url.txt url='files/teaching/os-ensta' %}">cours de système d’exploitation</a> en 2ème année (niveau M1)</div>
-		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
+		<div class="place"><a class="link" href="https://www.ensta.fr/" hreflang="fr">ENSTA, Paris</a></div>
 		<div class="date">2023 &ndash; 2024 et 2024 &ndash; 2025</div>
 	</div></div>
 	<div class="container"><div class="box">
@@ -102,7 +102,7 @@ la programmation fonctionnelle, la compilation, et d’autres sujets.
 	<div class="container"><div class="box">
 		<div class="title">Stage de recherche : conception et implémentation d’un bootloader sécurisé</div>
 		<div class="place">
-			<a class="link" href="https://www.provenrun.com/" hreflang="en">Prove & Run, Paris</a>
+			<a class="link" href="https://provenrun.com/" hreflang="en">Prove & Run, Paris</a>
 		</div>
 		<div class="date">Mars &mdash; Juillet 2020</div>
 		<div class="desc">Encadré par Patrice Hameau.<br>

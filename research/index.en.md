@@ -32,7 +32,7 @@ programming, compilers and more.
 	</div></div>
 	<div class="container"><div class="box">
 		<div class="title">Teaching assistant for the 2nd year <a href="{% include url.txt url='files/teaching/os-ensta' %}">operating systems course</a> (M1 level)</div>
-		<div class="place"><a class="link" href="https://www.ensta-paris.fr/" hreflang="fr">ENSTA, Paris</a></div>
+		<div class="place"><a class="link" href="https://www.ensta.fr/" hreflang="fr">ENSTA, Paris</a></div>
 		<div class="date">2023 &ndash; 2024 and 2024 &ndash; 2025</div>
 	</div></div>
 	<div class="container"><div class="box">
@@ -95,7 +95,7 @@ programming, compilers and more.
 	<div class="container"><div class="box">
 		<div class="title">Research internship: design and implementation of a secure bootloaders</div>
 		<div class="place">
-			<a class="link" href="https://www.provenrun.com/" hreflang="en">Prove &amp; Run, Paris</a>
+			<a class="link" href="https://provenrun.com/" hreflang="en">Prove &amp; Run, Paris</a>
 		</div>
 		<div class="date">March &mdash; July 2020</div>
 		<div class="desc">Supervised by Patrice Hameau.<br>

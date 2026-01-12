@@ -36,7 +36,7 @@
         en: OCaml prefix-tree library based on the binary representation of the key
       lang: OCaml
       license: LGPL-2.1
-      url: https://codex.top/api/patricia-tree
+      url: https://codex.top/api/patricia-tree/
       repo: https://github.com/codex-semantics-library/patricia-tree
 
     - name:
