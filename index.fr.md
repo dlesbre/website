@@ -97,6 +97,9 @@ régulièrement pour le travail, à des comics et jeux que j’apprécie beaucou
 - [Syncthing](https://syncthing.net/) (en) est un très bon outil de
   synchronisation de fichiers entre plusieurs appareils. Il me permet de passer
   mes photos du téléphone au PC sans même y penser.
+- [Zotero](https://www.zotero.org/) est un gestionnaire bibliographique. Il permet
+  de regrouper tous les PDFs de publications en un seul endroit avec leurs
+  information bibliographique, et d'y rajouter des tags et annotations personnelles.
 - [Connected papers](https://www.connectedpapers.com/) (en) site web affichant
   les citations entre publications scientifiques sous forme de graphe. Je le
   trouve très pratique pour l'exploration bibliographique.

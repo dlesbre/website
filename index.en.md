@@ -97,6 +97,9 @@ to some fun games and comics.
 - [Syncthing](https://syncthing.net/) is a great, privacy respecting file
   synchronisation tool. I set it up once, and it allows me to move photos and files
   from my phone to my PC very easily.
+- [Zotero](https://www.zotero.org/) is a bibliography manager, it can keep all those
+  PDFs organized in one place with their bibliographic information, as well as
+  custom tags, highlights and annotations.
 - [Connected papers](https://www.connectedpapers.com/) website displaying links
   between scientific publications as a graph. Very handy for bibliographic
   exploration.
