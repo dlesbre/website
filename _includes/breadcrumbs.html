@@ -8,7 +8,7 @@
     {% assign index = "/index.html" %}
   {% endif -%}
   {%- assign baseurl = '' -%}
-<a href="{% include url.txt url=index %}">{% unless listings %}{% include icon.html icon='house' %} {% endunless %}{% if page.lang == "fr" %}Acceuil{% else %}Home{% endif %}</a>
+<a href="{% include url.txt url=index %}">{% unless listings %}{% include icon.html icon='house' %} {% endunless %}{% if page.lang == "fr" %}Accueil{% else %}Home{% endif %}</a>
 {% if listings %}
   {% assign index = "/header.html" %}
 {% endif %}
