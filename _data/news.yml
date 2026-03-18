@@ -15,6 +15,13 @@
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
 # - type=award, field "name" (langstring), field "url" (optional), field "paper" optional
 
+- date: 2026-03-17
+  type: reviewing
+  subtype: artifact
+  venue: 33rd Static Analysis Symposium
+  venue-acronym: SAS 2026
+  url: https://conf.researchr.org/home/splash-issta-2026/sas-2026
+
 - date: 2026-01-04
   type: other
   content:
