@@ -45,11 +45,13 @@ priority: 0.9
 ## {% include icon.html icon="user" %} Qui suis-je ?
 
 Je suis étudiant en doctorat à l’[équipe BINSEC](https://binsec.github.io/), au
-centre NanoINNOV du [CEA Paris-Saclay](https://www.cea.fr/paris-saclay/Pages/Accueil.aspx).
-Je travaille sur l’analyse de programme par interprétation abstraite. Plus
-spécifiquement, j’étudie des domaines abstraits rapides (non-relationnels ou
-faiblement relationnel), comme ceux obtenus par une transformation SSA. Mon
-encadrant de thèse est [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
+centre NanoINNOV du [CEA
+Paris-Saclay](https://www.cea.fr/paris-saclay/Pages/Accueil.aspx). Je travaille
+sur l’analyse de programme par interprétation abstraite. Plus spécifiquement,
+j’étudie des domaines abstraits rapides (non-relationnels ou faiblement
+relationnels), comme ceux obtenus par une transformation SSA ou ceux construit
+sur une structure d'union-find. Mon encadrant de thèse est [Matthieu
+Lemerre](https://binsec.github.io/people/lemerre.html).
 
 Mes travaux récents et publications sont disponibles sur la [page recherche]({% include url.txt url='/research/index.html.fr' %}).
 

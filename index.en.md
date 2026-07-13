@@ -51,7 +51,8 @@ NanoINNOV at [CEA Paris-Saclay](https://www.cea.fr/paris-saclay/Pages/Accueil.as
 My PhD subject is centered around program verification by abstract
 interpretation. Specifically, my work centers around fast abstract domains
 (non-relational or weakly-relational) obtained by translating to a program to
-SSA form. I work under the supervision of [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
+SSA form or based  on union-find representations. I work under the supervision
+of [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html).
 
 You will find my current work and publications on the [research page]({% include url.txt url='/research/index.html.en' %}).
 

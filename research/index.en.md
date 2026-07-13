@@ -7,12 +7,13 @@ priority: 0.8
 
 # Research
 
-My research interests center around programming languages and program verification,
-especially tools that make it easier to write correct code. My PhD focuses on program
-verification by abstract interpretation. Specifically, my work centers around fast abstract domains
-(non-relational or weakly-relational) obtained by translating to a program to
-SSA form. However, I’m also interested in type systems, proof assistants, functional
-programming, compilers and more.
+My interests center around programming languages and program verification,
+especially tools that make it easier to write correct code. My PhD is on
+SSA-based numeric analysis by abstract interpretation. Specifically, my work
+centers around fast abstract domains (non-relational or weakly-relational)
+obtained by translating to a program to SSA form or based on union-find
+representations. However, I’m also interested in type systems, proof assistants,
+functional programming, compilers and more.
 
 ## {% include icon.html icon='book' %} Publications
 

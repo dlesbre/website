@@ -10,13 +10,15 @@ priority: 0.8
 
 # Recherche
 
-Mes sujets de recherches sont concentrés autour des langages de programmation
-et la vérification de programmes, notamment tous les outils qui permettent de
-facilité l’écriture de code correct. Mon sujet de thèse est l’analyse de programme par interprétation abstraite. Plus
-spécifiquement, j’étudie des domaines abstraits rapides (non-relationnels ou
-faiblement relationnel), comme ceux obtenus par une transformation SSA.
-Cependant, je suis aussi intéressé par les systèmes de type, les assistants de preuve,
-la programmation fonctionnelle, la compilation, et d’autres sujets.
+Mes sujets de recherches sont concentrés autour des langages de programmation et
+la vérification de programmes, notamment tous les outils qui permettent de
+facilité l’écriture de code correct. Mon sujet de thèse est l’analyse numérique
+de programme par interprétation abstraite. Plus spécifiquement, j’étudie des
+domaines abstraits rapides (non-relationnels ou faiblement relationnels), comme
+ceux obtenus par une transformation SSA ou ceux construit sur une structure
+d'union-find. Cependant, je suis aussi intéressé par les systèmes de type, les
+assistants de preuve, la programmation fonctionnelle, la compilation, et
+d’autres sujets.
 
 ## {% include icon.html icon='book' %} Publications
 
