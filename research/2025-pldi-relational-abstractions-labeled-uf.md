@@ -170,6 +170,7 @@ abstractions of these facts.
 
 - Read the [paper]({% include url.txt url='/files/publications/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf' %}).
 - You can also read the [WIP workshop paper]({% include url.txt url='/files/publications/2024-nsad-labeled-union-find.pdf' %}). It is only 4 pages long and less technical.
-- To be presented at the [Programming Language Design and Implementation (PLDI) 2025 conference](https://pldi25.sigplan.org/).
+- Presented at the [Programming Language Design and Implementation (PLDI) 2025 conference](https://pldi25.sigplan.org/),
+  watch the [talk video](https://www.youtube.com/watch?v=jE9qrvdxhNw) or look at the [slides]({% include url.txt url='/files/publications/2025-pldi-relational-abstractions-labeled-uf-slides.pdf' %}).
 - Download the [**software artifact**](https://zenodo.org/records/15261356) from
   Zenodo to explore the code and see the performance results.

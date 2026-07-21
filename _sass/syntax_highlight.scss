@@ -54,6 +54,9 @@ pre {
 
 .highlight  { color: #e6db74 } /* Literal.Date */
 
+.highlight .nn { color: #e38383 } /* Name.Namespace, OCaml module names */
+.highlight .bp { color: #e6db74 } /* Name.Builtin.Pseudo, OCaml unit */
+
 .highlight .na { color: #a6e22e } /* Name.Attribute */
 .highlight .nb { color: #f8f8f2 } /* Name.Builtin */
 .highlight  { color: #66d9ef } /* Name.Constant */
@@ -62,7 +65,7 @@ pre {
 .highlight .ne { color: #a6e22e } /* Name.Exception */
 .highlight .nf { color: #6ABCFF } // Name.Function
 .highlight .nl { color: #f8f8f2 } /* Name.Label */
-.highlight .nn { color: #f8f8f2 } /* Name.Namespace */
+
 .highlight .nx { color: #a6e22e } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
 .highlight .nv { color: #f8f8f2 } /* Name.Variable */
@@ -79,7 +82,7 @@ pre {
 .highlight .sr { color: #e6db74 } /* Literal.String.Regex */
 .highlight .s1 { color: #e6db74 } /* Literal.String.Single */
 .highlight .ss { color: #e6db74 } /* Literal.String.Symbol */
-.highlight .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+
 .highlight .vc { color: #f8f8f2 } /* Name.Variable.Class */
 .highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
 .highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
