@@ -168,7 +168,7 @@ abstractions of these facts.
 
 ## Going further
 
-- Read the [paper]({% include url.txt url='/files/publications/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf' %}).
+- Read the [**paper**]({% include url.txt url='/files/publications/2025-pldi-relational-abstractions-labeled-uf-with-appendices.pdf' %}).
 - You can also read the [WIP workshop paper]({% include url.txt url='/files/publications/2024-nsad-labeled-union-find.pdf' %}). It is only 4 pages long and less technical.
 - Presented at the [Programming Language Design and Implementation (PLDI) 2025 conference](https://pldi25.sigplan.org/),
   watch the [talk video](https://www.youtube.com/watch?v=jE9qrvdxhNw) or look at the [slides]({% include url.txt url='/files/publications/2025-pldi-relational-abstractions-labeled-uf-slides.pdf' %}).

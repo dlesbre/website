@@ -30,13 +30,13 @@ We formally define the operations required to turn persistent union-find into a 
   (i.e. the conjunction of the represented equivalence relations);
 - `meet` combines two union-finds to keep the set of equalities that are true in either
   (i.e. the disjunction of the represented equivalence relations);
-- an `inclusion` operator allows checking wether a union-find is more precise than another
-  (does it contain all the other's equalities)
+- an `inclusion` operator allows checking whether a union-find is more precise than another
+  (does it contain all the other's equalities).
 
 <figure>
 <img class="transparent"
   src="{% include url.txt url='imgs/publications/2026-sas-join-meet.svg' %}"
-  alt="Labeled union-find example"
+  alt="Union-find join and meet example"
   style="width:500px;" />
 <figcaption>
 Fig. Example of a <code>join</code> and <code>meet</code> of union-find structures.
@@ -127,7 +127,7 @@ if an equality that holds in `v` is not found in `u`.
 
 ## Going further
 
-- Read the [paper]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-with-appendices.pdf' %}).
+- Read the [**paper**]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-with-appendices.pdf' %}).
 - To be presented at the [Static Analysis Symposium (SAS) 2026 conference](https://pldi25.sigplan.org/).
 - Download the [**software artifact**](https://zenodo.org/records/21217874) from
   Zenodo to explore the code and see the performance results, or take a look at
