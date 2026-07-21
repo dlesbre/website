@@ -1,13 +1,32 @@
 # Publication artifact badges information
 acm-available:
-  image: imgs/artifacts-available.png
+  image: imgs/artifacts/acm-available.png
   title: ACM Artifacts Available
   width: 35
   height: 35
   link: https://www.acm.org/publications/policies/artifact-review-and-badging-current
 acm-reusable:
-  image: imgs/artifacts-reusable.png
+  image: imgs/artifacts/acm-reusable.png
   title: ACM Artifacts Reusable
   width: 35
   height: 35
   link: https://www.acm.org/publications/policies/artifact-review-and-badging-current
+
+sas-available:
+  image: imgs/artifacts/sas-available.png
+  title: SAS Artifacts Available
+  width: 35
+  height: 35
+  link: https://conf.researchr.org/track/splash-issta-2026/sas-2026-sas-artifact#Call-for-Artifacts
+sas-validated:
+  image: imgs/artifacts/sas-validated.png
+  title: SAS Artifacts Available
+  width: 35
+  height: 35
+  link: https://conf.researchr.org/track/splash-issta-2026/sas-2026-sas-artifact#Call-for-Artifacts
+sas-extensible:
+  image: imgs/artifacts/sas-extensible.png
+  title: SAS Artifacts Available
+  width: 35
+  height: 35
+  link: https://conf.researchr.org/track/splash-issta-2026/sas-2026-sas-artifact#Call-for-Artifacts

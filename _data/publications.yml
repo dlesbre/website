@@ -32,6 +32,69 @@
 #   abstract: langstring
 #   award: list of {name: langstring, url: optional string, date: optional}
 
+# SAS 2026
+- title: A Lattice of Union-Finds
+  type: conference
+  slug: 2026-sas-union-find-lattice
+  authors:
+    - dlesbre: Université Paris-Saclay, CEA List
+    - mlemerre: Université Paris-Saclay, CEA List
+  venue:
+    fullname: 33rd Static Analysis Symposium
+    acronym: SAS
+    url: https://conf.researchr.org/home/splash-issta-2026/sas-2026
+    location:
+      en: Oakland, California, United States
+      fr: Oakland, Californie, États-Unis
+    attending: true
+  ranking: B
+  award: null
+  #doi: 10.1145/3729298
+  date:
+    submitted: 2026-05-07
+    accepted: 2026-07-04
+    published: 2026-10-03
+    # presented: 2025-06-20
+  artifact: https://zenodo.org/records/15261356
+  artifact-badges:
+    - sas-validated
+    - sas-extensible
+    - sas-available
+  #talk-video: https://www.youtube.com/watch?v=jE9qrvdxhNw
+  #talk-video-length: 21
+  keywords:
+    - union-find
+    - en: lattice
+      fr: treillis
+    - persistence
+    - en: abstract interpretation
+      fr: interprétation abstraite
+  abstract:
+    en: |
+      Union-find data-structures offer compact and fast representation of
+      relations. To use them to represent facts in an abstract interpreter, the
+      canonical framework is to turn the structure into a lattice: i.e. extend
+      persistent union-find with a partial order and the associated join and
+      meet. We formally define all three and show how each can be computed in
+      almost-linear time relative to the number of nodes, or, in the presence of
+      an efficient difference operator, in almost-linear time relative to the
+      size of the difference. Benchmarks show these algorithms offer good
+      performance even on large inputs, and can be integrated in an abstract
+      interpreter with a small cost overhead.
+    fr: |
+      Les structures d’union-find offrent une représentation compacte et rapide
+      de relations. Afin de les utiliser dans un interprète abstrait, la méthode
+      canonique est de leur donner une structure de treillis&nbsp;: c’est-à-dire
+      de donner à l’union-find persistent un ordre partiel, ainsi que des
+      opérateurs de borne supérieure (join) et inférieure (meet). Nous définissons
+      formellement les trois et montrons qu’ils peuvent être calculé en temps
+      presque-linéaire relatif au nombre de nœuds, ou, en présence d’un opérateur
+      efficace de différence, en temps presque-linéaire relatif à la taille de la
+      différence. Nos expériences confirment que ces algorithmes ont une bonne performance
+      même sur des grandes entrées et peuvent être intégrés à un interprète abstrait
+      à faible surcoût.
+
+
 # PLDI 2025
 - title: Relational Abstractions Based on Labeled Union-Find
   type: conference
@@ -61,7 +124,7 @@
   artifact-badges:
     - acm-available
     - acm-reusable
-  talk-video: https://www.youtube.com/live/HQ29o1EWOO4?t=23045
+  talk-video: https://www.youtube.com/watch?v=jE9qrvdxhNw
   talk-video-length: 21
   keywords:
     - en: relational abstract domain
