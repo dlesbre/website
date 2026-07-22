@@ -18,10 +18,13 @@ of the set with fewer equalities.
 An extension (known as persistent union-find, see [Conchon and Filliâtre, *A Persistent Union-Find Data Structure*, 2007](https://dl.acm.org/doi/10.1145/1292535.1292541)) allows backtracking, i.e. forgetting
 the most recently added equalities to revert to a previous version.
 
-However, when representing relations in program analysis, such a tree of versions
-is not sufficient. We want to be able to compare information coming from different
-control-flow branches, and combine them to obtain the set of equalities that
-hold after joining such branches. In other words, we need **a lattice of version, not just a tree**.
+However, when representing relations in program analysis, such a tree of
+versions is not sufficient. We want to be able to compare information coming
+from different control-flow branches, and combine them to obtain the set of
+equalities that hold after joining such branches. In other words, we need **a
+directed acyclic graph (DAG) of versions, not just a tree**. In practice, we
+propose a lattice, which is more expressive than a DAG, as it has two
+distinct merges (conjunctions and disjunctions), and allows comparing versions.
 
 ## Lattice Operations on Union-Find
 
@@ -78,8 +81,10 @@ meaning we can find examples where creating the `join` union-find requires $$O(n
 
 However, in program analysis, we often join structures that only have small differences.
 In that case, we want to avoid scanning the entire set of nodes, and only focus on
-the much smaller set of nodes with differing parents. Fortunately, we found two data-structures,
-Patricia trees and persistent array, which allow fast access to that set.
+the much smaller set of nodes with differing parents. We can use
+either Patricia trees (see our [OCaml patricia-tree library](https://codex.top/api/patricia-tree/)
+with faster than linear union and intersection)
+or persistent array data structures for fast access to that difference set.
 We can then adapt the above algorithm to take advantage of this `diff` operator:
 ```ocaml
 let lookup tbl (x,y) =
@@ -131,4 +136,4 @@ if an equality that holds in `v` is not found in `u`.
 - To be presented at the [Static Analysis Symposium (SAS) 2026 conference](https://pldi25.sigplan.org/).
 - Download the [**software artifact**](https://zenodo.org/records/21217874) from
   Zenodo to explore the code and see the performance results, or take a look at
-  the [union-find-lattice](https://codex.top/api/union-find-lattice/) library that we've released on [opam](https://opam.ocaml.org/)
+  the [union-find-lattice](https://codex.top/api/union-find-lattice/) library that we've released on [opam](https://opam.ocaml.org/).
