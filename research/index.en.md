@@ -47,7 +47,7 @@ functional programming, compilers and more.
 
 <div class="timeline content">
 	<div class="container"><div class="box">
-		<div class="title">Research internship: verifying concurren programs with IRIS</div>
+		<div class="title">Research internship: verifying capability machines with IRIS</div>
 		<div class="place">
 			<a class="link" href="https://cs.au.dk/research/logic-and-semantics" hreflang="en">Logic and semantics team, Department of computer science, Aarhus university, Denmark</a>
 		</div>
