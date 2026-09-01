@@ -15,6 +15,19 @@
 # - type=accepted-paper, single field "paper", the _data/publications.yml object
 # - type=award, field "name" (langstring), field "url" (optional), field "paper" optional
 
+- date: 2026-12-07
+  type: other
+  content:
+    fr: Soutenance de thèse
+    en: PhD defense
+
+- date: 2026-10-01
+  type: reviewing
+  subtype: artifact
+  venue: 28th International Conference on Verification, Model Checking, and Abstract Interpretation
+  venue-acronym: VMCAI 2027
+  url: https://conf.researchr.org/home/VMCAI-2027
+
 - date: 2026-03-17
   type: reviewing
   subtype: artifact

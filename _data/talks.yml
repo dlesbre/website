@@ -10,6 +10,12 @@
 #   date: date
 #   paper: the publication object from _data/publications.yml
 
+- date: 2026-09-01
+  venue: Compiler Design Lab - Saarland University
+  title: SSA-based static numeric analysis
+  url: https://www.compilers.cs.uni-saarland.de/
+#  slides: /files/talks/
+
 - date: 2025-10-02
   venue:
     fr: Journées des doctorant STIC du plateau de Saclay
