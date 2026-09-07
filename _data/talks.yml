@@ -14,7 +14,7 @@
   venue: Compiler Design Lab - Saarland University
   title: SSA-based static numeric analysis
   url: https://www.compilers.cs.uni-saarland.de/
-#  slides: /files/talks/
+  slides: /files/talks/2026-09-Saarbrucken-Seminar.pdf
 
 - date: 2025-10-02
   venue:
