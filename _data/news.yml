@@ -5,7 +5,7 @@
 #
 # Each item must have a 'date'
 # Items are then sorted by their 'type' attribute:
-# - no type, single 'content' field, markdown langstring
+# - type=other, single 'content' field, markdown langstring, possible icon field, for fontawesome icon
 # - type=conference or type=summer-school, attending an event, fields:
 #   - event (langstring)
 #   - prefix (langstring) placed before event, but not in the url
@@ -18,8 +18,9 @@
 - date: 2026-12-07
   type: other
   content:
-    fr: Soutenance de thèse
-    en: PhD defense
+    fr: Soutenance de thèse (14h, Amphi 33, [Bât 862, Nano Innov, Palaiseau](https://www.openstreetmap.org/?mlat=48.712596&mlon=2.194519#map=18/48.712598/2.194519)) et en ligne
+    en: PhD defense (2pm, Amphi 33, [Building 862, Nano Innov, Palaiseau](https://www.openstreetmap.org/?mlat=48.712596&mlon=2.194519#map=18/48.712598/2.194519)) and online
+  icon: graduate
 
 - date: 2026-10-01
   type: reviewing
@@ -104,12 +105,14 @@
   content:
     fr: Début de ma thèse au CEA List, supervisé par [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html)
     en: Started of my PhD at CEA List, under the supervision of [Matthieu Lemerre](https://binsec.github.io/people/lemerre.html)
+  icon: briefcase
 
 - date: 2023-07-01
   type: other
   content:
     fr: Diplomé de l’[ENS Ulm](https://www.ens.psl.eu) avec le master [MPRI](https://mpri-master.ens.fr/) d’informatique et une licence de mathématiques
     en: Graduated from [ENS Ulm](https://www.ens.psl.eu) with the [MPRI](https://mpri-master.ens.fr/) master of computer science and a bachelor in mathematics
+  icon: graduate
 
 - date: 2023-04-24
   type: other
@@ -122,7 +125,6 @@
   content:
     fr: "Stage de recherche de 6 mois à l’[équipe LogSem](https://cs.au.dk/research/logic-and-semantics) (université d’Aarhus, Danemark), *vérification de programmes par logique de séparation avec IRIS et Coq*"
     en: "6 month research intership at the [LogSem team](https://cs.au.dk/research/logic-and-semantics) (Aarhus University, Denmark), *program verification with separation logic in IRIS and Coq*"
-
 
 - date: 2022-03-14
   type: other
@@ -159,3 +161,4 @@
   content:
     fr: Entrée à l’[ENS Ulm](https://www.ens.psl.eu) par concours MPI
     en: Admitted to [ENS Ulm](https://www.ens.psl.eu) via the MPI entrance exam
+  icon: graduate

@@ -69,6 +69,9 @@ clock-back:
 list:
   class: fa-solid fa-list
   unicode: f03a
+briefcase:
+  class: fa-solid fa-briefcase
+  unicode: f0b1
 
 # People
 user:

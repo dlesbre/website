@@ -51,7 +51,7 @@ news elements (wrapped in a `dl`) aren't siblings, we need to use more selectors
   {% elsif news.venue %}<span title="{{ news.venue }}">{{ news.venue-acronym }}</span>
   {% else %}{{ news.venue-acronym }}
   {% endif %}
-{%- elsif news.type == "other" %} {{ news.content | lang:page.lang }}
+{%- elsif news.type == "other" %} {% if news.icon %}{% include icon.html icon=news.icon %} {% endif %}{{ news.content | lang:page.lang }}
 {%- else %} {{ "unknown news type: " | append: news.type | error }}
 {%- endif %}
 {%- if limit and forloop.index >= limit %}{%break%}{%endif%}
