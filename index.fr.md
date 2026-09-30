@@ -30,10 +30,7 @@ priority: 0.9
 		<div class="contactsheet">
 			<dl>
 				<dt>{% include icon.html icon="email" %}</dt>
-				<dd>
-					<strong>pro :</strong> dorian.lesbre[arobase]cea.fr<br>
-					<strong>perso :</strong> dorian.lesbre[arobase]gmail.com
-				</dd>
+				<dd>dorian.lesbre[arobase]gmail.com</dd>
 				<dt>{% include icon.html icon="key" %}</dt>
 				<dd><a class="link" href="{% include url.txt url='files/Dorian_Lesbre_public.pgp' %}" download>Clé publique GPG</a><br>
 					<a class="link" href="{% include url.txt url='files/Dorian_Lesbre_public.pub' %}" download>Clé publique SSH</a></dd>
