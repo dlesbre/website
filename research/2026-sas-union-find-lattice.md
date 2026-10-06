@@ -40,7 +40,7 @@ We formally define the operations required to turn persistent union-find into a 
 <img class="transparent"
   src="{% include url.txt url='imgs/publications/2026-sas-join-meet.svg' %}"
   alt="Union-find join and meet example"
-  style="width:500px;" />
+  style="width:700px;" />
 <figcaption>
 Fig. Example of a <code>join</code> and <code>meet</code> of union-find structures.
 Each dot represents a node, each potato a class and each arrow a parent pointer
@@ -133,7 +133,7 @@ if an equality that holds in `v` is not found in `u`.
 ## Going further
 
 - Read the [**paper**]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-with-appendices.pdf' %}).
-- To be presented at the [Static Analysis Symposium (SAS) 2026 conference](https://pldi25.sigplan.org/).
+- Presented at the [Static Analysis Symposium (SAS) 2026 conference](https://pldi25.sigplan.org/), see the [slides]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-slides.pdf' %}).
 - Download the [**software artifact**](https://zenodo.org/records/21217874) from
   Zenodo to explore the code and see the performance results, or take a look at
   the [union-find-lattice](https://codex.top/api/union-find-lattice/) library that we've released on [opam](https://opam.ocaml.org/).
