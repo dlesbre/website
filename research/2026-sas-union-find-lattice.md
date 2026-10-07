@@ -133,7 +133,7 @@ if an equality that holds in `v` is not found in `u`.
 ## Going further
 
 - Read the [**paper**]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-with-appendices.pdf' %}).
-- Presented at the [Static Analysis Symposium (SAS) 2026 conference](https://pldi25.sigplan.org/), see the [slides]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-slides.pdf' %}).
+- Presented at the [Static Analysis Symposium (SAS) 2026 conference](https://conf.researchr.org/home/splash-issta-2026/sas-2026), see the [slides]({% include url.txt url='/files/publications/2026-sas-union-find-lattice-slides.pdf' %}).
 - Download the [**software artifact**](https://zenodo.org/records/21217874) from
   Zenodo to explore the code and see the performance results, or take a look at
   the [union-find-lattice](https://codex.top/api/union-find-lattice/) library that we've released on [opam](https://opam.ocaml.org/).
